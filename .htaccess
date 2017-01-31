@@ -1,9 +1,23 @@
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} !^blog\.smarchal\.com [NC]
-RewriteRule - http://blog.smarchal.com [R=302,L]
+# Jekyll: home page
+RewriteCond %{REQUEST_URI} ^index\.html$ [NC]
+RewriteRule . / [R=301,L,NC]
 
+# Jekyll: tags page
+RewriteCond %{REQUEST_URI} ^tag/(index\.html)?$ [NC]
+RewriteRule . /tag [R=301,L,NC]
+RewriteRule ^tag$ /tag/index.html [L,NC]
+
+# Jekyll: tag page
+RewriteCond %{REQUEST_URI} ^tag/[^/]+/(index\.html)?$ [NC]
+RewriteRule ^(tag/[^/]+)/index\.html$ $1 [R=301,L,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)/$ $1 [R=301,L]
+RewriteRule ^tag/([^/]+)$ /tag/$1/index.html [L,NC]
 
-RewriteRule ^/category/(.*)$ /tag/$1 [R=301,L]
+# Jekyll: post page
+RewriteCond %{REQUEST_URI} ^[^/]+(/|\.html)$ [NC]
+RewriteRule ^([^/]+)\.html$ $1 [R=301,L,NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ $1\.html [L,NC]
