@@ -11,7 +11,7 @@ description: >
 
 ## Une micro-librairie pour gérer vos media-queries en Sass
 
-Suite à mon ancien post sur la gestion de media-queries en Sass ([voir par ici](http://blog.smarchal.com/sass-et-media-queries)), j'ai utilisé les 4 mixins que j'avais créé sur tous mes projets :
+Suite à mon ancien post sur la gestion de media-queries en Sass ([voir par ici](https://blog.smarchal.com/sass-et-media-queries)), j'ai utilisé les 4 mixins que j'avais créé sur tous mes projets :
 
 - `media-min($from)`
 - `media-max($until)`

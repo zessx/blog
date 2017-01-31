@@ -20,7 +20,7 @@ Si vous travaillez avec SASS, vous utilisez probablement un fichier principal et
 	- _ie7.scss
 	- _rtl.scss
 
-Vous avez paramétré Sublime Text pour qu'il compile le code SASS automatiquement lorsque vous enregistrez votre fichier `app.scss` (si vous ne l'avez toujours pas fait, [voici la procédure](http://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3)). Oui mais voilà, le build se fait **aussi** quand vous enregistrez le fichier `_variables.scss`, et vous vous retrouvez systématiquement avec de nombreux fichiers type `variables.css` et `variables.min.css` dont vous ne vous servez pas, et que vous devez supprimer manuellement.
+Vous avez paramétré Sublime Text pour qu'il compile le code SASS automatiquement lorsque vous enregistrez votre fichier `app.scss` (si vous ne l'avez toujours pas fait, [voici la procédure](https://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3)). Oui mais voilà, le build se fait **aussi** quand vous enregistrez le fichier `_variables.scss`, et vous vous retrouvez systématiquement avec de nombreux fichiers type `variables.css` et `variables.min.css` dont vous ne vous servez pas, et que vous devez supprimer manuellement.
 
 ## Paramétrer SublimeOnSaveBuild
 

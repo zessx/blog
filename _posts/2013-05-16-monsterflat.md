@@ -14,4 +14,4 @@ Mais bon, c'est gratuit, c'est cadeau, et ça m'a permit de tester quelques bric
 {:.center}
 ![Monsterflat]({{ site.url }}/images/monsterflat/monsterflat-promo.png)
 
-C'est par ici : [work.smarchal.com/monsterflat](http://work.smarchal.com/monsterflat/)
+C'est par ici : [work.smarchal.com/monsterflat](https://work.smarchal.com/monsterflat/)

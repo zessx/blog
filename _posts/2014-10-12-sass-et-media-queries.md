@@ -8,7 +8,7 @@ description: >
   Constat et astuces sur l'utilisation des media queries avec Sass
 ---
 
-> Une version améliorée des mixins utilisés ici est présentée [dans un autre article](http://blog.smarchal.com/sass-queries).
+> Une version améliorée des mixins utilisés ici est présentée [dans un autre article](https://blog.smarchal.com/sass-queries).
 
 ## Un exemple de media query en CSS
 
