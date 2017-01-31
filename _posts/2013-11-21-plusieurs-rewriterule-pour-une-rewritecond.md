@@ -2,15 +2,16 @@
 layout: post
 title:  "Plusieurs RewriteRule pour une RewriteCond"
 date:   2013-11-21
-tags: 
+tags:
 - apache
+- server
 description: >
   Petite astuce aujourd'hui, pour vous permettre d'utiliser une unique condition pour plusieurs règles dans vos <code>.htaccess</code>.
 ---
 
 ## Un aperçu du problème
 
-Lors de l'écriture de fichiers ***.htaccess***, il n'est pas rare de se retrouver à avoir une même condition ***RewriteCond*** pour plusieurs règles ***RewriteRule***.   
+Lors de l'écriture de fichiers ***.htaccess***, il n'est pas rare de se retrouver à avoir une même condition ***RewriteCond*** pour plusieurs règles ***RewriteRule***.
 Prenons comme exemple ces trois types d'url, permettant d'accéder à différentes pages, gérées dynamiquement :
 
 * ***www.domain.tld/category/***
@@ -54,19 +55,19 @@ Nous allons nous servir du flag `[S]` (pour ***[S]kip***), qui permet, dans le c
 
 ## En d'autres mots...
 
-Reprenons notre exemple, avec des mots :   
-> Si ce n'est ni un dossier ni un fichier, alors vérifie la première règle.   
-> Si ce n'est ni un dossier ni un fichier, alors vérifie la seconde règle.   
-> Si ce n'est ni un dossier ni un fichier, alors vérifie la troisième règle.   
+Reprenons notre exemple, avec des mots :
+> Si ce n'est ni un dossier ni un fichier, alors vérifie la première règle.
+> Si ce n'est ni un dossier ni un fichier, alors vérifie la seconde règle.
+> Si ce n'est ni un dossier ni un fichier, alors vérifie la troisième règle.
 
-Voici comment le code que je vous propose fonctionne :   
-> Si c'est un dossier ou un fichier, alors saute les 3 prochaines règles.   
-> Vérifie la première règle   
-> Vérifie la seconde règle   
-> Vérifie la troisième règle   
+Voici comment le code que je vous propose fonctionne :
+> Si c'est un dossier ou un fichier, alors saute les 3 prochaines règles.
+> Vérifie la première règle
+> Vérifie la seconde règle
+> Vérifie la troisième règle
 
 
 ## Liens
-[Une réponse sur ServeurFault résumant la syntaxe à utiliser pour mod_rewrite](http://serverfault.com/a/214521/168109)   
-[Documentation officielle du mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html)   
+[Une réponse sur ServeurFault résumant la syntaxe à utiliser pour mod_rewrite](http://serverfault.com/a/214521/168109)
+[Documentation officielle du mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html)
 [Documentation officielle sur le flag S](http://httpd.apache.org/docs/current/rewrite/flags.html#flag_s)

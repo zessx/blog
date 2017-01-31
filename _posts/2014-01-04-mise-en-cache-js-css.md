@@ -2,10 +2,11 @@
 layout: post
 title:  "La mise en cache des ressources JS/CSS"
 date:   2014-01-04
-tags: 
+tags:
 - apache
 - html
 - php
+- server
 description: >
   Le cache, c'est la vie, mais il arrive parfois qu'il pose quelques soucis.
 ---
@@ -90,7 +91,7 @@ Notez qu'il faut évidemment définir la constante `PATH_ASSETS` dans votre code
 
 ## Piste 4 : l'url rewriting
 
-Afin d'éviter tout problème lié au paramètre ***GET*** ajouté, il reste une dernière piste : utilisé un couplage de versioning et d'url rewriting.    
+Afin d'éviter tout problème lié au paramètre ***GET*** ajouté, il reste une dernière piste : utilisé un couplage de versioning et d'url rewriting.
 Le principe repose sur la piste #3, qui est de continuer d'avoir une url qui change à chaque mise à jour, tout en évitant au développeur de renommer/éditer ses fichiers. Plutôt que de placer le résultat de `filemtime()` dans un paramètre ***GET***, nous allons le placer dans le nom du fichier lui-même, et s'assurer via l'url rewriting que le tout pointe bien sur le fichier.
 
 Voici le côté client :
@@ -119,6 +120,6 @@ Merci à [@jiceb](https://twitter.com/jiceb) pour ses remarques sur la piste #3,
 
 ## Liens
 
-[La fonction filemtime()](http://php.net/manual/fr/function.filemtime.php)    
-[Apache mod_expire](http://httpd.apache.org/docs/2.2/mod/mod_expires.html)    
+[La fonction filemtime()](http://php.net/manual/fr/function.filemtime.php)
+[Apache mod_expire](http://httpd.apache.org/docs/2.2/mod/mod_expires.html)
 [Revving filenames : don't use querystrings](http://stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring)
