@@ -16,7 +16,7 @@ Suite à certains événements survenus l'année dernière, j'ai décidé de m'i
 
 Il y a quelques mois, [Google annonçait sur son blog](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html) vouloir encourager le passage d'un maximum de sites de HTTP à HTTPS. Ceci pour permettre une navigation plus sûre sur le web.
 
-Mais concrètement, à quoi peut bien servir un certificat SSL/TLS ?  
+Mais concrètement, à quoi peut bien servir un certificat SSL/TLS ?
 Quand vous créez un certificat, vous le faites toujours depuis votre serveur. Ce certificat va principalement contenir une clé publique et une clé privée :
 
 - La clé privée est protégée, et sera utilisée pour identifier le serveur
@@ -34,10 +34,10 @@ Ces points sont extrêmement importants dès lors que l'on parle de paiement en 
 
 Cette sécurisation globale n'aurait jamais été possible, ou en tout cas pas encore initiée, sans un acteur majeur : Let's Encrypt.
 
-Let's Encrypt est une autorité de certification, un tiers de confiance chargé de délivrer et vérifier des certificats SSL ou TLS. Un certificat ne sert effectivement à rien s'il n'y a personne pour l'authentifier.  
+Let's Encrypt est une autorité de certification, un tiers de confiance chargé de délivrer et vérifier des certificats SSL ou TLS. Un certificat ne sert effectivement à rien s'il n'y a personne pour l'authentifier.
 Fondée fin 2015 par la **Fondation Mozilla**, l'**Université du Michigan** et l'**Electronic Frontier Foundation**, elle a déjà délivré plus de 10 millions de certificats gratuitement.
 
-Car oui, ses certificats sont gratuits.  
+Car oui, ses certificats sont gratuits.
 
 ## Installer Certbot
 
@@ -55,11 +55,11 @@ L'installation de certbot se fait simplement via git, pensez donc à l'installer
     sudo ap-get install git
     sudo git clone https://github.com/certbot/certbot /opt/letsencrypt
 
-Et c'est terminé !  
+Et c'est terminé !
 
 ## Générer un certificat
 
-L'outil certbot est extrêmement bien fichu, à tel point que vous n'avez presque rien à faire !  
+L'outil certbot est extrêmement bien fichu, à tel point que vous n'avez presque rien à faire !
 Pour générer un certificat, il vous suffit de lancer la commande suivante :
 
     /opt/letsencrypt/letsencrypt-auto
@@ -119,11 +119,11 @@ Là aussi, certbot vous mâche le travail, vous n'aurez qu'à lancer la commande
 
 **Votre certificat est à présent renouvelé !**
 
-Il est possible d'automatiser cette tâche, en l'ajoutant dans votre crontab. Plusieurs scripts sont trouvables sur le net, qui permettent de vérifier si votre certificat expire bientôt, de le renouveler si c'est le cas, mais aussi de vous avertir par mail si le renouvellement a échoué.  
+Il est possible d'automatiser cette tâche, en l'ajoutant dans votre crontab. Plusieurs scripts sont trouvables sur le net, qui permettent de vérifier si votre certificat expire bientôt, de le renouveler si c'est le cas, mais aussi de vous avertir par mail si le renouvellement a échoué.
 Personnellement, [j'utilise ce script](https://gist.github.com/erikaheidi/4d579acf553297da0fa1), que je lance toutes les semaines via un cron.
 
 ## Liens
 
-- [Let's Encrypt](https://letsencrypt.org/)  
-- [Certbot sur GitHub](https://github.com/certbot/certbot)  
+- [Let's Encrypt](https://letsencrypt.org/)
+- [Certbot sur GitHub](https://github.com/certbot/certbot)
 - [Auto renewal script](https://gist.github.com/erikaheidi/4d579acf553297da0fa1)
