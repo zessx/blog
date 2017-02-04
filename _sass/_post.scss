@@ -1,111 +1,111 @@
 @charset "utf-8";
 
 article {
-    width: 100%;
-    margin: 0 auto;
-    padding: $content_padding;
-    line-height: 1.5;
-    -webkit-transition: margin-top $transition_header;
-    transition: margin-top $transition_header;
+  width: 100%;
+  margin: 0 auto;
+  padding: $content_padding;
+  line-height: 1.5;
+  -webkit-transition: margin-top $transition_header;
+  transition: margin-top $transition_header;
 
-    @include media($from: tablet) {
-        padding: $content_padding 0;
-        width: map-get($content_width, tablet);
-    }
-    @include media($from: desktop) {
-        width: map-get($content_width, desktop);
-    }
+  @include media($from: tablet) {
+    padding: $content_padding 0;
+    width: map-get($content_width, tablet);
+  }
+  @include media($from: desktop) {
+    width: map-get($content_width, desktop);
+  }
 
-    ul {
-        list-style: outside disc;
-        padding-left: $section_padding;
-        margin: ($section_padding / 2) 0;
-    }
+  ul {
+    list-style: outside disc;
+    padding-left: $section_padding;
+    margin: ($section_padding / 2) 0;
+  }
 
-    &.full-article {
-        min-height: 100vh;
-    }
-    .article-preview {
-        display: none;
-    }
-    .article-content {
+  &.full-article {
+    min-height: 100vh;
+  }
+  .article-preview {
+    display: none;
+  }
+  .article-content {
+    display: block;
+  }
+
+  aside {
+    overflow: hidden;
+    text-align: center;
+
+    .date {
+      color: $grey;
+      margin: 0 auto;
+
+      &:before,
+      &:after {
+        content: '';
         display: block;
-    }
+        margin: 0 auto 20px;
+        width: 80%;
+        height: 1px;
+        background: $grey_light;
 
-    aside {
-        overflow: hidden;
-        text-align: center;
-
-        .date {
-            color: $grey;
-            margin: 0 auto;
-
-            &:before,
-            &:after {
-                content: '';
-                display: block;
-                margin: 0 auto 20px;
-                width: 80%;
-                height: 1px;
-                background: $grey_light;
-
-                @include media($from: tablet) {
-                    display: inline-block;
-                    width: 16%;
-                    margin: 0 10px 6px;
-                }
-            }
-            &:after {
-                content: none;
-
-                @include media($from: tablet) {
-                    content: '';
-                }
-            }
+        @include media($from: tablet) {
+          display: inline-block;
+          width: 16%;
+          margin: 0 10px 6px;
         }
-        .update {
-            font-size: 80%;
-            color: $grey;
-            margin-top: 0;
+      }
+      &:after {
+        content: none;
+
+        @include media($from: tablet) {
+          content: '';
         }
-        .tags {
-            list-style-type: none;
-            padding: 0;
-            font-size: 0;
-            text-align: center;
+      }
+    }
+    .update {
+      font-size: 80%;
+      color: $grey;
+      margin-top: 0;
+    }
+    .tags {
+      list-style-type: none;
+      padding: 0;
+      font-size: 0;
+      text-align: center;
 
-            li {
-                display: inline;
-                font-size: $font_size;
-                margin: 0 5px;
+      li {
+        display: inline;
+        font-size: $font_size;
+        margin: 0 5px;
 
-                a {
-                    text-decoration: none;
-                    color: $grey;
-                    font-size: 80%;
-                    padding: 2px 8px;
-                    border: 1px solid;
+        a {
+          text-decoration: none;
+          color: $grey;
+          font-size: 80%;
+          padding: 2px 8px;
+          border: 1px solid;
 
-                    &:hover,
-                    &:focus {
-                        box-shadow: none;
+          &:hover,
+          &:focus {
+            box-shadow: none;
 
-                        @each $tag, $color in $colors {
-                            [data-color="#{$tag}"] {
-                                color: $color;
-                            }
-                        }
-                    }
-                }
+            @each $tag, $color in $colors {
+              [data-color="#{$tag}"] {
+                color: $color;
+              }
             }
+          }
         }
+      }
     }
-    .center {
-        text-align: center;
-    }
-    img,
-    iframe {
-        max-width: 100%;
-        margin: 0 auto;
-    }
+  }
+  .center {
+    text-align: center;
+  }
+  img,
+  iframe {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }

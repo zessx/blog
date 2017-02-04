@@ -2,84 +2,84 @@
 layout: listing
 ---
 <header>
-    <h1 id="title">
-        <svg id="logo" width="200" height="154" fill="#222" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="0,0 0,42 62,42 39,0"></polygon>
-            <polygon points="45,0 68,42 200,42 200,0"></polygon>
-            <polygon points="0,56 0,98 93,98 70,56"></polygon>
-            <polygon points="107,112 130,154 200,154 200,112"></polygon>
-            <circle cx="121" cy="77" r="21"></circle>
-            <circle cx="179" cy="77" r="21"></circle>
-            <circle cx="21" cy="133" r="21"></circle>
-            <circle cx="79" cy="133" r="21"></circle>
-        </svg>
-        <span>Le blog</span>
-    </h1>
-    <a href="/tag" class="link-header"><span>Tags</span></a>
-    <a href="/recherche" class="link-header"><span>Recherche</span></a>
+  <h1 id="title">
+    <svg id="logo" width="200" height="154" fill="#222" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,0 0,42 62,42 39,0"></polygon>
+      <polygon points="45,0 68,42 200,42 200,0"></polygon>
+      <polygon points="0,56 0,98 93,98 70,56"></polygon>
+      <polygon points="107,112 130,154 200,154 200,112"></polygon>
+      <circle cx="121" cy="77" r="21"></circle>
+      <circle cx="179" cy="77" r="21"></circle>
+      <circle cx="21" cy="133" r="21"></circle>
+      <circle cx="79" cy="133" r="21"></circle>
+    </svg>
+    <span>Le blog</span>
+  </h1>
+  <a href="/tag" class="link-header"><span>Tags</span></a>
+  <a href="/recherche" class="link-header"><span>Recherche</span></a>
 </header>
 
 <section class="articles">
-    {% for post in site.posts limit:5 %}
+  {% for post in site.posts limit:5 %}
 
-    {% assign monthNum = post.date | date: "%-m" %}
-    {% assign month = '' %}
-    {% case monthNum %}
-      {% when '1' %}{% assign month = 'Janvier' %}
-      {% when '2' %}{% assign month = 'Février' %}
-      {% when '3' %}{% assign month = 'Mars' %}
-      {% when '4' %}{% assign month = 'Avril' %}
-      {% when '5' %}{% assign month = 'Mai' %}
-      {% when '6' %}{% assign month = 'Juin' %}
-      {% when '7' %}{% assign month = 'Juillet' %}
-      {% when '8' %}{% assign month = 'Août' %}
-      {% when '9' %}{% assign month = 'Septembre' %}
-      {% when '10' %}{% assign month = 'Octobre' %}
-      {% when '11' %}{% assign month = 'Novembre' %}
-      {% when '12' %}{% assign month = 'Décembre' %}
-    {% endcase %}
+  {% assign monthNum = post.date | date: "%-m" %}
+  {% assign month = '' %}
+  {% case monthNum %}
+    {% when '1' %}{% assign month = 'Janvier' %}
+    {% when '2' %}{% assign month = 'Février' %}
+    {% when '3' %}{% assign month = 'Mars' %}
+    {% when '4' %}{% assign month = 'Avril' %}
+    {% when '5' %}{% assign month = 'Mai' %}
+    {% when '6' %}{% assign month = 'Juin' %}
+    {% when '7' %}{% assign month = 'Juillet' %}
+    {% when '8' %}{% assign month = 'Août' %}
+    {% when '9' %}{% assign month = 'Septembre' %}
+    {% when '10' %}{% assign month = 'Octobre' %}
+    {% when '11' %}{% assign month = 'Novembre' %}
+    {% when '12' %}{% assign month = 'Décembre' %}
+  {% endcase %}
 
-    <article data-color="{{ post.tags | first }}">
-        <aside>
-            <p class="date">{{ post.date | date: "%d " }}{{ month }}{{ post.date | date: " %Y" }}</p>
+  <article data-color="{{ post.tags | first }}">
+    <aside>
+      <p class="date">{{ post.date | date: "%d " }}{{ month }}{{ post.date | date: " %Y" }}</p>
 
-            {% if post.update %}
+      {% if post.update %}
 
-            {% assign updateMonthNum = post.update | date: "%-m" %}
-            {% assign updateMonth = '' %}
-            {% case updateMonthNum %}
-              {% when '1' %}{% assign updateMonth = 'Janvier' %}
-              {% when '2' %}{% assign updateMonth = 'Février' %}
-              {% when '3' %}{% assign updateMonth = 'Mars' %}
-              {% when '4' %}{% assign updateMonth = 'Avril' %}
-              {% when '5' %}{% assign updateMonth = 'Mai' %}
-              {% when '6' %}{% assign updateMonth = 'Juin' %}
-              {% when '7' %}{% assign updateMonth = 'Juillet' %}
-              {% when '8' %}{% assign updateMonth = 'Août' %}
-              {% when '9' %}{% assign updateMonth = 'Septembre' %}
-              {% when '10' %}{% assign updateMonth = 'Octobre' %}
-              {% when '11' %}{% assign updateMonth = 'Novembre' %}
-              {% when '12' %}{% assign updateMonth = 'Décembre' %}
-            {% endcase %}
+      {% assign updateMonthNum = post.update | date: "%-m" %}
+      {% assign updateMonth = '' %}
+      {% case updateMonthNum %}
+        {% when '1' %}{% assign updateMonth = 'Janvier' %}
+        {% when '2' %}{% assign updateMonth = 'Février' %}
+        {% when '3' %}{% assign updateMonth = 'Mars' %}
+        {% when '4' %}{% assign updateMonth = 'Avril' %}
+        {% when '5' %}{% assign updateMonth = 'Mai' %}
+        {% when '6' %}{% assign updateMonth = 'Juin' %}
+        {% when '7' %}{% assign updateMonth = 'Juillet' %}
+        {% when '8' %}{% assign updateMonth = 'Août' %}
+        {% when '9' %}{% assign updateMonth = 'Septembre' %}
+        {% when '10' %}{% assign updateMonth = 'Octobre' %}
+        {% when '11' %}{% assign updateMonth = 'Novembre' %}
+        {% when '12' %}{% assign updateMonth = 'Décembre' %}
+      {% endcase %}
 
-            <p class="update"><label>Mise à jour :</label> {{ post.update | date: "%d " }}{{ updateMonth }}{{ post.update | date: " %Y" }}</p>
-            {% endif %}
+      <p class="update"><label>Mise à jour :</label> {{ post.update | date: "%d " }}{{ updateMonth }}{{ post.update | date: " %Y" }}</p>
+      {% endif %}
 
-            <div class="article-preview">
-                <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-                {{ post.description }}
-            </div>
+      <div class="article-preview">
+        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        {{ post.description }}
+      </div>
 
-            {% if post.tags %}
-            <ul class="tags">
-            {% for tag in post.tags %}
-                <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-            {% endfor %}
-            </ul>
-            {% endif %}
-        </aside>
+      {% if post.tags %}
+      <ul class="tags">
+      {% for tag in post.tags %}
+        <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+    </aside>
 
-    </article>
-    {% endfor %}
+  </article>
+  {% endfor %}
 </section>
 <div class="loader"></div>
