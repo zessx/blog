@@ -85,5 +85,9 @@ header {
         top: 2 * $body_padding + 80px;
       }
     }
+
+    &[href="/recherche"] {
+      display: none;
+    }
   }
 }
