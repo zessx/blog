@@ -53,11 +53,9 @@ header {
 			padding: ($content_padding * 2) $content_padding;
 		}
 	}
-	.link-home,
-	.link-tags
-	.link-search {
+	.link-header {
 		position: fixed;
-		top: 0;
+		top: 2 * $body_padding;
 		left: 0;
 		padding: 0.5em 2em 0.5em 1em;
 		margin: 0;
@@ -79,14 +77,12 @@ header {
 				padding-right: 30px;
 			}
 		}
-	}
-	.link-home {
-		top: 2 * $body_padding;
-	}
-	.link-tags {
-		top: 2 * $body_padding + 40px;
-	}
-	.search-form {
-		top: 2 * $body_padding + 80px;
+                + .link-header {
+                        top: 2 * $body_padding + 40px;
+                        + .link-header {
+                                top: 2 * $body_padding + 80px;
+                        }
+                }
+
 	}
 }
