@@ -18,6 +18,10 @@ body {
   left: $body_padding;
   pointer-events: none;
 
+  &.small {
+    position: absolute;
+  }
+
   polygon {
     display: none;
 

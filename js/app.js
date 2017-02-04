@@ -35,7 +35,8 @@ function trianglify() {
   if(oldWidth == window.innerWidth) {
     return;
   }
-  var svg = document.querySelector('#canvas'),
+  var header = document.querySelector('.page-content header'),
+      svg = document.querySelector('#canvas'),
       svgBackground = document.querySelector('#canvas-background'),
       svgPolygons = document.querySelector('#canvas-polygons'),
       svgMask = document.querySelector('#canvas-mask');
@@ -52,8 +53,9 @@ function trianglify() {
 
   var margin = 30,
       fullWidth = window.innerWidth - margin * 2,
-      fullHeight = window.innerHeight - margin * 2,
+      fullHeight = header.classList.contains('small-header') ? 300 : window.innerHeight - margin * 2,
       attributes = {
+        'class': header.classList.contains('small-header') ? 'small' : '',
         'width': fullWidth,
         'height': fullHeight
       }
