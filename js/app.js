@@ -216,19 +216,19 @@ function infiniteLoad() {
       postsToLoad = document.querySelectorAll('.articles article').length,
       loadNewPostsThreshold = 3000,
       request = new XMLHttpRequest();
-  request.open('GET', '/posts.json', true);
+  request.open('GET', '/search.json', true);
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       var data = JSON.parse(request.responseText);
       if(loader = document.querySelector('.loader')) {
         if(tag = loader.getAttribute('data-tag')) {
-          for (var i = 0; i < data["posts"].length; i++) {
-            if(data["posts"][i].tags.indexOf(tag) >= 0) {
-              allPosts.push(data["posts"][i])
+          for (var i = 0; i < data.length; i++) {
+            if(data[i].tags.indexOf(tag) >= 0) {
+              allPosts.push(data[i])
             }
           };
         } else {
-          allPosts = data["posts"];
+          allPosts = data;
         }
       }
       if(allPosts.length <= postsToLoad) {
