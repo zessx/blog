@@ -15,7 +15,7 @@ header {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  padding: 0 100px;
+  padding: 0 $content_padding;
   color: $white;
 
   &.small-header {
@@ -105,7 +105,8 @@ header {
   .jekyll-search-input {
     border: none;
     padding: 1em;
-    width: 50%;
+    width: 100%;
+    max-width: 400px;
     font-size: 17px;
     text-align: center;
     text-transform: uppercase;
