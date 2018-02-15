@@ -44,7 +44,7 @@ header {
     transition: all $transition_header;
 
     [data-color="default"] & {
-      color: $grey_dark;
+      color: #075675;
     }
 
     #logo {
@@ -76,7 +76,11 @@ header {
     margin: 0;
     border: none;
     color: $white;
-    background: $grey_dark;
+    background: #02c39a;
+    background: -moz-linear-gradient(left, #02c39a 0%, #00a896 33%, #028090 66%, #075675 100%);
+    background: -webkit-linear-gradient(left, #02c39a 0%,#00a896 33%,#028090 66%,#075675 100%);
+    background: linear-gradient(to right, #02c39a 0%,#00a896 33%,#028090 66%,#075675 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02c39a', endColorstr='#075675',GradientType=1 );
     text-decoration: none;
     text-align: center;
     font-size: 14px;
