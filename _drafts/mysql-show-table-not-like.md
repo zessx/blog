@@ -26,9 +26,9 @@ Au cas où vous ne le sauriez pas, l'inverse ne fonctionne pas :
 
 Merde.
 
-En revanche, vous pouvez utilisez la commande suivante (avec une base de données est nommée `mabase`) :
+En revanche, vous pouvez utilisez la commande suivante (avec une base de données nommée `test`) :
 
-    SHOW TABLES WHERE tables_in_mabase NOT LIKE 'log_%';
+    mysql> SHOW TABLES WHERE tables_in_test NOT LIKE 'log_%';
 
 ## Liens
 
