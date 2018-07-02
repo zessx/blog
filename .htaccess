@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Common errors
+RewriteRule ^ga.js$ / [R=404,L,NC]
+
 # Jekyll: home page
 RewriteCond %{REQUEST_URI} ^index\.html$ [NC]
 RewriteRule . / [R=301,L,NC]
