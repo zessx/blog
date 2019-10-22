@@ -11,7 +11,7 @@ description: >
 
 > Articles du dossier :  
 > 
-> **I - Les traits**
+> **I - Les traits**   
 > [II - self versus static](https://blog.smarchal.com/self-versus-static) 
 
 ## Back to the future
