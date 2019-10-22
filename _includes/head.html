@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://ssl.google-analytics.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
+  <link rel="preload" href="{{ "/fonts/sourcecodepro-light-webfont.woff" | prepend: site.baseurl | prepend: site.url }}" as="font">
+  <link rel="preload" href="{{ "/fonts/SourceSansPro-ExtraLight.woff" | prepend: site.baseurl | prepend: site.url }}" as="font">
+
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
