@@ -52,4 +52,4 @@ Rien d'autre.
 
 ## Liens
 
-[Spécifications W3C sur les pseudos-éléments](http://www.w3.org/TR/2011/REC-CSS2-20110607/selector.html#before-and-after)
+[Spécifications W3C sur les pseudos-éléments](https://www.w3.org/TR/2011/REC-CSS2-20110607/selector.html#before-and-after)

@@ -165,4 +165,4 @@ Ou encore supprimer les doublons avec `DISTINCT`. On cherche ici à récupérer 
 
 ## Liens
 
-[Documentation sur les fonctions avec GROUP BY](http://dev.mysql.com/doc/refman/5.0/fr/group-by-functions.html)
+[Documentation sur les fonctions avec GROUP BY](https://dev.mysql.com/doc/refman/5.0/fr/group-by-functions.html)

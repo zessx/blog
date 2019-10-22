@@ -25,6 +25,5 @@ En mini-bonus, vous avez la possibilité d'utiliser les différents skins de jQu
 
 
 ## Liens
-[Awesome Cookie Manager sur le Chrome Web Store](https://chrome.google.com/webstore/detail/awesome-cookie-manager-be/hcpidejphgpcgfnpiehkcckkkemgneif)  
-[Le site des développeurs](http://www.upway2late.com/)  
+[Awesome Cookie Manager sur le Chrome Web Store](https://chrome.google.com/webstore/detail/awesome-cookie-manager-be/hcpidejphgpcgfnpiehkcckkkemgneif)   
 [Vanilla Cookie Manager sur le Chrome Web Store](https://chrome.google.com/webstore/detail/vanilla-cookie-manager/gieohaicffldbmiilohhggbidhephnjj)  

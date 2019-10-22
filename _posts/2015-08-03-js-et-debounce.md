@@ -50,7 +50,7 @@ Ici les événements `resize` ne font plus appel à la fonction `draw()`, mais �
 
 ## Généraliser le debounce
 
-Pour avoir une fonction un peu plus générique, vous pouvez utiliser le code de celle proposée par la librairie [underscore.js](http://underscorejs.org/docs/underscore.html#section-83) :
+Pour avoir une fonction un peu plus générique, vous pouvez utiliser le code de celle proposée par la librairie [underscore.js](https://underscorejs.org/docs/underscore.html#section-83) :
 
     function debounce(func, wait, immediate) {
         var timeout, args, context, timestamp, result;
@@ -89,4 +89,4 @@ Vous pourrez ainsi appeler n'importe quelle fonction via un debounce.
 
 ## Liens
 
-[Underscore.js](http://underscorejs.org/)
+[Underscore.js](https://underscorejs.org/)

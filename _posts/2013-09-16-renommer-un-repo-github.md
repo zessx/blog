@@ -28,4 +28,4 @@ Notez les noms, on considérera ici que vous avez utilisé le mot-clé `origin`.
 Si vous êtes seul à travailler sur le projet, vous n'aurez aucun souci à faire la manipulation. En revanche, si d'autres développeurs sont déjà sur ce projet, vous devrez leur communiquer la nouvelle url pour le repo distant, afin que chacun fasse la manipulation de son côté (ou clone le projet une nouvelle fois).
 
 ## Liens
-[Documentation Git - remote](http://git-scm.com/docs/git-remote)
+[Documentation Git - remote](https://git-scm.com/docs/git-remote)
