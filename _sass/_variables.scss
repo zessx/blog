@@ -64,7 +64,7 @@ $colors: (
   [data-c="#{$tag}"] #partager-block > a:hover {
     background: $color;
   }
-  [data-fill="#{$tag}"] canvas rect {
+  [data-c="#{$tag}"] canvas rect {
     fill: $color;
   }
 }
