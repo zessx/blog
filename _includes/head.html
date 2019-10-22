@@ -28,15 +28,29 @@
   <meta property="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />{% if page.layout == "listing" %}
   <meta property="twitter:title" content="{{ page.title }}" />{% endif %}
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://accounts.google.com">
+  <link rel="preconnect" href="https://ssl.gstatic.com">
+  <link rel="preconnect" href="https://apis.google.com">
+
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="me" href="https://twitter.com/{{ site.twitter_username }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ "/images/logo.png" | prepend: site.baseurl | prepend: site.url }}">
 
-  <script src="{{ "/js/jekyll-search.min.js" | prepend: site.baseurl | prepend: site.url }}" type="text/javascript"></script>
-  <script src="{{ "/js/app.js" | prepend: site.baseurl | prepend: site.url }}" type="text/javascript"></script>
+  <script src="{{ "/js/jekyll-search.min.js" | prepend: site.baseurl | prepend: site.url }}" type="text/javascript" async></script>
+  <script src="{{ "/js/app.js" | prepend: site.baseurl | prepend: site.url }}" type="text/javascript" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" defer></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Roboto:300,500']
+      }
+    });
+  </script>
+
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-32364969-2']);
