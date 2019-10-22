@@ -54,6 +54,7 @@ $colors: (
   [data-c="#{$tag}"] #partager-block > a:hover::before,
   [data-c="#{$tag}"] #partager-block > a:hover::after,
   section.articles article[data-c="#{$tag}"] h2 a,
+  section.tags[data-c="#{$tag}"] > a:hover,
   section.tags[data-c="#{$tag}"] h2 a {
     color: $color;
   }
