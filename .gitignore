@@ -1,4 +1,5 @@
 .sass-cache/
+.jekyll-cache/
 .vscode/
 .DS_Store
 _site/
