@@ -169,7 +169,7 @@ function jekyllSearch() {
         }
       },
       searchResultTemplate: '\
-        <article data-color="{class}">\
+        <article data-c="{class}">\
           <aside>\
             <p class="date">{date}</p>\
             {update}\
@@ -286,7 +286,7 @@ function infiniteLoad() {
         Array.prototype.forEach.call(posts, function(post, index){
           if(loader = document.querySelector('.loader')) {
             if(tag = loader.getAttribute('data-tag')) {
-              post.setAttribute('data-color', tag);
+              post.setAttribute('data-c', tag);
             }
           }
           post.classList.remove('full-article');

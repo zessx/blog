@@ -43,7 +43,7 @@ header {
     -webkit-transition: all $transition_header;
     transition: all $transition_header;
 
-    [data-color="default"] & {
+    [data-c="default"] & {
       color: #075675;
     }
 

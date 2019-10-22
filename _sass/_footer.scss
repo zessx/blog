@@ -96,20 +96,14 @@ body > footer {
         -webkit-transition: all .4s;
         transition: all .4s;
       }
-      &:hover,
-      &:focus {
+      &:hover {
         color: $grey_dark;
 
-        @each $tag, $color in $colors {
-          [data-color="#{$tag}"] & {
-            background: $color;
-
-            &:before,
-            &:after {
-              border-top-color: $color;
-              border-bottom-color: $color;
-            }
-          }
+        &:before,
+        &:after {
+          background: currentColor;
+          border-top-color: currentColor;
+          border-bottom-color: currentColor;
         }
       }
     }
@@ -138,16 +132,8 @@ body > footer {
       }
     }
 
-    #disqus_thread {
+    @at-root #disqus_thread {
       color: $grey_dark;
-
-      a {
-        @each $tag, $color in $colors {
-          [data-color="#{$tag}"] & {
-            color: $color;
-          }
-        }
-      }
     }
   }
 }

@@ -89,12 +89,6 @@ article {
           &:hover,
           &:focus {
             box-shadow: none;
-
-            @each $tag, $color in $colors {
-              [data-color="#{$tag}"] {
-                color: $color;
-              }
-            }
           }
         }
       }

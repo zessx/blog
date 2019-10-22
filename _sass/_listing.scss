@@ -40,11 +40,6 @@ section.articles {
         content: none;
       }
     }
-    @each $tag, $color in $colors {
-      &[data-color="#{$tag}"] h2 a {
-        color: $color;
-      }
-    }
 
     .article-preview {
       display: block;
@@ -97,14 +92,10 @@ section.tags {
     box-shadow: inset 0 0 0 1px $grey;
     text-decoration: none;
 
-    @each $tag, $color in $colors {
-      &[data-color="#{$tag}"] {
-        &:hover,
-        &:focus {
-          color: $color;
-          box-shadow: inset 0 0 0 2px $color;
-        }
-      }
+    &:hover,
+    &:focus {
+      color: $color;
+      box-shadow: inset 0 0 0 2px currentColor;
     }
   }
   &:after {

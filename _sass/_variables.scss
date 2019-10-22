@@ -42,7 +42,28 @@ $colors: (
   "regex"           : $defaultcolor,
   "software"        : $defaultcolor,
   "bash"            : $defaultcolor
-  );
+);
+
+// Optimized to minimize the CSS generated
+@each $tag, $color in $colors {
+  [data-c="#{$tag}"] ::-moz-selection,
+  [data-c="#{$tag}"] ::selection,
+  [data-c="#{$tag}"] p a:hover,
+  [data-c="#{$tag}"] li a:hover,
+  [data-c="#{$tag}"] #disqus_thread a:hover,
+  [data-c="#{$tag}"] #partager-block > a:hover::before,
+  [data-c="#{$tag}"] #partager-block > a:hover::after,
+  section.articles article[data-c="#{$tag}"] h2 a {
+  section.tags[data-c="#{$tag}"] h2 a {
+    color: $color;
+  }
+  [data-c="#{$tag}"] #partager-block > a:hover {
+    background: $color;
+  }
+  [data-fill="#{$tag}"] canvas rect {
+    fill: $color;
+  }
+}
 
 $white              : #fff;
 $grey               : #bbb;
