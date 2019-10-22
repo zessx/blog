@@ -124,7 +124,8 @@ function headingAnchors() {
     var link = document.createElement('a');
     link.setAttributes({
       'name': el.getAttribute('id'),
-      'href': '#' + el.getAttribute('id')
+      'href': '#' + el.getAttribute('id'),
+      'aria-label': el.innerText
     });
     el.removeAttribute('id');
     el.appendChild(link);
