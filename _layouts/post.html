@@ -26,7 +26,7 @@ layout: full
   <a href="/recherche" class="link-header"><span>Recherche</span></a>
 </header>
 
-<article class="full-article" data-c="{{ page.tags | first }}">
+<article class="full-article c-{{ page.tags | first }}">
   <aside>
     <p class="date">{{ page.date | date: "%d " }}{{ dateMonth }}{{ page.date | date: " %Y" }}</p>
     {% if page.update %}
