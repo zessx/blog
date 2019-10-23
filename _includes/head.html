@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://accounts.google.com">
   <link rel="preconnect" href="https://ssl.gstatic.com">
   <link rel="preconnect" href="https://apis.google.com">
-  <link rel="preconnect" href="https://ssl.google-analytics.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link rel="preload" href="{{ "/fonts/sourcecodepro-light-webfont.woff" | prepend: site.baseurl | prepend: site.url }}" as="font">
@@ -46,15 +45,4 @@
 
   <script src="{{ "/js/jekyll-search.min.js" | prepend: site.baseurl | prepend: site.url }}" type="text/javascript" async></script>
   <script src="{{ "/js/app.js" | prepend: site.baseurl | prepend: site.url }}" type="text/javascript" defer></script>
-
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-32364969-2']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
 </head>

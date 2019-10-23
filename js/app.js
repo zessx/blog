@@ -131,7 +131,7 @@ function headingAnchors() {
     el.appendChild(link);
   });
 }
-document.addEventListener('DOMContentLoaded', headingAnchors, false);
+window.addEventListener('load', headingAnchors, false);
 
 // Open social links in new tab
 function socialLinksInNewTab() {
@@ -140,7 +140,7 @@ function socialLinksInNewTab() {
     el.setAttribute('target', '_blank');
   });
 }
-document.addEventListener('DOMContentLoaded', socialLinksInNewTab, false);
+window.addEventListener('load', socialLinksInNewTab, false);
 
 // Enable search in Jekyll
 var months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
@@ -184,7 +184,7 @@ function jekyllSearch() {
     });
   }
 }
-document.addEventListener('DOMContentLoaded', jekyllSearch, false);
+window.addEventListener('load', jekyllSearch, false);
 
 // Double click on code block to select all
 function selectCode() {
@@ -207,7 +207,7 @@ function selectCode() {
     );
   });
 }
-document.addEventListener('DOMContentLoaded', selectCode, false);
+window.addEventListener('load', selectCode, false);
 
 // Infinite load
 function infiniteLoad() {
@@ -307,4 +307,4 @@ function infiniteLoad() {
   }
 
 }
-document.addEventListener('DOMContentLoaded', infiniteLoad, false);
+window.addEventListener('load', infiniteLoad, false);
