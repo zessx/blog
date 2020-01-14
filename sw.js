@@ -15,6 +15,7 @@ self.addEventListener('install', function(e) {
         '/fonts/sourcecodepro-light-webfont.woff',
         '/fonts/SourceSansPro-ExtraLight.woff',
         '/search.json',
+        '/manifest.json',
       ];
 
       const request = async () => {
