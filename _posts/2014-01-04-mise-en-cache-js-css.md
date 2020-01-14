@@ -6,7 +6,7 @@ tags:
 - apache
 - html
 - php
-- server
+- sysadmin
 description: >
   Le cache, c'est la vie, mais il arrive parfois qu'il pose quelques soucis.
 ---
