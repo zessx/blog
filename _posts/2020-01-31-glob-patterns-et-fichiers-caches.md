@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Inclure les fichiers cachés dans les glob patterns"
-date:   2020-31-01
+date:   2020-01-31
 tags:
 - bash
 - sysadmin
