@@ -30,13 +30,13 @@ body {
     }
   }
   rect {
-    fill: $white;
+    fill: $frontground;
   }
 
   &:before {
     content: '';
     position: absolute;
-    box-shadow: inset 0 0 0 30px $white;
+    box-shadow: inset 0 0 0 30px $frontground;
     height: 100vh;
     width: 100vw;
     z-index: 80;
@@ -45,20 +45,20 @@ body {
 }
 
 a {
-  color: $grey_dark;
+  color: $background;
 }
 
 .page-content {
-  color: $grey_dark;
-  background: $white;
+  color: $background;
+  background: $frontground;
 }
 
 ::-moz-selection {
-  background: $grey_dark;
+  background: $background;
 }
 
 ::selection {
-  background: $grey_dark;
+  background: $background;
 }
 
 h2 {
@@ -145,7 +145,7 @@ p, li {
 
     &:hover {
       box-shadow:
-        inset 0 -23px $white,
+        inset 0 -23px $frontground,
         inset 0 -25px currentColor;
     }
 
@@ -178,7 +178,7 @@ pre {
   position: relative;
   margin: $section_padding 0;
   padding: $section_padding 0;
-  color: $white;
+  color: $frontground;
 
   &:before {
     content: '';
@@ -190,7 +190,7 @@ pre {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: $grey_dark;
+    background: $background;
     z-index: 1;
   }
   &:after {
@@ -273,14 +273,14 @@ kbd {
   background-color: $grey_light;
   border: 1px solid $grey;
   border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px $white inset;
-  color: $grey_dark;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px $frontground inset;
+  color: $background;
   display: inline-block;
   font-size: 80%;
   line-height: 1.4;
   margin: 0 .1em;
   padding: .1em .5em;
-  text-shadow: 0 1px 0 $white;
+  text-shadow: 0 1px 0 $frontground;
   vertical-align: text-top;
 }
 strong {
