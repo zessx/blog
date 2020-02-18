@@ -37,8 +37,12 @@ article {
     text-align: center;
 
     .date {
-      color: $background;
+      color: $grey_dark;
       margin: 0 auto;
+
+      @include darkmode() {
+        color: $white;
+      }
 
       &:before,
       &:after {
@@ -81,10 +85,14 @@ article {
 
         a {
           text-decoration: none;
-          color: $background;
+          color: $grey_dark;
           font-size: 80%;
           padding: 2px 8px;
           border: 1px solid;
+
+          @include darkmode() {
+            color: $white;
+          }
 
           &:hover {
             box-shadow: none;
