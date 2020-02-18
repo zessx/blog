@@ -98,9 +98,13 @@ function trianglify() {
                       coords = points[i+numPointsX].join(',')+' '+points[i+1].join(',')+' '+points[i+numPointsX+1].join(',');
                   }
               }
+              var fillColor = '0,0,0';
+              if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                fillColor = '255,255,255';
+              }
               polygon.setAttributes({
                 'points': coords,
-                'fill': 'rgba(0,0,0,'+(Math.random()/4)+')'
+                'fill': 'rgba('+fillColor+','+(Math.random()/4)+')'
               });
               polygonClone = polygon.cloneNode();
               polygons.push(polygon);
