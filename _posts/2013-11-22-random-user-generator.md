@@ -45,7 +45,7 @@ Vous obtenez un objet JSON formaté comme ci-dessous :
 				phone: "(471)-543-4073",
 				cell: "(651)-308-4754",
 				SSN: "160-76-1677",
-				picture: "https://api.randomuser.me/0.2/portraits/women/6.jpg"
+				picture: "https://randomuser.me/api/portraits/women/22.jpg"
 			},
 			seed: "tinyGoose"
 		}]
