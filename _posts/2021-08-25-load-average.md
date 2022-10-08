@@ -98,7 +98,7 @@ Pour information, voici les niveaux que j'utilise dans mon monitoring de serveur
 - Niveau d'alerte à 0.9 / 0.7 / 0.5
 - Niveau critique à 1.0 / 0.8 / 0.6
 
-Si un load average dépasse la valeur de 2.0 sur la dernière minute, ou de 1.2 sur les 15 dernières minutes, le niveau critique est atteint. À noter que ces valeurs ne sont pas identiques (2.0 / 2.0 / 2.0) car les moyennes sont pondérées, avec une importance plus grande apportée aux valeurs récentes.
+Si un load average dépasse la valeur de 1.0 sur la dernière minute, ou de 0.6 sur les 15 dernières minutes, le niveau critique est atteint. À noter que ces valeurs ne sont pas identiques (1.0 / 1.0 / 1.0) car les moyennes sont pondérées, avec une importance plus grande apportée aux valeurs récentes.
 
 Ces valeurs sont évidemment à multiplier par le nombre de cœurs de la machine (voire plus avec l'Hyper-Threading).
 
@@ -135,4 +135,4 @@ Malgré une moyenne de charge à 97%, 76% du CPU est inactif. Il ne s'agit donc 
 Probablement votre meilleure chance d'améliorer les choses. La plupart du temps, le load average met en évidence des problèmes de performances dans la codebase. Il peut être assez ardu d'en identifier la source, commencez par surveiller le nombre de visites et l'évolution du load average dans le temps (dans le cas d'un serveur accessible via le web) :
 - Si le nombre de visites est correlé avec le load average, voyez pour mettre en place un proxy et du cache pour soulager votre serveur web.
 - Si le load average augmente soudainement à des heures précises, rechercher quels crons sont lancés à ces moment et optimisez-les
-- Si le load average augmente progressivement avec le temps, vous oubliez probablement de fermer certaines flux quand vous n'en avez plus besoin
+- Si le load average augmente progressivement avec le temps, vous oubliez probablement de fermer certains flux quand vous n'en avez plus besoin
