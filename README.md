@@ -1,6 +1,5 @@
-# Samuel Marchal > Le Blog
+# Personal blog
 
-Laboratoire public, ce blog est l'aggrégation de toutes
-mes expériences dans le domaine du développement web.
+Made with [Jekyll](https://jekyllrb.com/).
 
-[blog.smarchal.com](http://blog.smarchal.com)
+→ [blog.smarchal.com](https://blog.smarchal.com)
