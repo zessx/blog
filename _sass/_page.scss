@@ -27,10 +27,12 @@ body {
   }
 
   polygon {
-    display: none;
+    display: block;
+    opacity: 0;
+    transition: 0.7s;
 
     &.visible {
-      display: block;
+      opacity: 1;
     }
   }
   rect {
