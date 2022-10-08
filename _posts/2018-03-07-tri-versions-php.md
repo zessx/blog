@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Trier un tableau de versions en PHP"
-date:   2015-01-01
+date:   2018-03-07
 tags:
 - php
 description: >
