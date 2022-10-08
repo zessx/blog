@@ -235,6 +235,9 @@ pre {
     background: $grey_dark;
     z-index: 1;
 
+    @include darkmode() {
+      background: $white;
+    }
   }
   &:after {
     @extend %font-regular;
