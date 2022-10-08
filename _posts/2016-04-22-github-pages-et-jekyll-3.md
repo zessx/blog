@@ -11,7 +11,7 @@ description: >
 
 ## Une nouvelle ère
 
-Depuis le 1er févier dernier, GitHub a déployé la 3e version de Jekyll, pour servir ses GitHub Pages. J'ai déjà parlé de ces pages à plusieurs reprises ([ici](http://blog.smarchal.com/heberger-son-site-sur-github), ou encore [là](http://blog.smarchal.com/v3)) quand j'avais décidé d'héberger mon blog sur GitHub, puis lors de sa refonte l'année dernière.
+Depuis le 1er févier dernier, GitHub a déployé la 3e version de Jekyll, pour servir ses GitHub Pages. J'ai déjà parlé de ces pages à plusieurs reprises ([ici](https://blog.smarchal.com/heberger-son-site-sur-github), ou encore [là](https://blog.smarchal.com/v3)) quand j'avais décidé d'héberger mon blog sur GitHub, puis lors de sa refonte l'année dernière.
 
 Et qu'apporte donc Jekyll 3 ?
 

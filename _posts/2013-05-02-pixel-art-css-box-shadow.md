@@ -100,8 +100,8 @@ Notez au passage que, même avec un `background: none`, vous ne pourrez pas affi
 <center><iframe src="{{ site.url }}/demos/pixel-art-css-box-shadow/index.html" width="340" height="430"></iframe></center>
 
 ## Liens
-[**Démonstration**](http://blog.smarchal.com/demos/pixel-art-css-box-shadow/index.html)
-[Un début de générateur que je prendrait (peut-être) le temps d'améliorer](http://blog.smarchal.com/demos/pixel-art-css-box-shadow/generator.php)
+[**Démonstration**](https://blog.smarchal.com/demos/pixel-art-css-box-shadow/index.html)
+[Un début de générateur que je prendrait (peut-être) le temps d'améliorer](https://blog.smarchal.com/demos/pixel-art-css-box-shadow/generator.php)
 [Spécifications de la propriété box-shadow](http://www.w3.org/TR/css3-background/#the-box-shadow")
 [Le Sonic complet sur CodePen](http://codepen.io/zessx/pen/BsfFt")
 [Un générateur de box-shadow pour les fainéants](http://cssmatic.com/box-shadow)

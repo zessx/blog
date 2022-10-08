@@ -28,7 +28,7 @@ N'oubliez pas l'option `-g` pour que ce soit une installation globale. Sans cett
 Comme pour SASS, nous allons créer un fichier de build spécifique pour le JS, qui définira quelle commande Sublime Text exécutera à l'enregistrement de nos fichiers.
 
 En parlant d'enregistrement... Avez-vous installé [**SublimeOnSaveBuild**](https://sublime.wbond.net/packages/SublimeOnSaveBuild) ?
-Pour ceux qui n'auraient pas lu [l'article sur SASS](http://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3) (COMMENT ?!!), il s'agit simplement d'un package qui lance les builds correspondants à chaque fois que vous enregistrez votre fichier.
+Pour ceux qui n'auraient pas lu [l'article sur SASS](https://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3) (COMMENT ?!!), il s'agit simplement d'un package qui lance les builds correspondants à chaque fois que vous enregistrez votre fichier.
 Il est utile, mais facultatif, vous pouvez toujours lancer les builds à la main à l'aide d'un petit <kbd>Ctrl + B</kbd>
 
 Pour créer le fichier de build : cliquez sur ***Preferences > Browse Packages***, rendez-vous dans le dossier ***User/***, et créez un fichier ***JS.sublime-build*** contenant ce code :
@@ -114,7 +114,7 @@ Vous pouvez gardez l'option `--mangle`, mais si la lisibilité est votre but, ce
 
 ## Liens
 
-[Guide d'installation de SASS avec Sublime Text 3](http://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3)
+[Guide d'installation de SASS avec Sublime Text 3](https://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3)
 [UglifyJS](https://github.com/mishoo/UglifyJS2)
 [NodeJS](http://nodejs.org/)
 [SublimeOnSaveBuild](https://sublime.wbond.net/packages/SublimeOnSaveBuild)

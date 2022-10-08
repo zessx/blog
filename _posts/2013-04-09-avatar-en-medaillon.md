@@ -90,7 +90,7 @@ Voici le résultat que vous obtenez suite à ce petit billet :
 
 
 ## Liens
-[**Démonstration**](http://blog.smarchal.com/demos/avatar-en-medaillon/index.html)
+[**Démonstration**](https://blog.smarchal.com/demos/avatar-en-medaillon/index.html)
 [Référence CSS - border-radius](https://developer.mozilla.org/fr/docs/CSS/border-radius)
 [Référence CSS - box-shadow](https://developer.mozilla.org/fr/docs/CSS/box-shadow)
 [Référence CSS - filter](https://developer.mozilla.org/fr/docs/CSS/filter)

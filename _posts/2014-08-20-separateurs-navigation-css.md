@@ -82,4 +82,4 @@ Il ne reste à présent qu'à rajouter les séparateurs, en utilisant une combin
 <center><iframe src="{{ site.url }}/demos/separateurs-navigation-css/index.html" width="600" height="90"></iframe></center>
 
 ## Liens
-[**Démonstration**](http://blog.smarchal.com/demos/separateurs-navigation-css/index.html)
+[**Démonstration**](https://blog.smarchal.com/demos/separateurs-navigation-css/index.html)

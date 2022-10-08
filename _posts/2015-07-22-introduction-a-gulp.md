@@ -13,7 +13,7 @@ description: >
 
 Si vous me lisez depuis quelques temps, vous savez probablement que je suis un fervent utilisateur de Sass.
 
-J'ai initialement utilisé [SublimeOnSaveBuild](http://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3/#package--sublimeonsavebuild) pour gérer la compilation automatiquement.
+J'ai initialement utilisé [SublimeOnSaveBuild](https://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3/#package--sublimeonsavebuild) pour gérer la compilation automatiquement.
 Quand j'ai changé d'emploi et que j'ai commencé à travailler avec de nouveaux collègues, j'ai cherché à généraliser l'utilisation de Sass au sein de l'équipe.
 Je me voyais mal leur imposer, en plus d'un nouveau langage, mon éditeur de texte et sa configuration.
 

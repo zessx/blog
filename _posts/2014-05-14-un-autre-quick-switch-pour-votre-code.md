@@ -10,7 +10,7 @@ description: >
   J'avais déjà parlé d'un premier quick-switch dans un article de 2013, en voici un autre plus compressé que j'ai découvert tout récemment.
 ---
 
-Article précédent : [Switcher rapidement entre deux blocs de CSS](http://blog.smarchal.com/switcher-rapidement-entre-deux-blocs-de-css)
+Article précédent : [Switcher rapidement entre deux blocs de CSS](https://blog.smarchal.com/switcher-rapidement-entre-deux-blocs-de-css)
 
 ## Bloc 1 actif :
 
@@ -68,4 +68,4 @@ Ici, le switch se fait en ajoutant un slash au début de la première ligne. Cel
 Notez qu'il est possible d'insérer des commentaires sur une ligne à l'intérieur de ces blocs, sans affecter le switch.
 
 ## Liens
-[Un autre quick-switch](http://blog.smarchal.com/switcher-rapidement-entre-deux-blocs-de-css)
+[Un autre quick-switch](https://blog.smarchal.com/switcher-rapidement-entre-deux-blocs-de-css)

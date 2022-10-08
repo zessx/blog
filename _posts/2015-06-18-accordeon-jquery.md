@@ -111,6 +111,6 @@ Voici les quelques fonctions de base de jQuery dans ce script :
 
 ## Liens
 
-[**Démonstration**](http://blog.smarchal.com/demos/accordeon-jquery/index.html)
+[**Démonstration**](https://blog.smarchal.com/demos/accordeon-jquery/index.html)
 [Documentation jQuery](http://api.jquery.com/)
 [Le composant natif Accordion, sur jQuery UI](http://jqueryui.com/accordion/)

@@ -15,7 +15,7 @@ Une fois n'est pas coutume, je vais commencer par le résultat final, histoire q
 
 <center><iframe src="{{ site.url }}/demos/chaos-avec-nth-child/index.html" width="600" height="600"></iframe></center>
 
-(Vous noterez l'utilisation de [Random User Generator](http://blog.smarchal.com/random-user-generator) dont j'ai parlé dans un précédent billet)
+(Vous noterez l'utilisation de [Random User Generator](https://blog.smarchal.com/random-user-generator) dont j'ai parlé dans un précédent billet)
 
 ## La base avant tout
 
@@ -125,7 +125,7 @@ Et là, ça send tout de suite moins le ménage de printemps ! Voici donc commen
 
 
 ## Liens
-[**Démonstration**](http://blog.smarchal.com/demos/chaos-avec-nth-child/index.html)
-[Random User Generator, utilisé pour les portraits et les noms](http://blog.smarchal.com/random-user-generator)
+[**Démonstration**](https://blog.smarchal.com/demos/chaos-avec-nth-child/index.html)
+[Random User Generator, utilisé pour les portraits et les noms](https://blog.smarchal.com/random-user-generator)
 [Can I Use ? transform](http://caniuse.com/#feat=transforms2d)
 [Master of the :nth-child()](http://nthmaster.com/)

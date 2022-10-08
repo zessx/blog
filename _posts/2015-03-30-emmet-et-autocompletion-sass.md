@@ -11,7 +11,7 @@ description: >
 
 ## Le petit truc qui vient gâcher la fête
 
-Déjà, pour ceux qui n'utiliseraient pas encore Emmet, je vous invite à le découvrir rapidement [sur un autre article de ce blog](http://blog.smarchal.com/emmet). L'article en question est loin d'être complet, il présente rapidement l'outil et ses utilisations principales.
+Déjà, pour ceux qui n'utiliseraient pas encore Emmet, je vous invite à le découvrir rapidement [sur un autre article de ce blog](https://blog.smarchal.com/emmet). L'article en question est loin d'être complet, il présente rapidement l'outil et ses utilisations principales.
 
 Emmet fourni aussi un grand nombre de raccourcis en CSS, comme :
 
@@ -30,7 +30,7 @@ Notez l'absence du point-virgule. Ce n'est pas grand chose, mais vous êtes obli
 
 ## Pourquoi ce bug, et comment le corriger ?
 
-Premièrement, il ne s'agit pas d'un bug proprement dit. Emmet associe les fichiers `.sass` et `.scss` à la syntaxe par défaut de Sass, qui est SASS (en majuscules, voir l'introduction de [cet article](http://blog.smarchal.com/les-variables-sass) pour la désambiguïsation). C'est là que tout se joue : la syntaxe SASS ne requiert aucun point-virgule en fin de ligne (contrairement à la syntaxe SCSS). `top: 0` est donc parfaitement valide tant que vous n'utilisez pas SCSS.
+Premièrement, il ne s'agit pas d'un bug proprement dit. Emmet associe les fichiers `.sass` et `.scss` à la syntaxe par défaut de Sass, qui est SASS (en majuscules, voir l'introduction de [cet article](https://blog.smarchal.com/les-variables-sass) pour la désambiguïsation). C'est là que tout se joue : la syntaxe SASS ne requiert aucun point-virgule en fin de ligne (contrairement à la syntaxe SCSS). `top: 0` est donc parfaitement valide tant que vous n'utilisez pas SCSS.
 
 Si comme moi vous êtes un utilisateur exclusif de la syntaxe SCSS, vous pouvez forcer Emmet à rajouter ce point-virgule. Il va falloir pour cela changer la propriété `sass.propertyEnd` dans vos préférences utilisateur.
 Ouvrez le fichier <kbd>Preferences</kbd> > <kbd>Package Settings</kbd> > <kbd>Emmet</kbd> > <kbd>Settings — User</kbd>, et collez-y ce code :

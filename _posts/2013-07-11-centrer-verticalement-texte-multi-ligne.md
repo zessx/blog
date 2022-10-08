@@ -53,4 +53,4 @@ La syntaxe HTML redevient alors celle d'origine :
 	<p class="va">Mon texte sur une ou plusieurs lignes</p>
 
 ## Liens
-[**Démonstration**](http://blog.smarchal.com/demos/centrer-verticalement-texte-multi-ligne/)
+[**Démonstration**](https://blog.smarchal.com/demos/centrer-verticalement-texte-multi-ligne/)

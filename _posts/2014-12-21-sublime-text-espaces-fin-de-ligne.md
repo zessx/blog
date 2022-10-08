@@ -50,6 +50,5 @@ Des espaces supprimés en fin de ligne à chaque enregistrement, sauf sur la lig
 
 ## Liens
 [Sublime Text 3](http://www.sublimetext.com/3)
-[Mes préférences utilisateur pour ST3](https://gist.github.com/zessx/8235212)
 [Le Markdown](http://fr.wikipedia.org/wiki/Markdown)
 [Dropplets](http://dropplets.com/)

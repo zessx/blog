@@ -72,5 +72,5 @@ L'url dispose de quelques options, afin d'affiner les profils que vous désirer 
 <center><iframe src="{{ site.url }}/demos/random-user-generator/index.html" width="600" height="200"></iframe></center>
 
 ## Liens
-[**Démonstration**](http://blog.smarchal.com/demos/random-user-generator/index.html)
+[**Démonstration**](https://blog.smarchal.com/demos/random-user-generator/index.html)
 [Le site de Random User generator](http://randomuser.me)

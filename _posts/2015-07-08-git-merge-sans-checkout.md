@@ -10,7 +10,7 @@ description: >
 
 ## De branche en branche...
 
-Si vous utilisez les [pages GitHub](http://blog.smarchal.com/heberger-son-site-sur-github/), vous utilisez très probablement deux branches :
+Si vous utilisez les [pages GitHub](https://blog.smarchal.com/heberger-son-site-sur-github/), vous utilisez très probablement deux branches :
 
 - `master` pour la version de développement
 - `gh-pages` pour la version de production, propulsée par GitHub Pages

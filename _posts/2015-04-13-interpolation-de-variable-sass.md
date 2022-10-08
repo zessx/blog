@@ -10,8 +10,8 @@ description: >
 
 > Articles du dossier :
 >
-> [I - Les variables Sass et leur portée](http://blog.smarchal.com/les-variables-sass)
-> [II - Les variables et les opérations en Sass](http://blog.smarchal.com/variables-et-operations-en-sass)
+> [I - Les variables Sass et leur portée](https://blog.smarchal.com/les-variables-sass)
+> [II - Les variables et les opérations en Sass](https://blog.smarchal.com/variables-et-operations-en-sass)
 > **III - L'interpolation de variable en Sass**
 
 ## L'interpolation
@@ -38,7 +38,7 @@ Prenons le cas de la chaîne de caractère pour commencer :
 
 Le résultat affiché sera `Author — $author` car la variable n'est pas évaluée. Pour qu'elle le soit, nous avons deux solutions :
 
-- la concaténation : `content: 'Author — ' + $author;` ([vue dans l'article précédent](http://blog.smarchal.com/variables-et-operations-en-sass))
+- la concaténation : `content: 'Author — ' + $author;` ([vue dans l'article précédent](https://blog.smarchal.com/variables-et-operations-en-sass))
 - l'interpolation : `content: 'Author — #{$author}';`
 
 Dans un cas comme dans l'autre, la variable sera évaluée, et le résultat affiché sera : `Author — @zessx`.

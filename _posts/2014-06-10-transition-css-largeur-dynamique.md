@@ -83,6 +83,6 @@ Et c'est encore plus complexe avec les différentes valeurs de `transition-timin
 <center><iframe src="{{ site.url }}/demos/transition-css-largeur-dynamique/index.html" width="400" height="250"></iframe></center>
 
 ## Liens
-[**Démonstration**](http://blog.smarchal.com/demos/transition-css-largeur-dynamique/index.html)
+[**Démonstration**](https://blog.smarchal.com/demos/transition-css-largeur-dynamique/index.html)
 [Les transitions CSS - W3C](http://www.w3.org/TR/css3-transitions/)
 [Utiliser les transition CSS - MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)

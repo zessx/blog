@@ -10,9 +10,9 @@ description: >
 
 > Articles du dossier :
 >
-> [I - Les variables Sass et leur portée](http://blog.smarchal.com/les-variables-sass)
+> [I - Les variables Sass et leur portée](https://blog.smarchal.com/les-variables-sass)
 > **II - Les variables et les opérations en Sass**
-> [III - Interpolation de variables en Sass](http://blog.smarchal.com/interpolation-de-variable-sass)
+> [III - Interpolation de variables en Sass](https://blog.smarchal.com/interpolation-de-variable-sass)
 
 ## Référencer une autre variable
 

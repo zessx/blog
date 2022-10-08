@@ -10,7 +10,7 @@ description: >
 
 ## Pourquoi cloner ?
 
-Prenons un [objet de type anonyme](http://blog.smarchal.com/types-anonymes-en-php) tout simple :
+Prenons un [objet de type anonyme](https://blog.smarchal.com/types-anonymes-en-php) tout simple :
 
 	$foo = (object) array('value' => 10);
 
@@ -49,4 +49,4 @@ Notez que l'utilisation de `clone` va provoquer l'appel à la fonction `__clone(
 
 ## Liens
 [Le clonage en PHP](http://php.net/manual/fr/language.oop5.cloning.php)
-[Les types anonymes en PHP](http://blog.smarchal.com/types-anonymes-en-php)
+[Les types anonymes en PHP](https://blog.smarchal.com/types-anonymes-en-php)

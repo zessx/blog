@@ -11,7 +11,7 @@ description: >
 
 ## Article tripartite condensé
 
-Rentrons directement dans le vif du sujet, je vais vous présenter le code que j'utilise aujourd'hui, pour **centrer horizontalement et verticalement** n'importe quel bloc, dans n'importe quelle situation. J'inclue ce code dans un placeholder Sass (voir mon article sur [OOSCSS](http://blog.smarchal.com/oocss-et-ooscss) pour des exemples d'utilisation des placeholders), mais vous pouvez l'utiliser en CSS tout aussi simplement.
+Rentrons directement dans le vif du sujet, je vais vous présenter le code que j'utilise aujourd'hui, pour **centrer horizontalement et verticalement** n'importe quel bloc, dans n'importe quelle situation. J'inclue ce code dans un placeholder Sass (voir mon article sur [OOSCSS](https://blog.smarchal.com/oocss-et-ooscss) pour des exemples d'utilisation des placeholders), mais vous pouvez l'utiliser en CSS tout aussi simplement.
 
     %centered-box {
     	position: absolute;

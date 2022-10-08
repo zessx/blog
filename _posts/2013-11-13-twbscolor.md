@@ -68,11 +68,11 @@ Le [composant navbar](http://getbootstrap.com/components/#navbar) est un des plu
 	  </div><!-- /.navbar-collapse -->
 	</nav>
 
-Comme on peut le voir, il est assez complexe dans sa structure, bien qu'assez facile à appréhender. Cette complexité va nous poser problème quand vous aurez envie de modifier la couleur du composant. Ce dernier utilise en effet plusieurs couleurs, et à différents endroits. C'est là qu'intervient [TWBSColor](http://work.smarchal.com/twbscolor/)...
+Comme on peut le voir, il est assez complexe dans sa structure, bien qu'assez facile à appréhender. Cette complexité va nous poser problème quand vous aurez envie de modifier la couleur du composant. Ce dernier utilise en effet plusieurs couleurs, et à différents endroits. C'est là qu'intervient [TWBSColor](https://work.smarchal.com/twbscolor/)...
 
 ## TWBSColor
 
-[TWBSColor](http://work.smarchal.com/twbscolor), le petit outil que je vous présente va vous permettre de générer une navbar à vos couleurs très rapidement. Vous aurez 4 couleurs à définir :
+[TWBSColor](https://work.smarchal.com/twbscolor), le petit outil que je vous présente va vous permettre de générer une navbar à vos couleurs très rapidement. Vous aurez 4 couleurs à définir :
 <ul>
 	<li>Default background</li>
 	<li>Active background</li>
@@ -83,20 +83,20 @@ L'outil reste assez simpliste, mais répondra aux besoin de la plupart des gens.
 
 ## Quelques exemples :
 
-[Couleurs de base](http://work.smarchal.com/twbscolor/css)
-<center><iframe src="http://work.smarchal.com/twbscolor/navbar.php" width="800" height="80" scrolling="no"></iframe></center>
+[Couleurs de base](https://work.smarchal.com/twbscolor/css)
+<center><iframe src="https://work.smarchal.com/twbscolor/navbar.php" width="800" height="80" scrolling="no"></iframe></center>
 
-[Tons rouges](http://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0)
-<center><iframe src="http://work.smarchal.com/twbscolor/navbar.php?params=e74c3cc0392becf0f1ffbbbc0" width="800" height="80" scrolling="no"></iframe></center>
+[Tons rouges](https://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0)
+<center><iframe src="https://work.smarchal.com/twbscolor/navbar.php?params=e74c3cc0392becf0f1ffbbbc0" width="800" height="80" scrolling="no"></iframe></center>
 
-[Tons verts](http://work.smarchal.com/twbscolor/css/2ecc7127ae60ecf0f1d1ffed0)
-<center><iframe src="http://work.smarchal.com/twbscolor/navbar.php?params=2ecc7127ae60ecf0f1d1ffed0" width="800" height="80" scrolling="no"></iframe></center>
+[Tons verts](https://work.smarchal.com/twbscolor/css/2ecc7127ae60ecf0f1d1ffed0)
+<center><iframe src="https://work.smarchal.com/twbscolor/navbar.php?params=2ecc7127ae60ecf0f1d1ffed0" width="800" height="80" scrolling="no"></iframe></center>
 
-[Tons violets](http://work.smarchal.com/twbscolor/css/9b59b68e44adecf0f1ecdbff0)
-<center><iframe src="http://work.smarchal.com/twbscolor/navbar.php?params=9b59b68e44adecf0f1ecdbff0" width="800" height="80" scrolling="no"></iframe></center>
+[Tons violets](https://work.smarchal.com/twbscolor/css/9b59b68e44adecf0f1ecdbff0)
+<center><iframe src="https://work.smarchal.com/twbscolor/navbar.php?params=9b59b68e44adecf0f1ecdbff0" width="800" height="80" scrolling="no"></iframe></center>
 
-[Tons oranges](http://work.smarchal.com/twbscolor/css/e67e22d35400ecf0f1ffe6d10)
-<center><iframe src="http://work.smarchal.com/twbscolor/navbar.php?params=e67e22d35400ecf0f1ffe6d10" width="800" height="80" scrolling="no"></iframe></center>
+[Tons oranges](https://work.smarchal.com/twbscolor/css/e67e22d35400ecf0f1ffe6d10)
+<center><iframe src="https://work.smarchal.com/twbscolor/navbar.php?params=e67e22d35400ecf0f1ffe6d10" width="800" height="80" scrolling="no"></iframe></center>
 
 ## Une alternative LESS ?
 

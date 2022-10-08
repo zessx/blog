@@ -12,7 +12,7 @@ description: >
 
 ## Pourquoi Jekyll ?
 
-Je vous en ai parlé lors de la mise en ligne de la [v3 de ce blog](http://blog.smarchal.com/v3/), j'ai utilisé Jekyll pour cette nouvelle version. J'ai principalement fait ce choix pour une raison : Jekyll permet de générer un blog statique et de l'héberger sur GitHub. En effet, cet outil a été développé par le co-fondateur de GitHub, et c'est lui qu'on retrouve derrière les GitHub Pages.
+Je vous en ai parlé lors de la mise en ligne de la [v3 de ce blog](https://blog.smarchal.com/v3/), j'ai utilisé Jekyll pour cette nouvelle version. J'ai principalement fait ce choix pour une raison : Jekyll permet de générer un blog statique et de l'héberger sur GitHub. En effet, cet outil a été développé par le co-fondateur de GitHub, et c'est lui qu'on retrouve derrière les GitHub Pages.
 
 Son fonctionnement est simple :
 
@@ -117,7 +117,7 @@ Vérifiez que tout s'est bien passé :
 
     $ jekyll --version
 
-Pour les utilisateurs de [Cygwin](http://blog.smarchal.com/cygwin/) et de Ruby < 2.4, il est possible que vous ayez ce type d'erreur :
+Pour les utilisateurs de [Cygwin](https://blog.smarchal.com/cygwin/) et de Ruby < 2.4, il est possible que vous ayez ce type d'erreur :
 
 > ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
 > Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (

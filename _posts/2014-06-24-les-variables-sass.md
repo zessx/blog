@@ -12,8 +12,8 @@ description: >
 > Articles du dossier :
 >
 > **I - Les variables Sass et leur portée**
-> [II - Les variables et les opérations en Sass](http://blog.smarchal.com/variables-et-operations-en-sass)
-> [III - Interpolation de variables en Sass](http://blog.smarchal.com/interpolation-de-variable-sass)
+> [II - Les variables et les opérations en Sass](https://blog.smarchal.com/variables-et-operations-en-sass)
+> [III - Interpolation de variables en Sass](https://blog.smarchal.com/interpolation-de-variable-sass)
 
 Petite note pour commencer : je parle de Sass (voire de SASS par abus de langage, mea culpa) tout au long de mon billet, ce qui inclut les deux syntaxes SASS et SCSS.
 J'utilise personnellement SCSS, et on trouve très peu de différences avec SASS. Je vous laisse le soin de transposer en SASS si vous désirez l'utiliser, il n'y a rien de bien méchant.
