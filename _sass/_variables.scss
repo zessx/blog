@@ -58,6 +58,7 @@ $colors: (
   .c-#{$tag} #partager-block > a:hover::before,
   .c-#{$tag} #partager-block > a:hover::after,
   section.articles article.c-#{$tag} h2 a,
+  section.tags > a.c-#{$tag}:hover,
   section.tags.c-#{$tag} > a:hover,
   section.tags.c-#{$tag} h2 a {
     color: $color;
