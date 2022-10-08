@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Créer une commande de callback AJAX avec Drupal 8"
-date:   2015-01-01
+date:   2018-04-04
 tags:
 - drupal
 - php
 description: >
-  Les commandes de callback AJAX fournies par Drupal 9 ne sont pas toujours suffisantes, voici comment en créer une entièrement, qui répondra à un besoin précis.
+  Les commandes de callback AJAX fournies par Drupal 8 ne sont pas toujours suffisantes. Voici comment en créer une entièrement, qui répondra à un besoin précis.
 ---
 
 *Cet article ne concerne que la version 8 de Drupal.*
@@ -69,8 +69,8 @@ Voici le contenu de base d'une commande :
         {}
 
         /**
-        * Implements Drupal\Core\Ajax\CommandInterface:render().
-        */
+         * Implements Drupal\Core\Ajax\CommandInterface:render().
+         */
         public function render()
         {
             return [
@@ -104,16 +104,16 @@ Voilà, la partie serveur chargée de renvoyer un objet JSON décrivant les trai
 
 ## Mise en place du traitement
 
-Cette seconde étape se passe côté client. Commençons donc par ajouter cette commande dans l'objet `Drupal.Ajax.AjaxCommands.prototye`, en créant un fichier JavaScript dans le module :
+Cette seconde étape se passe côté client. Commençons donc par ajouter notre nouvelle commande dans l'objet `Drupal.Ajax.AjaxCommands.prototype`, en créant un fichier JavaScript dans le module :
 
     // web/modules/custom/ajaxextended/js/commands.js
     (function($, Drupal) {
 
-        Drupal.AjaxCommands.prototype.cleanFeedbacks = function(ajax, response, status) {
-            setTimeout(function() {
-                $(response.selector).removeClass('ajax-success ajax-error');
-            }, 3000);
-        }
+      Drupal.AjaxCommands.prototype.cleanFeedbacks = function(ajax, response, status) {
+        setTimeout(function() {
+          $(response.selector).removeClass('ajax-success ajax-error');
+        }, 3000);
+      };
 
     })(jQuery, Drupal);
 
