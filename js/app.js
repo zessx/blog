@@ -142,6 +142,7 @@ function socialLinksInNewTab() {
 document.addEventListener('DOMContentLoaded', socialLinksInNewTab, false);
 
 // Enable search in Jekyll
+var months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
 function jekyllSearch() {
   var searchInput   = document.querySelector('.jekyll-search-input');
   var searchResults = document.querySelector('.jekyll-search-results');
@@ -150,25 +151,31 @@ function jekyllSearch() {
       searchInput: searchInput,
       resultsContainer: searchResults,
       json: '/search.json',
-      noResultsText: 'Aucun résultat',
+      noResultsText: '<p style="text-align:center">Aucun résultat</p>',
       fuzzy: false,
-      middleware: function(prop, value, template){
-        // if (prop === 'class') {
-        //   new Date(value);
-        //   return value.replace(/^\//, '')
-        // } else
-        if (prop === 'tags') {
-          return value.replace(/[^,]+/, '<li><a href="/tag/$1">$1</a></li>');
+      templateMiddleware: function(prop, value, template){
+        if (prop === 'date') {
+          var date = new Date(value);
+          return ('00'+date.getDate()).substr(-2) +' '+ months[date.getMonth()] +' '+ date.getFullYear();
+        } else if (prop === 'update') {
+          if (value == "") {
+            return "";
+          }
+          var date = new Date(value);
+          return '<p class="update"><label>Mise à jour :</label> '+ ('00'+date.getDate()).substr(-2) +' '+ months[date.getMonth()] +' '+ date.getFullYear() +'</p>';
+        } else if (prop === 'tags') {
+          return value.replace(/([^,]+),/g, '<li><a href="/tag/$1">$1</a></li>');
         }
       },
       searchResultTemplate: '\
         <article data-color="{class}">\
           <aside>\
             <p class="date">{date}</p>\
-              <div class="article-preview">\
-                <h2><a href="{url}">{title}</a></h2>\
-                {description}\
-              </div>\
+            {update}\
+            <div class="article-preview">\
+              <h2><a href="{url}">{title}</a></h2>\
+              {description}\
+            </div>\
             <ul class="tags">{tags}</ul>\
           </aside>\
         </article>\
