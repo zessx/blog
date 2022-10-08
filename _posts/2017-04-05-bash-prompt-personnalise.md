@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Un bash prompt personnalisé"
-date:   2017-02-01
+date:   2017-04-05
 tags:
 - bash
 description: >
@@ -11,7 +11,7 @@ description: >
 ## La variable `PS1`
 
 Commençons par le début, pour ceux qui ne seraient pas familier de bash.
-Le bash prompt est la partie située à gauche du curseur, quand vous vous trouvez dans un invité de commande. Elle contient généralement des informations sur l'utilisateur et/ou le dossier courants :
+Le bash prompt est la partie située à gauche du curseur, quand vous vous trouvez dans un invité de commande. Elle contient généralement des informations sur l'utilisateur et/ou le dossier courant :
 
     zessx:~$
 
@@ -88,7 +88,7 @@ Je définis un certains nombre de codes couleurs, afin de ne pas avoir à les r�
     local GREEN="\[\e[32m\]"
     local RESET="\[$(tput sgr0)\]"
 
-Juste en dessous, je récupère l'utilisateur courant avec la commande `whoami`. Si je trouve cette valeur dans le tableau `BGP_USER_UNSAFE` défini en début de script, je colorerait le résultat en rouge. Le tout est stocké dans la variable `USER_PS` pour plus tard. Notez l'utilisation de la variable `RESET` pour éviter que tout le reste du bash prompt ne soit coloré :
+Juste en dessous, je récupère l'utilisateur courant avec la commande `whoami`. Si je trouve cette valeur dans le tableau `BGP_USER_UNSAFE` défini en début de script, je colorerai le résultat en rouge. Le tout est stocké dans la variable `USER_PS` pour plus tard. Notez l'utilisation de la variable `RESET` pour éviter que tout le reste du bash prompt ne soit coloré :
 
     # Get username and host
     local USER=$(whoami)
@@ -97,7 +97,7 @@ Juste en dessous, je récupère l'utilisateur courant avec la commande `whoami`.
       USER_PS="$RED\u@\h$RESET"
     fi
 
-De la même manière, je vais aller récupérer le statut du dépôt git. J'utilise pour cela l'option `--porcelain`, qui retourne uniquement une liste des fichiers modifiés, je compte ne nombre de lignes avec la commande `wc -l`. Si ce nombre est égal à 0, je stocke un égal (=) en vert dans la variable `GIT_STATUS_PS`, sinon je stocke le nombre lui-même après un tilde (~) :
+De la même manière, je vais aller récupérer le statut du dépôt git. J'utilise pour cela l'option `--porcelain`, qui retourne uniquement une liste des fichiers modifiés, je compte le nombre de lignes avec la commande `wc -l`. Si ce nombre est égal à 0, je stocke un égal (=) en vert dans la variable `GIT_STATUS_PS`, sinon je stocke le nombre lui-même après un tilde (~) :
 
     # Get git status
     local GIT_STATUS=$(git status --porcelain 2> /dev/null | wc -l)
@@ -106,7 +106,7 @@ De la même manière, je vais aller récupérer le statut du dépôt git. J'util
       GIT_STATUS_PS="$RED~$GIT_STATUS$RESET"
     fi
 
-La partie pour récupérer la branche courante est assez connue, c'est à peu de chose près ce qu'on retrouve dans bon nombre de script en ligne. Il y a simplement une vérification du nom pour savoir si la branche se trouve dans les tableaux `BGP_BRANCH_SAFE` ou `BGP_BRANCH_UNSAFE`.
+La partie pour récupérer la branche courante est assez connue, c'est à peu de chose près ce qu'on retrouve dans bon nombre de scripts en ligne. Il y a simplement une vérification du nom pour savoir si la branche se trouve dans les tableaux `BGP_BRANCH_SAFE` ou `BGP_BRANCH_UNSAFE`.
 
 Enfin, voici la génération proprement dite du bash prompt, qui n'est plus à ce stade qu'une simple concaténation des différentes variables créées :
 
