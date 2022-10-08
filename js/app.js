@@ -215,7 +215,6 @@ function infiniteLoad() {
       isFetchingPosts = false,
       shouldFetchPosts = true,
       postsToLoad = document.querySelectorAll('.articles article').length,
-      loadNewPostsThreshold = 3000,
       request = new XMLHttpRequest();
   request.open('GET', '/search.json', true);
   request.onload = function() {
