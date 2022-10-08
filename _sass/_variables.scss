@@ -46,7 +46,10 @@ $colors: (
 
 // Optimized to minimize the CSS generated
 @each $tag, $color in $colors {
-  [data-c="#{$tag}"] ::-moz-selection,
+  // ::-moz- needs to be apart, or the whole selector will be ignored
+  [data-c="#{$tag}"] ::-moz-selection {
+    color: $color;
+  }
   [data-c="#{$tag}"] ::selection,
   [data-c="#{$tag}"] p a:hover,
   [data-c="#{$tag}"] li a:hover,
