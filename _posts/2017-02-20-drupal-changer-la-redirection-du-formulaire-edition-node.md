@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Le tri de tableaux insensible à la casse en PHP"
-date:   2017-03-01
+title:  "Drupal 8 : Changer la redirection des formulaires d'edition des nodes"
+date:   2017-02-20
 tags:
 - drupal
 - php
