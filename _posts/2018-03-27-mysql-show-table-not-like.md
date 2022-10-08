@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SHOW TABLES NOT LIKE avec MySQL"
-date:   2017-02-01
+date:   2018-03-27
 tags:
 - sql
 description: >
@@ -22,7 +22,9 @@ Au cas où vous ne le sauriez pas, dans votre base de données MySQL il est poss
 Au cas où vous ne le sauriez pas, l'inverse ne fonctionne pas :
 
     mysql> SHOW TABLES NOT LIKE "log_%";
-    #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NOT LIKE 'help%'' at line 1
+    #1064 - You have an error in your SQL syntax; check the manual that
+      corresponds to your MySQL server version for the right syntax to
+      use near 'NOT LIKE 'help%'' at line 1
 
 Merde.
 
