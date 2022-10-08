@@ -26,7 +26,7 @@ C'est là le résultat le plus abouti que j'ai pu produire pour le moment :
 
 Il aura tout de même fallu quelques heures pour passer de ma première idée (551 octets) à ceci, avec quelques moments de lecture assidue de documentation sur le SVG.
 
-Avant de continuer, je suis conscient que cette version ne correspond pas au pixel prêt au nouveau logo de Google, il s'agit d'une création tout à fait originale (Google n'ayant à ce jour pas encore dévoilé la fameuse version de 305 bytes). Une armée de nazis du pixel me sont déjà tombés sur le dos après avoir lu l'article du blog de Google présentant la charte et le logo. L'intérêt était surtout de savoir si j'étais capable de trouver des moyens de minimiser mon code au possible. Ce processus de minification vous force à étudier la documentation et le code dans ses moindres détails, ce qui - quelque soit le résultat - est extrêmement enrichissant.
+Avant de continuer, je suis conscient que cette version ne correspond pas au pixel près au nouveau logo de Google, il s'agit d'une création tout à fait originale (Google n'ayant à ce jour pas encore dévoilé la fameuse version de 305 bytes). Une armée de nazis du pixel me sont déjà tombés sur le dos après avoir lu l'article du blog de Google présentant la charte et le logo. L'intérêt était surtout de savoir si j'étais capable de trouver des moyens de minimiser mon code au possible. Ce processus de minification vous force à étudier la documentation et le code dans ses moindres détails, ce qui - quelque soit le résultat - est extrêmement enrichissant.
 
 ## L'élément `<svg>`
 
