@@ -43,7 +43,7 @@ layout: listing
     {% when '12' %}{% assign month = 'Décembre' %}
   {% endcase %}
 
-  <article data-color="{{ post.tags | first }}">
+  <article data-c="{{ post.tags | first }}">
     <aside>
       <p class="date">{{ post.date | date: "%d " }}{{ month }}{{ post.date | date: " %Y" }}</p>
 
