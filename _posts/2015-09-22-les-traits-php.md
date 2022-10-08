@@ -12,7 +12,7 @@ description: >
 > Articles du dossier :
 >
 > **I - Les traits**
-> [II - self versus static](https://blog.smarchal.com/self-versus-static)
+> [II - self versus static](https://blog.smarchal.com/php-self-vs-static)
 
 ## Back to the future
 
