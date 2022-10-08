@@ -4,6 +4,7 @@ title:  "Plusieurs RewriteRule pour une RewriteCond"
 date:   2013-11-21
 tags:
 - apache
+- server
 description: >
   Petite astuce aujourd'hui, pour vous permettre d'utiliser une unique condition pour plusieurs règles dans vos <code>.htaccess</code>.
 ---
