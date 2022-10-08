@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "Activer HTTP/2 sur Nginx"
+date:   2019-12-17
+tags:
+- nginx
+- server
+description: >
+  Tutoriel sur l'installation de HTTP/2 sur un serveur Nginx
+---
+
+## Prérequis — Nginx
+
+Le support de HTTP/2 a été ajouté dans [Nginx 1.9.5](https://www.nginx.com/blog/nginx-1-9-5/), vous aurez donc besoin de mettre à jour Nginx si vous utiliser une version antérieure (ce qui commence à devenir inquiétant vu que cette version date déjà de 2015 !). Cette procédure de mise à jour étant trop dépendante de votre plateforme, je ne la détaillerai pas dans cet article.
+
+Pour vérifier votre version de Nginx, et si elle a bien été compilée avec le module HTTP/2, lancez la commande suivante :
+```sh
+$ nginx -V
+nginx version: nginx/1.17.3
+built by gcc 4.9.2 (Debian 4.9.2-10+deb8u2)
+built with OpenSSL 1.1.1b  26 Feb 2019
+TLS SNI support enabled
+configure arguments: --with-cc-opt='-g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -fPIC -D_FORTIFY_SOURCE=2' --with-ld-opt='-fPIE -pie -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/share/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_flv_module --with-http_geoip_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module --with-http_mp4_module --with-http_perl_module --with-http_random_index_module --with-http_secure_link_module --with-http_sub_module --with-http_xslt_module --with-mail --with-mail_ssl_module --with-stream --with-stream_ssl_module
+```
+
+Ci-dessus vous pourrez trouver la version (`nginx/1.17.3`) et les arguments utilisés pour compiler Nginx (`configure arguments`). Dans ces arguments, vous devrier retrouver `--with-http_v2_module`, si ce n'est pas le cas il vous faudra soit trouver une autre source pour installer un Nginx précompilé (solution simple), ou bien le compiler vous-même (solution compliquée).
+
+Partons du principe que vous êtes à présent à jour !
+
+## Prérequis — SSL
+
+Le second prérequis pour la mise en place de HTTP/2, c'est un certificat SSL. J'avais écrit [un article](https://blog.smarchal.com/https-avec-letsencrypt) en 2017 sur la mise en place de certificats SSL Let's Encrypt, mais uniquement sur un serveur Apache. Si vous êtes suffisament à l'aise avec ces deux serveurs web vous n'aurez aucun mal à adapter les procédures à Nginx, mais je préfère vous renvoyer au site [certbot.eff.org](https://certbot.eff.org/) qui est très clair et contient toutes les informations nécessaires.
+
+## Activer HTTP/2
+
+Nous avons donc à présent un serveur web Nginx compilé avec HTTP/2, et un vhost sur le port 443 (SSL). Vous trouverez ci-dessous une version minimale de ce vhost :
+
+```
+server {
+  listen 443 ssl;
+  listen [::]:443 ssl;
+  server_name example.com;
+
+  # SSL
+  ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem; # managed by Certbot
+  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem; # managed by Certbot
+  include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+  # Application
+  root /var/www/example.com/web;
+  index index.php index.html;
+}
+```
+
+Pour l'activation de HTTP/2, il vous suffira de modifier les deux instruction `listen` pour forcer l'utilisation du module `http2`. Nous allons donc passer de ceci :
+
+```
+listen 443 ssl;
+listen [::]:443 ssl;
+```
+
+À celà :
+
+```
+listen 443 ssl http2;
+listen [::]:443 ssl http2;
+```
+
+Voilà qui est fait, ne reste plus qu'à redémarrer le serveur :
+
+```sh
+$ service nginx reload
+```
+
+## Et c'est tout ?
+
+Oui.
+
+## Liens :
+
+[What is HTTP/2 (nginx.com)](https://www.nginx.com/resources/glossary/http2/)
+[Certbot - Site officiel](https://certbot.eff.org/)
