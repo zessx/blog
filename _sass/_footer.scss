@@ -2,7 +2,7 @@
 
 body > footer {
   width: 100%;
-  background: $white;
+  background: $frontground;
   padding-bottom: 80px;
 
   @at-root #partager-block {
@@ -19,7 +19,7 @@ body > footer {
     -ms-flex-pack: center;
     justify-content: center;
     line-height: 120px;
-    color: $white;
+    color: $frontground;
 
     @include media($from: tablet) {
       width: map-get($content_width, tablet);
@@ -43,7 +43,7 @@ body > footer {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      background: $grey_dark;
+      background: $background;
       z-index: 1;
     }
     h2 {
@@ -60,8 +60,8 @@ body > footer {
       }
     }
     > a {
-      background: $grey_dark;
-      color: $white;
+      background: $background;
+      color: $frontground;
       text-decoration: none;
       float: left;
       font-size: 120%;
@@ -97,7 +97,7 @@ body > footer {
         transition: all .4s;
       }
       &:hover {
-        color: $grey_dark;
+        color: $background;
 
         &:before,
         &:after {
@@ -122,7 +122,7 @@ body > footer {
     }
 
     h2 {
-      color: $grey_dark;
+      color: $background;
       padding-top: ($section_padding / 2);
       margin-bottom: $section_padding;
 
@@ -132,7 +132,7 @@ body > footer {
     }
 
     @at-root #disqus_thread {
-      color: $grey_dark;
+      color: $background;
     }
   }
 }

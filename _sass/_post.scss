@@ -37,7 +37,7 @@ article {
     text-align: center;
 
     .date {
-      color: $grey_dark;
+      color: $background;
       margin: 0 auto;
 
       &:before,
@@ -81,7 +81,7 @@ article {
 
         a {
           text-decoration: none;
-          color: $grey_dark;
+          color: $background;
           font-size: 80%;
           padding: 2px 8px;
           border: 1px solid;
