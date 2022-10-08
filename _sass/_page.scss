@@ -30,35 +30,60 @@ body {
     }
   }
   rect {
-    fill: $frontground;
+    fill: $white;
+
+    @include darkmode() {
+      fill: $grey_dark;
+    }
   }
 
   &:before {
     content: '';
     position: absolute;
-    box-shadow: inset 0 0 0 30px $frontground;
+    box-shadow: inset 0 0 0 30px $white;
     height: 100vh;
     width: 100vw;
     z-index: 80;
     pointer-events: none;
+
+    @include darkmode() {
+      box-shadow: inset 0 0 0 30px $grey_dark;
+    }
   }
 }
 
 a {
-  color: $background;
+  color: $grey_dark;
+
+  @include darkmode() {
+    color: $white;
+  }
 }
 
 .page-content {
-  color: $background;
-  background: $frontground;
+  color: $grey_dark;
+  background: $white;
+
+  @include darkmode() {
+    color: $white;
+    background: $grey_dark;
+  }
 }
 
 ::-moz-selection {
-  background: $background;
+  background: $grey_dark;
+
+  @include darkmode() {
+    background: $white;
+  }
 }
 
 ::selection {
-  background: $background;
+  background: $grey_dark;
+
+  @include darkmode() {
+    background: $white;
+  }
 }
 
 h2 {
@@ -145,8 +170,14 @@ p, li {
 
     &:hover {
       box-shadow:
-        inset 0 -23px $frontground,
+        inset 0 -23px $white,
         inset 0 -25px currentColor;
+
+      @include darkmode() {
+        box-shadow:
+          inset 0 -23px $grey_dark,
+          inset 0 -25px currentColor;
+      }
     }
 
     blockquote & {
@@ -178,7 +209,11 @@ pre {
   position: relative;
   margin: $section_padding 0;
   padding: $section_padding 0;
-  color: $frontground;
+  color: $white;
+
+  @include darkmode() {
+    color: $grey_dark;
+  }
 
   &:before {
     content: '';
@@ -190,8 +225,12 @@ pre {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: $background;
+    background: $grey_dark;
     z-index: 1;
+
+    @include darkmode() {
+      background: $white;
+    }
   }
   &:after {
     @extend %font-regular;
@@ -273,15 +312,21 @@ kbd {
   background-color: $grey_light;
   border: 1px solid $grey;
   border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px $frontground inset;
-  color: $background;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px $white inset;
+  color: $grey_dark;
   display: inline-block;
   font-size: 80%;
   line-height: 1.4;
   margin: 0 .1em;
   padding: .1em .5em;
-  text-shadow: 0 1px 0 $frontground;
+  text-shadow: 0 1px 0 $white;
   vertical-align: text-top;
+
+  @include darkmode() {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px $grey_dark inset;
+    color: $white;
+    text-shadow: 0 1px 0 $grey_dark;
+  }
 }
 strong {
   font-weight: bold;

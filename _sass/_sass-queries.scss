@@ -52,6 +52,13 @@ $sq-mobile-first: true !default;
   }
 }
 
+@mixin darkmode()
+{
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
 @if $sq-debug {
   body:before {
     display: block;

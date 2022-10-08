@@ -75,14 +75,6 @@ $grey               : #bbb;
 $grey_light         : #eee;
 $grey_dark          : #333;
 
-$frontground        : $white;
-$background         : $grey_dark;
-
-@media (prefers-color-scheme: dark) {
-  $frontground        : $grey_dark;
-  $background         : $white;
-}
-
 $logo_height        : 180px;
 $header_height      : 250px;
 $content_width      : (

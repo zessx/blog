@@ -16,7 +16,11 @@ header {
   justify-content: center;
   text-align: center;
   padding: 0 $content_padding;
-  color: $frontground;
+  color: $white;
+
+  @include darkmode() {
+    color: $grey_dark;
+  }
 
   &.small-header {
     padding-top: 30px;
@@ -75,13 +79,18 @@ header {
     padding: 0.5em 2em 0.5em 1em;
     margin: 0;
     border: none;
-    color: $frontground;
-    background: $background;
+    color: $white;
+    background: $grey_dark;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
     line-height: $font_size;
     z-index: 90;
+
+    @include darkmode() {
+      color: $grey_dark;
+      background: $white;
+    }
 
     span {
       -webkit-transition: padding .4s;

@@ -2,8 +2,12 @@
 
 body > footer {
   width: 100%;
-  background: $frontground;
+  background: $white;
   padding-bottom: 80px;
+
+  @include darkmode() {
+    background: $grey_dark;
+  }
 
   @at-root #partager-block {
     width: 100%;
@@ -19,8 +23,11 @@ body > footer {
     -ms-flex-pack: center;
     justify-content: center;
     line-height: 120px;
-    color: $frontground;
+    color: $white;
 
+    @include darkmode() {
+      color: $grey_dark;
+    }
     @include media($from: tablet) {
       width: map-get($content_width, tablet);
     }
@@ -43,8 +50,12 @@ body > footer {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      background: $background;
+      background: $grey_dark;
       z-index: 1;
+
+      @include darkmode() {
+        background: $white;
+      }
     }
     h2 {
       display: none;
@@ -60,8 +71,8 @@ body > footer {
       }
     }
     > a {
-      background: $background;
-      color: $frontground;
+      background: $grey_dark;
+      color: $white;
       text-decoration: none;
       float: left;
       font-size: 120%;
@@ -72,6 +83,11 @@ body > footer {
       -webkit-transition: all .4s;
       transition: all .4s;
       z-index: 2;
+
+      @include darkmode() {
+        background: $white;
+        color: $grey_dark;
+      }
 
       &:before {
         border-left: 20px solid transparent;
@@ -97,7 +113,11 @@ body > footer {
         transition: all .4s;
       }
       &:hover {
-        color: $background;
+        color: $grey_dark;
+
+        @include darkmode() {
+          color: $white;
+        }
 
         &:before,
         &:after {
@@ -122,9 +142,13 @@ body > footer {
     }
 
     h2 {
-      color: $background;
+      color: $grey_dark;
       padding-top: ($section_padding / 2);
       margin-bottom: $section_padding;
+
+      @include darkmode() {
+        color: $white;
+      }
 
       &:before {
         content: none;
@@ -132,7 +156,11 @@ body > footer {
     }
 
     @at-root #disqus_thread {
-      color: $background;
+      color: $grey_dark;
+
+      @include darkmode() {
+        color: $white;
+      }
     }
   }
 }
