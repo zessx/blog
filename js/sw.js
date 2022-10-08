@@ -16,17 +16,15 @@ self.addEventListener('install', function(e) {
         '/fonts/SourceSansPro-ExtraLight.woff',
         '/search.json',
       ];
-      var request = new XMLHttpRequest();
-      request.open('GET', '/search.json', true);
-      request.onload = function() {
-        if (request.status >= 200 && request.status < 400) {
-          var posts = JSON.parse(request.responseText);
-          for (var post in posts) {
-            urls.push(post.url);
-         }
+
+      const request = async () => {
+        var response = await fetch('/search.json')
+        var posts = await response.json();
+        for (var post in posts) {
+          urls.push(post.url);
         }
-      };
-      request.send();
+      }
+      request();
 
       return cache.addAll(urls);
     })
