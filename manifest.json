@@ -3,7 +3,7 @@
     "short_name": "Le Blog",
     "theme_color": "#075675",
     "background_color": "#075675",
-    "display": "browser",
+    "display": "fullscreen",
     "Scope": "/",
     "start_url": "/",
     "icons": [
