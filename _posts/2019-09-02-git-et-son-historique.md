@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git et son historique"
-date:   2016-01-26
+date:   2010-09-02
 tags:
 - git
 description: >
