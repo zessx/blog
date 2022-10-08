@@ -235,9 +235,6 @@ pre {
     background: $grey_dark;
     z-index: 1;
 
-    @include darkmode() {
-      background: $white;
-    }
   }
   &:after {
     @extend %font-regular;
@@ -280,6 +277,10 @@ blockquote {
   margin: $section_padding 0;
   padding: $section_padding 0;
 
+  @include darkmode() {
+    color: $grey_dark;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -301,6 +302,10 @@ blockquote {
     left: $section_padding * -2;
     line-height: 1;
     z-index: 2;
+
+    @include darkmode() {
+      color: $grey_medium;
+    }
   }
   p,
   em {
