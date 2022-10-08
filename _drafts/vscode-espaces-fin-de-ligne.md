@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "VSCode et les espaces en fin de ligne"
+date:   2017-02-01
+tags:
+- vscode
+description: >
+  Comment supprimer les espaces en fin de ligne automatiquement, et intelligemment ?
+---
+
+> [Vous trouverez l'article equivalent pour Sublime Text par ici.](https://blog.smarchal.com/sublime-text-espaces-fin-de-ligne)
+
+## L'option `files.trimTrailingWhitespace`
+
+Afin de supprimer automatiquement les espaces en fin de ligne lorsque vous sauvegardez vos fichiers, activez simplement cette option dans vos préférences utilisateurs :
+
+    {
+        "files.trimTrailingWhitespace": true
+    }
+
+## Le problème du Markdown
+
+Nous avions évoqué le problème dans [l'article sur Sublime Text](https://blog.smarchal.com/sublime-text-espaces-fin-de-ligne), les espaces en fin de ligne ont un intérêt dans le language Markdown, et il est très préjudiciable de les supprimer.
+Pour éviter cela, il va falloir faire une surcharge de paramètres comme ceci :
+
+    {
+        "files.trimTrailingWhitespace": true,
+
+        "[markdown]": {
+            "files.trimTrailingWhitespace": false
+        }
+    }
+
+
+## Liens
+[Visual Studio Code](https://code.visualstudio.com/)
+[Mes préférences utilisateur pour VSCode](https://gist.github.com/zessx/b7875430f23eda960df7f344158ff3ca)
+[Le Markdown](http://fr.wikipedia.org/wiki/Markdown)
