@@ -35,7 +35,7 @@ L'erreur en question est la suivante :
 # TypeError: Cannot read property 'endOffset' of undefined
 ```
 
-Pourtant, vous n'avez pas changé votre code. L'erreur vient donc de Prettier, dont les version 2.3.1 et 2.6.1 réagissent différemment.
+Pourtant, vous n'avez pas changé votre code. L'erreur vient donc de Prettier, dont les versions 2.3.1 et 2.6.1 réagissent différemment.
 
 ## Tutoriel
 
@@ -71,7 +71,7 @@ yarn && bin/prettier.js -c test-file.scss
 # Checking formatting...
 # All matched files use Prettier code style!
 
-# On bascule sur la version 2.3.1
+# On bascule sur la version 2.6.1
 git checkout 2.6.1
 yarn && bin/prettier.js -c test-file.scss
 # Checking formatting...
@@ -93,8 +93,8 @@ Initialisons la commande `bisect` avec ces informations :
 
 ```sh
 git bisect start
-git bisect bad 2.3.1   # Le bug n'est pas présent sur le tag 2.3.1
-git bisect good 2.6.1  # Le bug est présent sur le tag 2.6.1
+git bisect good 2.3.1   # Le bug n'est pas présent sur le tag 2.3.1
+git bisect bad 2.6.1    # Le bug est présent sur le tag 2.6.1
 # Bisecting: 445 revisions left to test after this (roughly 9 steps)
 # [5746d2f22f326bf59e36ff8ab15eba594c66b0e6] Build(deps-dev): Bump concurrently from 6.3.0 to 6.4.0 in /website (#11805)
 ```
