@@ -244,7 +244,8 @@ function infiniteLoad() {
   }
   function scroller() {
     if(!shouldFetchPosts || isFetchingPosts) return;
-    if(document.body.scrollTop + window.innerHeight + 100 > document.body.offsetHeight) {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if(scrollTop + window.innerHeight + 100 > document.body.offsetHeight) {
       fetchPosts();
     }
   }
