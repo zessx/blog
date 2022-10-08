@@ -19,7 +19,7 @@ Suite à mon ancien post sur la gestion de media-queries en Sass ([voir par ici]
 - `media($breakpoint)`
 
 Cette fonctionnalité étant cruciale, des mixins/librairies similaires ont fleuri un peu partout sur le net. J'ai finalement découvert [mq](https://github.com/sass-mq/sass-mq), et sa manière d'utiliser des arguments optionnels au lieu de 4 mixins.
-J'ai donc mis à jour mon code pour reproduire ce fonctionnement, en ajoutant quelques options afin de mettre [SassQueries](http://smarchal.com/sass-queries/) sur pieds.
+J'ai donc mis à jour mon code pour reproduire ce fonctionnement, en ajoutant quelques options afin de mettre [SassQueries](https://work.smarchal.com/sass-queries/) sur pieds.
 
 ## Utilisation
 
@@ -64,5 +64,5 @@ Vous avez maintenant accès au mixin `media()`, dont voici quelques exemple d'ut
     }
 
 ## Liens
-[SassQueries](http://smarchal.com/sass-queries/)
+[SassQueries](https://work.smarchal.com/sass-queries/)
 [Le projet Github](https://github.com/zessx/sass-queries)

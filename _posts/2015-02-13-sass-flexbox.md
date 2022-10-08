@@ -72,7 +72,7 @@ Voici donc la liste des mixins définis (je vous laisserai vous plonger dans le 
 - `align-content($align)`
 
 ## Liens
-[SassFlexbox](http://smarchal.com/sass-flexbox/)
+[SassFlexbox](https://work.smarchal.com/sass-flexbox/)
 [Le projet Github](https://github.com/zessx/sass-flexbox)
 [Spécifications W3C pour Flexbox](http://www.w3.org/TR/css3-flexbox/)
 [Utiliser Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)

@@ -18,7 +18,7 @@ Afin de se mettre rapidement en conformité avec la loi européenne sur les cook
 
 ## Installation
 
-Il vous suffit de récupérer le script [sur le site dédié](http://smarchal.com/cookiesplease/), où de le cloner dans un de vos projets via git :
+Il vous suffit de récupérer le script [sur le site dédié](https://work.smarchal.com/cookiesplease/), où de le cloner dans un de vos projets via git :
 
     $ git submodule add https://github.com/zessx/cookiesplease.git vendor/cookiesplease
 
@@ -85,6 +85,6 @@ Afin de faciliter sa personnalisation et d'éviter tout conflit, CookiesPlease u
 	body.cookiesplease-shown {}
 
 ## Liens
-[CookiesPlease](http://smarchal.com/cookiesplease/)
+[CookiesPlease](https://work.smarchal.com/cookiesplease/)
 [Le projet Github](https://github.com/zessx/cookiesplease)
 [Article de la CNIL sur les cookies](http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/)

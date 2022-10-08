@@ -8,6 +8,8 @@ description: >
   Vous voulez profiter de GitHub pour héberger votre site (statique) perso ? Pas de problème.
 ---
 
+> Mon site ayant été refait depuis, les exemples sont toujours valides, mais non visibles.
+
 ## Étude de cas
 
 J'utilise GitHub assez régulièrement pour mes projets. J'ai d'ailleurs pris l'habitude d'y stocker les sources de mon site perso pour pouvoir travailler dessus un peu partout.
@@ -122,7 +124,7 @@ Comme GitHub n'autorise que des ressources statiques, inutile de compter sur un 
 
 
 ## Liens
-[Mon site perso - sources](https://github.com/zessx/zessx.github.io)
-[Mon site perso - résultat](http://smarchal.com)
+[Mon site perso - sources](https://github.com/zessx/site)
+[Mon site perso - résultat](https://smarchal.com)
 [GitHub Pages](https://pages.github.com/)
 [Documentation GitHub - Comment mettre en place une URL personnalisée](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages)
