@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Synchroniser vos settings VSCode"
-date:   2017-02-01
+date:   2017-02-06
 tags:
 - vscode
 - git
@@ -40,6 +40,8 @@ Pour exemple, voici à quoi ressemble le gist final :
 Dans un nouvel environnement, vous n'aurez besoin que du token généré plus tôt, et de l'identifiant du gist dans lequel sont sauvegardés vos paramètres.
 
 Prenez une installation de VSCode fraîche, installer l'extension Settings Sync, et lancez la commande `Sync: Download Settings`. On vous demandera alors le token, puis l'identifiant du gist. Validez, and voilà !
+
+Au passage, l'extension vous affiche un récapitulatif de ce qui a été fait, et vous pouvez retrouver le token utilisé. Cela signifie quand même que vous devez avoir accès à un VSCode déjà synchronisé pour le retrouver.
 
 ## Liens
 
