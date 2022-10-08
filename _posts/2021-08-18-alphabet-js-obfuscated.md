@@ -216,8 +216,6 @@ Et ainsi nous pouvons récupérer les lettres `g`, `m`, `p`, `v`, `x` et `y`
 
 ## Les bases
 
-// H K Q W Z
-
 Pour les 5 lettres restantes, n'ayant pas trouvé de moyen de les récupérer via des chaînes, il va falloir ruser avec les bases. La base 36 utilise 36 caractères (les 10 chiffres plus l'alphabet complet), codant les nombres suivants ainsi :
 - 0 : 0
 - 1 : 1
