@@ -12,70 +12,82 @@ description: >
 
 Cette propriété, introduite avec CSS3, permet habituellement d'ajouter une ombre portée facilement. Voici la syntaxe habituelle :
 
-	box-shadow <offset-x> <offset-y> <blur> <color>;
+```css
+box-shadow <offset-x> <offset-y> <blur> <color>;
+```
 
 Il existe des paramètres supplémentaires, plus rarement utilisés et qui ne nous intéressent pas ici. Je vous invite à passer voir [les spécifications du W3C](https://www.w3.org/TR/css3-background/#the-box-shadow) pour tous les détails.
 
 ## Le pixel art
 
-Commençons par créer un pixel... ok, un **gros** pixel :
+Commençons par créer un pixel… ok, un **gros** pixel :
 
-	div {
-		width: 50px;
-		height: 50px;
-		background: #00c3d4;
-	}
+```css
+div {
+  width: 50px;
+  height: 50px;
+  background: #00c3d4;
+}
+```
 
 {:.center}
 ![Pixel-art - Étape 1]({{ site.url }}/images/pixel-art-css-box-shadow/pixelart01.jpg)
 
 Ajoutons une petite ombre :
 
-	div {
-		width: 50px;
-		height: 50px;
-		background: #00c3d4;
-		box-shadow: 3px 3px 5px #656565;
-	}
+```css
+div {
+  width: 50px;
+  height: 50px;
+  background: #00c3d4;
+  box-shadow: 3px 3px 5px #656565;
+}
+```
 
 {:.center}
 ![Pixel-art - Étape 2]({{ site.url }}/images/pixel-art-css-box-shadow/pixelart02.jpg)
 
 Supprimons l'effet de flou en passant le paramètre `blur` à `0px` :
 
-	div {
-		width: 50px;
-		height: 50px;
-		background: #00c3d4;
-		box-shadow: 3px 3px 0px #656565;
-	}
+```css
+div {
+  width: 50px;
+  height: 50px;
+  background: #00c3d4;
+  box-shadow: 3px 3px 0px #656565;
+}
+```
 
 {:.center}
 ![Pixel-art - Étape 3]({{ site.url }}/images/pixel-art-css-box-shadow/pixelart03.jpg)
 
 Il faut à présent décaler cette ombre pour qu'elle ne chevauche plus notre pixel :
 
-	div {
-		width: 50px;
-		height: 50px;
-		background: #00c3d4;
-		box-shadow: 50px 50px 0px #656565;
-	}
+```css
+div {
+  width: 50px;
+  height: 50px;
+  background: #00c3d4;
+  box-shadow: 50px 50px 0px #656565;
+}
+```
 
 {:.center}
 ![Pixel-art - Étape 4]({{ site.url }}/images/pixel-art-css-box-shadow/pixelart04.jpg)
 
-Et enfin, là ou l'astuce se fait... Nous pouvons **cumuler** les ombres. Chaque ombre ajoutée va donc nous permettre de dessiner un pixel supplémentaire :
+Et enfin, là ou l'astuce se fait… Nous pouvons **cumuler** les ombres. Chaque ombre ajoutée va donc nous permettre de dessiner un pixel supplémentaire :
 
-	div {
-		width: 50px;
-		height: 50px;
-		background: #ffa87c;
-		box-shadow:
-			50px 0px 0px #ff6b42,
-			0px 50px 0px #d44800,
-			50px 50px 0px #c02600;
-	}
+```css
+div {
+  width: 50px;
+  height: 50px;
+  background: #ffa87c;
+  box-shadow:
+    50px 0px 0px #ff6b42,
+    0px 50px 0px #d44800,
+    50px 50px 0px #c02600;
+}
+```
 
 {:.center}
 ![Pixel-art - Étape 5]({{ site.url }}/images/pixel-art-css-box-shadow/pixelart05.jpg)
@@ -85,17 +97,19 @@ Notez au passage que, même avec un `background: none`, vous ne pourrez pas affi
 
 ## Le résultat
 
-	div {
-		width: 10px;
-		height: 10px;
-		background: transparent;
-		box-shadow:
-			90px 10px 0 rgb(0, 52, 206),
-			100px 10px 0 rgb(0, 52, 206),
-			/* ... */
-			200px 390px 0 rgb(1, 0, 0),
-			210px 390px 0 rgb(1, 0, 0);
-	}
+```css
+div {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  box-shadow:
+    90px 10px 0 rgb(0, 52, 206),
+    100px 10px 0 rgb(0, 52, 206),
+    /* … */
+    200px 390px 0 rgb(1, 0, 0),
+    210px 390px 0 rgb(1, 0, 0);
+}
+```
 
 <center><iframe src="{{ site.url }}/demos/pixel-art-css-box-shadow/index.html" width="340" height="430"></iframe></center>
 

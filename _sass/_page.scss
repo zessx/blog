@@ -327,6 +327,9 @@ blockquote {
       margin-right: 6px;
     }
   }
+  code {
+    background: transparent !important;
+  }
 }
 kbd {
   background-color: $grey_light;

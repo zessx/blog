@@ -9,7 +9,7 @@ description: >
   Une nouvelle extension Chrome pour aujourd’hui !! Ou plutôt, une application : PHP Docs-to-go
 ---
 
-La présentation va être très brève, il s'agit tout simplement de la documentation PHP complète en mode offline ! Inutile ? Mais si, mais si... laissez-vous convaincre...
+La présentation va être très brève, il s'agit tout simplement de la documentation PHP complète en mode offline ! Inutile ? Mais si, mais si… laissez-vous convaincre…
 
 {:.center}
 ![CommitStrip - Inavouable](https://www.commitstrip.com/wp-content/uploads/2013/06/Strips-MkTime-550-final.jpg)
@@ -20,7 +20,7 @@ La présentation va être très brève, il s'agit tout simplement de la document
 * Une interface un peu plus claire que celle de php.net
 * Un raccourci natif pour la recherche (tapez ***op date*** dans l'omnibox et hop !)
 * Une vitesse d'accès incomparable, vu que tout est local
-* Un accès aux contributions des utilisateurs (les commentaires), qui sont une partie importante de la doc, mine de rien...
+* Un accès aux contributions des utilisateurs (les commentaires), qui sont une partie importante de la doc, mine de rien…
 
 ## Inconvénients
 

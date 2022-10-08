@@ -10,16 +10,18 @@ description: >
 
 ## L'origine du problème
 
-Quand on travaille sur de nombreux fichiers, on ne fait pas systématiquement attentions aux espaces en fin de ligne. Les nombreuses tabulations, les suppressions, les changements de format, les duplications... de nombreux cas peuvent provoquer l'apparition de ces espaces indésirables.
-Vous pouvez supprimer ces espaces à la main, encore faut-il avoir la patience nécessaire... Nous allons voir comment automatiser cela.
+Quand on travaille sur de nombreux fichiers, on ne fait pas systématiquement attentions aux espaces en fin de ligne. Les nombreuses tabulations, les suppressions, les changements de format, les duplications… de nombreux cas peuvent provoquer l'apparition de ces espaces indésirables.
+Vous pouvez supprimer ces espaces à la main, encore faut-il avoir la patience nécessaire… Nous allons voir comment automatiser cela.
 
 ## L'option `trim_trailing_white_space_on_save`
 
 Dans vos préférences utilisateur (`Preferences > Settings - User`), ajoutez cette ligne :
 
-	{
-		"trim_trailing_white_space_on_save": true
-	}
+```json
+{
+  "trim_trailing_white_space_on_save": true
+}
+```
 
 Avec cette option activée, tous les espaces en fin de ligne seront supprimés !
 
@@ -28,10 +30,12 @@ Avec cette option activée, tous les espaces en fin de ligne seront supprimés !
 Un problème survient assez rapidement avec cette option activée : les espaces à la fin de la ligne courante (celle sur laquelle vous êtes en train de travailler) sont eux aussi supprimés.
 Si ce comportement ne vous convient pas, vous avez la possibilité d'affiner l'option pour que la ligne courante ne soit pas prise en compte :
 
-	{
-		"trim_trailing_white_space_on_save": true,
-		"trailing_spaces_include_current_line": false
-	}
+```json
+{
+  "trim_trailing_white_space_on_save": true,
+  "trailing_spaces_include_current_line": false
+}
+```
 
 ## Le problème du Markdown
 
@@ -41,9 +45,11 @@ La syntaxe n'est pas forcément très heureuse, toujours est-il qu'elle existe, 
 
 Afin de désactiver l'option `trim_trailing_white_space_on_save` pour les fichiers `Markdown`, il va falloir créer un fichier `Markdown.sublime-settings` dans le dossier `Packages/User` (accessible via le menu `Preferences > Browse Packages`). Dans ce fichier, vous pouvez préciser la configuration spécifique aux fichiers reconnus comme utilisant le `Markdown`. Remplissez-le avec un simple :
 
-	{
-		"trim_trailing_white_space_on_save": false
-	}
+```json
+{
+  "trim_trailing_white_space_on_save": false
+}
+```
 
 Et voilà !
 Des espaces supprimés en fin de ligne à chaque enregistrement, sauf sur la ligne de travail (courante) et dans les fichiers `.md`.

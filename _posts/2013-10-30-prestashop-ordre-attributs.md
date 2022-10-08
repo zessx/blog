@@ -40,12 +40,16 @@ Pour fonctionner, le module requiert quelques modifications mineures sur deux cl
 
 Dans la classe ***Product***, modifiez la clause ***ORDER BY*** de la requête dans la fonction `getAttributesGroups()` :
 
-	ORDER BY ag.`position` ASC, a.`position` ASC
+```sql
+ORDER BY ag.`position` ASC, a.`position` ASC
+```
 
 Dans la classe ***ProductController***, commentez ces deux lignes dans la fonction `process()` :
 
-	// foreach ($groups AS &$group)
-	//     natcasesort($group['attributes']);
+```php
+// foreach ($groups AS &$group)
+//     natcasesort($group['attributes']);
+```
 
 Et voilà notre module installé. Pour pouvez maintenant le retrouver dans le Back-Office en passant par Catalogue > Ordre des attributs (il est possible que ce soit en anglais, mais ça reste simple à trouver).
 

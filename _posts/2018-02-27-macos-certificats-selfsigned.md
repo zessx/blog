@@ -18,7 +18,9 @@ Dans le cas contraire, il va falloir le récupérer avec la commande `openssl`, 
 
 Voici un exemple ci-dessous, permettant de stocker le certificat SSL utilisé sur ce blog dans un fichier, remplacez simplement les noms de domaine et de fichier par ceux que vous voulez :
 
-    openssl s_client -showcerts -connect blog.smarchal.com:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >~/cert_blog.pem
+```sh
+openssl s_client -showcerts -connect blog.smarchal.com:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >~/cert_blog.pem
+```
 
 Le fichier `~/cert_blog.pem` contient désormais votre certificat SSL à approuver.
 

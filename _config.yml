@@ -12,6 +12,7 @@ github_username:  zessx
 # Build settings
 safe: false
 markdown: kramdown
+highlighter: rouge
 permalink: /:title
 sass:
   style: compressed

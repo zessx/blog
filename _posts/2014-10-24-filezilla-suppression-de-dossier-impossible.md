@@ -26,7 +26,7 @@ Le réflexe à avoir dans ces cas là, c'est de désactiver temporairement le fi
 
 Ce sera majoritairement **Useless Explorer files** le responsable, mais dans le doute, décochez tous les filtres distants. Il ne vous reste plus qu'à valider, relancer votre suppression, et réactiver les filtres de contenus distants.
 
-Pour finir, je vous invite très fortement à toujours activer ces filtres, afin d'éviter de laisser traîner des fichiers inutiles sur le serveur. Vous avez la possibilité d'éditer les règles de filtrage, afin d'ajouter d'autres fichiers/dossiers (`.git`, `.sass-cache`, `cache/*`...) à ne pas afficher dans FileZilla (et donc ne pas les transférer).
+Pour finir, je vous invite très fortement à toujours activer ces filtres, afin d'éviter de laisser traîner des fichiers inutiles sur le serveur. Vous avez la possibilité d'éditer les règles de filtrage, afin d'ajouter d'autres fichiers/dossiers (`.git`, `.sass-cache`, `cache/*`…) à ne pas afficher dans FileZilla (et donc ne pas les transférer).
 
 
 ## Liens

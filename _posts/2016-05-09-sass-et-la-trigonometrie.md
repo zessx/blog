@@ -72,34 +72,38 @@ Nous aurons toutefois besoin d'encore quatre choses avant d'attaquer ces formule
 La fonction puissance est assez simple à écrire. Pour `xⁿ` il s'agit juste de multiplier `1` par `x`, et ce `n` fois.
 Petite nuance toutefois, quand vous utilisez une puissance négative, il faut diviser au lieu de multiplier. Dans le cas où la puissance est nulle, on retournera toujours la valeur `1` :
 
-    @function pow($x, $n) {
-        $pow: 1;
-        @if $n > 0 {
-            @for $i from 1 through $n {
-                $pow: $pow * $x;
-            }
-        }
-        @else if $n < 0 {
-            @for $i from 1 through -$n {
-                $pow: $pow / $x;
-            }
-        }
-        @return $pow;
+```scss
+@function pow($x, $n) {
+  $pow: 1;
+  @if $n > 0 {
+    @for $i from 1 through $n {
+      $pow: $pow * $x;
     }
+  }
+  @else if $n < 0 {
+    @for $i from 1 through -$n {
+      $pow: $pow / $x;
+    }
+  }
+  @return $pow;
+}
+```
 
 ## Fonction exponentielle
 
 La fonction exponentielle n'est pas plus compliquée à écrire :
 
-    @function fact($n) {
-        $fact: 1;
-        @if $n > 0 {
-            @for $i from 1 through $n {
-                $fact: $fact * $i;
-            }
-        }
-        @return $fact;
+```scss
+@function fact($n) {
+  $fact: 1;
+  @if $n > 0 {
+    @for $i from 1 through $n {
+      $fact: $fact * $i;
     }
+  }
+  @return $fact;
+}
+```
 
 On notera que comme `-5` n'est pas une entrée valide pour la fonction factorielle (qui n'accepte que les entiers naturels), il n'est pas nécessaire de gérer les entrées négatives. Ici, la fonction retournera la valeur `0` pour toute entrée négative, et `1` pour une entrée nulle.
 
@@ -110,15 +114,17 @@ Les fonctions trigonométriques utilisent uniquement les radians. Comme nous uti
 On sait que `360° = 2π`, ce qui permet par un produit en croix de déduire :
 `deg2rad(α) = 2π * α / 360`
 
-    @function pi() {
-        @return 3.1415926535;
-    }
-    @function deg2rad($angle) {
-        @if unit($angle) == deg {
-            $angle: $angle / 1deg;
-        }
-        @return 2 * pi() * $angle / 360;
-    }
+```scss
+@function pi() {
+  @return 3.1415926535;
+}
+@function deg2rad($angle) {
+  @if unit($angle) == deg {
+    $angle: $angle / 1deg;
+  }
+  @return 2 * pi() * $angle / 360;
+}
+```
 
 Utiliser une fonction plutôt qu'une variable pour retourner la valeur de pi est assez intéressant, car ainsi personne ne risque de modifier sa valeur par mégarde. Enfin, la condition dans la fonction sert uniquement à supprimer l'unité `deg`, pour vous permettre d'utiliser indifféremment `deg2rad(45)` et `deg2rad(45deg)`.
 
@@ -126,19 +132,23 @@ Utiliser une fonction plutôt qu'une variable pour retourner la valeur de pi est
 
 Ça y est, nous avons tous les outils nécessaires à la création de la fonction cosinus. Voici du coup le résultat ci-dessous :
 
-    @function cos($angle) {
-        $cos: 0;
-        @for $i from 0 through 10 {
-            $cos: $cos + (pow(-1, $i) / fact(2 * $i)) * pow($angle, 2 * $i);
-        }
-        @return $cos;
-    }
+```scss
+@function cos($angle) {
+  $cos: 0;
+  @for $i from 0 through 10 {
+    $cos: $cos + (pow(-1, $i) / fact(2 * $i)) * pow($angle, 2 * $i);
+  }
+  @return $cos;
+}
+```
 
 Comme la fonction cosinus n'accepte que les radians, il faudra penser à utiliser la fonction `deg2rad()` dès que nécessaire :
 
-    $a: cos( deg2rad(150) );    // -0.8660254
-    $a: cos( deg2rad(150deg) ); // -0.8660254
-    $a: cos( 5 * pi() / 6 );    // -0.8660254
+```scss
+$a: cos( deg2rad(150) );    // -0.8660254
+$a: cos( deg2rad(150deg) ); // -0.8660254
+$a: cos( 5 * pi() / 6 );    // -0.8660254
+```
 
 Actuellement, la boucle `@for` est utilisée 10 fois. Augmenter cette valeur `i` augmenterait la précision, tout en réduisant la vitesse de compilation, il est donc important de fixer une valeur `i` assez basse pour ne pas passer 3 heures à compiler, mais suffisamment haute pour ne pas perdre en précision. Sur tous les tests que j'ai pu effectuer, j'obtiens les mêmes résultats pour toute valeur `i` supérieure ou égale à 8 ; on peut donc fixer `i` à 10, histoire d'avoir une petite marge de sécurité.
 
@@ -146,21 +156,25 @@ Actuellement, la boucle `@for` est utilisée 10 fois. Augmenter cette valeur `i`
 
 Même fonctionnement pour la fonction sinus, que voici ci-dessous :
 
-    @function sin($angle) {
-        $sin: 0;
-        @for $i from 0 through 30 {
-            $sin: $sin + (pow(-1, $i) / fact(2 * $i + 1) ) * pow($angle, (2 * $i + 1));
-        }
-        @return $sin;
-    }
+```scss
+@function sin($angle) {
+  $sin: 0;
+  @for $i from 0 through 30 {
+    $sin: $sin + (pow(-1, $i) / fact(2 * $i + 1) ) * pow($angle, (2 * $i + 1));
+  }
+  @return $sin;
+}
+```
 
 ## Tangente
 
 La tangente étant simplement définie par `tan(α) = sin(α) / cos(α)`, on peut facilement réutiliser les fonctions précédentes :
 
-    @function tan($angle) {
-        @return sin($angle) / cos($angle);
-    }
+```scss
+@function tan($angle) {
+  @return sin($angle) / cos($angle);
+}
+```
 
 ## Liens
 

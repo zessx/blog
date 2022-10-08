@@ -20,17 +20,25 @@ Afin de se mettre rapidement en conformité avec la loi européenne sur les cook
 
 Il vous suffit de récupérer le script [sur le site dédié](https://work.smarchal.com/cookiesplease/), où de le cloner dans un de vos projets via git :
 
-    $ git submodule add https://github.com/zessx/cookiesplease.git vendor/cookiesplease
+```sh
+git submodule \
+  add https://github.com/zessx/cookiesplease.git \
+  vendor/cookiesplease
+```
 
 Ajoutez-le ensuite dans votre template :
 
-    <script src="vendor/cookiesplease/cookiesplease.min.js">
+```html
+<script src="vendor/cookiesplease/cookiesplease.min.js">
+```
 
 Et initialisez le quand le DOM est prêt (exemple avec jQuery ci-dessous) :
 
-    $(function() {
-    	cookiesplease.init();
-    });
+```js
+$(function() {
+  cookiesplease.init();
+});
+```
 
 CookiesPlease est à présent fonctionnel, et les utilisateurs de votre site on déjà un message les prévenant que des cookies sont stockés, et qu'ils acceptent ce stockage en naviguant sur ledit site :
 
@@ -41,12 +49,14 @@ CookiesPlease est à présent fonctionnel, et les utilisateurs de votre site on 
 
 Dans le cas où vous auriez besoin de savoir si l'utilisateur a accepté ou non les cookies, CookiesPlease met deux fonctions à votre disposition :
 
-    if(cookiesplease.wasAccepted()) {
-    	/* l'utilisateur a accepté les cookies */
-    }
-    if(cookiesplease.wasDeclined()) {
-    	/* l'utilisateur a refusé les cookies */
-    }
+```js
+if(cookiesplease.wasAccepted()) {
+  /* l'utilisateur a accepté les cookies */
+}
+if(cookiesplease.wasDeclined()) {
+  /* l'utilisateur a refusé les cookies */
+}
+```
 
 ## Options
 
@@ -65,24 +75,28 @@ Quelques options sont disponibles afin d'adapter CookiesPlease à vos besoins :
 
 CookiesPlease ajoute son propre CSS dans le DOM. L'ensemble des éléments sont contenus dans cette `<div>` :
 
-    <div id="cookiesplease" class="cookiesplease">
-        ...
-    </div>
+```html
+<div id="cookiesplease" class="cookiesplease">
+  …
+</div>
+```
 
 Afin de faciliter sa personnalisation et d'éviter tout conflit, CookiesPlease utilise la classe `.cookiesplease` pour son style par défaut, vous laissant ainsi la possibilité d'utiliser l'id `#cookiesplease` :
 
-    #cookiesplease {
-        background-color: #eee;
-        border-top: 1px solid #222;
-        color: #222;
-    }
-	#cookiesplease p {}
-	#cookiesplease a {}
-	#cookiesplease button {}
-	#cookiesplease button.cookiesplease-accept {}
-	#cookiesplease button.cookiesplease-decline {}
-	#cookiesplease.cookiesplease-hidden {}
-	body.cookiesplease-shown {}
+```css
+#cookiesplease {
+  background-color: #eee;
+  border-top: 1px solid #222;
+  color: #222;
+}
+#cookiesplease p {}
+#cookiesplease a {}
+#cookiesplease button {}
+#cookiesplease button.cookiesplease-accept {}
+#cookiesplease button.cookiesplease-decline {}
+#cookiesplease.cookiesplease-hidden {}
+body.cookiesplease-shown {}
+```
 
 ## Liens
 [CookiesPlease](https://work.smarchal.com/cookiesplease/)

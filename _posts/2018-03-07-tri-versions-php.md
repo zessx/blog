@@ -10,7 +10,7 @@ description: >
 
 ## Le problème des versions
 
-Le versioning, c'est parfois compliqué mais c'est pas méchant... Mais c'est parfois compliqué.
+Le versioning, c'est parfois compliqué mais c'est pas méchant… Mais c'est parfois compliqué.
 
 Considérons les numéros de version tels que définis par [SemVer](https://semver.org/) (qui, porté par GitHub, tend à devenir une norme). Ils sont aussi nombreux que différents, mélangeant chiffres, lettres et ponctuation. Imaginez un peu devoir ordonner ces numéros :
 
@@ -29,11 +29,15 @@ Considérons les numéros de version tels que définis par [SemVer](https://semv
 
 PHP fournit depuis sa version 4 une fonction permettant de comparer deux numéros de version :
 
-    version_compare('1.1.2', '1.2.0');
+```php
+version_compare('1.1.2', '1.2.0');
+```
 
 La fonction `usort` quant à elle permet de trier un tableau en utilisant une fonction de comparaison. Celle-ci peut aussi bien être une fonction native qu'une fonction qu'on aura écrit. Ici, nous allons simplement combiner `usort` avec `version_compare` :
 
-    usort($versions, 'version_compare');
+```php
+usort($versions, 'version_compare');
+```
 
 
 ## Liens :

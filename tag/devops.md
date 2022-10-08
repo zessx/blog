@@ -1,5 +1,5 @@
 ---
 layout: devops
-tag: devops
+tag: tag
 permalink: /tag/devops/
 ---

@@ -23,7 +23,7 @@ Ce système a plusieurs intérêts :
 * Il ne s'alourdit pas avec le temps
 * Il garantit un anonymat total (si tenté que le fournisseur du service ne choppe pas votre IP sans le dire)
 
-Côté limites/désavantages, il faut bien se souvenir que l'URL a une taille limitée. 2047, 2048, 2083... tout dépend du navigateur. En gardant cette limite à l'esprit, on se souviendra qu'il faut éviter de coller l'intégralité de Guerre et Paix (Tolstoï).
+Côté limites/désavantages, il faut bien se souvenir que l'URL a une taille limitée. 2047, 2048, 2083… tout dépend du navigateur. En gardant cette limite à l'esprit, on se souviendra qu'il faut éviter de coller l'intégralité de Guerre et Paix (Tolstoï).
 
 N'hésitez pas à l'utiliser pour vos besoins perso, c'est cadeau !
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Une regex pour les rechercher tous..."
+title:  "Une regex pour les rechercher tous…"
 date:   2013-05-05
 tags:
 - regex
@@ -12,7 +12,7 @@ description: >
 ---
 
 Aujourd’hui, c'est regex !
-Mais si, mais si, je sais bien que vous adorez ça...
+Mais si, mais si, je sais bien que vous adorez ça…
 
 {:.center}
 ![PERL Problems](https://imgs.xkcd.com/comics/perl_problems.png)
@@ -23,7 +23,7 @@ Quand on commence à avoir besoin d'une regex, c'est qu'on veut remplacer pas ma
 * nettoyer des fichiers d'imports
 * passer un CSV en XML sans forcément mettre en place un convertisseur
 * faire des opérations sur des listes
-* ...
+* …
 
 Attention, soyons clairs malgré tout : la regex est puissante, donc la regex est dangereuse.
 Comme la plupart des gens ne maîtrisent pas complètement les regex, cette technique peux rapidement conduire à des pertes de donnés massives. Je vous conseille donc d'avoir des sauvegardes lorsque vous travaillez sur des fichiers sensibles.
@@ -85,7 +85,7 @@ Faisons la même chose à présent avec les balises `ul` :
 {:.center}
 ![La sélection multi-ligne - 03]({{ site.url }}/images/une-regex-pour-les-rechercher-tous/regex08.jpg)
 
-Il semble que ça fonctionne moins bien... Ce problème est dû au fait que vos balises `ul` s'étendent sur plusieurs lignes. Par défaut, le caractère `.` ne capture pas les retours à la ligne. Pour activer cette option, il va falloir utiliser le modifier `(?s)` (s pour single-line) :
+Il semble que ça fonctionne moins bien… Ce problème est dû au fait que vos balises `ul` s'étendent sur plusieurs lignes. Par défaut, le caractère `.` ne capture pas les retours à la ligne. Pour activer cette option, il va falloir utiliser le modifier `(?s)` (s pour single-line) :
 
 {:.center}
 ![Le modifier single-line]({{ site.url }}/images/une-regex-pour-les-rechercher-tous/regex09.jpg)
@@ -102,39 +102,41 @@ Avec ces quelques outils, vous avez les moyens de modifier vos fichiers massivem
 
 ## Résumé
 
-	foo(?i)bar         //sensible à la casse : foo
-	foo(?-i)bar        //sensible à la casse : foo, bar
-	foo(?i)bar(?-i)baz //sensible à la casse : foo, baz
-	foo(?i:bar)baz     //sensible à la casse : foo, baz
+```css
+foo(?i)bar         /* sensible à la casse : foo      */
+foo(?-i)bar        /* sensible à la casse : foo, bar */
+foo(?i)bar(?-i)baz /* sensible à la casse : foo, baz */
+foo(?i:bar)baz     /* sensible à la casse : foo, baz */
 
-	/*
-	* capture tout le contenu
-	* entre la première occurrence <foo>
-	* et la dernière occurrence de </foo>
-	* sur une seule ligne
-	*/
-	<foo>(.*)</foo>
-	/*
-	* capture tout le contenu
-	* entre la première occurrence <foo>
-	* et l'occurrence de </foo> la plus proche
-	* sur une seule ligne
-	*/
-	<foo>(.*?)</foo>
-	/*
-	* capture tout le contenu
-	* entre la première occurrence <foo>
-	* et la dernière occurrence de </foo>
-	* sur plusieurs lignes
-	*/
-	(?s)<foo>(.*)</foo>
-	/*
-	* capture tout le contenu
-	* entre la première occurrence <foo>
-	* et l'occurrence de </foo> la plus proche
-	* sur plusieurs lignes
-	*/
-	(?s)<foo>(.*?)</foo>
+/*
+* capture tout le contenu
+* entre la première occurrence <foo>
+* et la dernière occurrence de </foo>
+* sur une seule ligne
+*/
+<foo>(.*)</foo>
+/*
+* capture tout le contenu
+* entre la première occurrence <foo>
+* et l'occurrence de </foo> la plus proche
+* sur une seule ligne
+*/
+<foo>(.*?)</foo>
+/*
+* capture tout le contenu
+* entre la première occurrence <foo>
+* et la dernière occurrence de </foo>
+* sur plusieurs lignes
+*/
+(?s)<foo>(.*)</foo>
+/*
+* capture tout le contenu
+* entre la première occurrence <foo>
+* et l'occurrence de </foo> la plus proche
+* sur plusieurs lignes
+*/
+(?s)<foo>(.*?)</foo>
+```
 
 ## Liens
 [XKCD : Perl Problems](https://xkcd.com/1171/)

@@ -19,22 +19,26 @@ C'est pour éviter d'avoir a réécrire ces préfixes que j'ai mis en place Sass
 
 Importez tout d'abord SassFlexbox :
 
-    @import "helpers/sass-flexbox";
+```scss
+@import "helpers/sass-flexbox";
+```
 
 Vous pouvez dès à présent utiliser les placeholders ou les mixins définis. Leurs noms sont on ne peut plus intuitif puisqu'ils correspondent aux standards actuels du W3C en ce qui concerne Flexbox :
 
-    .wrapper {
-      @include display-flex();
-      @include display-flow(column nowrap);
+```scss
+.wrapper {
+  @include display-flex();
+  @include display-flow(column nowrap);
 
-      .element {
-        @include flex-grow(1);
+  .element {
+    @include flex-grow(1);
 
-        &.important {
-          @include order(1);
-        }
-      }
+    &.important {
+      @include order(1);
     }
+  }
+}
+```
 
 Notez que chaque mixin utilise des placeholders afin d'éviter de générer du code supplémentaire. Prenons l'exemple de la propriété `flex-wrap`. SassFlexbox définit pour elle 4 placeholders :
 
@@ -45,12 +49,14 @@ Notez que chaque mixin utilise des placeholders afin d'éviter de générer du c
 
 Vous pouvez utiliser ces placeholders, mais afin de faciliter leur utilisation et uniformiser le code, un mixin est aussi défini :
 
-    @mixin flex-wrap($wrap: nowrap) {
-        @if not index((nowrap, wrap, wrap-reverse, inherit), $wrap) {
-            $wrap: nowrap;
-        }
-        @extend %flex-wrap-#{$wrap};
-    }
+```scss
+@mixin flex-wrap($wrap: nowrap) {
+  @if not index((nowrap, wrap, wrap-reverse, inherit), $wrap) {
+    $wrap: nowrap;
+  }
+  @extend %flex-wrap-#{$wrap};
+}
+```
 
 Ce mixin ne fait rien d'autre que de vérifier la valeur en argument, et d'étendre le placeholder correspondant. Ce moyen vous permet de constamment utiliser `flex-wrap()` sans vous soucier du code compilé.
 

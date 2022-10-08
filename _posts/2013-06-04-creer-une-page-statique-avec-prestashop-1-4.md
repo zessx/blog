@@ -13,59 +13,69 @@ Dans notre exemple, on cherchera à ajouter une page "Nos Services". Chaque port
 
 ## Créer le fichier PHP
 
-	<?php
-	/* our-services.php */
+```php
+<?php
+/* our-services.php */
 
-	require_once(dirname(__FILE__).'/config/config.inc.php');
-	ControllerFactory::getController('OurServicesController')->run();
+require_once(dirname(__FILE__).'/config/config.inc.php');
+ControllerFactory::getController('OurServicesController')->run();
+```
 
 ## Créer le contrôleur
 
-	<?php
-	/* controllers/OurServicesController.php */
+```php
+<?php
+/* controllers/OurServicesController.php */
 
-	class OurServicesControllerCore extends FrontController
-	{
-		public $php_self = 'our-services.php';
+class OurServicesControllerCore extends FrontController
+{
+  public $php_self = 'our-services.php';
 
-		public function process()
-		{
-			/* process code */
-		}
+  public function process()
+  {
+    /* process code */
+  }
 
-		public function setMedia()
-		{
-			parent::setMedia();
-			Tools::addCSS(_THEME_CSS_DIR_.'our_services.css');
-			Tools::addJS(_THEME_JS_DIR_.'our_services.css');
-		}
+  public function setMedia()
+  {
+    parent::setMedia();
+    Tools::addCSS(_THEME_CSS_DIR_.'our_services.css');
+    Tools::addJS(_THEME_JS_DIR_.'our_services.css');
+  }
 
-		public function displayContent()
-		{
-			parent::displayContent();
-			self::$smarty->display(_PS_THEME_DIR_.'our-services.tpl');
-		}
-	}
+  public function displayContent()
+  {
+    parent::displayContent();
+    self::$smarty->display(_PS_THEME_DIR_.'our-services.tpl');
+  }
+}
+```
 
 ## Créer le template
 
-	{* themes/mon-theme/our-services.tpl *}
+```smarty
+{* themes/mon-theme/our-services.tpl *}
 
-	{capture name=path}{l s='Our Services'}{/capture}
-	{include file="$tpl_dir./breadcrumb.tpl"}
-	{include file="$tpl_dir./errors.tpl"}
+{capture name=path}{l s='Our Services'}{/capture}
+{include file="$tpl_dir./breadcrumb.tpl"}
+{include file="$tpl_dir./errors.tpl"}
+```
 
 ## Créer le fichier CSS
 
-	/* themes/mon-theme/css/our_services.css */
+```css
+/* themes/mon-theme/css/our_services.css */
+```
 
 ## Créer le fichier JS
 
-	/* themes/mon-theme/js/our_services.js */
+```js
+/* themes/mon-theme/js/our_services.js */
+```
 
 ## Mettre en place les URL simplifiées
 
-	BackEnd > Préférences > SEO & URLs > Nouveau
+`BackEnd > Préférences > SEO & URLs > Nouveau`
 
 Vous sélectionnez la page ***our-services.php*** et vous entrez les informations nécessaires :
 

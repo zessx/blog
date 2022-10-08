@@ -27,15 +27,17 @@ Heureusement pour nous, Sublime Text 3 utilise une architecture de dossiers asse
 
 En plus de cela, il va falloir sauvegarder les plugins installés. Là, nous remercions de tout notre cœur [Will Bond](https://wbond.net/), qui a créé le plugin **Package Control**, lequel permet d'installer simplement d'autres plugins via Sublime Text, mais surtout d'installer une liste complète de plugins prédéfinis ! Cette liste se trouve tout simplement dans le fichier `Package Control.sublime-settings`, dont voici un exemple :
 
-    {
-        "installed_packages":
-        [
-            "Emmet",
-            "Language - French - Français",
-            "PackageResourceViewer",
-            "Theme - Afterglow"
-        ]
-    }
+```json
+{
+  "installed_packages":
+  [
+    "Emmet",
+    "Language - French - Français",
+    "PackageResourceViewer",
+    "Theme - Afterglow"
+  ]
+}
+```
 
 Plutôt que de sauvegarder l'intégralité de nos plugins, nous n'allons garder que Package Control et sa configuration, ce qui présente plusieurs avantages :
 
@@ -53,45 +55,53 @@ Selon votre système d'exploitation, tous ces fichiers vont se trouver dans un d
 
 Rendez-vous donc dans ce dossier et créez un repository (exemple pour Windows) :
 
-    cd %APPDATA%/Sublime Text 3
-    git init
+```sh
+cd %APPDATA%/Sublime Text 3
+git init
+```
 
 Créez ensuite un fichier `.gitignore` pour filtrer les fichiers à sauvegarder :
 
-    # Tout ignorer sauf le fichier .gitignore
-    *
-    !.gitignore
+```sh
+# Tout ignorer sauf le fichier .gitignore
+*
+!.gitignore
 
-    # Garder le plugin Package Control uniquement
-    !Installed Packages
-    Installed Packages/*
-    !Installed Packages/Package Control.sublime-package
+# Garder le plugin Package Control uniquement
+!Installed Packages
+Installed Packages/*
+!Installed Packages/Package Control.sublime-package
 
-    # Garder les raccourcis clavier, les préférences et les builds
-    !Packages
-    Packages/*
-    !Packages/User
-    Packages/User/*
-    !Packages/User/*.sublime-keymap
-    !Packages/User/*.sublime-settings
-    !Packages/User/*.sublime-build
+# Garder les raccourcis clavier, les préférences et les builds
+!Packages
+Packages/*
+!Packages/User
+Packages/User/*
+!Packages/User/*.sublime-keymap
+!Packages/User/*.sublime-settings
+!Packages/User/*.sublime-build
+```
 
 Voilà votre sauvegarde prête, vous n'avez plus qu'à la mettre à jour et l'envoyer sur GitHub par exemple :
 
-    git remote add origin https://github.com/<user>/st3-settings.git
-    git add --all
-    git commit -m "Ma sauvegarde Sublime Text 3"
-    git push origin master
+```sh
+git remote add origin https://github.com/<user>/st3-settings.git
+git add --all
+git commit -m "Ma sauvegarde Sublime Text 3"
+git push origin master
+```
 
 ## Restaurer votre sauvegarde
 
 Vous avez une installation toute fraîche de Sublime Text 3, et vous désirez à présent restaurer votre sauvegarde, afin de retrouver votre environnement de travail habituel. Voici pour votre plus grand plaisir la marche à suivre (exemple pour Windows) :
 
-    cd %APPDATA%/Sublime Text 3
-    git init
-    git remote add origin https://github.com/<user>/st3-settings.git
-    git fetch
-    git checkout -t origin/master
+```sh
+cd %APPDATA%/Sublime Text 3
+git init
+git remote add origin https://github.com/<user>/st3-settings.git
+git fetch
+git checkout -t origin/master
+```
 
 **30 secondes, chrono.**
 

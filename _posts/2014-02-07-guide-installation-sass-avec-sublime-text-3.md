@@ -12,7 +12,7 @@ description: >
 
 ## Sublime Text 3
 
-Hop... Captain Obvious passe la tête par l'encadrure de la porte pour vous préciser que sans [Sublime Text 3](https://www.sublimetext.com/3) (j'insiste sur la v3), ce guide perd légèrement de son intérêt.
+Hop… Captain Obvious passe la tête par l'encadrure de la porte pour vous préciser que sans [Sublime Text 3](https://www.sublimetext.com/3) (j'insiste sur la v3), ce guide perd légèrement de son intérêt.
 
 ## Ruby
 
@@ -21,7 +21,9 @@ Pour les utilisateurs de Windows, vous avez un installeur qui fait (presque tout
 
 Une fois l'installation terminée, vérifiez que tout est bien accessible en exécutant cette petite commande :
 
-	ruby -v
+```sh
+ruby -v
+```
 
 Si vous voyez le numéro de version s'afficher (genre ***ruby 2.0.0p353 (2013-11-22) [x64-mingw32]***), c'est bon pour cette partie. Dans le cas contraire, vous avez probablement une erreur au niveau du chemin d'accès aux exécutables de Ruby (je vous avais pourtant dit de cocher la petite case !!).
 Allez donc ajouter manuellement le chemin ***C:\Ruby200-x64\bin*** dans votre ***PATH***. Pour ceux qui ne sauraient toujours pas ou ça se trouve sous Windows (!!) :
@@ -38,7 +40,9 @@ Allez donc ajouter manuellement le chemin ***C:\Ruby200-x64\bin*** dans votre **
 
 Venons-en à présent à l'installation de SASS lui-même. Là, ça va être rapide : installez simplement la gemme correspondante.
 
-	gem install sass
+```sh
+gem install sass
+```
 
 Vous avez a présent accès aux commandes de SASS.
 
@@ -66,43 +70,43 @@ En parlant de build, il va bien falloir préciser à Sublime Text 3 quand et com
 
 Vous allez donc cliquer sur ***Preferences > Browse Packages***, vous rendre dans le dossier ***User/***, et créer un fichier ***SASS.sublime-build*** contenant ce code :
 
-	{
+```json
+{
+  "cmd": [
+    "sass",
+    "--update",
+    "--stop-on-error",
+    "--no-cache",
+    "--style", "compressed",
+    "--sourcemap=none",
+    "--load-path", "${file_path}",
+    "$file:${file_path}/../css/${file_base_name}.min.css",
 
-		"cmd": [
-			"sass",
-			"--update",
-			"--stop-on-error",
-			"--no-cache",
-			"--style", "compressed",
-			"--sourcemap=none",
-			"--load-path", "${file_path}",
-			"$file:${file_path}/../css/${file_base_name}.min.css",
+    "&",
 
-			"&",
+    "sass",
+    "--update",
+    "--stop-on-error",
+    "--no-cache",
+    "--sourcemap=none",
+    "--load-path", "${file_path}",
+    "$file:${file_path}/../css/${file_base_name}.css"
+  ],
 
-			"sass",
-			"--update",
-			"--stop-on-error",
-			"--no-cache",
-			"--sourcemap=none",
-			"--load-path", "${file_path}",
-			"$file:${file_path}/../css/${file_base_name}.css"
-		],
+  "selector": "source.sass, source.scss",
+  "line_regex": "Line ([0-9]+):",
 
-		"selector": "source.sass, source.scss",
-		"line_regex": "Line ([0-9]+):",
+  "osx":
+  {
+    "path": "/usr/local/bin:$PATH"
+  },
 
-		"osx":
-		{
-			"path": "/usr/local/bin:$PATH"
-		},
-
-		"windows":
-		{
-			"shell": "true"
-		}
-
-	}
+  "windows":
+  {
+    "shell": "true"
+  }
+}
+```
 
 Le détail des options de la commande :
 

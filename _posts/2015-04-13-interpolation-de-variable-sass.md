@@ -30,11 +30,13 @@ Dans le cas de l'interpolation de variable en Sass, il s'agit de forcer l'évalu
 
 Prenons le cas de la chaîne de caractère pour commencer :
 
-	$author: '@zessx';
+```scss
+$author: '@zessx';
 
-	footer {
-		content: 'Author — $author';
-	}
+footer {
+  content: 'Author — $author';
+}
+```
 
 Le résultat affiché sera `Author — $author` car la variable n'est pas évaluée. Pour qu'elle le soit, nous avons deux solutions :
 
@@ -47,16 +49,17 @@ Dans un cas comme dans l'autre, la variable sera évaluée, et le résultat affi
 
 Maintenant que vous avez saisi le principe, vous comprendrez vite son intérêt dans les sélecteurs et les nom de propriétés :
 
-	$theme:    'glossy';
-	$property: 'radius';
-	$value:     4px;
+```scss
+$theme:    'glossy';
+$property: 'radius';
+$value:     4px;
 
-	body.#{$theme} {
-		button {
-			border-#{property}: $value;
-		}
-	}
-
+body.#{$theme} {
+  button {
+    border-#{property}: $value;
+  }
+}
+```
 
 ## Liens
 [La documentation de Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)

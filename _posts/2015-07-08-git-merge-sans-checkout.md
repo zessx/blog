@@ -8,7 +8,7 @@ description: >
   Dans certains workflow, on doit souvent faire un git merge pour rapatrier des modifications. Mais comment le faire sans switcher sur la branche en question ?
 ---
 
-## De branche en branche...
+## De branche en branche…
 
 Si vous utilisez les [pages GitHub](https://blog.smarchal.com/heberger-son-site-sur-github/), vous utilisez très probablement deux branches :
 
@@ -17,19 +17,23 @@ Si vous utilisez les [pages GitHub](https://blog.smarchal.com/heberger-son-site-
 
 A chaque fois que vous voulez publier des modifications, voici le genre de commandes git que vous avez à saisir :
 
-	git add --all
-	git commit -m "Change xxx"
-	git checkout gh-pages
-	git merge master
-	git checkout master
-	git push --all origin
+```sh
+git add --all
+git commit -m "Change xxx"
+git checkout gh-pages
+git merge master
+git checkout master
+git push --all origin
+```
 
 Si on ne peut échapper aux commandes `add`, `commit` et `push`, sachez qu'il est tout à fait possible de faire un fast-forward sur la branche `gh-pages` sans bouger de master. Pour cela, nous utiliserons la commande `fetch` :
 
-    git add --all
-	git commit -m "Change xxx"
-	git fetch . master:gh-pages
-	git push --all origin
+```sh
+git add --all
+git commit -m "Change xxx"
+git fetch . master:gh-pages
+git push --all origin
+```
 
 ## En détails
 

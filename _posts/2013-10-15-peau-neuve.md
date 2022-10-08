@@ -28,7 +28,7 @@ Notez tout de même qu'il n'y a pas de comparaison possible avec Wordpress. Il n
 ## Et pourquoi changer ?
 
 Je le dis assez fréquemment, j'aime bien tester les nouveautés. Pour [Dropplets](https://dropplets.com/), j'ai eu un petit coup de cœur : j'aime bien les outils qui permettent de se concentrer sur le contenu, plutôt que sur la structure.
-Quand je l'ai découvert, je me suis amusé à le tester avec le contenu de mon blog, juste pour voir... Et ça rendait plutôt bien ! Du coup, j'en ai profité pour refaire le thème de mon blog, chose qui me trottait dans la tête depuis quelques temps. J'ai au final gardé une bonne partie du thème de base, en adaptant ce que je voulais.
+Quand je l'ai découvert, je me suis amusé à le tester avec le contenu de mon blog, juste pour voir… Et ça rendait plutôt bien ! Du coup, j'en ai profité pour refaire le thème de mon blog, chose qui me trottait dans la tête depuis quelques temps. J'ai au final gardé une bonne partie du thème de base, en adaptant ce que je voulais.
 Un autre point positif pour [Dropplets](https://dropplets.com/) d'ailleurs, son créateur est actif sur Github, et les ***pull-request*** que je propose à l'occasion sont rapidement étudiées et prises en compte.
 
 Voici donc un petit coup de jeune pour ce blog !

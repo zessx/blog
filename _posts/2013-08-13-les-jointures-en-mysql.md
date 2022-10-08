@@ -12,20 +12,22 @@ description: >
 
 Premièrement, la petite requête qui va bien pour créer des tables de test (c'est un peu léger certes, mais ça suffit pour illustrer) :
 
-	CREATE TABLE IF NOT EXISTS `a` (
-		`id` varchar(50) CHARACTER SET utf8_unicode_ci NOT NULL,
-		PRIMARY KEY (`id`)
-	);
-	INSERT INTO `a` (`id`) VALUES
-	('A and B'),
-	('A only');
-	CREATE TABLE IF NOT EXISTS `b` (
-		`id` varchar(50) CHARACTER SET utf8_unicode_ci NOT NULL,
-		PRIMARY KEY (`id`)
-	);
-	INSERT INTO `b` (`id`) VALUES
-	('B only'),
-	('A and B');
+```sql
+CREATE TABLE IF NOT EXISTS `a` (
+  `id` varchar(50) CHARACTER SET utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `a` (`id`) VALUES
+('A and B'),
+('A only');
+CREATE TABLE IF NOT EXISTS `b` (
+  `id` varchar(50) CHARACTER SET utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `b` (`id`) VALUES
+('B only'),
+('A and B');
+```
 
 ## JOIN
 
@@ -34,10 +36,12 @@ Premièrement, la petite requête qui va bien pour créer des tables de test (c'
 
 La première et la plus simple : vous voulez récupérer les lignes ayant une correspondance dans les deux tables :
 
-	SELECT *
-	FROM a
-	JOIN b
-	ON a.id = b.id
+```sql
+SELECT *
+FROM a
+JOIN b
+ON a.id = b.id
+```
 
 ## LEFT JOIN
 
@@ -46,10 +50,12 @@ La première et la plus simple : vous voulez récupérer les lignes ayant une co
 
 Vous voulez récupérer toutes les lignes de la table A, qu'elles aient ou non une correspondance dans la table B :
 
-	SELECT *
-	FROM a
-	LEFT JOIN b
-	ON a.id = b.id
+```sql
+SELECT *
+FROM a
+LEFT JOIN b
+ON a.id = b.id
+```
 
 ## RIGHT JOIN
 
@@ -58,10 +64,12 @@ Vous voulez récupérer toutes les lignes de la table A, qu'elles aient ou non u
 
 Vous voulez récupérer toutes les lignes de la table B, qu'elles aient ou non une correspondance dans la table A :
 
-	SELECT *
-	FROM a
-	RIGHT JOIN b
-	ON a.id = b.id
+```sql
+SELECT *
+FROM a
+RIGHT JOIN b
+ON a.id = b.id
+```
 
 ## LEFT JOIN WHERE y IS NULL
 
@@ -70,11 +78,13 @@ Vous voulez récupérer toutes les lignes de la table B, qu'elles aient ou non u
 
 Vous voulez récupérer toutes les lignes de la table A n'ayant <b>pas</b> de correspondance dans la table B :
 
-	SELECT *
-	FROM a
-	LEFT JOIN b
-	ON a.id = b.id
-	WHERE b.id IS NULL
+```sql
+SELECT *
+FROM a
+LEFT JOIN b
+ON a.id = b.id
+WHERE b.id IS NULL
+```
 
 ## RIGHT JOIN WHERE x IS NULL
 
@@ -83,11 +93,13 @@ Vous voulez récupérer toutes les lignes de la table A n'ayant <b>pas</b> de co
 
 Vous voulez récupérer toutes les lignes de la table B n'ayant <b>pas</b> de correspondance dans la table A :
 
-	SELECT *
-	FROM a
-	RIGHT JOIN b
-	ON a.id = b.id
-	WHERE a.id IS NULL
+```sql
+SELECT *
+FROM a
+RIGHT JOIN b
+ON a.id = b.id
+WHERE a.id IS NULL
+```
 
 ## UNION
 
@@ -96,11 +108,13 @@ Vous voulez récupérer toutes les lignes de la table B n'ayant <b>pas</b> de co
 
 Vous voulez récupérer toutes les lignes des tables A et B, qu'elle aient ou non une correspondance
 
-	SELECT * FROM a
-	LEFT JOIN b ON a.id = b.id
-	UNION
-	SELECT * FROM a
-	RIGHT JOIN b ON a.id = b.id
+```sql
+SELECT * FROM a
+LEFT JOIN b ON a.id = b.id
+UNION
+SELECT * FROM a
+RIGHT JOIN b ON a.id = b.id
+```
 
 ## Quelques notes
 
@@ -109,7 +123,7 @@ Vous voulez récupérer toutes les lignes des tables A et B, qu'elle aient ou no
 * `RIGHT OUTER JOIN` est un alias de `RIGHT JOIN`
 * `FULL OUTER JOIN` n'existe pas en MySQL, d'où la nécessité d'utiliser un `UNION` sur deux requêtes. Son utilisation reste toutefois assez rare
 * Toute requête impliquant un `RIGHT JOIN` peut être réécrite avec des `LEFT JOIN` uniquement (en inversant l'ordre des tables particulièrement)
-* `CROSS JOIN` permet de... non, n'utilisez pas `CROSS JOIN`
+* `CROSS JOIN` permet de… non, n'utilisez pas `CROSS JOIN`
 
 Toutes ces requêtes sont basiques et répondront à plus de 99% de vos besoins dans le développement web. Cela vaut plutôt le coup de les avoir en tête !
 

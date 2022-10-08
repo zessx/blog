@@ -66,7 +66,7 @@ ba82e3731477fb8b9bee27eea344a594d71888fc Merge branch 'update-italian-translatio
 Notez que nous n'affichons ici que le sommaire des commits, le texte recherché (ici 2.23) peut très bien se trouver dans le message du commit, comme c'est le cas pour la dernière ligne. Si vous voulez avoir plus de détails sur chaque commit, enlever simplement l'options `--oneline`.
 
 Cette première méthode peut servir à plusieurs choses :
-- Savoir quand un changement a eu lieu (modification, feature, release...)
+- Savoir quand un changement a eu lieu (modification, feature, release…)
 - Connaître le numéro d'un commit particulier, pour l'afficher avec `git show`, où faire toute autre opération
 
 ## Les dates de commit

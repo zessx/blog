@@ -21,73 +21,83 @@ Quand on fait de l'intégration HTML/CSS, plusieurs questions se posent à un mo
 
 Le principe de base du couple HTML/CSS, c'est de séparer le contenu et la présentation. Prenons par exemple deux boutons **Ajouter** et **Supprimer** :
 
-	<button>Ajouter</button>
-	<button>Supprimer</button>
+```html
+<button>Ajouter</button>
+<button>Supprimer</button>
+```
 
 Je leur applique un style de base :
 
-	button {
-		border: none;
-		border-radius: 4px;
-		background: #ddd;
-		padding: 5px 10px;
-	}
+```css
+button {
+  border: none;
+  border-radius: 4px;
+  background: #ddd;
+  padding: 5px 10px;
+}
+```
 
 {:.center}
 ![CSS de base]({{ site.url }}/images/oocss-et-ooscss/css-simple.png)
 
 Je décide de garder ce style pour tous mes boutons, mais aussi de proposer deux couleurs différentes : vert et rouge :
 
-	<button id="button-green">Ajouter</button>
-	<button id="button-red">Supprimer</button>
+```html
+<button id="button-green">Ajouter</button>
+<button id="button-red">Supprimer</button>
+```
 
-<!-- -->
-
-	button {
-		border: none;
-		border-radius: 4px;
-		background: #ddd;
-		padding: 5px 10px;
-	}
-	#button-green {
-		background: #2ecc71;
-	}
-	#button-red {
-		background: #e74c3c;
-	}
+```css
+button {
+  border: none;
+  border-radius: 4px;
+  background: #ddd;
+  padding: 5px 10px;
+}
+#button-green {
+  background: #2ecc71;
+}
+#button-red {
+  background: #e74c3c;
+}
+```
 
 {:.center}
 ![CSS amélioré]({{ site.url }}/images/oocss-et-ooscss/css-ameliore.png)
 
 Ce code est difficilement réutilisable, à cause de l'utilisation des identifiants `#button-green` et `#button-red`. Nous allons donc utiliser des classes uniquement, et même en profiter pour rendre les coins arrondis optionnels :
 
-	<button class="background-green rounded-corners">Ajouter</button>
-	<button class="background-red">Supprimer</button>
+```html
+<button class="background-green rounded-corners">Ajouter</button>
+<button class="background-red">Supprimer</button>
+```
 
-<!-- -->
-
-	button {
-		border: none;
-		background: #ddd;
-		padding: 5px 10px;
-	}
-	.rounded-corners {
-		border-radius: 4px;
-	}
-	.background-green {
-		background: #2ecc71;
-	}
-	.background-red {
-		background: #e74c3c;
-	}
+```css
+button {
+  border: none;
+  background: #ddd;
+  padding: 5px 10px;
+}
+.rounded-corners {
+  border-radius: 4px;
+}
+.background-green {
+  background: #2ecc71;
+}
+.background-red {
+  background: #e74c3c;
+}
+```
 
 {:.center}
 ![OOCSS]({{ site.url }}/images/oocss-et-ooscss/oocss.png)
 
 Nous avons à présent 3 classes : `.rounded-corners`, `.background-green` et `.background-red`, réutilisables à souhait y compris sur d'autres types d'éléments ! Rien ne nous empêche en effet de faire ceci :
 
-	<div class="rounded-corners">Foo</div>
-	<p class="background-green">Bar</p>
+```html
+<div class="rounded-corners">Foo</div>
+<p class="background-green">Bar</p>
+```
 
 L'utilisation exclusive de classes permet d'accélérer très nettement l'intégration. Vous allez créer votre "librairie" de classes CSS au fur et à mesure, et les réutiliser autant de fois qu'il le faudra. Voilà ce qu'est le principe de l'Object-Oriented CSS ! Et les avantages sont multiples :
 
@@ -98,18 +108,22 @@ L'utilisation exclusive de classes permet d'accélérer très nettement l'intég
 - Vous n'avez plus qu'un seul bout de code à modifier, si l'envie vous vient de changer la teinte de ces ombres.
 - Vous simplifiez vos sélecteurs dans les fichiers CSS.
 
-## Quand la sémantique s'en mêle...
+## Quand la sémantique s'en mêle…
 
 Oui, mais.
 Si l'OOCSS apporte beaucoup du côté de la présentation, il n'en dénature pas moins le contenu. Nous sommes passé de ceci :
 
-	<button>Ajouter</button>
-	<button>Supprimer</button>
+```html
+<button>Ajouter</button>
+<button>Supprimer</button>
+```
 
-... à cela :
+… à cela :
 
-	<button class="background-green rounded-corners">Ajouter</button>
-	<button class="background-red">Supprimer</button>
+```html
+<button class="background-green rounded-corners">Ajouter</button>
+<button class="background-red">Supprimer</button>
+```
 
 Les désavantage du côté du HTML sont aussi nombreux et visibles :
 
@@ -127,108 +141,120 @@ L'arrivée de Sass ces dernières années a redonné la foi à de nombreux inté
 
 Tout naturellement, j'ai appliqué les principes de l'OOCSS à Sass quand j'ai commencé à l'utiliser. Je me suis du coup retrouvé avec ce genre de fichiers SCSS :
 
-	$bg-default: #ddd;
-	$bg-green:   #2ecc71;
-	$bg-red:     #e74c3c;
+```scss
+$bg-default: #ddd;
+$bg-green:   #2ecc71;
+$bg-red:     #e74c3c;
 
-	button {
-		border: none;
-		background: $bg-default;
-		padding: 5px 10px;
-	}
-	.rounded-corners {
-		border-radius: 4px;
-	}
-	.background-green {
-		background: $bg-green;
-	}
-	.background-red {
-		background: $bg-red;
-	}
+button {
+  border: none;
+  background: $bg-default;
+  padding: 5px 10px;
+}
+.rounded-corners {
+  border-radius: 4px;
+}
+.background-green {
+  background: $bg-green;
+}
+.background-red {
+  background: $bg-red;
+}
+```
 
-Emballé par les nouveautés que Sass apportait, je ne me suis pas rendu compte tout de suite que...
+Emballé par les nouveautés que Sass apportait, je ne me suis pas rendu compte tout de suite que…
 
-	<button class="background-green rounded-corners">Ajouter</button>
-	<button class="background-red">Supprimer</button>
+```html
+<button class="background-green rounded-corners">Ajouter</button>
+<button class="background-red">Supprimer</button>
+```
 
-... rien n'avait changé côté HTML.
+… rien n'avait changé côté HTML.
 
 Et pourtant, si on se penche du côté des placeholders de Sass, on voit qu'il est possible de combiner sémantique et réutilisabilité. Exemple :
 
-	/* On définit les variables */
-	$bg-default: #ddd;
-	$bg-green:   #2ecc71;
-	$bg-red:     #e74c3c;
+```scss
+/* On définit les variables */
+$bg-default: #ddd;
+$bg-green:   #2ecc71;
+$bg-red:     #e74c3c;
 
-	/* On crée notre librairie de placeholders */
-	%button {
-		border: none;
-		background: $bg-default;
-		padding: 5px 10px;
-	}
-	%rounded-corners {
-		border-radius: 4px;
-	}
-	%background-green {
-		background: $bg-green;
-	}
-	%background-red {
-		background: $bg-red;
-	}
+/* On crée notre librairie de placeholders */
+%button {
+  border: none;
+  background: $bg-default;
+  padding: 5px 10px;
+}
+%rounded-corners {
+  border-radius: 4px;
+}
+%background-green {
+  background: $bg-green;
+}
+%background-red {
+  background: $bg-red;
+}
 
-	/* CSS spécifique, réutilisant les placeholders */
-	button {
-		@extend %button;
+/* CSS spécifique, réutilisant les placeholders */
+button {
+  @extend %button;
 
-		&.btn-add {
-			@extend %rounded-corners;
-			@extend %background-green;
-		}
-		&.btn-delete {
-			@extend %background-red;
-		}
-	}
+  &.btn-add {
+    @extend %rounded-corners;
+    @extend %background-green;
+  }
+  &.btn-delete {
+    @extend %background-red;
+  }
+}
+```
 
 Première réaction : ça demande d'écrire un peu plus de code. Pas tant que ça au final, surtout que les deux premières parties (variables et placeholders) dont définies une unique fois (il s'agit en faire de votre librairie SCSS). Vous pouvez d'ailleurs les placer dans deux fichiers à part (`_variables.scss` et `_placeholders.scss`) que vous importerez dans vos fichiers SCSS :
 
-	@import 'variables';
-	@import 'placeholders';
+```scss
+@import 'variables';
+@import 'placeholders';
 
-	button {
-		@extend %button;
+button {
+  @extend %button;
 
-		&.btn-add {
-			@extend %rounded-corners;
-			@extend %background-green;
-		}
-		&.btn-delete {
-			@extend %background-red;
-		}
-	}
+  &.btn-add {
+    @extend %rounded-corners;
+    @extend %background-green;
+  }
+  &.btn-delete {
+    @extend %background-red;
+  }
+}
+```
 
 Mais le plus important dans tout ça (car c'était le but recherché) c'est qu'en plus d'un CSS évolutif, clair et réutilisable à souhait, nous avons ceci côté HTML :
 
-	<button class="btn-add">Ajouter</button>
-	<button class="btn-delete">Supprimer</button>
+```html
+<button class="btn-add">Ajouter</button>
+<button class="btn-delete">Supprimer</button>
+```
 
-De la pure sémantique, et une unique classe... Voici ce que Sass vous permet réellement de faire !
+De la pure sémantique, et une unique classe… Voici ce que Sass vous permet réellement de faire !
 
 Notez à présent le CSS généré :
 
-	button {
-		border: none;
-		background: #dddddd;
-		padding: 5px 10px;
-	}
-	button.btn-add {
-		border-radius: 4px;
-	}
-	button.btn-add {
-		background: #2ecc71;
-	}
-	button.btn-delete {
-		background: #e74c3c;
-	}
+```css
+button {
+  border: none;
+  background: #dddddd;
+  padding: 5px 10px;
+}
+button.btn-add {
+  border-radius: 4px;
+}
+button.btn-add {
+  background: #2ecc71;
+}
+button.btn-delete {
+  background: #e74c3c;
+}
+```
 
 On remarque la double utilisation du sélecteur `button.btn-add`. Il ne faut pas crier au loup et craindre ici un fichier CSS gigantesque au bout du compte. Sass regroupe tout simplement les sélecteur par placeholder, et non pas l'inverse. C'est un choix qui porte ses fruits sur de gros fichiers et permet un gain de place non négligeable.
 

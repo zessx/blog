@@ -21,7 +21,9 @@ On pense généralement au premier point. Mais le second est plus sournois, car 
 
 La solution ? Rien de plus simple : augmenter la valeur de `memory_limit`, soit dans `php.ini`, soit via un :
 
-	ini_set('memory_limit', '128M');
+```php
+ini_set('memory_limit', '128M');
+```
 
 ## Liens
 [Documentation PHP : imagecreatefromjpeg()](https://php.net/manual/fr/function.imagecreatefromjpeg.php)

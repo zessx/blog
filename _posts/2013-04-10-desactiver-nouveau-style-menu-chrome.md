@@ -24,10 +24,10 @@ Et hop ! Le style de menu de base est de retour :
 ![Ancien style du menu de Chrome]({{ site.url }}/images/desactiver-nouveau-style-menu-chrome/chrome-old-menu-style.jpg)
 
 **EDIT [11 Juillet 2013]**
-Il semble malheureusement que l'option `--disable-new-menu-style` a été supprimée à partir de Chrome 28... Parti pris de leur part, pas forcément le meilleur du point de vue de certains utilisateurs.
+Il semble malheureusement que l'option `--disable-new-menu-style` a été supprimée à partir de Chrome 28… Parti pris de leur part, pas forcément le meilleur du point de vue de certains utilisateurs.
 
 **EDIT [14 Octobre 2013]**
-L'équipe s'occupant de Google Chrome est finalement revenue en arrière (partiellement), en gardant le nouveau style, tout en réduisant la taille des lignes (au moins sur la version desktop). Voici qui satisfait tout le monde, et qui rend ce billet inutile... Monde de merde.
+L'équipe s'occupant de Google Chrome est finalement revenue en arrière (partiellement), en gardant le nouveau style, tout en réduisant la taille des lignes (au moins sur la version desktop). Voici qui satisfait tout le monde, et qui rend ce billet inutile… Monde de merde.
 
 {:.center}
 ![Style final du menu de Chrome]({{ site.url }}/images/desactiver-nouveau-style-menu-chrome/chrome-final-menu-style.jpg)

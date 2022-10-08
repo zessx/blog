@@ -20,7 +20,9 @@ Le reboot est la solution la plus évidente, mais le plus souvent j'ai la flemme
 
 À la place, il suffit de tuer le processus de CoreAudio, qui redémarrera tout seul quelques secondes plus tard. Pour ce faire, lancez cette commande dans votre terminal :
 
-    sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`
+```sh
+sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`
+```
 
 La commande en détails pour les curieux :
 
@@ -32,7 +34,9 @@ La commande en détails pour les curieux :
 
 Pour plus de facilité, vous pouvez directement créer un alias pour cette commande, dans votre `.bashrc` ou votre `.zshrc` (et consort) :
 
-    alias soundfix="sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`"
+```sh
+alias soundfix="sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`"
+```
 
 ## Liens :
 

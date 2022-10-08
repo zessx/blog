@@ -5,7 +5,7 @@ date:   2014-06-10
 tags:
 - css
 description: >
-  Ça y est, c'est la reprise des astuces CSS ! Sans transition, la suite... *kof*
+  Ça y est, c'est la reprise des astuces CSS ! Sans transition, la suite… *kof*
 ---
 
 ## Une histoire de valeurs
@@ -24,13 +24,15 @@ Voyons ci-dessous les essais réalisés.
 
 La première idée qui vient à l'esprit, c'est de faire une transition sur la valeur de `width` :
 
-	.element {
-		width: 0px;
-		transition: width .4s;
-	}
-	.element:hover {
-		width: auto;
-	}
+```css
+.element {
+  width: 0px;
+  transition: width .4s;
+}
+.element:hover {
+  width: auto;
+}
+```
 
 Le problème, c'est que la transition est incapable de déterminer la taille finale de l'élément. Ne connaissant pas la "distance" à parcourir, la transition finit par purement et simplement sauter à l'état final.
 
@@ -38,13 +40,15 @@ Le problème, c'est que la transition est incapable de déterminer la taille fin
 
 Afin de s'assurer que la transition aie une valeur de départ et de fin, nous pouvons fixer cette valeur manuellement :
 
-	.element {
-		width: 0px;
-		transition: width .4s;
-	}
-	.element:hover {
-		width: 200px;
-	}
+```css
+.element {
+  width: 0px;
+  transition: width .4s;
+}
+.element:hover {
+  width: 200px;
+}
+```
 
 La transition s'effectue bien, mais on perd ce qu'on cherchais à préserver au départ, à savoir une taille de contenu variable.
 
@@ -52,13 +56,15 @@ La transition s'effectue bien, mais on perd ce qu'on cherchais à préserver au 
 
 Nouvel essai sur la largeur, pourquoi ne pas utiliser une largeur de 100% ?
 
-	.element {
-		width: 0px;
-		transition: width .4s;
-	}
-	.element:hover {
-		width: 100%;
-	}
+```css
+.element {
+  width: 0px;
+  transition: width .4s;
+}
+.element:hover {
+  width: 100%;
+}
+```
 
 La transition s'effectue là aussi, mais ce n'est pas du tout le résultat recherché, puisque la largeur de l'élément dépend du conteneur. Cela revient à reporter la fixation de la taille sur le conteneur, on ne gagne donc rien, pire, on y perd.
 
@@ -66,13 +72,15 @@ La transition s'effectue là aussi, mais ce n'est pas du tout le résultat reche
 
 L'astuce consiste à ne pas toucher à la valeur de `width`, mais plutôt celle de `max-width` :
 
-	.element {
-		max-width: 0px;
-		transition: max-width 1s;
-	}
-	.element:hover {
-		max-width: 100%;
-	}
+```css
+.element {
+  max-width: 0px;
+  transition: max-width 1s;
+}
+.element:hover {
+  max-width: 100%;
+}
+```
 
 On effectue une transition de `max-width: 0px;` à `max-width: 100%;`. Travailler sur `max-width` ne pose aucun problème tant que les valeurs de départ et de fin restent au delà des valeurs possibles de `width`. Ainsi, aucun souci visuel puisque la largeur reste déterminée par `width`.
 

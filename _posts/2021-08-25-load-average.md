@@ -27,8 +27,6 @@ KiB Swap:   976556 total,   961964 free,    14592 used.  2314332 avail Mem
 …
 ```
 
-<!-- -->
-
 ```
 Processes: 576 total, 2 running, 574 sleeping, 2805 threads
 Load Avg: 3.90, 3.70, 3.12  CPU usage: 15.20% user, 8.52% sys, 76.26% idle   SharedLibs: 224M resident, 68M data, 19M linkedit.
@@ -77,7 +75,7 @@ La seconde conclusion, c'est que le processus est légèrement plus chargé sur 
 
 Prenons maintenant le second exemple, sur le système macOS :
 
-```sh
+```
 Load Avg: 3.90, 3.70, 3.12
 ```
 

@@ -32,6 +32,7 @@ Pour désactiver ces limites, il va donc falloir agir sur deux variables :
 
 Il suffit de mettre une limite inatteignable dans votre fichier de configuration (`sites/XXX/settings.php`) :
 
-	$conf['user_failed_login_ip_limit'] = PHP_INT_MAX;
-	$conf['user_failed_login_user_limit'] = PHP_INT_MAX;
-
+```php
+$conf['user_failed_login_ip_limit'] = PHP_INT_MAX;
+$conf['user_failed_login_user_limit'] = PHP_INT_MAX;
+```

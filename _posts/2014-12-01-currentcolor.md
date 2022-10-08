@@ -14,10 +14,12 @@ Le mot-clé `currentColor` permet de réutiliser la couleur de texte d'un élém
 
 Avant l'arrivée de la troisième version de CSS, ce comportement était celui par défaut des bordures. Ces dernières prenaient en effet automatiquement la couleur de texte de l'élément correspondant si rien n'était spécifié. Dans l'exemple suivant, nous avons une bordure de couleur rouge :
 
-	div {
-		color: red;
-		border: 1px solid;
-	}
+```css
+div {
+  color: red;
+  border: 1px solid;
+}
+```
 
 Même chose si vous utilisez la valeur `initial` pour `border-color`.
 
@@ -29,82 +31,92 @@ Les cas d'utilisation sont multiples : partout où vous utilisez plusieurs fois 
 
 Un bouton avec une bordure et une icône, et son état `:hover` par exemple, avant :
 
-	button {
-		color: tomato;
-		border: 1px solid tomato;
-	}
-	button:hover {
-		color: firebrick;
-		border-color: firebrick;
-	}
+```css
+button {
+  color: tomato;
+  border: 1px solid tomato;
+}
+button:hover {
+  color: firebrick;
+  border-color: firebrick;
+}
+```
 
 Après :
 
-	button {
-		color: tomato;
-		border: 1px solid currentColor;
-	}
-	button:hover {
-		color: firebrick;
-	}
+```css
+button {
+  color: tomato;
+  border: 1px solid currentColor;
+}
+button:hover {
+  color: firebrick;
+}
+```
 
 Un élément avec de multiples `box-shadow`, décliné en deux couleurs possibles, avant :
 
-	.frame-red {
-		color: tomato;
-		box-shadow:
-			0 0 0 5px white,
-			-10px 0 0 0 tomato,
-			0 -10px 0 0 tomato,
-			0 10px 0 0 tomato,
-			10px 0 0 0 tomato;
-	}
-	.frame-green {
-		color: forestgreen;
-		box-shadow:
-			0 0 0 5px white,
-			-10px 0 0 0 forestgreen,
-			0 -10px 0 0 forestgreen,
-			0 10px 0 0 forestgreen,
-			10px 0 0 0 forestgreen;
-	}
+```css
+.frame-red {
+  color: tomato;
+  box-shadow:
+    0 0 0 5px white,
+    -10px 0 0 0 tomato,
+    0 -10px 0 0 tomato,
+    0 10px 0 0 tomato,
+    10px 0 0 0 tomato;
+}
+.frame-green {
+  color: forestgreen;
+  box-shadow:
+    0 0 0 5px white,
+    -10px 0 0 0 forestgreen,
+    0 -10px 0 0 forestgreen,
+    0 10px 0 0 forestgreen,
+    10px 0 0 0 forestgreen;
+}
+```
 
 Après :
 
-	.frame-red,
-	.frame-green {
-		color: tomato;
-		box-shadow:
-			0 0 0 5px white,
-			-10px 0 0 0 currentColor,
-			0 -10px 0 0 currentColor,
-			0 10px 0 0 currentColor,
-			10px 0 0 0 currentColor;
-	}
-	.frame-green {
-		color: forestgreen;
-	}
+```css
+.frame-red,
+.frame-green {
+  color: tomato;
+  box-shadow:
+    0 0 0 5px white,
+    -10px 0 0 0 currentColor,
+    0 -10px 0 0 currentColor,
+    0 10px 0 0 currentColor,
+    10px 0 0 0 currentColor;
+}
+.frame-green {
+  color: forestgreen;
+}
+```
 
 ## Utilisation avec Sass
 
 `currentColor` est bien évidement utilisable avec Sass, et peut du coup vous permettre de remplacer certains mixins par des placeholders :
 
-	%frame {
-	  	box-shadow:
-		    0 0 0 5px white,
-		    -10px 0 0 0 currentColor,
-		    0 -10px 0 0 currentColor,
-		    0 10px 0 0 currentColor,
-		    10px 0 0 0 currentColor;
-	}
-	.frame-red {
-	  	@extend %frame;
-	  	color: tomato;
-	}
-	.frame-green {
-	  	@extend %frame;
-	  	color: forestgreen;
-	}
+```scss
+%frame {
+  box-shadow:
+    0 0 0 5px white,
+    -10px 0 0 0 currentColor,
+    0 -10px 0 0 currentColor,
+    0 10px 0 0 currentColor,
+    10px 0 0 0 currentColor;
+}
+.frame-red {
+  @extend %frame;
+  color: tomato;
+}
+.frame-green {
+  @extend %frame;
+  color: forestgreen;
+}
+```
 
 ## Utilisation avec SVG
 

@@ -34,49 +34,53 @@ Chacune de ces barres va être affichée ou non à un moment donné du cycle. Un
 
 Le CSS de base utilisé est celui-ci :
 
-	.bar {
-		/*
-		On utilise l'animation barAnimation, qui se fait sur 10 secondes,
-		qui est régulière, qui débute sans délai, et qui tourne en boucle.
-		*/
-		-webkit-animation: barAnimation 10s linear 0 infinite; /* Chrome / Safari / Opera 15 */
-		animation: barAnimation 10s linear 0 infinite;         /* Firefox / IE10 / Opera <15 */
-	}
-	@-webkit-keyframes barAnimation {
-		from    { opacity: 0; }
-		33.332% { opacity: 0; }
-		33.333% { opacity: 1; }
-		66.665% { opacity: 1; }
-		66.666% { opacity: 0; }
-		99.999% { opacity: 0; }
-		to      { opacity: 1; }
-	}
-	@keyframes barAnimation {
-		from    { opacity: 0; }
-		33.332% { opacity: 0; }
-		33.333% { opacity: 1; }
-		66.665% { opacity: 1; }
-		66.666% { opacity: 0; }
-		99.999% { opacity: 0; }
-		to      { opacity: 1; }
-	}
+```css
+.bar {
+  /*
+  On utilise l'animation barAnimation, qui se fait sur 10 secondes,
+  qui est régulière, qui débute sans délai, et qui tourne en boucle.
+  */
+  -webkit-animation: barAnimation 10s linear 0 infinite; /* Chrome / Safari / Opera 15 */
+  animation: barAnimation 10s linear 0 infinite;         /* Firefox / IE10 / Opera <15 */
+}
+@-webkit-keyframes barAnimation {
+  from    { opacity: 0; }
+  33.332% { opacity: 0; }
+  33.333% { opacity: 1; }
+  66.665% { opacity: 1; }
+  66.666% { opacity: 0; }
+  99.999% { opacity: 0; }
+  to      { opacity: 1; }
+}
+@keyframes barAnimation {
+  from    { opacity: 0; }
+  33.332% { opacity: 0; }
+  33.333% { opacity: 1; }
+  66.665% { opacity: 1; }
+  66.666% { opacity: 0; }
+  99.999% { opacity: 0; }
+  to      { opacity: 1; }
+}
+```
 
 J'utilise les valeurs 33.332% et 33.333% pour éviter qu'il y ait une transition entre `opacity: 0` et `opacity: 1`. Je suis persuadé qu'il existe un moyen plus simple, mais je vous livre la "v1" de mon expérience, j'essaierai de la simplifier par la suite.
 
 Il est assez pratique de créer vos keyframes ligne par ligne, mais vous avez la possibilité de compresser tout ça ensuite, histoire que ça prenne moins de place en prod :
 
-	.bar {
-		-webkit-animation: barAnimation 10s linear 0 infinite;
-		animation: barAnimation 10s linear 0 infinite;
-	}
-	@-webkit-keyframes barAnimation {
-		0%, 33.332%, 66.666%, 99.999% { opacity: 0; }
-		33.333%, 66.665%, 100% { opacity: 1; }
-	}
-	@keyframes barAnimation {
-		0%, 33.332%, 66.666%, 99.999% { opacity: 0; }
-		33.333%, 66.665%, 100% { opacity: 1; }
-	}
+```css
+.bar {
+  -webkit-animation: barAnimation 10s linear 0 infinite;
+  animation: barAnimation 10s linear 0 infinite;
+}
+@-webkit-keyframes barAnimation {
+  0%, 33.332%, 66.666%, 99.999% { opacity: 0; }
+  33.333%, 66.665%, 100% { opacity: 1; }
+}
+@keyframes barAnimation {
+  0%, 33.332%, 66.666%, 99.999% { opacity: 0; }
+  33.333%, 66.665%, 100% { opacity: 1; }
+}
+```
 
 J'utilise ensuite des `keyframes` différentes selon le chiffre, que je temporise différemment (un cycle pour l'unité des heures est plus long qu'un cycle pour l'unité des secondes).
 On pourra d'ailleurs utiliser les mêmes `keyframes` pour les heures, les millisecondes, et les unités des des minutes/secondes (comme le cycle est un simple `0->9`) ; même chose pour les dizaines des minutes/secondes, qui suivent le même cycle `0->5`.

@@ -23,10 +23,12 @@ J'utilise personnellement SCSS, et on trouve très peu de différences avec SASS
 La base avant tout !
 Les variables Sass se déclare à l'aide d'un `$` devant le nom de la variable, et d'un `:` pour séparer la valeur :
 
-	$foo: 5;
+```scss
+$foo: 5;
+```
 
-...Rien de plus à dire pour cette partie.
-Maintenant qu'on sait créer des variables, il faut être au courant de ce qu'on peut y mettre. A peu près n'importe quoi en fait...
+…Rien de plus à dire pour cette partie.
+Maintenant qu'on sait créer des variables, il faut être au courant de ce qu'on peut y mettre. A peu près n'importe quoi en fait…
 
 ## Les types de données
 
@@ -34,76 +36,94 @@ Maintenant qu'on sait créer des variables, il faut être au courant de ce qu'on
 
 Il est possible de stocker des booléens, des entiers et des doubles, et ce avec ou sans unité :
 
-	$a: 5;
-	$b: 3.14;
-	$c: 12px;
-	$d: 50%;
-	$e: 4.2em;
-	$f: 6rem;
+```scss
+$a: 5;
+$b: 3.14;
+$c: 12px;
+$d: 50%;
+$e: 4.2em;
+$f: 6rem;
+```
 
 ### Les chaînes de caractères
 
 Celles-ci se stockent avec de simples ou doubles guillemets, ou même sans guillemets pour les valeurs CSS telles que `red`, `bold` ou `sans-serif` :
 
-	$g: "foo";
-	$h: 'bar';
-	$i: sans-serif;
+```scss
+$g: "foo";
+$h: 'bar';
+$i: sans-serif;
+```
 
 ### Les couleurs
 
 Les variables Sass permettent aussi le stockage de couleurs, dans le formats HEX, RGB, RGBA, HSL, HSLA, ou là aussi via des noms reconnus par le CSS :
 
-	$j: tomato;
-	$k: #C0FFEE;
-	$l: rgb(10, 20, 30);
-	$m: rgba(40, 50, 60, .5);
-	$n: hsl(0, 100%, 50%);
-	$o: hsla(30, 70%, 40%, .4);
+```scss
+$j: tomato;
+$k: #C0FFEE;
+$l: rgb(10, 20, 30);
+$m: rgba(40, 50, 60, .5);
+$n: hsl(0, 100%, 50%);
+$o: hsla(30, 70%, 40%, .4);
+```
 
 ### Les booléens
 
-	$p: true;
-	$q: false;
+```scss
+$p: true;
+$q: false;
+```
 
 ### La valeur nulle
 
-	$r: null;
+```scss
+$r: null;
+```
 
 ### Les listes
 
 Les listes utilisent l'espace ou la virgule comme caractère de séparation :
 
-	$s: 'foo'
-		'bar'
-		'baz';
-	$t: 'foo',
-		'bar',
-		'baz';
+```scss
+$s: 'foo'
+  'bar'
+  'baz';
+$t: 'foo',
+  'bar',
+  'baz';
+```
 
 On peut cumuler ces deux caractères pour imbriquer des listes :
 
-	$u: 'foo' 'fooo',
-		'bar' 'baar',
-		'baz' 'baaz';
+```scss
+$u: 'foo' 'fooo',
+  'bar' 'baar',
+  'baz' 'baaz';
+```
 
 Il est aussi possible de créer des couples clé/valeur dans ces listes :
 
-	$v: (
-		foo: 'foo',
-		bar: 'bar',
-		baz: 'baz'
-	);
+```scss
+$v: (
+  foo: 'foo',
+  bar: 'bar',
+  baz: 'baz'
+);
+```
 
 ## Une valeur par défaut ?
 
 Vous pouvez, avant d'assigner une valeur à une variable, vérifier si celle-ci n'est pas déjà définie.
 Cette méthode est très utile lors de l'initialisation de vos variables dans une librairie, afin de fournir des valeurs par défaut, mais de préserver celles que l'utilisateur à déjà fixées :
 
-	$a: 1 !default; // $a = 1
-	$a: 2 !default; // $a = 1
-	$a: 3;          // $a = 3
-	$a: null;       // $a = null
-	$a: 4 !default; // $a = 4
+```scss
+$a: 1 !default; // $a = 1
+$a: 2 !default; // $a = 1
+$a: 3;          // $a = 3
+$a: null;       // $a = null
+$a: 4 !default; // $a = 4
+```
 
 ## La portée des variables
 
@@ -112,26 +132,28 @@ Cette méthode est très utile lors de l'initialisation de vos variables dans un
 Il n'existe pas de notion de portée des variables en Sass, elles sont toutes globales.
 Voici un exemple pour bien comprendre les limites du système :
 
-	$c: blue;
+```scss
+$c: blue;
 
-	span {
-		color: $c;
-		border-color: $c;
-	}
+span {
+  color: $c;
+  border-color: $c;
+}
 
-	.error {
-		$c: red;
+.error {
+  $c: red;
 
-		p {
-			color: $c;
-			border-color: $c;
-		}
-	}
+  p {
+    color: $c;
+    border-color: $c;
+  }
+}
 
-	p {
-		color: $c;
-		border-color: $c;
-	}
+p {
+  color: $c;
+  border-color: $c;
+}
+```
 
 Dans ce cas de figure, nous aurons :
 

@@ -12,17 +12,19 @@ description: >
 
 Cet objet permet à Javascript d'accéder à l'historique et de le manipuler. Vous pouvez avoir un aperçu de ses propriétés en affichant sont prototype dans une console JS :
 
-    window.history.__proto__;
-    /**
-     * History
-     *    back: function back() { [native code] }
-     *    constructor: function History() { [native code] }
-     *    forward: function forward() { [native code] }
-     *    go: function go() { [native code] }
-     *    pushState: function () { [native code] }
-     *    replaceState: function () { [native code] }
-     *    __proto__: Object
-     */
+```js
+window.history.__proto__;
+/**
+ * History
+ *    back: function back() { [native code] }
+ *    constructor: function History() { [native code] }
+ *    forward: function forward() { [native code] }
+ *    go: function go() { [native code] }
+ *    pushState: function () { [native code] }
+ *    replaceState: function () { [native code] }
+ *    __proto__: Object
+**/
+```
 
 ## Se déplacer dans l'historique
 
@@ -37,12 +39,14 @@ Notez que l'objet History a une propriété `.length`, qui vous permet de conna�
 
 ## Manipuler l'historique
 
-Voilà qui est bien plus intéressant...
-Les fonctions suivantes ont été introduites avec HTML5. Elle permettent d'ajouter ou de supprimer des entrées dans l'historique. Concrètement, cela se traduit par une modification de l'URL, **sans rafraîchissement de la page**. Ah, j'ai capté l'attention de certains...
+Voilà qui est bien plus intéressant…
+Les fonctions suivantes ont été introduites avec HTML5. Elle permettent d'ajouter ou de supprimer des entrées dans l'historique. Concrètement, cela se traduit par une modification de l'URL, **sans rafraîchissement de la page**. Ah, j'ai capté l'attention de certains…
 
 Pour ajouter une entrée dans l'historique, nous utilisons la fonction `pushState()` :
 
-    window.history.pushState({}, '', 'nouvelle-url.html');
+```js
+window.history.pushState({}, '', 'nouvelle-url.html');
+```
 
 La fonction accepte trois paramètres :
 

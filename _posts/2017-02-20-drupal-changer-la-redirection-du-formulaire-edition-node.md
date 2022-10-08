@@ -21,62 +21,74 @@ Tous les formulaire ont un identifiant appelé `machine name`. C'est cet identif
 
 Si vous ne désirez changer la redirection que pour un seul type de node, vous pouvez directement utiliser le hook `hook_form_FORM_ID_alter`. Prenons par exemple un type de contenu "Actualité" dont l'identifiant serait `news`. Le formulaire correspondant aurait pour identifiant `node_news_form`, ce qui nous donne ce code :
 
-    use Drupal\Core\Form\FormStateInterface;
+```php
+use Drupal\Core\Form\FormStateInterface;
 
-    function MODULE_form_node_news_form_alter(&$form, FormStateInterface $form_state)
-    {
-        // ...
-    }
+function MODULE_form_node_news_form_alter(&$form, FormStateInterface $form_state)
+{
+  // …
+}
+```
 
 Si en revanche vous voulez ciblez tous les formulaires de création et de modification de contenu, il va falloir passer par un hook plus général : `hook_form_node_form_alter`. Cette fonction sera appelée quel que soit le type de contenu :
 
-    use Drupal\Core\Form\FormStateInterface;
+```php
+use Drupal\Core\Form\FormStateInterface;
 
-    function MODULE_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id)
-    {
-        // ...
-    }
+function MODULE_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+  // …
+}
+```
 
 ## Modifier le formulaire
 
 Drupal 8 ne propose pas de hook du type `hook_form_submit`. En revanche, il est possible de modifier un formulaire pour y ajouter une fonction de callback sur une action.
 L'action la plus évidente est bien sûr `submit`, on pourrait donc se contenter du code suivant :
 
-    $form['actions']['submit']['#submit'][] = '_MODULE_node_form_submit';
+```php
+$form['actions']['submit']['#submit'][] = '_MODULE_node_form_submit';
+```
 
 On indique ici que l'on veut appeler la fonction `_MODULE_node_form_submit` quand l'action `submit` est déclenchée. Le problème, c'est qu'il n'y a pas que cette action a traiter. On va donc parcourir la liste des actions disponibles, et ajouter notre callback sur toutes celles qui seront de type `submit`. **Attention à ne pas confondre l'identifiant `submit` (qui ne concernait qu'une seule action) et le type d'action `submit`, que plusieurs actions peuvent avoir.**. Vous noterez l'exception faite sur l'action `preview`, qui est du type `submit` mais pour laquelle on ne veut pas de redirection (sans quoi on ne pourrait jamais accéder à la page de prévisualisation) :
 
-    foreach (array_keys($form['actions']) as $action) {
-      if (isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit' && $action != 'preview') {
-        $form['actions'][$action]['#submit'][] = '_MODULE_node_form_submit';
-      }
-    }
+```php
+foreach (array_keys($form['actions']) as $action) {
+  if (isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit' && $action != 'preview') {
+    $form['actions'][$action]['#submit'][] = '_MODULE_node_form_submit';
+  }
+}
+```
 
 ## Faire la redirection
 
 La redirection se fera donc dans notre fonction de callback (notre "submit handler"). Ici, rien de compliqué car l'interface `FormStateInterface` propose une fonction `setRedirect`, qu'on utilisera pour rediriger vers la route `system.admin.content` (qui correspond à la page "Contenu" du backoffice) :
 
-    $form_state->setRedirect('system.admin_content');
+```php
+$form_state->setRedirect('system.admin_content');
+```
 
 ## Le code complet
 
 Voici donc l’agrégation de tous les bouts de codes que nous avons vu dans cet article :
 
-    use Drupal\Core\Form\FormStateInterface;
+```php
+use Drupal\Core\Form\FormStateInterface;
 
-    function MODULE_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id)
-    {
-      foreach (array_keys($form['actions']) as $action) {
-        if (isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit' && $action != 'preview') {
-          $form['actions'][$action]['#submit'][] = '_MODULE_node_form_submit';
-        }
-      }
+function MODULE_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+  foreach (array_keys($form['actions']) as $action) {
+    if (isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit' && $action != 'preview') {
+      $form['actions'][$action]['#submit'][] = '_MODULE_node_form_submit';
     }
+  }
+}
 
-    function _MODULE_node_form_submit(&$form, FormStateInterface $form_state)
-    {
-      $form_state->setRedirect('system.admin_content');
-    }
+function _MODULE_node_form_submit(&$form, FormStateInterface $form_state)
+{
+  $form_state->setRedirect('system.admin_content');
+}
+```
 
 ## Liens
 

@@ -19,12 +19,16 @@ Emmet fourni aussi un grand nombre de raccourcis en CSS, comme :
 - `t20` pour `top: 20px;`
 - `wa` pour `width: auto;`
 - `bdrz50%` pour `border-radius: 50%;`
-- et tant d'autres...
+- et tant d'autres…
 
 Ces raccourcis sont intuitifs, et permettent de réduire considérablement le temps que vous passez à écrire du CSS.
 Mais ce n'est pas tout : ils sont aussi disponibles quand vous codez avec Sass ! À un détail près. Si vous êtes dans un fichier `.scss` et que vous utilisez un de ces raccourcis (mettons `t0`), vous aurez ce résultat :
 
-    top: 0
+```scss
+* {
+  top: 0
+}
+```
 
 Notez l'absence du point-virgule. Ce n'est pas grand chose, mais vous êtes obligé de rajouter ce point-virgule manuellement à chaque utilisation d'un raccourci Emmet. Et les choses répétitives, c'est chiant.
 
@@ -35,16 +39,22 @@ Premièrement, il ne s'agit pas d'un bug proprement dit. Emmet associe les fichi
 Si comme moi vous êtes un utilisateur exclusif de la syntaxe SCSS, vous pouvez forcer Emmet à rajouter ce point-virgule. Il va falloir pour cela changer la propriété `sass.propertyEnd` dans vos préférences utilisateur.
 Ouvrez le fichier <kbd>Preferences</kbd> > <kbd>Package Settings</kbd> > <kbd>Emmet</kbd> > <kbd>Settings — User</kbd>, et collez-y ce code :
 
-    {
-        "preferences": {
-            "sass.propertyEnd": ";"
-        }
-    }
+```json
+{
+  "preferences": {
+    "sass.propertyEnd": ";"
+  }
+}
+```
 
 Vous spécifiez ainsi que pour la syntaxe des fichiers Sass (SASS et SCSS), vous voulez ajouter un point-virgule à la fin de chaque propriété.
 Tout est fin prêt, à présent le raccourci `t0` vous donnera ce résultat :
 
-    top: 0;
+```scss
+* {
+  top: 0;
+}
+```
 
 ## Liens
 [Site officiel du plugin Emmet](https://emmet.io/)

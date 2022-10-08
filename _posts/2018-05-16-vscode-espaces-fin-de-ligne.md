@@ -15,22 +15,26 @@ description: >
 
 Afin de supprimer automatiquement les espaces en fin de ligne lorsque vous sauvegardez vos fichiers, activez simplement cette option dans vos préférences utilisateurs :
 
-    {
-        "files.trimTrailingWhitespace": true
-    }
+```json
+{
+  "files.trimTrailingWhitespace": true
+}
+```
 
 ## Le problème du Markdown
 
 Nous avions évoqué le problème dans [l'article sur Sublime Text](https://blog.smarchal.com/sublime-text-espaces-fin-de-ligne), les espaces en fin de ligne ont un intérêt dans le language Markdown, et il est très préjudiciable de les supprimer.
 Pour éviter cela, il va falloir faire une surcharge de paramètres comme ceci :
 
-    {
-        "files.trimTrailingWhitespace": true,
+```json
+{
+  "files.trimTrailingWhitespace": true,
 
-        "[markdown]": {
-            "files.trimTrailingWhitespace": false
-        }
-    }
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
+}
+```
 
 
 ## Liens

@@ -11,7 +11,7 @@ description: >
 
 Gardez bien à l'esprit que votre ombre aura toujours la forme de votre élément (ça reste une ombre, merde.), mais que vous pouvez agir sur sa taille. Voici, ce coup-ci, la syntaxe complète de `box-shadow` :
 
-	box-shadow <inset> <offset-x> <offset-y> <blur-radius> <spread-radius> <color>;
+  box-shadow <inset> <offset-x> <offset-y> <blur-radius> <spread-radius> <color>;
 
 Dans mon précédent article, je n'avais pas introduit les paramètres `inset` et `spread-radius` parce qu'ils n'avaient aucun intérêt dans ce cas précis. Mais aujourd’hui on va s'en servir ! Nous avons donc, dans l'ordre :
 
@@ -26,64 +26,74 @@ En jouant sur cette taille, et en faisant bien attention à l'ordre dans lequel 
 
 ## Une double bordure toute simple
 
-	.double-border {
-		box-shadow:
-			0 0 0 3px #999,
-			0 0 0 6px #333;
-	}
+```css
+.double-border {
+  box-shadow:
+    0 0 0 3px #999,
+    0 0 0 6px #333;
+}
+```
 
 {:.center}
 ![Double bordure simple]({{ site.url }}/images/bordures-avancees-box-shadow/double-border.png)
 
 ## Une double bordure arrondie
-...qui donne un effet sympa quand on décale les deux ombres.
+…qui donne un effet sympa quand on décale les deux ombres.
 
-	.rounded-double-border {
-		border-radius: 0 15px;
-		box-shadow:
-			-3px -3px 0 3px #999,
-			 3px  3px 0 3px #333;
-	}
+```css
+.rounded-double-border {
+  border-radius: 0 15px;
+  box-shadow:
+    -3px -3px 0 3px #999,
+      3px  3px 0 3px #333;
+}
+```
 
 {:.center}
 ![Double bordure arrondie]({{ site.url }}/images/bordures-avancees-box-shadow/rounded-double-border.png)
 
 ## Deux coins mis en avant
 
-	.double-coins-border {
-		box-shadow:
-			60px 60px 0 -50px #333,
-			-60px -60px 0 -50px #333,
-			0 0 0 6px #999;
-	}
+```css
+.double-coins-border {
+  box-shadow:
+    60px 60px 0 -50px #333,
+    -60px -60px 0 -50px #333,
+    0 0 0 6px #999;
+}
+```
 
 {:.center}
 ![Deux coins mis en avant]({{ site.url }}/images/bordures-avancees-box-shadow/double-coins-border.png)
 
 ## Un bordure dans un style "couture"
 
-	.seam-border {
-		border: 2px dashed #333;
-		box-shadow:
-			0 0 0 1px #333,
-			inset 0 0 0 1px #333;
-	}
+```css
+.seam-border {
+  border: 2px dashed #333;
+  box-shadow:
+    0 0 0 1px #333,
+    inset 0 0 0 1px #333;
+}
+```
 
 {:.center}
 ![Un bordure dans un style couture]({{ site.url }}/images/bordures-avancees-box-shadow/seam-border.png)
 
-## Une bordure arc-en-c...
+## Une bordure arc-en-c…
 DOUBLE RAINBOWS !! RAINBOWS EVERYWHERE !!11!
 
-	.rainbow-border {
-		box-shadow:
-			0 0 0 1px #f80c12,
-			0 0 0 2px #ff4422,
-			0 0 0 3px #feae2d,
-			0 0 0 4px #aacc22,
-			0 0 0 5px #12bdb9,
-			0 0 0 6px #3311bb;
-	}
+```css
+.rainbow-border {
+  box-shadow:
+    0 0 0 1px #f80c12,
+    0 0 0 2px #ff4422,
+    0 0 0 3px #feae2d,
+    0 0 0 4px #aacc22,
+    0 0 0 5px #12bdb9,
+    0 0 0 6px #3311bb;
+}
+```
 
 {:.center}
 ![DOUBLE RAINBOWS !! RAINBOWS EVERYWHERE !!11!]({{ site.url }}/images/bordures-avancees-box-shadow/rainbow-border.png)

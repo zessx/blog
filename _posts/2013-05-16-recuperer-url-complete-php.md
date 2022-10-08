@@ -10,10 +10,15 @@ description: >
 
 Pour la fonction du jour, elle permet tout simplement de récupérer l'url complète de la page courante en PHP. C'est une fonction dérivée de nombreuses autres trouvables facilement sur le net, qui tient compte du protocole, d'un éventuel port et des variables GET :
 
-	function currentURL() {
-		$protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === FALSE ? 'http' : 'https';
-		$host     = $_SERVER['SERVER_NAME'];
-		$port     = $_SERVER["SERVER_PORT"];
-		$query    = $_SERVER['REQUEST_URI'];
-		return $protocol.'://'.$host.($port != 80 ? ':'.$port : '').$query;
-	}
+```php
+function currentURL() {
+  $protocol =
+    stripos($_SERVER['SERVER_PROTOCOL'], 'https') === FALSE
+    ? 'http'
+    : 'https';
+  $host  = $_SERVER['SERVER_NAME'];
+  $port  = $_SERVER["SERVER_PORT"];
+  $query = $_SERVER['REQUEST_URI'];
+  return $protocol.'://'.$host.($port != 80 ? ':'.$port : '').$query;
+}
+```

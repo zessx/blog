@@ -68,13 +68,13 @@ On peut à présent basculer sur les deux versions testées, pour confirmer que 
 # On bascule sur la version 2.3.1
 git checkout 2.3.1
 yarn && bin/prettier.js -c test-file.scss
-# Checking formatting...
+# Checking formatting…
 # All matched files use Prettier code style!
 
 # On bascule sur la version 2.6.1
 git checkout 2.6.1
 yarn && bin/prettier.js -c test-file.scss
-# Checking formatting...
+# Checking formatting…
 # test-file.scss[error] test-file.scss: TypeError: Cannot read property 'endOffset' of undefined
 # [error]     at locEnd (~/prettier/src/language-css/loc.js:225:22)
 # [error]     at isNextLineEmpty (~/prettier/src/common/util.js:140:42)
@@ -103,7 +103,7 @@ On voit que la commande commence immédiatement le travail : elle nous a bascul�
 
 ```sh
 yarn && bin/prettier.js -c test-file.scss
-# Checking formatting...
+# Checking formatting…
 # All matched files use Prettier code style!
 ```
 
@@ -119,13 +119,13 @@ Une nouvelle bascule sur un commit, et à nouveau un test à faire de notre côt
 
 ```sh
 yarn && bin/prettier.js -c test-file.scss
-# Checking formatting...
+# Checking formatting…
 # All matched files use Prettier code style!
 git bisect good
 # Bisecting: 111 revisions left to test after this (roughly 7 steps)
 # [0a65d2a8f0a7b345c254960afdfe1fbebb90d108] Build(deps): Bump preactjs/compressed-size-action from 2.3.0 to 2.4.0 (#12328)
 yarn && bin/prettier.js -c test-file.scss
-# Checking formatting...
+# Checking formatting…
 # test-file.scss[error] test-file.scss: TypeError: Cannot read property 'endOffset' of undefined
 # [error]     at locEnd (~/prettier/src/language-css/loc.js:225:22)
 # [error]     at isNextLineEmpty (~/prettier/src/common/util.js:140:42)
@@ -174,8 +174,8 @@ git bisect good
 
 #  changelog_unreleased/css/12210.md                  | 32 ++++++++++++++++++
 #  src/language-css/printer-postcss.js                | 38 +++++++++++++++-------
-#  .../css/atrule/__snapshots__/jsfmt.spec.js.snap    | 35 +++++++++++++++++---
-#  .../css/parens/__snapshots__/jsfmt.spec.js.snap    | 31 ++++++++++++++++++
+#  …/css/atrule/__snapshots__/jsfmt.spec.js.snap    | 35 +++++++++++++++++---
+#  …/css/parens/__snapshots__/jsfmt.spec.js.snap    | 31 ++++++++++++++++++
 #  tests/format/css/parens/empty-lines.css            | 12 +++++++
 #  5 files changed, 132 insertions(+), 16 deletions(-)
 #  create mode 100644 changelog_unreleased/css/12210.md
@@ -223,8 +223,8 @@ git bisect run ./test-script.sh
 
 #  changelog_unreleased/css/12210.md                  | 32 ++++++++++++++++++
 #  src/language-css/printer-postcss.js                | 38 +++++++++++++++-------
-#  .../css/atrule/__snapshots__/jsfmt.spec.js.snap    | 35 +++++++++++++++++---
-#  .../css/parens/__snapshots__/jsfmt.spec.js.snap    | 31 ++++++++++++++++++
+#  …/css/atrule/__snapshots__/jsfmt.spec.js.snap    | 35 +++++++++++++++++---
+#  …/css/parens/__snapshots__/jsfmt.spec.js.snap    | 31 ++++++++++++++++++
 #  tests/format/css/parens/empty-lines.css            | 12 +++++++
 #  5 files changed, 132 insertions(+), 16 deletions(-)
 #  create mode 100644 changelog_unreleased/css/12210.md

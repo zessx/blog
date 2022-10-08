@@ -23,22 +23,26 @@ J'ajoute une image ci-dessous au cas où ce comportement disparaîtrait avec les
 
 Si vous êtes dans ce cas, c'est probablement que vous utiliser un framework CSS (comme Bootstrap) ou un reset/normalize maison. Le problème vient de cette règle, qui doit traîner dans vos styles :
 
-    img {
-        max-width: 100%;
-    }
+```css
+img {
+  max-width: 100%;
+}
+```
 
-Google Maps utilise une image contenant l'intégralité des contrôles, et joue sur les dimensions et `overflow: hidden` pour n'afficher que ce dont vous avez besoin. L'image utilisée (voir ci-dessous) peut avoir, et aura une largeur supérieure à l'élément qui la contient. Mais vous limitez la largeur maximale de *toutes* les images...
+Google Maps utilise une image contenant l'intégralité des contrôles, et joue sur les dimensions et `overflow: hidden` pour n'afficher que ce dont vous avez besoin. L'image utilisée (voir ci-dessous) peut avoir, et aura une largeur supérieure à l'élément qui la contient. Mais vous limitez la largeur maximale de *toutes* les images…
 
 {:.center}
 ![Le sprite de Google Maps]({{ site.url }}/images/probleme-affichage-controles-google-maps/sprite.png)
 
 Pour corriger tout ça, supprimer simplement cette règle pour vos Google Maps :
 
-    img {
-        max-width: 100%;
-    }
-    #map img {
-        max-width: none;
-    }
+```css
+img {
+  max-width: 100%;
+}
+#map img {
+  max-width: none;
+}
+```
 
 <center><iframe src="{{ site.url }}/demos/probleme-affichage-controles-google-maps/fixed.html" width="100%" height="450"></iframe></center>

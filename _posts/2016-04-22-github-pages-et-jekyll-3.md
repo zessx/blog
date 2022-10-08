@@ -6,7 +6,7 @@ tags:
 - git
 - ruby
 description: >
-  Jekyll 3 débarque sur les GitHub Pages ! Mais il n'apporte pas que du bonheur...
+  Jekyll 3 débarque sur les GitHub Pages ! Mais il n'apporte pas que du bonheur…
 ---
 
 ## Une nouvelle ère
@@ -25,7 +25,9 @@ Si les changements sont les bienvenus, ils faut tout de même être au courant q
 Plusieurs parseurs Markdown différents étaient auparavant disponible avec Jekyll 2, comme `kramdown`, `rdiscount` ou `redCarpet`.
 À partir du 1er mai 2016, **le seul parseur accepté sera `kramdown`**, pensez-donc à mettre à jour votre fichier de configuration `_config.yml` :
 
-	markdown: kramdown
+```yaml
+markdown: kramdown
+```
 
 Normalement la transition ne devrait poser aucun problème, car les fonctionnalités de `rdiscount` et `redCarpet` sont intégrées à `kramdown`. Autre précision, le support de Textile (une alternative au Markdown) est aussi abandonné.
 
@@ -34,59 +36,75 @@ Normalement la transition ne devrait poser aucun problème, car les fonctionnali
 La coloration syntaxique sera désormais uniquement gérée par `rouge`. Là, c'est une bonne nouvelle car `rouge` est codé en Ruby, il n'y a plus besoin d'installer Python et `pygments` pour les versions locales de vos sites !
 Pensez là aussi à mettre à jour votre fichier de configuration :
 
-	highlighter: rouge
+```yaml
+highlighter: rouge
+```
 
 Et à changer la syntaxe dans vos fichiers Markdown, de ceci :
 
-	{ % highlight php % }
-	<?php print 'foo'; ?>
-	{ % endhighlight % }
+{% raw %}
+```md
+{% highlight php %}
+<?php print 'foo'; ?>
+{% endhighlight %}
+```
+{% endraw %}
 
 À ceci :
 
-	```php
-	<?php print 'foo'; ?>
-	```
+    ```php
+    <?php print 'foo'; ?>
+    ```
 
 ## Les urls
 
 Et enfin, le changement le plus important. Jekyll 3 a radicalement changé la structure du dossier `_site` (le dossier généré, qui contient votre site). Précédemment, un dossier était créé pour chaque post. Prenons l'architecture suivante par exemple :
 
-	_posts/
-	  2016-04-22-mon-article.md
-	_site/
+```
+_posts/
+  2016-04-22-mon-article.md
+_site/
+```
 
 Une fois votre site généré avec la commande `jekyll`, vous aviez ceci :
 
-	_posts/
-	  2016-04-22-mon-article.md
-	_site/
-	  mon-article/
-	    index.html
+```
+_posts/
+  2016-04-22-mon-article.md
+_site/
+  mon-article/
+    index.html
+```
 
 En accédant à l'URL `/mon-article`, vous étiez alors automatiquement redirigé vers le dossier présent à cet endroit, en résultait une URL avec un trailing slash toujours présent : `/mon-article/`.
 
 Mais depuis Jekyll 3, ce n'est plus un dossier au nom de votre article qui est généré, mais bien un fichier :
 
-	_posts/
-	  2016-04-22-mon-article.md
-	_site/
-	  mon-article.html
+```
+_posts/
+  2016-04-22-mon-article.md
+_site/
+  mon-article.html
+```
 
 La conséquence de tout cela ? Toutes les URLs que vous avez pu utiliser avec des trailing slash génèrent à présent des erreurs 404 ! Pour corriger cela vous avez deux méthodes ; soit vous décidez de garder le trailing slash et il faudra mettre votre configuration à jour conséquemment :
 
-	permalink: /:title/
+```yaml
+permalink: /:title/
+```
 
 Soit vous décidez de supprimer tous ces slash, et il faudra dans ce cas ruser en gérant la redirection dans votre fichier `/404.html` :
 
-	<script>
-	  // Remove trailing slash because of Jekyll 3
-	  var urll = location.href;
-	  var urls = location.href.replace(/#.*/, '');
-	  if(urls.substr(urls.length - 1) === '/') {
-	    window.location = urll.replace(/\/(?=#|$)/, '');
-	  }
-	</script>
+```html
+<script>
+  // Remove trailing slash because of Jekyll 3
+  var urll = location.href;
+  var urls = location.href.replace(/#.*/, '');
+  if(urls.substr(urls.length - 1) === '/') {
+    window.location = urll.replace(/\/(?=#|$)/, '');
+  }
+</script>
+```
 
 Dernier détail, mais pas des moindres : pensez à faire un tour sur votre compte Disqus si vous en avez un, afin de rediriger toutes ces mauvaises URLs vers les bonnes. Disqus considère les URLs `/mon-article` et `/mon-article/` comme étant différentes, et crée alors deux discussions. Il vous faudra les fusionner pour s'assurer qu'il ne manque aucun commentaire.
 

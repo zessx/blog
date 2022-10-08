@@ -16,7 +16,7 @@ description: >
 > Secrets y sont tous préservés.
 >
 > Et si tel homme, tout avisé
-> Venait à le manipuler...
+> Venait à le manipuler…
 
 - Ouvrer l'éditeur de registre `regedit.exe` en le recherchant via le menu Démarrer.
 - Accédez à la clé `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows`

@@ -17,11 +17,15 @@ Vous changez ensuite le nom via le formulaire en haut de page.
 
 Il faut à présent redéfinir l'url du repo distant fixée dans votre repo local, celle qui est utilisée lorsque vous faites vos `push` et vos `pull`. Retrouvez d'abord les noms que vous avez donné à ces url :
 
-	git remote -v
+```sh
+git remote -v
+```
 
 Notez les noms, on considérera ici que vous avez utilisé le mot-clé `origin`. Changez ensuite les urls :
 
-	git remote set-url origin https://github.com/USER/NEWREPO.git
+```sh
+git remote set-url origin https://github.com/USER/NEWREPO.git
+```
 
 ## Note importante
 

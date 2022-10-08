@@ -12,12 +12,14 @@ description: >
 
 Ce pseudo-élément vous permet de définir un style pour la sélection de texte. Si vous désirez simplement changer le bleu en un rouge vif, utilisez un simple :
 
-	::selection {
-		background-color: #c0001e;
-	}
-	::-moz-selection {
-		background-color: #c0001e;
-	}
+```css
+::selection {
+  background-color: #c0001e;
+}
+::-moz-selection {
+  background-color: #c0001e;
+}
+```
 
 Vous pouvez voir un exemple fonctionnel sur ce blog même : la sélection est affiché en blanc, sur fond anthracite.
 

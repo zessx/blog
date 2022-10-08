@@ -30,7 +30,7 @@ Je manque un peu de temps ces jours-ci, et je n'imaginais pas que Gulp puisse ê
 
 [Gulp](https://gulpjs.com/) est un outil de gestion de tâches en JavaScript.
 Une fois installé, il se base sur un fichier `gulpfile.js` placé à la racine de votre projet, dans lequel sont définies les tâches disponibles.
-Ces tâches vous permettent de modifier vos sources (Sass, JS, HTML, images...) afin de... et bien afin de faire ce que vous voulez !
+Ces tâches vous permettent de modifier vos sources (Sass, JS, HTML, images…) afin de… et bien afin de faire ce que vous voulez !
 Minification, compression d'images, compilation, vérification syntaxique, tout est possible et la seule limite est le besoin que vous en avez.
 
 ## Installation
@@ -39,14 +39,18 @@ Gulp est un outil basé sur [NodeJS](https://nodejs.org/), il faudra donc avant 
 
 Une fois NodeJS en place, installez gulp :
 
-    $ npm install --global gulp
+```sh
+npm install --global gulp
+```
 
-Hum... c'est bon, Gulp est installé.
+Hum… c'est bon, Gulp est installé.
 Besoin d'un plugin ? Ci-dessous un exemple d'installation de `gulp-sass` :
 
-    $ npm install --global gulp-sass
+```sh
+npm install --global gulp-sass
+```
 
-Voilà voilà...
+Voilà voilà…
 
 ## Fonctionnement
 
@@ -74,41 +78,45 @@ Prenons d'abord la tâche `css`, qui va prendre des fichiers `.scss` en entrée,
 
 Ces plugins seront appelés dans un ordre précis, avec ou sans paramètres selon les cas. Si on reprend la tâche complète, voici comment elle sera définie en JS :
 
-    gulp.task('css', function() {
+```js
+gulp.task('css', function() {
 
-        // Récupération du fichier app.scss en entrée
-        return gulp.src(source + '/scss/app.scss')
+  // Récupération du fichier app.scss en entrée
+  return gulp.src(source + '/scss/app.scss')
 
-            // Compilation du Sass
-            .pipe(sass())
+    // Compilation du Sass
+    .pipe(sass())
 
-            // Autoprefixer, avec les options définies
-            .pipe(autoprefixer({
-                browsers: ['> 1%', 'last 2 versions']
-            }))
+    // Autoprefixer, avec les options définies
+    .pipe(autoprefixer({
+      browsers: ['> 1%', 'last 2 versions']
+    }))
 
-            // Minification du CSS
-            .pipe(minify())
+    // Minification du CSS
+    .pipe(minify())
 
-            // Sortie dans le fichier dist.css
-            .pipe(gulp.dest(dest + '/css/dist.css'));
+    // Sortie dans le fichier dist.css
+    .pipe(gulp.dest(dest + '/css/dist.css'));
 
-    });
+});
+```
 
 Le code est assez simple à comprendre, il se compose majoritairement d'options de configuration des plugins Gulp. Notez l'utilisation systématique de `pipe()` pour concaténer les traitements. Les fichiers en entrée sont modifiés plusieurs fois avant d'avoir le résultat final, qui est renvoyé dans un fichier en sortie. Vous auriez pu faire tout ceci à la main, avec une succession de lignes de commande, mais Gulp est justement là pour centraliser et simplifier tout ça !
 
 La tâche `js` quant à elle sera définie comme ceci :
 
-    gulp.task('js', function() {
-        return gulp.src([
-                source + '/js/libs/jquery.js',
-                source + '/js/libs/touche.js',
-                source + '/js/app.js'
-            ])
-            .pipe(concat())
-            .pipe(uglify())
-            .pipe(gulp.dest(dest + '/js/dist.js'));
-    });
+```js
+gulp.task('js', function() {
+  return gulp.src([
+      source + '/js/libs/jquery.js',
+      source + '/js/libs/touche.js',
+      source + '/js/app.js'
+    ])
+    .pipe(concat())
+    .pipe(uglify())
+    .pipe(gulp.dest(dest + '/js/dist.js'));
+});
+```
 
 Pas grand chose ne change, si ce n'est qu'on utilise d'autres plugins, et que cette fois-ci nous avons plusieurs fichiers en entrée. À ce propos d'ailleurs, vous pouvez utiliser quelques éléments de regex dans les paths fournis à `src()` (je n'ai pas encore été voir si ce sont des regex simplifiées, ou carrément des PCRE) :
 
@@ -125,22 +133,26 @@ Souvenez-vous bien que les fichiers sont ajoutés **dans l'ordre ou Gulp les ré
 Vos tâches auront besoin de plugins Gulp pour fonctionner. Ces plugins ne sont pas grand chose de plus que des wrappers permettant d'utiliser des outils en ligne de commande à travers Gulp.
 Si on reprend notre tâche `css`, nous avons trois plugins à installer et à charger. Nous avons vu plus haut comment les installer, voici à présent comment charger Gulp et ses plugins dans le fichier `gulpfile.js` :
 
-    // Chargement de Gulp
-    var gulp         = require('gulp');
+```js
+// Chargement de Gulp
+var gulp         = require('gulp');
 
-    // Chargement des plugins
-    var sass         = require('gulp-sass');
-    var autoprefixer = require('gulp-autoprefixer');
-    var minify       = require('gulp-minify-css');
-    var uglify       = require('gulp-uglify');
-    var concat       = require('gulp-concat');
+// Chargement des plugins
+var sass         = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var minify       = require('gulp-minify-css');
+var uglify       = require('gulp-uglify');
+var concat       = require('gulp-concat');
+```
 
 Rien de plus pour les plugins !
 Notez au passage qu'on a utilisé deux variables dans notre tâche, qui sont simplement des paths qu'on aura définis dans le fichier :
 
-    // Définition de variables
-    var source       = './assets/';
-    var dest         = './dist/';
+```js
+// Définition de variables
+var source       = './assets/';
+var dest         = './dist/';
+```
 
 ## Exécuter une tâche
 
@@ -151,7 +163,9 @@ Il y a plusieurs manières d'exécuter une tâche Gulp. Sur le schéma, ces exé
 La première manière, c'est la ligne de commande (*losanges verts sur le schéma*). Elle permet d'exécuter de manière ponctuelle une tâche spécifique.
 Vous venez de modifier un fichier Sass, et voulez régénérer le CSS pour voir le résultat. Pour se faire il suffit d'ouvrir un terminal, de se rendre dans le dossier de votre projet et d'exécuter cette commande :
 
-    $ gulp css
+```sh
+gulp css
+```
 
 Ici, la tâche `css` sera exécutée, et vous aurez quelques informations dans le terminal vous indiquant si tout s'est bien passé ou pas.
 
@@ -160,102 +174,116 @@ Ici, la tâche `css` sera exécutée, et vous aurez quelques informations dans l
 La seconde manière, c'est de passer par la tache par défaut.
 Nous avons déjà vu les tâches `css` et `js`, mais il reste une troisième tâche dans notre schéma : la tâche `default`. Cette dernière doit (?) toujours être définie (ou en tout cas, le devrait). Voici comment elle est définie :
 
-    gulp.task('default', ['css', 'js']);
+```js
+gulp.task('default', ['css', 'js']);
+```
 
 Vous pouvez voir que cette tâche ne fait rien d'autre qu'appeler les deux autres. Ces appels sont d'ailleurs représentés sur le schéma. Cette tâche sera par exemple à exécuter avant un push en production, pour s'assurer que le JS et le CSS sont à jour. Ici aussi, on fait appel à la commande `gulp`, mais sans préciser de nom de tâche :
 
-    gulp
+```sh
+gulp
+```
 
 ### Exécution automatique
 
 La troisième et dernière manière permet d'exécuter les tâches automatiquement, dès qu'un changement est détecté sur un fichier (*losanges rouges sur le schéma*). Ceci sera possible grâce à la fonction `watch()` dont nous avons parlé précédemment, et qui devrait parler aux utilisateur de Sass/LESS entre autres.
 Premièrement, il va falloir définir quels fichiers observer, et quelle tâche lancer quand un changement est détecté :
 
-    gulp.task('watch', function () {
+```js
+gulp.task('watch', function () {
 
-        // Un changement dans un SCSS ? Lancer "css"
-        gulp.watch(source + '/scss/**/*.scss', ['css']);
+  // Un changement dans un SCSS ? Lancer "css"
+  gulp.watch(source + '/scss/**/*.scss', ['css']);
 
-        // Un changement dans un JS ? Lancer "js"
-        gulp.watch(source + '/js/**/*.js',     ['js']);
+  // Un changement dans un JS ? Lancer "js"
+  gulp.watch(source + '/js/**/*.js',     ['js']);
 
-    });
+});
+```
 
 Simplissime. Et là encore, vous aurez remarqué bien évidemment que nous avons défini une nouvelle tâche. Il ne reste donc plus qu'à faire ceci :
 
-    $ gulp watch
+```sh
+gulp watch
+```
 
-Et Gulp se chargera de tout maintenir à jour pendant que vous travaillez. Et rassurez-vous, c'est rapide... **très** rapide.
+Et Gulp se chargera de tout maintenir à jour pendant que vous travaillez. Et rassurez-vous, c'est rapide… **très** rapide.
 
 ## Récapitulatif
 
 Si on reprend tout ce qu'on a dit, voici primo l'architecture de notre projet :
 
-    /assets
-        /scss
-            app.scss
-            _partial.scss
-        /js
-            /libs
-                jquery.js
-                touche.js
-        app.js
-    /dist
-        /css
-            dist.css
-        /js
-            dist.js
-    gulpfile.js
+```
+/assets
+  /scss
+    app.scss
+    _partial.scss
+  /js
+    /libs
+      jquery.js
+      touche.js
+  app.js
+/dist
+  /css
+    dist.css
+  /js
+    dist.js
+gulpfile.js
+```
 
 Ensuite, l'installation de gulp et des modules :
 
-    npm install --global gulp
-    npm install --global gulp-sass
-    npm install --global gulp-autoprefixer
-    npm install --global gulp-minify-css
-    npm install --global gulp-uglify
-    npm install --global gulp-concat
+```sh
+npm install --global gulp
+npm install --global gulp-sass
+npm install --global gulp-autoprefixer
+npm install --global gulp-minify-css
+npm install --global gulp-uglify
+npm install --global gulp-concat
+```
 
 Puis enfin le fichier de configuration `gulpfile.js` au complet :
 
-    var gulp         = require('gulp');
+```js
+var gulp         = require('gulp');
 
-    var sass         = require('gulp-sass');
-    var autoprefixer = require('gulp-autoprefixer');
-    var minify       = require('gulp-minify-css');
-    var uglify       = require('gulp-uglify');
-    var concat       = require('gulp-concat');
+var sass         = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var minify       = require('gulp-minify-css');
+var uglify       = require('gulp-uglify');
+var concat       = require('gulp-concat');
 
-    var source       = './assets/';
-    var dest         = './dist/';
+var source       = './assets/';
+var dest         = './dist/';
 
-    gulp.task('default', ['css', 'js']);
+gulp.task('default', ['css', 'js']);
 
-    gulp.task('watch', function () {
-        gulp.watch(source + '/scss/**/*.scss', ['css']);
-        gulp.watch(source + '/js/**/*.js',     ['js']);
-    });
+gulp.task('watch', function () {
+  gulp.watch(source + '/scss/**/*.scss', ['css']);
+  gulp.watch(source + '/js/**/*.js',     ['js']);
+});
 
-    gulp.task('css', function() {
-        return gulp.src(source + '/scss/app.scss')
-            .pipe(sass())
-            .pipe(autoprefixer({
-                browsers: ['> 1%', 'last 2 versions']
-            }))
-            .pipe(minify())
-            .pipe(gulp.dest(dest + '/css/dist.css'));
-    });
+gulp.task('css', function() {
+  return gulp.src(source + '/scss/app.scss')
+    .pipe(sass())
+    .pipe(autoprefixer({
+      browsers: ['> 1%', 'last 2 versions']
+    }))
+    .pipe(minify())
+    .pipe(gulp.dest(dest + '/css/dist.css'));
+});
 
-    gulp.task('js', function() {
-        return gulp.src([
-                source + '/js/libs/jquery.js',
-                source + '/js/libs/touche.js',
-                source + '/js/app.js'
-            ])
-            .pipe(concat())
-            .pipe(uglify())
-            .pipe(gulp.dest(dest + '/js/dist.js'));
-    });
+gulp.task('js', function() {
+  return gulp.src([
+      source + '/js/libs/jquery.js',
+      source + '/js/libs/touche.js',
+      source + '/js/app.js'
+    ])
+    .pipe(concat())
+    .pipe(uglify())
+    .pipe(gulp.dest(dest + '/js/dist.js'));
+});
+```
 
 ## Conclusion
 
@@ -263,7 +291,7 @@ Il s'est passé moins de 10 minutes entre le moment où j'ai décidé de tester 
 Cette rapidité de mise en place, ainsi que la simplicité du fichier de configuration sont deux énormes atouts de Gulp.
 Même si cela fait à peine quelques jours que j'ai découvert tout ça, Je suis ravi des résultats qui ne se sont pas fait attendre, et confiant pour la suite : il s'agira simplement d'installer un nouveau module et de mettre à jour le `gulpfile.js` !
 
-Ne reste plus qu'une chose : convaincre les graphistes-intégrateurs à utiliser une nouvelle ligne de commande...
+Ne reste plus qu'une chose : convaincre les graphistes-intégrateurs à utiliser une nouvelle ligne de commande…
 
 *(D'ailleurs, je suis preneur de tout interface graphique pour Gulp, je n'ai pas encore vu/trouvé ce qui se faisait)*
 

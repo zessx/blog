@@ -15,30 +15,34 @@ description: >
 
 Prenons un exemple concret pour exposer le problème. Vous avez mis en ligne une page HTML avec ses ressources JS/CSS, et vous avez consciencieusement mis en place un petit htaccess pour mettre ces ressources en cache, et éviter aux clients de les recharger systématiquement :
 
-	# Extrait de html5-boilerplate
-	<IfModule mod_expires.c>
-	    ExpiresActive on
-	    ExpiresDefault                        "access plus 1 month"
-	  # CSS
-	    ExpiresByType text/css                "access plus 1 year"
-	  # JavaScript
-	    ExpiresByType application/javascript  "access plus 1 year"
-	</IfModule>
+```apache
+# Extrait de html5-boilerplate
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault                        "access plus 1 month"
+  # CSS
+    ExpiresByType text/css                "access plus 1 year"
+  # JavaScript
+    ExpiresByType application/javascript  "access plus 1 year"
+</IfModule>
+```
 
 Le tout étant utilisé le plus simplement du monde :
 
-	<!DOCTYPE html>
-	<html>
-	    <head>
-	        <meta charset="utf-8">
-	        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	        <title>Hello world!</title>
-	        <link rel="stylesheet" href="css/app.css">
-	    </head>
-	    <body>
-	        <script src="js/app.js"></script>
-	    </body>
-	</html>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello world!</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+```
 
 Jusqu'ici tout va bien, mais quelques mois plus tard vous devez faire une modification mineure sur le CSS. Vous modifiez le fichier, vous l'uploadez, et le problème survient. Votre ancien fichier CSS étant en cache, et sa date d'expiration n'étant pas encore atteinte, votre site l'utilise toujours, sans connaître le nouveau. Vous avez plusieurs choix :
 
@@ -55,7 +59,9 @@ Ce n'est pas problématique tant que vous êtes le seul visiteur du site, mais a
 
 La première piste à suivre est le versioning. Plutôt que d'utiliser des ressources du type ***app.css***, vous utiliserez un nom différent pour chaque version :
 
-	<link rel="stylesheet" href="css/app-1.0.css">
+```html
+<link rel="stylesheet" href="css/app-1.0.css">
+```
 
 * **Avantages :** vous pouvez garder facilement les versions précédentes en cas de pépin, vos ressources sont bien toutes mises en cache, et la solution ne requiert que du HTML.
 * **Inconvénients :** vous êtes obligé de modifier vos sources à chaque version, et vous devez veiller à ce que la page HTML ne soit pas elle-même en cache !
@@ -64,11 +70,13 @@ La première piste à suivre est le versioning. Plutôt que d'utiliser des resso
 
 Seconde piste, nous allons ajouter un paramètre inutile à l'url de notre ressource, en veillant à ce que ce paramètre soit toujours différent :
 
-	<?php
-	    $t = time();
-	?>
-	<link rel="stylesheet" href="css/app.css?<?php echo $t ?>">
-	<!-- Exemple de résultat : css/app.css?1445444940 -->
+```php
+<?php
+  $t = time();
+?>
+<link rel="stylesheet" href="css/app.css?<?php echo $t ?>">
+<!-- Exemple de résultat : css/app.css?1445444940 -->
+```
 
 Ce paramètre ne sert à rien, mais l'url utilisée pour la ressource est différente, ce qui force son rechargement, ce que nous recherchions.
 
@@ -79,10 +87,12 @@ Ce paramètre ne sert à rien, mais l'url utilisée pour la ressource est diffé
 
 Troisième piste, l'utilisation de `filemtime()`. Cette fonction retourne la date de dernière modification d'un fichier (sous la forme d'un timestamp Unix). Nous voulons que notre ressource reste en cache, tant qu'elle n'est pas modifiée. S'il n'y a pas eu modification, le timestamp et donc l'url seront les mêmes, et on ira chercher la ressource en cache. Si en revanche, il y a eu modification, l'url change et la ressource est rechargée :
 
-	<?php
-	    $t = filemtime(PATH_ASSETS.'css/app.css');
-	?>
-	<link rel="stylesheet" href="css/app.css?<?php echo $t ?>">
+```php
+<?php
+  $t = filemtime(PATH_ASSETS.'css/app.css');
+?>
+<link rel="stylesheet" href="css/app.css?<?php echo $t ?>">
+```
 
 Notez qu'il faut évidemment définir la constante `PATH_ASSETS` dans votre code.
 
@@ -96,15 +106,19 @@ Le principe repose sur la piste #3, qui est de continuer d'avoir une url qui cha
 
 Voici le côté client :
 
-	<?php
-	    $t = filemtime(PATH_ASSETS.'css/app.css');
-	?>
-	<link rel="stylesheet" href="css/app.<?php echo $t ?>.css">
+```php
+<?php
+  $t = filemtime(PATH_ASSETS.'css/app.css');
+?>
+<link rel="stylesheet" href="css/app.<?php echo $t ?>.css">
+```
 
 Et le côté serveur, dans le ***.htaccess*** :
 
-	RewriteEngine On
-	RewriteRule ^(css|js)/([\w-]+)\.\d+\.\1$ $1/$2.$1 [L]
+```apache
+RewriteEngine On
+RewriteRule ^(css|js)/([\w-]+)\.\d+\.\1$ $1/$2.$1 [L]
+```
 
 Cette règle va concerner toutes les urls qui concernent nos fichiers JS et CSS, et va simplement supprimer le timestamp de l'url :
 

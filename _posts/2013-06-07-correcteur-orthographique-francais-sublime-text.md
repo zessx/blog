@@ -23,11 +23,15 @@ Afin de rendre accessible ce dictionnaire, créez un nouveau package pour l'y pl
 
 ***Sublime Text 2*** :
 
-	C:/Users/ID/AppData/Roaming/Sublime Text 2/Packages/Language - French/
+```
+C:/Users/ID/AppData/Roaming/Sublime Text 2/Packages/Language - French/
+```
 
 ***Sublime Text 3*** :
 
-	C:/Users/ID/AppData/Roaming/Sublime Text 3/Packages/Language - French/
+```
+C:/Users/ID/AppData/Roaming/Sublime Text 3/Packages/Language - French/
+```
 
 Copiez/Collez les 2 fichiers (par dictionnaires) dans ce répertoire.
 

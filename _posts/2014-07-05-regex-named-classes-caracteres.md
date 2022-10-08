@@ -13,12 +13,16 @@ description: >
 Les regex peuvent devenir fastidieuses à écrire assez rapidement, comme par exemple quand vous voulez désigner l'ensemble des caractères de ponctuation :
 On trouve de nombreux exemples sur le net utilisant ceci :
 
-	[!"#$%&'()*+,-.\/:;<=>?@[\]^_`{|}~]
+```
+[!"#$%&'()*+,-.\/:;<=>?@[\]^_`{|}~]
+```
 
 En soit, c'est complètement valide, mais au sein d'une grande regex ça peut devenir difficile à lire, d'autant plus si ce bloc est répété.
 Il faut savoir que les regex acceptent un certains nombre de classes de caractères nommées (prédéfinies). Pour les caractères de ponctuation par exemple, on pourra remplacer ce code par ceci :
 
-	[[:punct:]]
+```
+[[:punct:]]
+```
 
 Voici qui est déjà beaucoup plus lisible !
 Les classes ne caractères ne sont pas systématiquement plus courtes à écrire (je pense par exemple à `[[:digit:]]`, qui est plus long que `[0-9]`), mais leur intérêt est surtout d'être plus lisibles.
@@ -44,19 +48,27 @@ Voici la liste complète des classes de caractères nommées disponibles :
 
 Chacune de ces classes est composée de 2 crochets (comme toute classe de caractères) et d'un mot clé :
 
-	[  [:digit]  ]
+```
+[  [:digit]  ]
+```
 
 En voyant ceci, vous venez peut-être de comprendre qu'il est possible d'étendre ces classes. Si je veux capturer une suite de lettres et de tirets (`-`), je vais en effet pouvoir utiliser :
 
-	[[:alpha:]-]+
+```
+[[:alpha:]-]+
+```
 
 Vous pouvez utiliser la négation de la même façon. Si je veux exclure les chiffres et les lettres A, B et C :
 
-	[^a-cA-C[:digit:]]
+```
+[^a-cA-C[:digit:]]
+```
 
 Mieux encore, la négation est aussi possible au sein de ces classes nommées ! Si je veux uniquement les consonnes :
 
-	[^aeiouAEIOU[:^alpha:]]
+```
+[^aeiouAEIOU[:^alpha:]]
+```
 
 ## Les raccourcis
 

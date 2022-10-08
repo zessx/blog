@@ -8,7 +8,7 @@ description: >
   Présentation d'un moteur de recherche alternatif.
 ---
 
-> Note : cette procédure s'adresse aux utilisateurs de Google Chrome, mais vous pourrez la trouver sans aucun problème pour les autres navigateurs (Firefox, Safari, Opera, Internet Explorer...)
+> Note : cette procédure s'adresse aux utilisateurs de Google Chrome, mais vous pourrez la trouver sans aucun problème pour les autres navigateurs (Firefox, Safari, Opera, Internet Explorer…)
 
 ## Vous avez dit vie privée ?
 

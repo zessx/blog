@@ -19,7 +19,7 @@ Dans votre module `foo`, vous aurez par exemple ce hook de mise à jour dans le 
 
 ```php
 function foo_update_8101() {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -27,7 +27,7 @@ Lors de la première mise à jour, ce hook aura probablement été exécuté via
 
 Il va falloir utiliser la commande `drush php-eval` (ou son alias `drush eval`) pour le lancer à la main, en chargeant au préalable le module en question :
 
-```bash
+```sh
 drush eval "module_load_install('foo'); foo_update_8101();"
 ```
 

@@ -14,15 +14,21 @@ description: >
 ## 291 octets
 
 <center><svg fill="none" stroke-width="8" height="90">
-    <circle cx="142" cy="47" r="17" stroke="#fbbc05" />
-    <path d="M220,4 v63" stroke="#34a853" />
-    <path d="M35,35 h30 A30,30,0,1,1,56,14 m150,33 a17,17,0,1,0,0,.1 m0,-21 v41 a17,17,0,0,1,-33,6" stroke="#4285f4" />
-    <path d="M110,47 a17,17,0,1,0,0,.1 M234,52 l32,-13 a17,17,0,1,0,0,17" stroke="#ea4335" />
+  <circle cx="142" cy="47" r="17" stroke="#fbbc05" />
+  <path d="M220,4 v63" stroke="#34a853" />
+  <path d="M35,35 h30 A30,30,0,1,1,56,14 m150,33 a17,17,0,1,0,0,.1 m0,-21 v41 a17,17,0,0,1,-33,6" stroke="#4285f4" />
+  <path d="M110,47 a17,17,0,1,0,0,.1 M234,52 l32,-13 a17,17,0,1,0,0,17" stroke="#ea4335" />
 </svg></center>
 
 C'est là le résultat le plus abouti que j'ai pu produire pour le moment :
 
-    <svg fill=none stroke-width=8><circle cx=142 cy=47 r=17 stroke=#fbbc05 /><path d=M220,4v63 stroke=#34a853 /><path d=M35,35h30A30,30,0,1,1,56,14m150,33a17,17,0,1,0,0,.1m0,-21v41a17,17,0,0,1,-33,6 stroke=#4285f4 /><path d=M110,47a17,17,0,1,0,0,.1M234,52l32,-13a17,17,0,1,0,0,17 stroke=#ea4335>
+```html
+<svg fill=none stroke-width=8>
+  <circle cx=142 cy=47 r=17 stroke=#fbbc05 />
+  <path d=M220,4v63 stroke=#34a853 />
+  <path d=M35,35h30A30,30,0,1,1,56,14m150,33a17,17,0,1,0,0,.1m0,-21v41a17,17,0,0,1,-33,6 stroke=#4285f4 />
+  <path d=M110,47a17,17,0,1,0,0,.1M234,52l32,-13a17,17,0,1,0,0,17 stroke=#ea4335>
+```
 
 Il aura tout de même fallu quelques heures pour passer de ma première idée (551 octets) à ceci, avec quelques moments de lecture assidue de documentation sur le SVG.
 
@@ -30,7 +36,7 @@ Avant de continuer, je suis conscient que cette version ne correspond pas au pix
 
 ## L'élément `<svg>`
 
-Un objet SVG est toujours contenu dans une balise `<svg>`. À l'intérieur de cette balise, on ajoute d'autres éléments : cercles, chemins, filtres... Tout ce qui permet de faire du dessin vectoriel.
+Un objet SVG est toujours contenu dans une balise `<svg>`. À l'intérieur de cette balise, on ajoute d'autres éléments : cercles, chemins, filtres… Tout ce qui permet de faire du dessin vectoriel.
 
 Vous pouvez voir dans mon exemple que quelques attributs sont définis sur la balise `<svg>` :
 
@@ -56,7 +62,9 @@ Dans mon exemple, j'utilise un cercle pour le second "o" de Google (le premier "
     <path d="M110,47 a17,17,0,1,0,0,.1 M234,52 l32,-13 a17,17,0,1,0,0,17" />
 </svg></center>
 
-    <circle cx=142 cy=47 r=17 stroke=#fbbc05 />
+```html
+<circle cx=142 cy=47 r=17 stroke=#fbbc05 />
+```
 
 ## L'élément `<path>`
 
@@ -69,18 +77,20 @@ Au cœur de cette démonstration se trouve un autre élément : `<path>`. Cet é
 
 Ces commandes seront placées avec leurs arguments dans l'attribut `d` de l'élément, de cette manière :
 
-    <svg>
-      <path d="
-        M35,35
-        h30
-        A30,30,0,1,1,56,14
-        m145,21
-        a17,17,0,1,0,.1,.1
-        m5,-9
-        v41
-        a17,17,0,0,1,-33,6
-      "/>
-    </svg>
+```html
+<svg>
+  <path d="
+    M35,35
+    h30
+    A30,30,0,1,1,56,14
+    m145,21
+    a17,17,0,1,0,.1,.1
+    m5,-9
+    v41
+    a17,17,0,0,1,-33,6
+  "/>
+</svg>
+```
 
 ### Les déplacements
 
@@ -108,9 +118,11 @@ Voici la ligne que j'ai tracée pour la barres du "e" de Google :
     <path d="M234,52 l32,-13" stroke="#ea4335" />
 </svg></center>
 
-    <svg fill="none" stroke-width="8">
-      <path d="M234,52 l32,-13" stroke="#ea4335" />
-    </svg>
+```html
+<svg fill="none" stroke-width="8">
+  <path d="M234,52 l32,-13" stroke="#ea4335" />
+</svg>
+```
 
 Il existe aussi des raccourcis pour les lignes horizontales et verticales :
 
@@ -131,11 +143,13 @@ Ce sont ces commandes `h` et `v` que j'ai utilisées pour dessiner les deux "g" 
     <path d="M206,26 v41" stroke="#4285f4" />
 </svg></center>
 
-    <svg fill="none" stroke-width="8">
-      <path d="M220,4 v63" stroke="#34a853" />
-      <path d="M35,35 h30" stroke="#4285f4" />
-      <path d="M206,26 v41" stroke="#4285f4" />
-    </svg>
+```html
+<svg fill="none" stroke-width="8">
+  <path d="M220,4 v63" stroke="#34a853" />
+  <path d="M35,35 h30" stroke="#4285f4" />
+  <path d="M206,26 v41" stroke="#4285f4" />
+</svg>
+```
 
 ### Les courbes
 
@@ -151,15 +165,15 @@ Afin de dessiner les deux "g" et le "e", j'ai utilisé des arcs de cercle. Cette
 
 Un arc se détermine à partir d'un cercle ou d'une ellipse, les 3 premiers paramètres (`rx`, `ry` et `x-axis-rotation`) servent à définir ce cercle ou cette ellipse.
 
-- dans le cas d'un cercle, il suffit de définir des rayons horizontal et vertical identiques. Le troisième paramètre n'a ici pas d'incidence, laissez donc sa valeur à 0 : `A 30,30 0 ...`
-- dans le cas d'une ellipse, vous aurez besoin de deux rayons différents pour définir sa forme. Le troisième paramètre permettra de pivoter l'ellipse, vous le définirez en degrés: `A 50,25 -45 ...`
+- dans le cas d'un cercle, il suffit de définir des rayons horizontal et vertical identiques. Le troisième paramètre n'a ici pas d'incidence, laissez donc sa valeur à 0 : `A 30,30 0 …`
+- dans le cas d'une ellipse, vous aurez besoin de deux rayons différents pour définir sa forme. Le troisième paramètre permettra de pivoter l'ellipse, vous le définirez en degrés: `A 50,25 -45 …`
 
 Je vais revenir sur les deux paramètres suivant (4e et 5e) plus tard. Les deux derniers paramètres (6e et 7e) définissent le point d'arrivée de votre arc. Une fois le point de départ et l'ellipse de référence définis (ou le cercle, dans son cas particulier), il existe deux moyens pour tracer un arc :
 
 - placer l'ellipse, et définir l'angle de l'arc
 - définir le point d'arrivée, et placer l'ellipse pour qu'elle passe par des points de départ et d'arrivée
 
-C'est cette seconde solution qui a été choisie par le W3C. Elle apporte le gros avantage de simplifier les calculs lors de la création de vos arcs. Nous avons donc les coordonnées d'arrivées en derniers paramètres. Ces coordonnées seront absolues ou relative selon que vous utiliserez la commande `A` ou `a` : `A 30,30 0 ... 56,14`
+C'est cette seconde solution qui a été choisie par le W3C. Elle apporte le gros avantage de simplifier les calculs lors de la création de vos arcs. Nous avons donc les coordonnées d'arrivées en derniers paramètres. Ces coordonnées seront absolues ou relative selon que vous utiliserez la commande `A` ou `a` : `A 30,30 0 … 56,14`
 
 Enfin, les deux paramètres manquants permettent de déterminer quelle ellipse sera utilisée, et quelle portion sera dessinée. Nous avons en effet deux points, et une même ellipse peut être placée à deux endroits différents sur ces deux points. De la même manière, une ellipse passant par deux points laisse deux arcs disponibles : un petit et un grand (ou deux arcs de même taille dans le cas particulier où les points sont opposés). Voici un petit schéma pour comprendre le problème, sur lequel vous pouvez voir deux ellipses identiques, passant par les même deux points de départ et d'arrivée. Les 4 arcs possibles sont affichés dans des couleurs différentes.
 
@@ -194,12 +208,14 @@ Cette combinaison de deux paramètres permet de pouvoir choisir l'arc a dessiner
     <path d="M266,39 a17,17,0,1,0,0,17" stroke="#ea4335" />
 </svg></center>
 
-    <svg fill="none" stroke-width="8">
-      <path d="M35,65 A30,30,0,1,1,56,14" stroke="#4285f4"/>
-      <path d="M110,47 a17,17,0,1,0,0,.1" stroke="#ea4335"/>
-      <path d="M206,67 a17,17,0,0,1,-33,6" stroke="#4285f4" />
-      <path d="M266,39 a17,17,0,1,0,0,17" stroke="#ea4335"/>
-    </svg>
+```html
+<svg fill="none" stroke-width="8">
+  <path d="M35,65 A30,30,0,1,1,56,14" stroke="#4285f4"/>
+  <path d="M110,47 a17,17,0,1,0,0,.1" stroke="#ea4335"/>
+  <path d="M206,67 a17,17,0,0,1,-33,6" stroke="#4285f4" />
+  <path d="M266,39 a17,17,0,1,0,0,17" stroke="#ea4335"/>
+</svg>
+```
 
 ### La clôture
 
@@ -217,9 +233,11 @@ C'est une commande utile pour terminer des formes anguleuses. Elle aurait aussi 
     <path d="M266,56 A17,17,0,0,1,234,52 m0,0 A17,17,0,0,1,266,40 z" stroke="#ea4335" />
 </svg></center>
 
-    <svg fill="none" stroke-width="8">
-      <path d="M266,56 A17,17,0,0,1,234,52 m0,0 A17,17,0,0,1,266,40 z" stroke="#ea4335" />
-    </svg>
+```html
+<svg fill="none" stroke-width="8">
+  <path d="M266,56 A17,17,0,0,1,234,52 m0,0 A17,17,0,0,1,266,40 z" stroke="#ea4335" />
+</svg>
+```
 
 ## La minification
 
@@ -241,7 +259,7 @@ Enfin, j'ai découvert au fil de mes recherches quelques raccourcis :
 
 - l'utilisation de `h` et `v` au lieu de `l` dans certains cas
 - l'utilisation de coordonnées relatives plutôt qu'absolues (ce qui permet d'avoir des coordonnées a 1 ou 2 chiffres plutôt qu'à 3)
-- ...
+- …
 
 Et tout ceci pour un résultat de 291 octets !
 

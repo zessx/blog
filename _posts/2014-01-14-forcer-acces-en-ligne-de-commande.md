@@ -37,11 +37,11 @@ Elle peut avoir pour valeur (liste non exhaustive extraite de la documentation) 
 
 La valeur qui nous intéresse est ***cli***, pour Command LIne. En utilisant ce genre de petite condition, vous serez alors capable de restreindre l'accès à vos scripts en ligne de commande :
 
-	<?php
-	if(PHP_SAPI != 'cli') die('L\'accès à ce script n\'est possible qu\'en ligne de commande.');
-
-	...
-	?>
+```php
+<?php
+if(PHP_SAPI != 'cli') die('L\'accès à ce script n\'est possible qu\'en ligne de commande.');
+// …
+```
 
 ## Liens
 [La constante `PHP_SAPI`](https://php.net/manual/fr/reserved.constants.php#constant.php-sapi)

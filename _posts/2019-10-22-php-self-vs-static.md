@@ -22,17 +22,17 @@ Si vous avez déjà fait un peu de POO, vous êtes censés connaître les foncti
 ```php
 class Mother
 {
-    protected static int $counter = 0;
+  protected static int $counter = 0;
 
-    public function __construct()
-    {
-        self::$counter++;
-    }
+  public function __construct()
+  {
+    self::$counter++;
+  }
 
-    public static function count(): int
-    {
-        return self::$counter;
-    }
+  public static function count(): int
+  {
+    return self::$counter;
+  }
 }
 
 new Mother();
@@ -55,22 +55,22 @@ Poussons un peu plus loin l'exemple précédent et ajoutons de l'héritage :
 ```php
 class Mother
 {
-    protected static int $counter = 0;
+  protected static int $counter = 0;
 
-    public function __construct()
-    {
-        self::$counter++;
-    }
+  public function __construct()
+  {
+    self::$counter++;
+  }
 
-    public static function count(): int
-    {
-        return self::$counter;
-    }
+  public static function count(): int
+  {
+    return self::$counter;
+  }
 }
 
 class Daughter extends Mother
 {
-    protected static int $counter = 0;
+  protected static int $counter = 0;
 }
 ```
 
@@ -109,7 +109,7 @@ Comme il s'agit d'une fonction héritée, le contenu de cette fonction dans le c
 ```php
 public static function count(): int
 {
-    return parent::count();
+  return parent::count();
 }
 ```
 
@@ -126,22 +126,22 @@ En reprenant toujours le même exemple, pour avoir deux compteurs différents il
 ```php
 class Mother
 {
-    protected static int $counter = 0;
+  protected static int $counter = 0;
 
-    public function __construct()
-    {
-        static::$counter++;
-    }
+  public function __construct()
+  {
+    static::$counter++;
+  }
 
-    public static function count(): int
-    {
-        return static::$counter;
-    }
+  public static function count(): int
+  {
+    return static::$counter;
+  }
 }
 
 class Daughter extends Mother
 {
-    protected static int $counter = 0;
+  protected static int $counter = 0;
 }
 
 
@@ -180,46 +180,46 @@ Pour chacune de mes APIs et partant du principe que j'ai mis en place un routeur
 ```php
 abstract class AbstractApi
 {
-    const VERSION = 'v1';
+  const VERSION = 'v1';
 }
 
 class Customers extends AbstractApi
 {
-    protected static function namespace(): string
-    {
-        return 'clients';
-    }
+  protected static function namespace(): string
+  {
+    return 'clients';
+  }
 
-    public static function root(): string
-    {
-        return sprintf('api/%s/%s', self::VERSION, self::namespace());
-    }
+  public static function root(): string
+  {
+    return sprintf('api/%s/%s', self::VERSION, self::namespace());
+  }
 }
 
 class Orders extends AbstractApi
 {
-    protected static function namespace(): string
-    {
-        return 'orders';
-    }
+  protected static function namespace(): string
+  {
+    return 'orders';
+  }
 
-    public static function root(): string
-    {
-        return sprintf('api/%s/%s', self::VERSION, self::namespace());
-    }
+  public static function root(): string
+  {
+    return sprintf('api/%s/%s', self::VERSION, self::namespace());
+  }
 }
 
 class Products extends AbstractApi
 {
-    protected static function namespace(): string
-    {
-        return 'products';
-    }
+  protected static function namespace(): string
+  {
+    return 'products';
+  }
 
-    public static function root(): string
-    {
-        return sprintf('api/%s/%s', self::VERSION, self::namespace());
-    }
+  public static function root(): string
+  {
+    return sprintf('api/%s/%s', self::VERSION, self::namespace());
+  }
 }
 ```
 
@@ -232,25 +232,25 @@ Pour améliorer tout ça, je déplace donc ces deux fonctions vers la classe mè
 ```php
 abstract class AbstractApi
 {
-    const VERSION = 'v1';
+  const VERSION = 'v1';
 
-    protected static function namespace(): string
-    {
-        return strtolower(get_class_name());
-    }
+  protected static function namespace(): string
+  {
+    return strtolower(get_class_name());
+  }
 
-    public static function root(): string
-    {
-        return sprintf('api/%s/%s', self::VERSION, static::namespace());
-    }
+  public static function root(): string
+  {
+    return sprintf('api/%s/%s', self::VERSION, static::namespace());
+  }
 }
 
 class Customers extends AbstractApi
 {
-    protected static function namespace(): string
-    {
-        return 'clients';
-    }
+  protected static function namespace(): string
+  {
+    return 'clients';
+  }
 }
 
 class Orders extends AbstractApi {}

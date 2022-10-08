@@ -26,16 +26,20 @@ Pour augmenter cette valeur, plusieurs solutions sont possibles.
 Vous pouvez modifier la valeur de cette variable dans la configuration PHP du serveur, si vous y avez accès bien entendu.
 Remplacer simplement la valeur de cette ligne dans le `php.ini` :
 
-	max_input_vars = 5000
+```apache
+max_input_vars = 5000
+```
 
 ## Via un .htaccess
 
 Si vous n'avez pas accès à cette configuration (comme par exemple sur certains serveurs mutualisés), vous pouvez tenter de modifier votre fichier `.htaccess` en ajoutant ces trois lignes :
 
-	php_value max_input_vars 5000
-	php_value suhosin.post.max_vars 5000
-	php_value suhosin.request.max_vars 5000
-	# ~~start~~
+```apache
+php_value max_input_vars 5000
+php_value suhosin.post.max_vars 5000
+php_value suhosin.request.max_vars 5000
+# ~~start~~
+```
 
 N'oubliez pas de bien placer ces ligne **avant** le commentaire `# ~~start~~`, sans quoi elles seront supprimées la prochaine fois que vous mettrez à jour le `.htaccess` via le backoffice.
 Notez que cette méthode ne fonctionne pas toujours,
@@ -44,25 +48,30 @@ Notez que cette méthode ne fonctionne pas toujours,
 
 Si module Apache `suPHP` est activé, vous avez aussi la possibilité de créer un nouveau fichier `php.ini` que vous placerez où vous voulez sur le serveur :
 
-	[PHP]
-	max_input_vars = 5000
+```ini
+[PHP]
+max_input_vars = 5000
+```
 
 Il ne reste plus qu'à modifier le `.htaccess` de votre Prestashop en y spécifiant le chemin absolu du dossier dans lequel se trouve le `php.ini` :
 
-	suPHP_ConfigPath /home/path/to/file/
-	# ~~start~~
+```apache
+suPHP_ConfigPath /home/path/to/file/
+# ~~start~~
+```
 
-## La dernière chance...
+## La dernière chance…
 
-Si vraiment rien de tout cela ne fonctionne, c'est que vous avez vraiment un hébergeur restrictif... Il faut toutefois savoir que la variable `max_input_vars` a été ajoutée avec PHP 5.3.9 ([voir le changelog](https://www.php.net/ChangeLog-5.php#5.3.9)), il vous reste donc une toute petite chance.
+Si vraiment rien de tout cela ne fonctionne, c'est que vous avez vraiment un hébergeur restrictif… Il faut toutefois savoir que la variable `max_input_vars` a été ajoutée avec PHP 5.3.9 ([voir le changelog](https://www.php.net/ChangeLog-5.php#5.3.9)), il vous reste donc une toute petite chance.
 
 Vous pouvez parfois choisir quelle version de PHP utiliser via votre console d'administration de serveur. Il s'agira là d'utiliser une version de PHP **antérieure** à la 5.3.9. La variable `max_input_vars` n'existera alors plus, et vous n'aurez plus de soucis pour traduire vos modules !
 
 Sur un hébergement mutualisé de base chez OVH par exemple, il suffit d'ajouter à votre `.htaccess` cette ligne pour forcer l'utilisation de PHP 5.2 :
 
-	SetEnv PHP_VER 5
-	# ~~start~~
-
+```apache
+SetEnv PHP_VER 5
+# ~~start~~
+```
 
 *Si vous connaissez d'autres techniques pour modifier cette variable (particulièrement sur des serveurs mutualisés), n'hésitez pas à les partager via les commentaires !*
 

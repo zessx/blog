@@ -10,10 +10,14 @@ description: >
 
 ## L'option `copy_with_empty_selection`
 
-Il arrive parfois (souvent) qu'on loupe un <kbd>Ctrl+C</kbd> / <kbd>Ctrl+V</kbd> lorsqu'on travaille de manière un peu mécanique. L'exemple typique étant de copier une portion de code, changer de fichier, placer son curseur, puis relancer stupidement un <kbd>Ctrl+C</kbd>...
+Il arrive parfois (souvent) qu'on loupe un <kbd>Ctrl+C</kbd> / <kbd>Ctrl+V</kbd> lorsqu'on travaille de manière un peu mécanique. L'exemple typique étant de copier une portion de code, changer de fichier, placer son curseur, puis relancer stupidement un <kbd>Ctrl+C</kbd>…
 
 Le fonctionnement par défaut de Sublime Text sera de vider votre presse-papier. Su-per.
 
 Pour éviter ce genre de petit désagréments, vous pouvez changer l'option suivante dans vos préférences :
 
-    "copy_with_empty_selection": false
+```json
+{
+  "copy_with_empty_selection": false
+}
+```

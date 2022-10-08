@@ -26,7 +26,7 @@ Le désinstalleur de Sublime Text 2 oublie simplement de supprimer une clé du r
 
 And voilà !
 
-Vous pouvez maintenant redéfinir l'éditeur par défaut par... disons... Sublime Text 3 ?
+Vous pouvez maintenant redéfinir l'éditeur par défaut par… disons… Sublime Text 3 ?
 
 
 ## Liens

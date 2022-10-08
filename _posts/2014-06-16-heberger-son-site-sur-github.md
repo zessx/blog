@@ -53,7 +53,9 @@ Il va donc vous falloir agir des deux côtés : sur GitHub, et chez votre regist
 Côté GitHub, tout ce que vous aurez à faire, c'est de créer un fichier `CNAME` (tout en capitales, sans extension) à la racine de votre dépôt.
 Dans ce fichier, vous ajoutez une unique ligne avec votre nom de domaine :
 
-    smarchal.com
+```
+smarchal.com
+```
 
 ## Configurer votre nom de domaine
 
@@ -61,19 +63,25 @@ Côté registrar à présent. Là, tout va dépendre de si vous utilisez un sous
 
 Dans le cas d'un sous-domaine (`www` y compris), vous avez simplement à ajouter une entrée `CNAME` dans votre zone DNS :
 
-    www.smarchal.com.  CNAME  zessx.github.io.
+```
+www.smarchal.com.  CNAME  zessx.github.io.
+```
 
 Dans le cas d'un domaine nu (ou "naked domain", ou "apex domain"), vous ne pouvez pas utiliser d'entrée `CNAME`. Il existe et existera toujours une entrée `A` pour votre domaine nu. Or, une entrée `CNAME` ne peut être ajoutée que si aucune autre entrée ne concerne cet alias. Vous ne pouvez par exemple pas faire ceci :
 
-    smarchal.com.  A      127.0.0.1
-    smarchal.com.  CNAME  zessx.github.io.
+```
+smarchal.com.  A      127.0.0.1
+smarchal.com.  CNAME  zessx.github.io.
+```
 
 Le service DNS ne saurait alors plus où donner de la tête : si on accède à `smarchal.com`, faut-il rediriger vers `zessx.github.io` ou accéder à l'IP `127.0.0.1` ?
 C'est pour cette raison que, pour les domaines nus uniquement, vous allez modifier l'entrée `A` directement. Vous expliquez ainsi au service DNS que votre site se trouve sur un autre serveur : celui de GitHub.
 GitHub fournit 2 URL différentes, que vous allez ajoutez en tant qu'entrées `A` :
 
-    smarchal.com.  A      192.30.252.153
-    smarchal.com.  A      192.30.252.154
+```
+smarchal.com.  A      192.30.252.153
+smarchal.com.  A      192.30.252.154
+```
 
 Veillez bien à ce que les autres entrées `A` pour `smarchal.com` soient supprimées, et vous n'aurez plus qu'à attendre que vos nouvelles entrées DNS soient propagées !
 
@@ -98,30 +106,27 @@ J'ai choisi une solution simple : mettre en place des sous-domaines pour ces sou
 L'ancienne url `smarchal.com/twbscolor` à été remplacée par `twbscolor.smarchal.com`. Mais cela ne suffit pas, il faut rediriger les appels de l'ancienne url vers la nouvelle.
 
 Lorsqu'on accède à `smarchal.com/twbscolor`, on est redirigé sur mon dépôt GitHub `zessx/twbscolor`, **si tant est qu'il existe**.
-Comme GitHub n'autorise que des ressources statiques, inutile de compter sur un `.htaccess` pour effectuer la redirection. Il va falloir utiliser... du JS.
+Comme GitHub n'autorise que des ressources statiques, inutile de compter sur un `.htaccess` pour effectuer la redirection. Il va falloir utiliser… du JS.
 
 - Créez le dépôt correspondant s'il n'existe pas (ici `zessx/twbscolor`)
 - Créez une branche `gh-pages`, qui contiendra votre page projet (l'autre type de GitHub pages dont nous parlions)
 - Ajoutez un fichier `index.html` sur cette branche
 - Complétez-le pour enfin effectuer votre redirection en JS :
 
-<!-- -->
-
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>TWBSColor</title>
-		<script>
-		window.location.replace("https://twbscolor.smarchal.com");
-		</script>
-	</head>
-	<body></body>
-	</html>
-
-<!-- -->
-
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TWBSColor</title>
+  <script>
+  window.location.replace("https://twbscolor.smarchal.com");
+  </script>
+</head>
+<body></body>
+</html>
+```
 
 ## Liens
 [Mon site perso - sources](https://github.com/zessx/site)

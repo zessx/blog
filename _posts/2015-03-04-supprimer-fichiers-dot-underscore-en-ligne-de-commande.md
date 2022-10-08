@@ -10,7 +10,9 @@ description: >
 
 ## I will look for you, I will find you, and I will kill you.
 
-    $ find . -name "._*" -exec rm -f {} \;
+```sh
+find . -name "._*" -exec rm -f {} \;
+```
 
 Quelques détails sur cette ligne de commande :
 
@@ -22,4 +24,6 @@ Quelques détails sur cette ligne de commande :
 
 Voilà pour l'astuce du jour. Et si vous voulez éviter que ces fichiers soient automatiquement créés, vous pouvez toujours ouvrir un terminal et exécuter cette commande :
 
-    $ echo "export COPYFILE_DISABLE=true" >> .profile
+```sh
+echo "export COPYFILE_DISABLE=true" >> .profile
+```

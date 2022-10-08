@@ -23,7 +23,7 @@ Certaines de ces commandes sont assez souvent utilisées :
 - `RemoveCommand`
 - `AppendCommand`
 - `InvokeCommand`
-- ...
+- …
 
 Pour plus de détails sur la manière de les utiliser, je vous renvoie à la [documentation de l'API](https://api.drupal.org/api/drupal/core%21core.api.php/group/ajax). Vous pourrez aussi trouver [la liste exhaustive des commandes](https://github.com/drupal/drupal/tree/8.5.x/core/lib/Drupal/Core/Ajax) sur GitHub.
 
@@ -33,9 +33,11 @@ Dans les commandes existantes on peut trouver `InvokeCommand`, qui permet d'appe
 
 Je vais prendre l'exemple concret d'un projet sur lequel je suis intervenu, et dans lequel certains boutons déclenchaient des appels AJAX, puis devaient avoir une classe particulière pendant un certains nombre de secondes. Voici le callback que je veux alors exécuter (je rappelle que jQuery est chargé par défaut, et nécessaire pour utiliser AJAX avec Drupal 8) :
 
-    setTimeout(function() {
-      $('button.ajax').removeClass('ajax-success ajax-error');
-    }, 3000);
+```js
+setTimeout(function() {
+  $('button.ajax').removeClass('ajax-success ajax-error');
+}, 3000);
+```
 
 Nous allons voir ensemble comment créer une commande simple qui correspond à ce traitement.
 
@@ -56,49 +58,57 @@ Pour cette première étape, il faut créer une classe qui hérite de `Drupal\Co
 
 Voici le contenu de base d'une commande :
 
-    <?php
+```php
+<?php
 
-    // web/modules/custom/ajaxextended/src/Ajax/RemoveFeedbackClassesCommand.php
-    namespace Drupal\ajaxextended\Ajax;
+// web/modules/custom/ajaxextended/src/Ajax/RemoveFeedbackClassesCommand.php
+namespace Drupal\ajaxextended\Ajax;
 
-    use Drupal\Core\Ajax\CommandInterface;
+use Drupal\Core\Ajax\CommandInterface;
 
-    class RemoveFeedbackClassesCommand implements CommandInterface
-    {
-        public function __construct()
-        {}
+class RemoveFeedbackClassesCommand implements CommandInterface
+{
+  public function __construct()
+  {}
 
-        /**
-         * Implements Drupal\Core\Ajax\CommandInterface:render().
-         */
-        public function render()
-        {
-            return [
-                'command' => 'removeFeedbackClasses'
-            ];
-        }
-    }
+  /**
+   * Implements Drupal\Core\Ajax\CommandInterface:render().
+   */
+  public function render()
+  {
+    return [
+      'command' => 'removeFeedbackClasses'
+    ];
+  }
+}
+```
 
 Il faut ensuite y ajouter les paramètres dont nous auront besoin. Dans notre cas, il suffira d'un sélecteur pour identifier l'élément à modifier lors du traitement. On ajoute donc une propriété à notre classe :
 
-    protected $selector;
+```php
+protected $selector;
+```
 
 On modifie le constructeur conséquemment :
 
-    public function __construct($selector)
-    {
-        $this->selector = $selector;
-    }
+```php
+public function __construct($selector)
+{
+  $this->selector = $selector;
+}
+```
 
 Et on modifie la fonction de rendu pour transmettre le sélecteur dans le retour JSON :
 
-    public function render()
-    {
-        return [
-            'command' => 'removeFeedbackClasses',
-            'selector' => $this->selector
-        ];
-    }
+```php
+public function render()
+{
+  return [
+    'command' => 'removeFeedbackClasses',
+    'selector' => $this->selector
+  ];
+}
+```
 
 Voilà, la partie serveur chargée de renvoyer un objet JSON décrivant les traitements à effectuer est prête. Passons donc à la suite.
 
@@ -106,34 +116,38 @@ Voilà, la partie serveur chargée de renvoyer un objet JSON décrivant les trai
 
 Cette seconde étape se passe côté client. Commençons donc par ajouter notre nouvelle commande dans l'objet `Drupal.Ajax.AjaxCommands.prototype`, en créant un fichier JavaScript dans le module :
 
-    // web/modules/custom/ajaxextended/js/commands.js
-    (function($, Drupal) {
+```js
+// web/modules/custom/ajaxextended/js/commands.js
+(function($, Drupal) {
 
-      Drupal.AjaxCommands.prototype.cleanFeedbacks = function(ajax, response, status) {
-        setTimeout(function() {
-          $(response.selector).removeClass('ajax-success ajax-error');
-        }, 3000);
-      };
+  Drupal.AjaxCommands.prototype.cleanFeedbacks = function(ajax, response, status) {
+    setTimeout(function() {
+      $(response.selector).removeClass('ajax-success ajax-error');
+    }, 3000);
+  };
 
-    })(jQuery, Drupal);
+})(jQuery, Drupal);
+```
 
 On retrouve ici le traitement dont j'avais parlé au début de cet article, c'est le cœur de la commande. Notons au passage les trois variable systématiquement envoyées aux commandes :
 
-- `ajax` : contient des informations sur l'appel (trigger, méthode...)
+- `ajax` : contient des informations sur l'appel (trigger, méthode…)
 - `response` : contient le tableau renvoyé par la classe PHP
-- `status` : contient le code HTTP (200, 404...)
+- `status` : contient le code HTTP (200, 404…)
 
 ## Déclaration d'une librairie
 
 Il faut ensuite ajouter le fichier qui contient la/les commande(s) à une librairie, et la déclarer dans votre module. Créons le fichier de librairies, s'il n'existe pas déjà dans le module :
 
-    # web/modules/custom/ajaxextended/ajaxextended.libraries.yml
-    ajaxextended.commands:
-      version: 1.x
-      js:
-        js/commands.js: {}
-      dependencies:
-        - core/drupal.ajax
+```yaml
+# web/modules/custom/ajaxextended/ajaxextended.libraries.yml
+ajaxextended.commands:
+  version: 1.x
+  js:
+    js/commands.js: {}
+  dependencies:
+    - core/drupal.ajax
+```
 
 La librairie a pour identifiant `ajaxextended.commands` (ce nom ne doit pas nécessairement être le même que votre fichier JavaScript), et pour dépendance `core/drupal.ajax`.
 
@@ -141,27 +155,31 @@ La librairie a pour identifiant `ajaxextended.commands` (ce nom ne doit pas néc
 
 La librairie est à présent prête à être utiliser, il va falloir l'ajouter dans le tableau de rendu des fonctions de Controller qui en auront besoin (là où se trouvent les boutons qui vont déclencher les appels AJAX). Un exemple ci-dessous :
 
-    public function renderCall()
-    {
-        $render = array();
-        // ...
+```php
+public function renderCall()
+{
+  $render = array();
+  // …
 
-        $render['#attached']['library'][] = 'ajaxextended/ajaxextended.commands';
-        return $render;
-    }
+  $render['#attached']['library'][] = 'ajaxextended/ajaxextended.commands';
+  return $render;
+}
+```
 
 ## Utilisation de la commande
 
 Ne reste à présent plus qu'à utiliser la commande dans les fonctions de Controller qui reçoivent les appels ajax :
 
-    public function ajaxCall($buttonId)
-    {
-        // ...
+```php
+public function ajaxCall($buttonId)
+{
+  // …
 
-        $response = new AjaxResponse();
-        $response->addCommand(new RemoveFeedbackClassesCommand(sprintf('#%s', $buttonId)));
-        return $response;
-    }
+  $response = new AjaxResponse();
+  $response->addCommand(new RemoveFeedbackClassesCommand(sprintf('#%s', $buttonId)));
+  return $response;
+}
+```
 
 ## Liens :
 
