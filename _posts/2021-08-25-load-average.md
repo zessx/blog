@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Comprendre load average"
+title:  "Comprendre le load average"
 date:   2021-08-25
 tags:
 - sysadmin
