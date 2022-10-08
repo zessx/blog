@@ -102,7 +102,7 @@ Plus de limites, nous pouvons désormais créer n'importe quel nombre grâce à 
 // true
 ```
 
-En englobant ces valeurs stringifiée (à l'aide de `+[]`), nous pouvons ainsi récupérer le enième charactère de chaque chaîne :
+En englobant ces valeurs stringifiée (à l'aide de `+[]`), nous pouvons ainsi récupérer le enième caractère de chaque chaîne :
 
 ```js
 (![]+[])[+!![]]
