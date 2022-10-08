@@ -8,7 +8,7 @@ description: >
   Comment activer le protocole HTTPS et générer des certificats SSL sur votre serveur ?
 ---
 
-> Cet article assume que vous avez accès à un serveur dédié ou un VPS, avec Apache
+> Cet article suppose que vous avez accès à un serveur dédié ou un VPS, avec Apache
 
 Suite à certains événements survenus l'année dernière, j'ai décidé de m'intéresser au protocole HTTPS, et d'essayer de le mettre en place sur mes différents noms de domaine. Étant assez novice dans ce domaine, il m'aura fallu un peu de temps avant de comprendre ce dont j'avais besoin.
 
@@ -20,7 +20,7 @@ Mais concrètement, à quoi peut bien servir un certificat SSL/TLS ?
 Quand vous créez un certificat, vous le faites toujours depuis votre serveur. Ce certificat va principalement contenir une clé publique et une clé privée :
 
 - La clé privée est protégée, et sera utilisée pour identifier le serveur
-- La clé publique est diffusée, et sera utilisée par les visiteurs pour chiffre les informations qu'ils envoient à votre serveur
+- La clé publique est diffusée, et sera utilisée par les visiteurs pour chiffrer les informations qu'ils envoient à votre serveur
 
 Un certificat SSL/TLS vous assure donc :
 
@@ -32,7 +32,7 @@ Ces points sont extrêmement importants dès lors que l'on parle de paiement en 
 
 ## Let's Encrypt
 
-Cette sécurisation globale n'aurait jamais été possible, ou en tout cas pas encore initiée, sans un acteur majeur : Let's Encrypt.
+Cette sécurisation globale n'aurait jamais été possible, ou en tout cas pas encore initiée, sans un acteur majeur : [Let's Encrypt](https://letsencrypt.org/).
 
 Let's Encrypt est une autorité de certification, un tiers de confiance chargé de délivrer et vérifier des certificats SSL ou TLS. Un certificat ne sert effectivement à rien s'il n'y a personne pour l'authentifier.
 Fondée fin 2015 par la **Fondation Mozilla**, l'**Université du Michigan** et l'**Electronic Frontier Foundation**, elle a déjà délivré plus de 10 millions de certificats gratuitement.
@@ -49,7 +49,7 @@ Voici ce que vous devriez avoir avant de commencer :
 - Un nom de domaine pointant sur ce serveur
 - Un vhost (Apache) liant les deux
 
-L'installation de certbot se fait simplement via git, pensez donc à l'installer si ce n'est pas déjà fait. Ici nous allons installer le certbot dans le dossier `/opt/letsencrypt` :
+L'installation de certbot se fait simplement via git, pensez donc à l'installer si ce n'est pas déjà fait. Ici nous allons installer l'outil certbot dans le dossier `/opt/letsencrypt` :
 
     sudo apt-get update
     sudo ap-get install git
@@ -99,7 +99,7 @@ Si vous regardez le contenu du vhost nouvellement créé, vous trouverez le mêm
     SSLCertificateKeyFile /etc/letsencrypt/live/blog.smarchal.com/privkey.pem
     Include /etc/letsencrypt/options-ssl-apache.conf
 
-Ces lignes vous indiques ou se situe votre certificat et la clé correspondante (ici dans `/opt/letsencrypt/live/blog.smarchal.com/`), ainsi que les options utilisées pour la configuration SSL. Vous pouvez si vous le voulez modifier ce fichier (déconseillé), ou modifier ces options directement dans votre vhost (conseillé).
+Ces lignes vous indiques où se situent votre certificat et la clé privée correspondante (ici dans `/opt/letsencrypt/live/blog.smarchal.com/`), ainsi que les options utilisées pour la configuration SSL. Vous pouvez si vous le voulez modifier ce fichier d'options (déconseillé), ou bien changer ces options directement dans votre vhost (conseillé).
 
 ## Vérifier votre site
 
@@ -107,7 +107,7 @@ L'activation d'HTTPS ne pose la plupart du temps aucun soucis, mais dans certain
 
 - Les urls des ressources externes (Google Fonts, jQuery...)
 - Les urls des ressources internes (JS, CSS, images)
-- Votre fichier .htaccess (qui ne prévois peut-être pas le HTTPS)
+- Votre fichier .htaccess (qui n'est peut-être pas adapté au protocole HTTPS)
 
 ## Renouveler un certificat
 
