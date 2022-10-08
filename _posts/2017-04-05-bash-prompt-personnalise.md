@@ -63,7 +63,7 @@ Dans le cas où je ne suis pas dans un dépôt git, cette section (et la suivant
 
 ### Le statut du dépôt
 
-La dernière information contextuelle apportée par ce bash prompt, est le statut actuel du dépôt git. Je passe mon temps à lancer des `git status`, alors avoir cette information sous l'oeil est plutôt utile.
+La dernière information contextuelle apportée par ce bash prompt, est le statut actuel du dépôt git. Je passe mon temps à lancer des `git status`, alors avoir cette information sous l'œil est plutôt utile.
 Si le dépôt est propre, un égal (=) vert s'affiche derrière la branche. Mais s'il y a des fichiers modifiés, alors c'est un tilde (~) rouge qui s'affiche, avec le nombre de modifications :
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span style="color:#5f5">zessx@srv</span> <span style="color:#ff5">/var/www/folder</span> <span style="color:#5f5">(develop)</span><span style="color:#5f5">=</span> $

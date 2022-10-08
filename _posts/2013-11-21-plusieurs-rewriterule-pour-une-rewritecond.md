@@ -6,7 +6,7 @@ tags:
 - apache
 - sysadmin
 description: >
-  Petite astuce aujourd'hui, pour vous permettre d'utiliser une unique condition pour plusieurs règles dans vos <code>.htaccess</code>.
+  Petite astuce aujourd’hui, pour vous permettre d'utiliser une unique condition pour plusieurs règles dans vos <code>.htaccess</code>.
 ---
 
 ## Un aperçu du problème

@@ -73,7 +73,7 @@ Cette place englobe ainsi tous les caractères entre `À` et `ÿ`. Vous noterez 
 
     [A-Za-zÀ-ÖØ-öø-ÿ]
 
-...et enfin le tiret (à la fin pour eviter tout conflit de plage) et le quantifieur :
+...et enfin le tiret (à la fin pour éviter tout conflit de plage) et le quantifieur :
 
     [A-Za-zÀ-ÖØ-öø-ÿ-]+
 

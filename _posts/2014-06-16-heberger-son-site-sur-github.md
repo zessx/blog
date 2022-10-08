@@ -28,7 +28,7 @@ Vous avez deux types de pages :
 - les pages utilisateurs/organisations
 - les pages projets
 
-Ce sont les pages utilisateurs qui nous intéressent aujourd'hui.
+Ce sont les pages utilisateurs qui nous intéressent aujourd’hui.
 
 ## Configuration du dépôt GitHub
 
@@ -43,7 +43,7 @@ Allez dans les paramètres de votre dépôt, et vous tomberez directement sur le
 
 ## Lier un nom de domaine à son dépôt GitHub
 
-Bon j'avoue, ma première idée a été de créer un simple `index.html` sur mon serveur, avec une bonne vieille iFrame toute moche chargant le contenu de `https://zessx.github.io`.
+Bon j'avoue, ma première idée a été de créer un simple `index.html` sur mon serveur, avec une bonne vieille iFrame toute moche chargeant le contenu de `https://zessx.github.io`.
 Je me suis renseigné avant de commencer ces lignes de code de la honte, et j'ai vu que GitHub proposait **déjà** cette fonctionnalité !
 
 Il va donc vous falloir agir des deux côtés : sur GitHub, et chez votre registrar (là où vous gérez habituellement les zones DNS).

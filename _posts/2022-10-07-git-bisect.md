@@ -194,7 +194,7 @@ yarn
 bin/prettier.js -c test-file.scss
 ```
 
-C'est aussi pour cela que j'ai choisi ce projet. L'utilisation de `bisect` peut être un peu plus fastidieuse quand le test requiert un grand nombre de commandes, pour installer et build le projet par exemple. Dans ces cas il est possible de créer un script contenant l'exemble des commandes, pour ensuite l'utiliser directement avec `git bisect run`. En reprenant notre exemple précédent, voici ce que cela donnerait :
+C'est aussi pour cela que j'ai choisi ce projet. L'utilisation de `bisect` peut être un peu plus fastidieuse quand le test requiert un grand nombre de commandes, pour installer et build le projet par exemple. Dans ces cas il est possible de créer un script contenant l’exemple des commandes, pour ensuite l'utiliser directement avec `git bisect run`. En reprenant notre exemple précédent, voici ce que cela donnerait :
 
 ```sh
 # On crée le script

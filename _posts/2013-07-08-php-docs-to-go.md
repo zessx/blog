@@ -6,7 +6,7 @@ tags:
 - chrome
 - php
 description: >
-  Une nouvelle extension Chrome pour aujourd'hui !! Ou plutôt, une application : PHP Docs-to-go
+  Une nouvelle extension Chrome pour aujourd’hui !! Ou plutôt, une application : PHP Docs-to-go
 ---
 
 La présentation va être très brève, il s'agit tout simplement de la documentation PHP complète en mode offline ! Inutile ? Mais si, mais si... laissez-vous convaincre...

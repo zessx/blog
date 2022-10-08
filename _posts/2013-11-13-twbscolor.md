@@ -9,8 +9,8 @@ description: >
   Présentation d'un travail perso : un générateur pour embellir rapidement vos navbars Bootstrap
 ---
 
-Vous connaissez probablement [Bootstrap](https://getbootstrap.com/) (anciennement Twitter Bootstrap), le framework CSS le plus en vogue aujourd'hui. Je l'utilise personnellement assez régulièrement, dans des contextes autant professionnels que personnels.
-Bootstrap n'est pas adapté à tous les projets, il ne faut pas chercher à systématiqument l'utiliser, mais il est important de savoir qu'il existe et d'être capable de détecter quand il peut être utile. Il permet en effet un gain de temps assez bluffant lorsqu'il s'agit de réaliser des applications web.
+Vous connaissez probablement [Bootstrap](https://getbootstrap.com/) (anciennement Twitter Bootstrap), le framework CSS le plus en vogue aujourd’hui. Je l'utilise personnellement assez régulièrement, dans des contextes autant professionnels que personnels.
+Bootstrap n'est pas adapté à tous les projets, il ne faut pas chercher à systématiquement l'utiliser, mais il est important de savoir qu'il existe et d'être capable de détecter quand il peut être utile. Il permet en effet un gain de temps assez bluffant lorsqu'il s'agit de réaliser des applications web.
 
 ## Le composant navbar
 

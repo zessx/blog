@@ -24,7 +24,7 @@ Vous noterez la possibilité de choisir le format de la couleur :
 * `rgba(231, 76, 60, 1.0)`
 
 
-Pour ceux qui se demanderait si ces couleurs viennent de quelquepart, c'est bien le cas. Ce sont celles utilisées dans le design framework [Flat UI](https://designmodo.com/flat-free/), très bien fichu au passage.
+Pour ceux qui se demanderait si ces couleurs viennent de quelque part, c'est bien le cas. Ce sont celles utilisées dans le design framework [Flat UI](https://designmodo.com/flat-free/), très bien fichu au passage.
 
 ## Liens
 [Flat UI Colors](https://flatuicolors.com/)

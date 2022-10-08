@@ -27,7 +27,7 @@ description: >
         }
     }
 
-Dans cet exemple de base, on definit un élément `#content` (ici notre bloc de contenu principal) ayant une largeur différente selon la taille de la zone de rendu. Nous avons 3 états :
+Dans cet exemple de base, on définit un élément `#content` (ici notre bloc de contenu principal) ayant une largeur différente selon la taille de la zone de rendu. Nous avons 3 états :
 
 - une largeur de 100% sur mobile (l'ordre des media queries nous indique que nous utilisons un style dit "mobile first")
 - une largeur fixe de 668px si la largeur de la zone de rendu est supérieure ou égale à 768px

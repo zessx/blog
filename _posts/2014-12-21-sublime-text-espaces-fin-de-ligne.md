@@ -10,7 +10,7 @@ description: >
 
 ## L'origine du problème
 
-Quand on travaille sur de nombreux fichiers, on ne fait pas systématiquement attentions aux espaces en fin de ligne. Les nombreuses tabulations, les suppressions, les changenements de format, les duplications... de nombreux cas peuvent provoquer l'apparition de ces espaces indésirables.
+Quand on travaille sur de nombreux fichiers, on ne fait pas systématiquement attentions aux espaces en fin de ligne. Les nombreuses tabulations, les suppressions, les changements de format, les duplications... de nombreux cas peuvent provoquer l'apparition de ces espaces indésirables.
 Vous pouvez supprimer ces espaces à la main, encore faut-il avoir la patience nécessaire... Nous allons voir comment automatiser cela.
 
 ## L'option `trim_trailing_white_space_on_save`

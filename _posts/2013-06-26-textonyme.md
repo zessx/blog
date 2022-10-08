@@ -25,7 +25,7 @@ Ce système a plusieurs intérêts :
 
 Côté limites/désavantages, il faut bien se souvenir que l'URL a une taille limitée. 2047, 2048, 2083... tout dépend du navigateur. En gardant cette limite à l'esprit, on se souviendra qu'il faut éviter de coller l'intégralité de Guerre et Paix (Tolstoï).
 
-N'hésitez pas à l'utiliser pour vos besoins persos, c'est cadeau !
+N'hésitez pas à l'utiliser pour vos besoins perso, c'est cadeau !
 
 ## Liens
 [Textonyme](https://text.ony.me)

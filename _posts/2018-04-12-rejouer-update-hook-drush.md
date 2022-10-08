@@ -23,7 +23,7 @@ function foo_update_8101() {
 }
 ```
 
-Lors de la première mise à jour, ce hook aura probablement été exécuté via la commande `drush updatedb`. Mais il n'est plus possible d'utiliser cette commande car le hook a été tagué comme ayant été éxécuté.
+Lors de la première mise à jour, ce hook aura probablement été exécuté via la commande `drush updatedb`. Mais il n'est plus possible d'utiliser cette commande car le hook a été tagué comme ayant été exécuté.
 
 Il va falloir utiliser la commande `drush php-eval` (ou son alias `drush eval`) pour le lancer à la main, en chargeant au préalable le module en question :
 

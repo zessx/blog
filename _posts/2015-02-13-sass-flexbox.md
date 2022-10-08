@@ -12,8 +12,8 @@ description: >
 ## Palier au manque d'uniformité de Flexbox
 
 Flexbox est très récent, et sa standardisation l'est encore plus. Comme c'est un élément assez conséquent, sa définition a pris du temps. Pendant cette période, plusieurs groupes de travail ont apporté leurs idées. Des idées parfois différentes, qui ont mené à certaines scissions. Plusieurs versions ont donc existé et cohabité au fil du temps. Et qui dit plusieurs versions, dit plusieurs syntaxes.
-Aujourd'hui il peut être compliqué de trouver tous les vendor prefixes à utiliser, et coder avec Flexbox devient fastidieux même en les connaissant.
-C'est pour eviter d'avoir a réecrire ces préfixes que j'ai mis en place SassFlexbox. C'est une petite librairie sans prétention, et qui n'est probablement pas parfaite. Mais j'en ai besoin dès maintenant, et elle évoluera avec le temps. Je suis d'ailleurs toujours ouvert à toute remarque pour l'améliorer ;)
+Aujourd’hui il peut être compliqué de trouver tous les vendor prefixes à utiliser, et coder avec Flexbox devient fastidieux même en les connaissant.
+C'est pour éviter d'avoir a réécrire ces préfixes que j'ai mis en place SassFlexbox. C'est une petite librairie sans prétention, et qui n'est probablement pas parfaite. Mais j'en ai besoin dès maintenant, et elle évoluera avec le temps. Je suis d'ailleurs toujours ouvert à toute remarque pour l'améliorer ;)
 
 ## Utilisation
 

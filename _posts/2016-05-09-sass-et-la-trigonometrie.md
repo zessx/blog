@@ -6,7 +6,7 @@ tags:
 - mathematiques
 - sass
 description: >
-  Un peu de mathématiques aujourd'hui, avec l'implémentation de fonctions trigonométriques en Sass !
+  Un peu de mathématiques aujourd’hui, avec l'implémentation de fonctions trigonométriques en Sass !
 ---
 
 Il arrive parfois qu'on ait à travailler en Sass avec des triangles, des cercles ou des coordonnées 2D voire 3D. La trigonométrie s'invite alors avant même qu'on ne l'appelle, et les fonctions cosinus, sinus et tangente se rendent indispensables. Si vous utiliser une librairie comme Compass, [vous avez déjà accès à ces fonctions](https://compass-style.org/reference/compass/helpers/math/) ; l'objectif de cet article sera de créer ces fonctions de toutes pièces.

@@ -10,7 +10,7 @@ description: >
 
 ## Etape 1 : récupérer le certificat
 
-Il est possible que vous ayiez déjà votre certificat sous forme de fichier `.pem`. Si c'est le cas, vous pouvez directement passer à l'étape 2.
+Il est possible que vous ayez déjà votre certificat sous forme de fichier `.pem`. Si c'est le cas, vous pouvez directement passer à l'étape 2.
 
 Dans le cas contraire, il va falloir le récupérer avec la commande `openssl`, disponible par défaut sur macOS. Vous n'aurez besoin que de deux informations :
 - le nom de domaine qui utilise le certificat
@@ -37,7 +37,7 @@ Cliquez ensuite sur le bouton `+` en bas de fenêtre, et sélectionnez votre fic
 
 Maintenant que le certificat est ajouté, il reste encore à l'approuver.
 
-C'est l'étape la plus simple, il suffit de double cliquer sur votre certificat (dans la fenêtre du trousseau d'accès), puis de sélectionner `Toujours approuver` dans la section `Se fier`. Vous pouvez soit approuver le certificat de manière globale, soit affiner vos réglages pour par exemple n'approuver son utilisation que sur la signature de code. Lorsque vous fermerez cette fenêtre, il vous sera une denière fois demandé d'entrer votre mot de passe administrateur.
+C'est l'étape la plus simple, il suffit de double cliquer sur votre certificat (dans la fenêtre du trousseau d'accès), puis de sélectionner `Toujours approuver` dans la section `Se fier`. Vous pouvez soit approuver le certificat de manière globale, soit affiner vos réglages pour par exemple n'approuver son utilisation que sur la signature de code. Lorsque vous fermerez cette fenêtre, il vous sera une dernière fois demandé d'entrer votre mot de passe administrateur.
 
 ## Liens
 

@@ -11,7 +11,7 @@ description: >
 
 ## Article tripartite condensé
 
-Rentrons directement dans le vif du sujet, je vais vous présenter le code que j'utilise aujourd'hui, pour **centrer horizontalement et verticalement** n'importe quel bloc, dans n'importe quelle situation. J'inclue ce code dans un placeholder Sass (voir mon article sur [OOSCSS](https://blog.smarchal.com/oocss-et-ooscss) pour des exemples d'utilisation des placeholders), mais vous pouvez l'utiliser en CSS tout aussi simplement.
+Rentrons directement dans le vif du sujet, je vais vous présenter le code que j'utilise aujourd’hui, pour **centrer horizontalement et verticalement** n'importe quel bloc, dans n'importe quelle situation. J'inclue ce code dans un placeholder Sass (voir mon article sur [OOSCSS](https://blog.smarchal.com/oocss-et-ooscss) pour des exemples d'utilisation des placeholders), mais vous pouvez l'utiliser en CSS tout aussi simplement.
 
     %centered-box {
     	position: absolute;
@@ -42,7 +42,7 @@ Et son état après l'utilisation d'une position absolute :
 {:.center}
 ![Position absolue]({{ site.url }}/images/centrer-un-element-en-css/absolute.jpg)
 
-On constate que le décalage vers la gauche est égale à la moitié de la largeur de l'élement. Même chose avec le décalage vers le bas, qui est égal à la moitié de la hauteur de l'élément. Pour corriger tout ça, il est temps d'utiliser la propriété `transform` avec la fonction `translate()` :
+On constate que le décalage vers la gauche est égale à la moitié de la largeur de l’élément. Même chose avec le décalage vers le bas, qui est égal à la moitié de la hauteur de l'élément. Pour corriger tout ça, il est temps d'utiliser la propriété `transform` avec la fonction `translate()` :
 
 	%centered-box {
     	position: absolute;

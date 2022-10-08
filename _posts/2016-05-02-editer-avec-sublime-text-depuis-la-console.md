@@ -11,7 +11,7 @@ description: >
 
 ## subl
 
-Depuis le build 3065 (27 août 2014), Sublime Text met à disposition pour les utilisateurs de Windows le **Sublime Command Line Helper** (celui-ci était déjà dsponible pour Unix et OSX depuis pas mal de temps). Ce petit utilitaire à pour seul but d'envoyer un fichier dans Sublime Text depuis votre console, et c'est justement ce que nous cherchons !
+Depuis le build 3065 (27 août 2014), Sublime Text met à disposition pour les utilisateurs de Windows le **Sublime Command Line Helper** (celui-ci était déjà disponible pour Unix et OSX depuis pas mal de temps). Ce petit utilitaire à pour seul but d'envoyer un fichier dans Sublime Text depuis votre console, et c'est justement ce que nous cherchons !
 
     $ subl.exe fichier.txt
 

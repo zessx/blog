@@ -62,8 +62,8 @@ Et vous n'avez plus qu'à l'utiliser pour combler les vides nécessaire !
 
 L'url dispose de quelques options, afin d'affiner les profils que vous désirer récupérer :
 <ul>
-	<li>`gender` : vous pemet de choisir le genre de l'utilisateur (`female` ou `male`)</li>
-	<li>`results` : vous pemet de récupérer plusieurs utilisateur d'un seul coup (de `1` à `5`)</li>
+	<li>`gender` : vous permet de choisir le genre de l'utilisateur (`female` ou `male`)</li>
+	<li>`results` : vous permet de récupérer plusieurs utilisateur d'un seul coup (de `1` à `5`)</li>
 	<li>`seed` : associe une chaîne de caractère à un utilisateur. Réutiliser la même `seed` renverra le même utilisateur</li>
 </ul>
 

@@ -28,7 +28,7 @@ Voici le design final, qui correspond (quasiment) à ce que je recherchais à fa
 
 ## Le création de l'icône
 
-Pour la syntaxe HTML, j'étais initiallement partie sur l'utilisation d'une classe toute simple :
+Pour la syntaxe HTML, j'étais initialement partie sur l'utilisation d'une classe toute simple :
 
 	<i class="fi">html</i>
 
@@ -54,7 +54,7 @@ Point important : je définis toutes les couleurs sur cet élément, afin de fac
 	    display: inline-block;
 	    position: relative;
 
-	    /* toutes les unités sont en em pour faciliter le redimentsionnement */
+	    /* toutes les unités sont en em pour faciliter le redimensionnement */
 	    width: 5em;
 	    height: 10em;
 

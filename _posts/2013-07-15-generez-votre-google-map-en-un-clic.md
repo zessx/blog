@@ -32,7 +32,7 @@ Une fois la Google Map générée, vous êtes libres de l'adapter à vos besoins
 
 Vous avez aussi accès aux différentes variables : `latitude`, `longitude`, `zoom`... Ainsi qu'un lien permettant de retrouver l'état actuel de votre Google Map (ou pour partager rapidement une localisation : [Fort Boyard !](#) *(Lien mort)*.
 
-Attention toutefois à un détail, j'utilise systématiquement l'identifiant `#map`. Si vous avez plusieurs Google Map sur la même page, veillez bien à adapter le code en utilsant une classe à la place.
+Attention toutefois à un détail, j'utilise systématiquement l'identifiant `#map`. Si vous avez plusieurs Google Map sur la même page, veillez bien à adapter le code en utilisant une classe à la place.
 
 ## Liens
 [Geoloc sur smarchal.com](#) *(Lien mort)*

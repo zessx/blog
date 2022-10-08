@@ -5,7 +5,7 @@ date:   2015-06-18
 tags:
 - js
 description: >
-  Atelier création ! Aujourd'hui je vous présente un moyen de créer un accordéon de contenu à la main.
+  Atelier création ! Aujourd’hui je vous présente un moyen de créer un accordéon de contenu à la main.
 ---
 
 ## Petite note

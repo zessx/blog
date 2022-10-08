@@ -67,7 +67,7 @@ La solution est simple, il suffit d'utiliser le path `/System/Volumes/Data/Users
 config.vm.synced_folder '/System/Volumes/Data/Users/bobby/shared-folder', '/shared-folder', type: 'nfs'
 ```
 
-Pour Trellis, afin de permettre aux développeurs sur macOS Mojave (ou précédent) de continuer à utiliser leurs Vagrant, vous pouvez vérifier l'existance sur dossier `/System/Volume/Data`, et agir en conséquence sur la variable `ANSIBLE_PATH`. Remplacez la première ligne de votre Vagrantfile par les suivantes (merci à @mmoollllee pour le bout de code) :
+Pour Trellis, afin de permettre aux développeurs sur macOS Mojave (ou précédent) de continuer à utiliser leurs Vagrant, vous pouvez vérifier l’existence sur dossier `/System/Volume/Data`, et agir en conséquence sur la variable `ANSIBLE_PATH`. Remplacez la première ligne de votre Vagrantfile par les suivantes (merci à @mmoollllee pour le bout de code) :
 
 ```ruby
 if Dir.exist?('/System/Volumes/Data')

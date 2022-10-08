@@ -19,7 +19,7 @@ Une fois n'est pas coutume, je vais commencer par le résultat final, histoire q
 
 ## La base avant tout
 
-Je suis parti d'une structure très basique, me permettant d'afficher le nom d'une persone sous sa photo :
+Je suis parti d'une structure très basique, me permettant d'afficher le nom d'une personne sous sa photo :
 
 	<ul class="pictures">
 		<li>

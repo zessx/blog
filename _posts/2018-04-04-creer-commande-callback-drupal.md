@@ -117,7 +117,7 @@ Cette seconde étape se passe côté client. Commençons donc par ajouter notre 
 
     })(jQuery, Drupal);
 
-On retrouve ici le traitement dont j'avais parlé au début de cet article, c'est le coeur de la commande. Notons au passage les trois variable systématiquement envoyées aux commandes :
+On retrouve ici le traitement dont j'avais parlé au début de cet article, c'est le cœur de la commande. Notons au passage les trois variable systématiquement envoyées aux commandes :
 
 - `ajax` : contient des informations sur l'appel (trigger, méthode...)
 - `response` : contient le tableau renvoyé par la classe PHP

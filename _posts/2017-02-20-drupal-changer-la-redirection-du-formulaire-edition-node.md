@@ -60,7 +60,7 @@ La redirection se fera donc dans notre fonction de callback (notre "submit handl
 
 ## Le code complet
 
-Voici donc l'aggrégation de tous les bouts de codes que nous avons vu dans cet article :
+Voici donc l’agrégation de tous les bouts de codes que nous avons vu dans cet article :
 
     use Drupal\Core\Form\FormStateInterface;
 

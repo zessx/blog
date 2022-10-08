@@ -102,7 +102,7 @@ On remplace ici le contenu de chaque ligne par ce qui ne se trouve entre les quo
     layout/content
     layout/footer
 
-### Éxecuter une commande sur chaque ligne
+### Exécuter une commande sur chaque ligne
 
 On utilise ensuite une boucle `for ... in ...; do ...; done` pour exécuter une/des commande(s) sur chaque ligne ne note liste.
 

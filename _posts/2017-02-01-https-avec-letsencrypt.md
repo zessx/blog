@@ -29,7 +29,7 @@ Un certificat SSL/TLS vous assure donc :
 - **La confidentialité** : vos échanges sont cryptés à l'aide des clés
 - **L'intégrité** : il est impossible d'altérer les échanges
 
-Ces points sont extrêmement importants dès lors que l'on parle de paiement en ligne, de messagerie ou de données personnelles (banques, assurances, réseaux sociaux...). L'intérêt est certes moindre dans le cas d'un blog ou de petits projets personnels, mais cela ne coûte aujourd'hui plus rien, et il est bon d'aller dans le sens d'une sécurisation globale du net.
+Ces points sont extrêmement importants dès lors que l'on parle de paiement en ligne, de messagerie ou de données personnelles (banques, assurances, réseaux sociaux...). L'intérêt est certes moindre dans le cas d'un blog ou de petits projets personnels, mais cela ne coûte aujourd’hui plus rien, et il est bon d'aller dans le sens d'une sécurisation globale du net.
 
 ## Let's Encrypt
 

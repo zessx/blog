@@ -27,7 +27,7 @@ Il y a là quelques nuances à comprendre afin de savoir dans quel cas utiliser 
     $('body').data('foo', 'bar');
     console.log($('body').data('foo'));
 
-La console va vous afficher `bar`. Cela veux dire que jQuery a bien associé une variable nommée `foo` et à la valeur `bar` à votre élément `body`. Toutefois, vous ne verrez aucun attribut `data-foo="bar"` dans le DOM si vous l'inspectez, tout simplement parceque cet attribut n'existe pas et n'a jamais été créé par jQuery.
+La console va vous afficher `bar`. Cela veux dire que jQuery a bien associé une variable nommée `foo` et à la valeur `bar` à votre élément `body`. Toutefois, vous ne verrez aucun attribut `data-foo="bar"` dans le DOM si vous l'inspectez, tout simplement parce que cet attribut n'existe pas et n'a jamais été créé par jQuery.
 
 Voyons le résultat si nous faisons la même chose avec `attr()` :
 

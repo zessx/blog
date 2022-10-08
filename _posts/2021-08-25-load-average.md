@@ -71,9 +71,9 @@ Nous avons donc des moyennes de charge de :
 - 0.47 sur les 5 denières
 - 0.34 sur les 15 dernières
 
-La première conclusion à tirer de ces chiffres est que le système n'est pas surchargé : sur les 15 dernières minutes (au moins) le load average n'atteint jamais la valeur de 1. Cela signifie que le processeur peut globalement traîter toutes les opérations sans mettre de processus en attente (gardez en tête que c'est une moyenne).
+La première conclusion à tirer de ces chiffres est que le système n'est pas surchargé : sur les 15 dernières minutes (au moins) le load average n'atteint jamais la valeur de 1. Cela signifie que le processeur peut globalement traiter toutes les opérations sans mettre de processus en attente (gardez en tête que c'est une moyenne).
 
-La seconde conclusion, c'est que le processus est légèrement plus chargé sur la dernière minute. Les raisons peuvent être multiples, et leur interprétation ne dépendra que de vous. Dans ce cas précis, nul besoin de s'alarmer, je venais à l'instant de me connecter sur le serveur pour lancer la comande `top`. Cette connexion, plus la commande elle même ont provoqué cette légère hausse.
+La seconde conclusion, c'est que le processus est légèrement plus chargé sur la dernière minute. Les raisons peuvent être multiples, et leur interprétation ne dépendra que de vous. Dans ce cas précis, nul besoin de s'alarmer, je venais à l'instant de me connecter sur le serveur pour lancer la commande `top`. Cette connexion, plus la commande elle même ont provoqué cette légère hausse.
 
 Prenons maintenant le second exemple, sur le système macOS :
 
@@ -83,7 +83,7 @@ Load Avg: 3.90, 3.70, 3.12
 
 Nous trouvons les moyennes de charge suivantes :
 - 3.90 sur la dernière minute
-- 3.70 sur les 5 denières
+- 3.70 sur les 5 dernières
 - 3.12 sur les 15 dernières
 
 Par rapports aux autres résultats, ces chiffres peuvent sembler alarmants. Mais vous devez prendre en compte un second facteur (volontairement occulté dans le début de cet article) essentiel pour les interpréter correctement : **le nombre de cœurs**. Nous pouvons à présent étendre notre règle de départ :
@@ -133,6 +133,6 @@ Malgré une moyenne de charge à 97%, 76% du CPU est inactif. Il ne s'agit donc 
 ### Le code et son architecture
 
 Probablement votre meilleure chance d'améliorer les choses. La plupart du temps, le load average met en évidence des problèmes de performances dans la codebase. Il peut être assez ardu d'en identifier la source, commencez par surveiller le nombre de visites et l'évolution du load average dans le temps (dans le cas d'un serveur accessible via le web) :
-- Si le nombre de visites est correlé avec le load average, voyez pour mettre en place un proxy et du cache pour soulager votre serveur web.
+- Si le nombre de visites est corrélé avec le load average, voyez pour mettre en place un proxy et du cache pour soulager votre serveur web.
 - Si le load average augmente soudainement à des heures précises, rechercher quels crons sont lancés à ces moment et optimisez-les
 - Si le load average augmente progressivement avec le temps, vous oubliez probablement de fermer certains flux quand vous n'en avez plus besoin

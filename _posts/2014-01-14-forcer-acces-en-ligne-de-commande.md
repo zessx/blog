@@ -12,7 +12,7 @@ description: >
 
 La constante `PHP_SAPI` (pour Server API) vous permet de connaître le type de l'interface qui a appelé le script. Elle a été introduite avec PHP 4.2.0, afin de remplacer la fonction `php_sapi_name()` (introduite avec PHP 4.0.1).
 
-Elle peut avoir pour valeur (liste non exausthive extraite de la documentation) :
+Elle peut avoir pour valeur (liste non exhaustive extraite de la documentation) :
 
  - ***aolserver***
  - ***apache***

@@ -6,7 +6,7 @@ tags:
 - js
 - sublime-text
 description: >
-  Nous avons déjà vu comment compiler du SASS avec Sublime Text, voyons aujourd'hui comment minifier du JS.
+  Nous avons déjà vu comment compiler du SASS avec Sublime Text, voyons aujourd’hui comment minifier du JS.
 ---
 
 ## UglifyJS

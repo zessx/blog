@@ -19,7 +19,7 @@ En temps normal, on utilise la clé `#required` pour rendre un champ obligatoire
       '#required' => true
     );
 
-Il susbsite malheureusement un bug dans Drupal 8 (8.4.3 à l'heure où j'écris cet article), qui rend l'utilisation de cette clé sur un champ de type `file` impossible :
+Il subsiste malheureusement un bug dans Drupal 8 (8.4.3 à l'heure où j'écris cet article), qui rend l'utilisation de cette clé sur un champ de type `file` impossible :
 
     $form['image'] = array(
       '#type'     => 'file',

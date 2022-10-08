@@ -12,7 +12,7 @@ description: >
 
 ## Le problème
 
-Pour une raison que j'ignore encore, il arrive parfois que mon Mac n'émette plus aucun son. Cela arrive généralement après plusieurs jours sans reboot, et la plupart du temps juste après un verouillage de session.
+Pour une raison que j'ignore encore, il arrive parfois que mon Mac n'émette plus aucun son. Cela arrive généralement après plusieurs jours sans reboot, et la plupart du temps juste après un verrouillage de session.
 
 ## La solution
 

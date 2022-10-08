@@ -16,7 +16,7 @@ description: >
 
 ## Back to the future
 
-Les traits ont été introduits avec PHP 5.4.0. Ce qui remonte effectivement à plus de 3 ans aujourd'hui... déjà.
+Les traits ont été introduits avec PHP 5.4.0. Ce qui remonte effectivement à plus de 3 ans aujourd’hui... déjà.
 
 Je ne les ai découverts que tout récemment, et ai essayé de les utiliser sur un projet pro. Il m'ont permis de gagner pas mal de temps, et de clarifier mes classes. Toutefois, il n'ont pas apporté que de bonnes choses, voilà pourquoi j'ai pensé à rédiger un petit article pour vous les présenter, ainsi que leurs avantages et inconvénients.
 

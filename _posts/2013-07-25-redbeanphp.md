@@ -12,7 +12,7 @@ description: >
 ## Vous avez dit ORM ?
 
 Petite introduction pour ceux qui ne connaîtraient pas le principe d'un Object-Relational Mapping.
-Les bases de données que nous utilisons aujourd'hui sont des BDD relationelles : l'information stockée en base est décomposée, et il existe des relations (clé étrangères) pour lier cette information. Face à cela, nous utilisons des langages pour la plupart orientés objet.
+Les bases de données que nous utilisons aujourd’hui sont des BDD relationnelles : l'information stockée en base est décomposée, et il existe des relations (clé étrangères) pour lier cette information. Face à cela, nous utilisons des langages pour la plupart orientés objet.
 Le but d'un ORM est de fournir une passerelle permettant de manipuler une BDD relationnelle de la même manière que nous manipulons des objets.
 
 Plutôt que d'écrire une requête (MySQL ici) pour mettre à jour le titre d'un livre :

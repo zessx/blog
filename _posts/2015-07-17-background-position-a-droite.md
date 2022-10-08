@@ -15,7 +15,7 @@ Avant CSS3, la propriété `background-position` n'acceptait que 1 ou 2 valeurs 
 - le positionnement/décalage du background par rapport au côté gauche
 - le positionnement/décalage du background par rapport au côté supérieur
 
-On avait alors ce genre de définitions, qui sont d'ailleurs toujours aujourd'hui les plus courantes :
+On avait alors ce genre de définitions, qui sont d'ailleurs toujours aujourd’hui les plus courantes :
 
     background-position: center center;
     background-position: left top;

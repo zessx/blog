@@ -18,7 +18,7 @@ Suite à la suppression, impossible de définir un nouvel éditeur par défaut. 
 
 Le désinstalleur de Sublime Text 2 oublie simplement de supprimer une clé du registre Windows. Il va falloir la supprimer manuellement.
 
-- Lancez une fenêtre d'éxécution : <kbd>Win + R</kbd>.
+- Lancez une fenêtre d’exécution : <kbd>Win + R</kbd>.
 - Lancez l'éditeur du registre en entrant la commande `regedit`.
 - Accédez à la clé `Computer\HKEY_CLASSES_ROOT\Applications\sublime_text.exe`.
 - Supprimez la clé.

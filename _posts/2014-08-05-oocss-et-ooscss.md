@@ -106,7 +106,7 @@ Si l'OOCSS apporte beaucoup du côté de la présentation, il n'en dénature pas
 	<button>Ajouter</button>
 	<button>Supprimer</button>
 
-... à celà :
+... à cela :
 
 	<button class="background-green rounded-corners">Ajouter</button>
 	<button class="background-red">Supprimer</button>
@@ -123,7 +123,7 @@ L'OOCSS a donc ses avantages, mais aussi ses inconvénients. Nous allons voir qu
 
 ## L'Object-Oriented SCSS à la rescousse
 
-L'arrivée de Sass ces dernières années a redonné la foi à de nombreux intégrateurs. [Je vous en ai déjà parlé à l’occasion](category/sass), et ce n'est pas prêt de finir. C'est un outil que j'estime indispensable aujourd'hui car il permet un gain de temps extraordinaire, et repousse les limites imposées par le CSS.
+L'arrivée de Sass ces dernières années a redonné la foi à de nombreux intégrateurs. [Je vous en ai déjà parlé à l’occasion](category/sass), et ce n'est pas prêt de finir. C'est un outil que j'estime indispensable aujourd’hui car il permet un gain de temps extraordinaire, et repousse les limites imposées par le CSS.
 
 Tout naturellement, j'ai appliqué les principes de l'OOCSS à Sass quand j'ai commencé à l'utiliser. Je me suis du coup retrouvé avec ce genre de fichiers SCSS :
 

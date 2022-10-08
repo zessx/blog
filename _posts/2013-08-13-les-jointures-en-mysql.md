@@ -5,7 +5,7 @@ date:   2013-08-13
 tags:
 - sql
 description: >
-  Aujourd'hui, ce sera une petite piqûre de rappel pour ceux qui aurait du mal avec les jointures en MySQL ! Notez bien que je parle de MySQL et pas d'un autre SGBD, car certaines fonctionnalités ne sont pas supportées (j'y reviendrai dans les notes de fin d'article). Voici donc pour vous un récapitulatif des différentes requêtes à utiliser sur deux tables liées.
+  Aujourd’hui, ce sera une petite piqûre de rappel pour ceux qui aurait du mal avec les jointures en MySQL ! Notez bien que je parle de MySQL et pas d'un autre SGBD, car certaines fonctionnalités ne sont pas supportées (j'y reviendrai dans les notes de fin d'article). Voici donc pour vous un récapitulatif des différentes requêtes à utiliser sur deux tables liées.
 ---
 
 ## La création des tables de test

@@ -11,13 +11,13 @@ description: >
 
 ## Les glob patterns
 
-Pour copier le contenu d'un dossier (et uniquement son contenu), vous avez sûrement déjà utilisé un "glob pattern" sans même savoir que celà s'appelait comme ça :
+Pour copier le contenu d'un dossier (et uniquement son contenu), vous avez sûrement déjà utilisé un "glob pattern" sans même savoir que cela s'appelait comme ça :
 
 ```sh
 $ cp from/* to/
 ```
 
-Vous aurez remarqué (soit immédiatement après la copie et avec une pointe de suprise, soit après avoir supprimé le dossier `from` et avec une pointe de regret) que les fichiers cachés ne sont pas copiés avec cette commande.
+Vous aurez remarqué (soit immédiatement après la copie et avec une pointe de surprise, soit après avoir supprimé le dossier `from` et avec une pointe de regret) que les fichiers cachés ne sont pas copiés avec cette commande.
 
 En effet et par défaut, les glob patterns excluent (pour des raisons de sécurité) les fichiers cachés.
 
@@ -54,7 +54,7 @@ Plus élégant, mais tout aussi contraignant.
 
 ## ZSH à la rescousse
 
-Si vous utilisez ZSH, bonne nouvelle pour vous car celui-ci supporte des flags (des Qualifiers) pour agir directement sur les glob patterns dans vos commandes. Et parmis ces flags, il en existe un pour activer l'option `dotglob` à la volée :
+Si vous utilisez ZSH, bonne nouvelle pour vous car celui-ci supporte des flags (des Qualifiers) pour agir directement sur les glob patterns dans vos commandes. Et parmi ces flags, il en existe un pour activer l'option `dotglob` à la volée :
 
 ```sh
 $ cp from/*(D) to/

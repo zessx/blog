@@ -11,7 +11,7 @@ description: >
   Une Regex pour les remplacer tous et dans les ténèbres les lier.
 ---
 
-Aujourd'hui, c'est regex !
+Aujourd’hui, c'est regex !
 Mais si, mais si, je sais bien que vous adorez ça...
 
 {:.center}

@@ -27,7 +27,7 @@ C'est justement en parcourant cette liste que je tombe sur la perle suivante :
 ```
 
 Quelques notes avant d'aller plus loin :
-- L'opérande de gauche `![]` est interprêté comme `false` (car visiblement `!Array() === false`)
+- L'opérande de gauche `![]` est interprété comme `false` (car visiblement `!Array() === false`)
 - L'opérande de droite `[]` est un simple array
 - Utiliser l'opérateur `+` sur un booléen provoque l'appel de `toString()` sur l'opérande de droite
 
@@ -51,7 +51,7 @@ Une idée germe alors : est-on capable de faire un alphabet complet avec un char
 
 Pour commencer, nous aurons besoin de générer deux choses essentielles :
 - Des chaînes de caractères (pour extraire notre alphabet)
-- Des nombres (pour sécifier les indices)
+- Des nombres (pour spécifier les indices)
 
 L'idée étant de générer ce genre de code, sans les caractères alphanumériques :
 
@@ -102,7 +102,7 @@ Plus de limites, nous pouvons désormais créer n'importe quel nombre grâce à 
 // true
 ```
 
-En englobant ces valeurs stringifiée (à l'aide de `+[]`), nous pouvons ainsi récupérer le enième caractère de chaque chaîne :
+En englobant ces valeurs stringifiée (à l'aide de `+[]`), nous pouvons ainsi récupérer le énième caractère de chaque chaîne :
 
 ```js
 (![]+[])[+!![]]
@@ -124,14 +124,14 @@ En englobant ces valeurs stringifiée (à l'aide de `+[]`), nous pouvons ainsi r
 // "u"
 ```
 
-Pour le `e` nous préférerons l'extraire de la chaîne `true` car son indice y est plus petit (3) que dans `false` (4), celà demandera donc un peu moins de symboles.
+Pour le `e` nous préférerons l'extraire de la chaîne `true` car son indice y est plus petit (3) que dans `false` (4), cela demandera donc un peu moins de symboles.
 
 > Et nous voilà à présent avec un petit début d'alphabet :
 > `a...ef.....l.....rstu.....` (27%)
 
 ## D'autres chaînes
 
-Avec ce que l'on connait, on peut déjà facilement trouver deux chaînes supplémentaires. La première est `undefined`, que JS nous renverra si l'on essaie d'accéder à un indice non défini sur un tableau et qui nous offrirait les lettres `d`, `i` et `n`), or nous savons déjà créer des tableau et des nombres :
+Avec ce que l'on connaît, on peut déjà facilement trouver deux chaînes supplémentaires. La première est `undefined`, que JS nous renverra si l'on essaie d'accéder à un indice non défini sur un tableau et qui nous offrirait les lettres `d`, `i` et `n`), or nous savons déjà créer des tableau et des nombres :
 
 ```js
 [][0]

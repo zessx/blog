@@ -6,7 +6,7 @@ tags:
 - regex
 - php
 description: >
-  Bien le bonjour, amis regexophiles ! Aujourd'hui, je vous explique rapidement comment utiliser les lookahead et les lookbehind dans une regex en PHP.
+  Bien le bonjour, amis regexophiles ! Aujourd’hui, je vous explique rapidement comment utiliser les lookahead et les lookbehind dans une regex en PHP.
 ---
 
 ## Le lookahead

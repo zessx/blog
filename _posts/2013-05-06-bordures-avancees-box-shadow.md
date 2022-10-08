@@ -13,14 +13,14 @@ Gardez bien à l'esprit que votre ombre aura toujours la forme de votre élémen
 
 	box-shadow <inset> <offset-x> <offset-y> <blur-radius> <spread-radius> <color>;
 
-Dans mon précédent article, je n'avais pas introduit les paramètres `inset` et `spread-radius` parce qu'ils n'avaient aucun intérêt dans ce cas précis. Mais aujourd'hui on va s'en servir ! Nous avons donc, dans l'ordre :
+Dans mon précédent article, je n'avais pas introduit les paramètres `inset` et `spread-radius` parce qu'ils n'avaient aucun intérêt dans ce cas précis. Mais aujourd’hui on va s'en servir ! Nous avons donc, dans l'ordre :
 
 * `inset` : affiche l'ombre vers l'intérieur de l'élément (optionnel)
 * `offset-x` : décale l'ombre sur l'axe X
 * `offset-y` : décale l'ombre sur l'axe Y
 * `blur-radius` : augmente le flou (optionnel)
 * `spread-radius` : augmente la taille de l'ombre (optionnel)
-* `color` : définit la couleur de l'mbre (optionnel)
+* `color` : définit la couleur de l'ombre (optionnel)
 
 En jouant sur cette taille, et en faisant bien attention à l'ordre dans lequel on ajoute nos ombres, on va pouvoir simuler des bordures. Voici quelques exemples :
 

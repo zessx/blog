@@ -86,7 +86,7 @@ print Mother::count(); // 4
 print Daughter::count(); // 4
 ```
 
-On constaste que les deux compteurs ont la même valeur, mais voici ce qu'il se passe réellement : **on utilise le même compteur**. Qu'on utilise `Mother` ou `Daughter`, tous les appels finissent par remonter jusqu'à la fonction `Mother::count()` et dans cette classe, `self` est une référence à elle-même : `Mother`.
+On constate que les deux compteurs ont la même valeur, mais voici ce qu'il se passe réellement : **on utilise le même compteur**. Qu'on utilise `Mother` ou `Daughter`, tous les appels finissent par remonter jusqu'à la fonction `Mother::count()` et dans cette classe, `self` est une référence à elle-même : `Mother`.
 
 Une solution serait de redéfinir les deux fonctions dans la classe fille `Daughter`, mais on perd dans ce cas absolument tout intérêt à utiliser de l'héritage.
 
@@ -96,7 +96,7 @@ PHP implémente (depuis sa version 5.3.0) le late static binding, ou "résolutio
 
 Dans des termes plus techniques, le site [php.net](https://www.php.net/manual/fr/language.oop5.late-static-bindings.php) précise que le mot-clé `static` comme contient une référence à la classe active lors du "dernier appel non transmis".
 
-> Un "appel transmis" est un appel statique déclenché par `self::`, `parent::`, `static::` ou, tout en haut de la hierarchie des classes, `forward_static_call()`.
+> Un "appel transmis" est un appel statique déclenché par `self::`, `parent::`, `static::` ou, tout en haut de la hiérarchie des classes, `forward_static_call()`.
 
 Lorsque vous utiliser l'appel ci-dessous, c'est un appel non transmis car il s'effectue sur une classe :
 
@@ -121,7 +121,7 @@ Pour résumé ce que nous venons de voir :
 - `self` permet d'accéder à la classe dans laquelle ce mot-clé est écrit
 - `static` permet d'accéder à la classe active lors de l'exécution
 
-En reprenant toujours le même exemple, pour avoir deux compteurs différents il faudrait procéder comme ceci (on chagne simplement tous les `self::$counter` en `static::$counter`) :
+En reprenant toujours le même exemple, pour avoir deux compteurs différents il faudrait procéder comme ceci (on change simplement tous les `self::$counter` en `static::$counter`) :
 
 ```php
 class Mother
@@ -164,7 +164,7 @@ Il est bon de noter que PHP 5.3.0 introduit en même temps la fonction `get_call
 
 En pratique, j'utilise beaucoup et principalement le late static binding avec des classes abstraites.
 
-Prenons un nouvel d'exemple, avec une architecture de classes soeurs définissant des APIs. Suivant le principe DRY (Don't Repeat Yourself), je vais chercher à rendre mon code le plus abstrait possible et à le centraliser dans une classe mère (généralement abstraite), afin de simplifier au maximum la création de futures classes d'APIs. Je pourrais avoir une architecture de ce type :
+Prenons un nouvel d'exemple, avec une architecture de classes sœurs définissant des APIs. Suivant le principe DRY (Don't Repeat Yourself), je vais chercher à rendre mon code le plus abstrait possible et à le centraliser dans une classe mère (généralement abstraite), afin de simplifier au maximum la création de futures classes d'APIs. Je pourrais avoir une architecture de ce type :
 
 ```
 src/

@@ -30,7 +30,7 @@ Dans le précédent exemple, nous n'avions qu'une seule substitution à faire. C
 
     $ scp -r ./folder1/* user@host:/path/folder1
 
-Il faut désormais faire une substitution globale (remplacer toutes les occurences de `folder1`).
+Il faut désormais faire une substitution globale (remplacer toutes les occurrences de `folder1`).
 L'autre syntaxe pour cette astuce est la suivante :
 
     $ !!:s/search/replace/
@@ -40,7 +40,7 @@ Le double point d'exclamation `!!` permet de relancer la commande précédente (
     $ !!:gs/folder1/folder2/
     scp -r ./folder2/* user@host:/path/folder2
 
-Il est aussi possible d'utiliser le symbole clé `&` dans vos subsitutions :
+Il est aussi possible d'utiliser le symbole clé `&` dans vos substitutions :
 
     $ !!:s/folder1/&.back/
     scp -r ./folder1.back/* user@host:/path/folder1

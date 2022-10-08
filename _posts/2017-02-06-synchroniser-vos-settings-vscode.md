@@ -28,7 +28,7 @@ Seront sauvegardés :
 
 La documentation est assez claire, mais voici quand même un résumé de ce qu'il vous faudra faire.
 
-Tout d'abord, il vous sera demandé de créer un nouveau token sur GitHub ([ici](https://github.com/settings/tokens)). Ce token sera le lien entre VSCode et votre compte GitHub, il devra donc authoriser l'accès à vos gist. **Attention, pensez à garder une trace de ce token quelque part**, car GitHub ne vous donnera pas la possibilité de le retrouver.
+Tout d'abord, il vous sera demandé de créer un nouveau token sur GitHub ([ici](https://github.com/settings/tokens)). Ce token sera le lien entre VSCode et votre compte GitHub, il devra donc autoriser l'accès à vos gist. **Attention, pensez à garder une trace de ce token quelque part**, car GitHub ne vous donnera pas la possibilité de le retrouver.
 
 Une fois cette petite procédure, il ne reste plus qu'à lancer la commande `Sync: Update / Upload Settings` et l'extension se chargera de créer le gist, et d'y uploader vos paramètres.
 
