@@ -34,7 +34,7 @@ layout: listing
           {% when '12' %}{% assign month = 'Décembre' %}
         {% endcase %}
 
-        <article data-c="{{ page.tag }}">
+        <article class="c-{{ page.tag }}">
           <aside>
             <p class="date">{{ post.date | date: "%d " }}{{ month }}{{ post.date | date: " %Y" }}</p>
 

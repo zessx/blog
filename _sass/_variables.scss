@@ -47,24 +47,24 @@ $colors: (
 // Optimized to minimize the CSS generated
 @each $tag, $color in $colors {
   // ::-moz- needs to be apart, or the whole selector will be ignored
-  [data-c="#{$tag}"] ::-moz-selection {
+  .c-#{$tag} ::-moz-selection {
     color: $color;
   }
-  [data-c="#{$tag}"] ::selection,
-  [data-c="#{$tag}"] p a:hover,
-  [data-c="#{$tag}"] li a:hover,
-  [data-c="#{$tag}"] #disqus_thread a:hover,
-  [data-c="#{$tag}"] #partager-block > a:hover::before,
-  [data-c="#{$tag}"] #partager-block > a:hover::after,
-  section.articles article[data-c="#{$tag}"] h2 a,
-  section.tags[data-c="#{$tag}"] > a:hover,
-  section.tags[data-c="#{$tag}"] h2 a {
+  .c-#{$tag} ::selection,
+  .c-#{$tag} p a:hover,
+  .c-#{$tag} li a:hover,
+  .c-#{$tag} #disqus_thread a:hover,
+  .c-#{$tag} #partager-block > a:hover::before,
+  .c-#{$tag} #partager-block > a:hover::after,
+  section.articles article.c-#{$tag} h2 a,
+  section.tags.c-#{$tag} > a:hover,
+  section.tags.c-#{$tag} h2 a {
     color: $color;
   }
-  [data-c="#{$tag}"] #partager-block > a:hover {
+  .c-#{$tag} #partager-block > a:hover {
     background: $color;
   }
-  [data-c="#{$tag}"] #canvas rect {
+  .c-#{$tag} #canvas rect {
     fill: $color;
   }
 }
