@@ -5,7 +5,7 @@ date:   2014-02-18
 tags:
 - apache
 - software
-- server
+- sysadmin
 description: >
   Tutoriel pour créer votre hôte virtuel sous Windows, avec WampServer.
 ---
