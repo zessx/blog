@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "VSCode et les espaces en fin de ligne"
-date:   2017-02-01
+date:   2018-05-16
 tags:
 - vscode
+- software
 description: >
   Comment supprimer les espaces en fin de ligne automatiquement, et intelligemment ?
 ---
