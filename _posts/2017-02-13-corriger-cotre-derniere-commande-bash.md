@@ -16,11 +16,11 @@ La syntaxe la plus simple pour la répétition de la dernière commande, avec un
 
     $ ^search^replace^
 
-Par exemple, vous pouvez avoir utilisé la commande `scp` pour envoyer le un dossier local sur un serveur distant :
+Par exemple, vous pouvez avoir utilisé la commande `scp` pour envoyer un dossier local sur un serveur distant :
 
     $ scp -r ./folder1 user@host:/path/dest/
 
-Mais vous avez un second dossier à envoyer. Plutôt que de retaper la commande précédente, ou de la modifier à grand renforts de flèches gauches, vous pouvez utiliser ceci :
+Mais vous avez un second dossier à envoyer. Plutôt que de retaper la commande précédente, ou de la modifier à grand renforts de flèches gauche, vous pouvez utiliser ceci&nbsp;:
 
     $ ^folder1^folder2^
 
@@ -30,17 +30,20 @@ Dans le précédent exemple, nous n'avions qu'une seule substitution à faire. C
 
     $ scp -r ./folder1/* user@host:/path/folder1
 
-Il faut désormais une substitution globale.
+Il faut désormais faire une substitution globale (remplacer toutes les occurences de `folder1`).
 L'autre syntaxe pour cette astuce est la suivante :
 
     $ !!:s/search/replace/
 
 Le double point d'exclamation `!!` permet de relancer la commande précédente (vous l'avez peut-être déjà utilisé comme ceci : `sudo !!`), et la suite de la commande se charge de la substitution. Là où cela devient intéressant, c'est qu'on peut préciser que cette dernière doit être globale :
 
-    $ !!:sg/folder1/folder2/
+    $ !!:gs/folder1/folder2/
     scp -r ./folder2/* user@host:/path/folder2
 
 Il est aussi possible d'utiliser le symbole clé `&` dans vos subsitutions :
 
     $ !!:s/folder1/&.back/
     scp -r ./folder1.back/* user@host:/path/folder1
+
+Voilà pour l'astuce du jour !
+N'hésitez pas à partagez votre propre manière de faire dans les commentaires.
