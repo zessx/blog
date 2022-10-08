@@ -3,7 +3,6 @@
 section.articles {
   width: 100%;
   padding: $content_padding 0;
-  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
 
@@ -58,7 +57,6 @@ section.articles {
 }
 section.tags {
   width: 100%;
-  min-height: 100vh;
   padding: $content_padding $tag_padding;
   margin-left: auto;
   margin-right: auto;

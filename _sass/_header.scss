@@ -18,6 +18,11 @@ header {
   padding: 0 100px;
   color: $white;
 
+  &.small-header {
+    padding-top: 30px;
+    height: 330px;
+  }
+
   h1 {
     position: relative;
     font-size: 50px;
