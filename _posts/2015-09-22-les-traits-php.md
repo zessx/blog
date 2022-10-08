@@ -9,6 +9,11 @@ description: >
   peu utilisé pouvant être utile et perturbant à la fois.
 ---
 
+> Articles du dossier :
+>
+> **I - Les traits**
+> [II - self versus static](https://blog.smarchal.com/self-versus-static)
+
 ## Back to the future
 
 Les traits ont été introduits avec PHP 5.4.0. Ce qui remonte effectivement à plus de 3 ans aujourd'hui... déjà.
