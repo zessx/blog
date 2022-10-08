@@ -171,5 +171,6 @@ Et vous avez là un bel historique avec les patches de chaque modification effec
 
 ## Liens
 
-[Référence git - tag](https://git-scm.com/docs/git-tag)
+[Référence git - log](https://git-scm.com/docs/git-log)
+[Référence git - show](https://git-scm.com/docs/git-show)
 [Référence git - blame](https://git-scm.com/docs/git-blame)
