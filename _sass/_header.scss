@@ -54,32 +54,39 @@ header {
 		}
 	}
 	.link-home,
-	.link-tags {
+	.link-tags
+	.link-search {
 		position: fixed;
 		top: 0;
 		left: 0;
-		padding: ($body_padding - $font_size) / 2;
-		margin: 0 $body_padding;
-		border-bottom: 1px solid $grey_light;
-		color: $grey_dark;
-		background: $white;
-		box-shadow: -$body_padding 0 $white, $body_padding 0 $white;
+		padding: 0.5em 2em 0.5em 1em;
+		margin: 0;
+		border: none;
+		color: $white;
+		background: $grey_dark;
 		text-decoration: none;
 		text-align: center;
 		font-size: 14px;
 		line-height: $font_size;
-		width: calc(100vw - #{$body_padding} * 2);
 		z-index: 90;
-		-webkit-transition: all .4s;
-		transition: all .4s;
 
 		span {
-			opacity: 0.5;
+			-webkit-transition: padding .4s;
+			transition: padding 0.4s;
 		}
 		&:hover {
 			span {
-				opacity: 1;
+				padding-right: 30px;
 			}
 		}
+	}
+	.link-home {
+		top: 2 * $body_padding;
+	}
+	.link-tags {
+		top: 2 * $body_padding + 40px;
+	}
+	.search-form {
+		top: 2 * $body_padding + 80px;
 	}
 }

@@ -139,6 +139,43 @@ function socialLinksInNewTab() {
 }
 document.addEventListener('DOMContentLoaded', socialLinksInNewTab, false);
 
+// Enable search in Jekyll
+function jekyllSearch() {
+  var searchInput   = document.querySelector('.jekyll-search-input');
+  var searchResults = document.querySelector('.jekyll-search-results');
+  if (searchInput) {
+    SimpleJekyllSearch({
+      searchInput: searchInput,
+      resultsContainer: searchResults,
+      json: '/search.json',
+      noResultsText: 'Aucun résultat',
+      fuzzy: false,
+      middleware: function(prop, value, template){
+        // if (prop === 'class') {
+        //   new Date(value);
+        //   return value.replace(/^\//, '')
+        // } else
+        if (prop === 'tags') {
+          return value.replace(/[^,]+/, '<li><a href="/tag/$1">$1</a></li>');
+        }
+      },
+      searchResultTemplate: '\
+        <article data-color="{class}">\
+          <aside>\
+            <p class="date">{date}</p>\
+              <div class="article-preview">\
+                <h2><a href="{url}">{title}</a></h2>\
+                {description}\
+              </div>\
+            <ul class="tags">{tags}</ul>\
+          </aside>\
+        </article>\
+      '
+    });
+  }
+}
+document.addEventListener('DOMContentLoaded', jekyllSearch, false);
+
 // Double click on code block to select all
 function selectCode() {
   Array.prototype.forEach.call(document.querySelectorAll('pre code'), function(code, index){
