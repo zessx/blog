@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Comprendre load average"
-date:   2021-08-01
+date:   2021-08-25
 tags:
 - sysadmin
 description: >
