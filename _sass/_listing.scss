@@ -1,131 +1,131 @@
 @charset "utf-8";
 
 section.articles {
-	width: 100%;
-	padding: $content_padding 0;
-	min-height: 100vh;
-	margin-left: auto;
-	margin-right: auto;
+  width: 100%;
+  padding: $content_padding 0;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
 
-	@include media($from: tablet) {
-		width: map-get($content_width, tablet);
-	}
-	@include media($from: desktop) {
-		width: map-get($content_width, desktop);
-	}
+  @include media($from: tablet) {
+    width: map-get($content_width, tablet);
+  }
+  @include media($from: desktop) {
+    width: map-get($content_width, desktop);
+  }
 
-	article {
-		padding-top: 0;
+  article {
+    padding-top: 0;
 
-		h2 {
-			display: block;
-			text-align: center;
-			margin: ($section_padding / 2) 0;
+    h2 {
+      display: block;
+      text-align: center;
+      margin: ($section_padding / 2) 0;
 
-			a {
-				position: relative;
-				text-decoration: none;
-				top: 0;
-				-webkit-transition: opacity .3s;
-				transition: opacity .3s;
+      a {
+        position: relative;
+        text-decoration: none;
+        top: 0;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
 
-				&:before {
-					content: none;
-				}
-				&:hover,
-				&:focus {
-					opacity: .7;
-				}
-			}
-			&:before {
-				content: none;
-			}
-		}
-		@each $tag, $color in $colors {
-			&[data-color="#{$tag}"] h2 a {
-				color: $color;
-			}
-		}
+        &:before {
+          content: none;
+        }
+        &:hover,
+        &:focus {
+          opacity: .7;
+        }
+      }
+      &:before {
+        content: none;
+      }
+    }
+    @each $tag, $color in $colors {
+      &[data-color="#{$tag}"] h2 a {
+        color: $color;
+      }
+    }
 
-		.article-preview {
-			display: block;
-			text-align: center;
-		}
-		.article-content {
-			display: none;
-		}
-	}
+    .article-preview {
+      display: block;
+      text-align: center;
+    }
+    .article-content {
+      display: none;
+    }
+  }
 }
 section.tags {
-	width: 100%;
-	min-height: 100vh;
-	padding: $content_padding $tag_padding;
-	margin-left: auto;
-	margin-right: auto;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-align-content: flex-start;
-	-ms-flex-line-pack: start;
-	align-content: flex-start;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: $content_padding $tag_padding;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
 
-	@include media($from: tablet) {
-		padding: $content_padding 0;
-		width: map-get($content_width, tablet);
-	}
-	@include media($from: desktop) {
-		width: map-get($content_width, desktop);
-	}
+  @include media($from: tablet) {
+    padding: $content_padding 0;
+    width: map-get($content_width, tablet);
+  }
+  @include media($from: desktop) {
+    width: map-get($content_width, desktop);
+  }
 
-	> a {
-		-webkit-box-flex: 1;
-		-webkit-flex-grow: 1;
-		-ms-flex-positive: 1;
-		flex-grow: 1;
-		color: $grey;
-		padding: $tag_padding;
-		margin: $tag_padding / 4;
-		line-height: $font_size;
-		text-align: center;
-		box-shadow: inset 0 0 0 1px $grey;
-		text-decoration: none;
+  > a {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    color: $grey;
+    padding: $tag_padding;
+    margin: $tag_padding / 4;
+    line-height: $font_size;
+    text-align: center;
+    box-shadow: inset 0 0 0 1px $grey;
+    text-decoration: none;
 
-		@each $tag, $color in $colors {
-			&[data-color="#{$tag}"] {
-				&:hover,
-				&:focus {
-					color: $color;
-					box-shadow: inset 0 0 0 2px $color;
-				}
-			}
-		}
-	}
-	&:after {
-		content: '';
-		-webkit-box-flex: 99999;
-		-webkit-flex-grow: 99999;
-		-ms-flex-positive: 99999;
-		flex-grow: 99999;
-	}
+    @each $tag, $color in $colors {
+      &[data-color="#{$tag}"] {
+        &:hover,
+        &:focus {
+          color: $color;
+          box-shadow: inset 0 0 0 2px $color;
+        }
+      }
+    }
+  }
+  &:after {
+    content: '';
+    -webkit-box-flex: 99999;
+    -webkit-flex-grow: 99999;
+    -ms-flex-positive: 99999;
+    flex-grow: 99999;
+  }
 }
 .loader {
-	&.end {
-		&:before {
-			content: "Bienvenue en bas de la page !";
-			display: block;
-			margin: 0 auto;
-			padding: ($content_padding * 2) 0;
-			text-align: center;
-			color: $grey;
-		}
-	}
+  &.end {
+    &:before {
+      content: "Bienvenue en bas de la page !";
+      display: block;
+      margin: 0 auto;
+      padding: ($content_padding * 2) 0;
+      text-align: center;
+      color: $grey;
+    }
+  }
 }

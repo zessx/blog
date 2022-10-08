@@ -1,9 +1,9 @@
 {% assign color = 'default' %}
 {% if page.tag %}
-    {% capture color %}{{ page.tag }}{% endcapture %}
+  {% capture color %}{{ page.tag }}{% endcapture %}
 {% else %}
-    {% if page.tags %}
-        {% capture color %}{{ page.tags | first }}{% endcapture %}
-    {% endif %}
+  {% if page.tags %}
+    {% capture color %}{{ page.tags | first }}{% endcapture %}
+  {% endif %}
 {% endif %}
 <body data-color="{{ color }}">

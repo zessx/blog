@@ -2,81 +2,81 @@
 layout: listing
 ---
 <header>
-	<h1 id="title">Tag : {{ page.tag }}</h1>
-	<a href="/" class="link-header"><span>Accueil</span></a>
-        <a href="/recherche" class="link-header"><span>Recherche</span></a>
+  <h1 id="title">Tag : {{ page.tag }}</h1>
+  <a href="/" class="link-header"><span>Accueil</span></a>
+  <a href="/recherche" class="link-header"><span>Recherche</span></a>
 </header>
 
 <section class="articles">
-	{% assign limit = 5 %}
-	{% for post in site.posts %}
-		{% for tag in post.tags %}
-			{% if tag == page.tag %}
-				{% capture limit %}{{ limit | minus:1 }}{% endcapture %}
-				{% if limit contains '-' %}
-					{% break %}
-				{% endif %}
+  {% assign limit = 5 %}
+  {% for post in site.posts %}
+    {% for tag in post.tags %}
+      {% if tag == page.tag %}
+        {% capture limit %}{{ limit | minus:1 }}{% endcapture %}
+        {% if limit contains '-' %}
+          {% break %}
+        {% endif %}
 
-				{% assign monthNum = post.date | date: "%-m" %}
-				{% assign month = '' %}
-				{% case monthNum %}
-					{% when '1' %}{% assign month = 'Janvier' %}
-					{% when '2' %}{% assign month = 'Février' %}
-					{% when '3' %}{% assign month = 'Mars' %}
-					{% when '4' %}{% assign month = 'Avril' %}
-					{% when '5' %}{% assign month = 'Mai' %}
-					{% when '6' %}{% assign month = 'Juin' %}
-					{% when '7' %}{% assign month = 'Juillet' %}
-					{% when '8' %}{% assign month = 'Août' %}
-					{% when '9' %}{% assign month = 'Septembre' %}
-					{% when '10' %}{% assign month = 'Octobre' %}
-					{% when '11' %}{% assign month = 'Novembre' %}
-					{% when '12' %}{% assign month = 'Décembre' %}
-				{% endcase %}
+        {% assign monthNum = post.date | date: "%-m" %}
+        {% assign month = '' %}
+        {% case monthNum %}
+          {% when '1' %}{% assign month = 'Janvier' %}
+          {% when '2' %}{% assign month = 'Février' %}
+          {% when '3' %}{% assign month = 'Mars' %}
+          {% when '4' %}{% assign month = 'Avril' %}
+          {% when '5' %}{% assign month = 'Mai' %}
+          {% when '6' %}{% assign month = 'Juin' %}
+          {% when '7' %}{% assign month = 'Juillet' %}
+          {% when '8' %}{% assign month = 'Août' %}
+          {% when '9' %}{% assign month = 'Septembre' %}
+          {% when '10' %}{% assign month = 'Octobre' %}
+          {% when '11' %}{% assign month = 'Novembre' %}
+          {% when '12' %}{% assign month = 'Décembre' %}
+        {% endcase %}
 
-				<article data-color="{{ page.tag }}">
-					<aside>
-						<p class="date">{{ post.date | date: "%d " }}{{ month }}{{ post.date | date: " %Y" }}</p>
+        <article data-color="{{ page.tag }}">
+          <aside>
+            <p class="date">{{ post.date | date: "%d " }}{{ month }}{{ post.date | date: " %Y" }}</p>
 
-						{% if post.update %}
+            {% if post.update %}
 
-						{% assign updateMonthNum = post.update | date: "%-m" %}
-						{% assign updateMonth = '' %}
-						{% case updateMonthNum %}
-						  {% when '1' %}{% assign updateMonth = 'Janvier' %}
-						  {% when '2' %}{% assign updateMonth = 'Février' %}
-						  {% when '3' %}{% assign updateMonth = 'Mars' %}
-						  {% when '4' %}{% assign updateMonth = 'Avril' %}
-						  {% when '5' %}{% assign updateMonth = 'Mai' %}
-						  {% when '6' %}{% assign updateMonth = 'Juin' %}
-						  {% when '7' %}{% assign updateMonth = 'Juillet' %}
-						  {% when '8' %}{% assign updateMonth = 'Août' %}
-						  {% when '9' %}{% assign updateMonth = 'Septembre' %}
-						  {% when '10' %}{% assign updateMonth = 'Octobre' %}
-						  {% when '11' %}{% assign updateMonth = 'Novembre' %}
-						  {% when '12' %}{% assign updateMonth = 'Décembre' %}
-						{% endcase %}
+            {% assign updateMonthNum = post.update | date: "%-m" %}
+            {% assign updateMonth = '' %}
+            {% case updateMonthNum %}
+              {% when '1' %}{% assign updateMonth = 'Janvier' %}
+              {% when '2' %}{% assign updateMonth = 'Février' %}
+              {% when '3' %}{% assign updateMonth = 'Mars' %}
+              {% when '4' %}{% assign updateMonth = 'Avril' %}
+              {% when '5' %}{% assign updateMonth = 'Mai' %}
+              {% when '6' %}{% assign updateMonth = 'Juin' %}
+              {% when '7' %}{% assign updateMonth = 'Juillet' %}
+              {% when '8' %}{% assign updateMonth = 'Août' %}
+              {% when '9' %}{% assign updateMonth = 'Septembre' %}
+              {% when '10' %}{% assign updateMonth = 'Octobre' %}
+              {% when '11' %}{% assign updateMonth = 'Novembre' %}
+              {% when '12' %}{% assign updateMonth = 'Décembre' %}
+            {% endcase %}
 
-						<p class="update"><label>Mise à jour :</label> {{ post.update | date: "%d " }}{{ updateMonth }}{{ post.update | date: " %Y" }}</p>
-						{% endif %}
+            <p class="update"><label>Mise à jour :</label> {{ post.update | date: "%d " }}{{ updateMonth }}{{ post.update | date: " %Y" }}</p>
+            {% endif %}
 
-						<div class="article-preview">
-							<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-							{{ post.description }}
-						</div>
+            <div class="article-preview">
+              <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+              {{ post.description }}
+            </div>
 
-						{% if post.tags %}
-						<ul class="tags">
-						{% for tag in post.tags %}
-							<li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-						{% endfor %}
-						</ul>
-						{% endif %}
-					</aside>
+            {% if post.tags %}
+            <ul class="tags">
+            {% for tag in post.tags %}
+              <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+          </aside>
 
-				</article>
-			{% endif %}
-		{% endfor %}
-	{% endfor %}
+        </article>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
 </section>
 <div class="loader" data-tag="{{ page.tag }}"></div>
