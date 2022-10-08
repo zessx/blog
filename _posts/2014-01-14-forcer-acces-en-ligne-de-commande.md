@@ -44,5 +44,5 @@ La valeur qui nous intéresse est ***cli***, pour Command LIne. En utilisant ce 
 	?>
 
 ## Liens
-[La constante `PHP_SAPI`](http://php.net/manual/fr/reserved.constants.php#constant.php-sapi)
-[La fonction `php_sapi_name()`](http://www.php.net/manual/fr/function.php-sapi-name.php)
+[La constante `PHP_SAPI`](https://php.net/manual/fr/reserved.constants.php#constant.php-sapi)
+[La fonction `php_sapi_name()`](https://www.php.net/manual/fr/function.php-sapi-name.php)

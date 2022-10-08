@@ -54,7 +54,7 @@ Il ne reste plus qu'à modifier le `.htaccess` de votre Prestashop en y spécifi
 
 ## La dernière chance...
 
-Si vraiment rien de tout cela ne fonctionne, c'est que vous avez vraiment un hébergeur restrictif... Il faut toutefois savoir que la variable `max_input_vars` a été ajoutée avec PHP 5.3.9 ([voir le changelog](http://www.php.net/ChangeLog-5.php#5.3.9)), il vous reste donc une toute petite chance.
+Si vraiment rien de tout cela ne fonctionne, c'est que vous avez vraiment un hébergeur restrictif... Il faut toutefois savoir que la variable `max_input_vars` a été ajoutée avec PHP 5.3.9 ([voir le changelog](https://www.php.net/ChangeLog-5.php#5.3.9)), il vous reste donc une toute petite chance.
 
 Vous pouvez parfois choisir quelle version de PHP utiliser via votre console d'administration de serveur. Il s'agira là d'utiliser une version de PHP **antérieure** à la 5.3.9. La variable `max_input_vars` n'existera alors plus, et vous n'aurez plus de soucis pour traduire vos modules !
 
@@ -67,6 +67,6 @@ Sur un hébergement mutualisé de base chez OVH par exemple, il suffit d'ajouter
 *Si vous connaissez d'autres techniques pour modifier cette variable (particulièrement sur des serveurs mutualisés), n'hésitez pas à les partager via les commentaires !*
 
 ## Liens
-[Homepage de Prestashop](http://www.prestashop.com/)
-[Documentation sur max_input_vars](http://www.php.net/manual/fr/info.configuration.php)
+[Homepage de Prestashop](https://www.prestashop.com/)
+[Documentation sur max_input_vars](https://www.php.net/manual/fr/info.configuration.php)
 [Homepage de suPHP](http://www.suphp.org/)

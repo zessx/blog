@@ -254,6 +254,6 @@ Et tout ceci pour un résultat de 291 octets !
 
 
 ## Liens
-[CodePen originel](http://codepen.io/zessx/pen/gapgRr)
-[Référence SVG - &lt;path&gt;](http://www.w3.org/TR/SVG/paths.html#PathElement)
-[Référence CSS - &lt;circle&gt;](http://www.w3.org/TR/SVG/shapes.html#CircleElement)
+[CodePen originel](https://codepen.io/zessx/pen/gapgRr)
+[Référence SVG - &lt;path&gt;](https://www.w3.org/TR/SVG/paths.html#PathElement)
+[Référence CSS - &lt;circle&gt;](https://www.w3.org/TR/SVG/shapes.html#CircleElement)

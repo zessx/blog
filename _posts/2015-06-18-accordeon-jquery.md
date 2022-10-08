@@ -94,16 +94,16 @@ On va faire simple, je vais balancer le code complet, en le commentant à chaque
 
 Voici les quelques fonctions de base de jQuery dans ce script :
 
-* [each()](http://api.jquery.com/each/) : pour faire une même action sur plusieurs éléments
-* [attr()](http://api.jquery.com/attr/) : récupère l'attribut  d'un élément
-* [find()](http://api.jquery.com/find/) : recherche dans les éléments enfants
-* [not()](http://api.jquery.com/not/) : enlève des éléments d'un ensemble
-* [removeClass()](http://api.jquery.com/removeClass/) : supprime une classe d'un élément, si elle existe
-* [addClass()](http://api.jquery.com/addClass/) : ajoute une classe à un élément, si elle n'existe pas déjà
-* [slideDown()](http://api.jquery.com/slideDown/) : affiche l'élément avec un effet de déroulage
-* [slideUp()](http://api.jquery.com/slideUp/) : cache l'élément avec un effet d'enroulage
-* [closest()](http://api.jquery.com/closest/) : récupère le parent le plus proche (correspondant au sélecteur)
-* [click()](http://api.jquery.com/click/) : définit un EventListener sur l'élément (pour l'évènement onclick)
+* [each()](https://api.jquery.com/each/) : pour faire une même action sur plusieurs éléments
+* [attr()](https://api.jquery.com/attr/) : récupère l'attribut  d'un élément
+* [find()](https://api.jquery.com/find/) : recherche dans les éléments enfants
+* [not()](https://api.jquery.com/not/) : enlève des éléments d'un ensemble
+* [removeClass()](https://api.jquery.com/removeClass/) : supprime une classe d'un élément, si elle existe
+* [addClass()](https://api.jquery.com/addClass/) : ajoute une classe à un élément, si elle n'existe pas déjà
+* [slideDown()](https://api.jquery.com/slideDown/) : affiche l'élément avec un effet de déroulage
+* [slideUp()](https://api.jquery.com/slideUp/) : cache l'élément avec un effet d'enroulage
+* [closest()](https://api.jquery.com/closest/) : récupère le parent le plus proche (correspondant au sélecteur)
+* [click()](https://api.jquery.com/click/) : définit un EventListener sur l'élément (pour l'évènement onclick)
 
 ## Le résultat
 
@@ -112,5 +112,5 @@ Voici les quelques fonctions de base de jQuery dans ce script :
 ## Liens
 
 [**Démonstration**](https://blog.smarchal.com/demos/accordeon-jquery/index.html)
-[Documentation jQuery](http://api.jquery.com/)
-[Le composant natif Accordion, sur jQuery UI](http://jqueryui.com/accordion/)
+[Documentation jQuery](https://api.jquery.com/)
+[Le composant natif Accordion, sur jQuery UI](https://jqueryui.com/accordion/)

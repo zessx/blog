@@ -48,5 +48,5 @@ Utiliser ce mot-clé sur un objet va permettre de dupliquer celui-ci en créant 
 Notez que l'utilisation de `clone` va provoquer l'appel à la fonction `__clone()` de l'objet. Vous pouvez ainsi définir un traitement particulier à effectuer lors du clonage, comme la génération d'un nouvel identifiant, ou encore la suppression de données sensibles.
 
 ## Liens
-[Le clonage en PHP](http://php.net/manual/fr/language.oop5.cloning.php)
+[Le clonage en PHP](https://php.net/manual/fr/language.oop5.cloning.php)
 [Les types anonymes en PHP](https://blog.smarchal.com/types-anonymes-en-php)

@@ -93,4 +93,4 @@ Dernier détail, mais pas des moindres : pensez à faire un tour sur votre compt
 
 ## Liens
 [Post de GitHub sur le déploiement de Jekyll 3.0](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0)
-[Guide de mise à jour de Jekyll 2 à Jekyll 3](http://jekyllrb.com/docs/upgrading/2-to-3/)
+[Guide de mise à jour de Jekyll 2 à Jekyll 3](https://rb.com/docs/upgrading/2-to-3/)

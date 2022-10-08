@@ -100,8 +100,8 @@ Sachez aussi qu'il est possible d'imbriquer des compteurs. L'affichage pourra al
 
 ## Compatibilité
 
-Les compteurs ont été définis dans la spécification 2.1 de CSS, ils sont donc très largement compatibles avec les différents navigateurs. Si on se réfère aux données de [CanIUse](http://caniuse.com/#search=counter), seuls IE6 et IE7 ne sont pas compatibles.
+Les compteurs ont été définis dans la spécification 2.1 de CSS, ils sont donc très largement compatibles avec les différents navigateurs. Si on se réfère aux données de [CanIUse](https://caniuse.com/#search=counter), seuls IE6 et IE7 ne sont pas compatibles.
 
 ## Liens
 [Documentation sur les compteurs CSS (MSN)](https://developer.mozilla.org/fr/docs/Web/CSS/Compteurs_CSS)
-[Spécification W3C](http://www.w3.org/TR/CSS21/generate.html#counters)
+[Spécification W3C](https://www.w3.org/TR/CSS21/generate.html#counters)

@@ -29,7 +29,7 @@ Voici la liste complète des classes de caractères nommées disponibles :
 
 - `[[:alphanum:]]` : les lettres et les chiffres (`[A-Za-z0-9]`)
 - `[[:alpha:]]` : les lettres (`[A-Za-z]`)
-- `[[:ascii:]]` : les [caractères ASCII](http://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#Description) (`[\x00-\x7F]`)
+- `[[:ascii:]]` : les [caractères ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#Description) (`[\x00-\x7F]`)
 - `[[:blank:]]` : l'espace et la tabulation (`[ \t]`)
 - `[[:cntrl:]]` : les caractères de contrôle (`[\x00-\x1F\x7F]`)
 - `[[:digit:]]` : les chiffres (`[0-9]`)
@@ -71,5 +71,5 @@ Il existe aussi des raccourcis pour certaines classes de caractères, qui vous s
 
 ## Liens
 
-[Table des caractères ASCII](http://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#Description)
-[Documentation PHP sur les classes de caractères](http://fr.php.net//manual/fr/regexp.reference.character-classes.php)
+[Table des caractères ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#Description)
+[Documentation PHP sur les classes de caractères](https://fr.php.net//manual/fr/regexp.reference.character-classes.php)

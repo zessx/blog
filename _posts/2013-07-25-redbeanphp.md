@@ -141,7 +141,7 @@ Je vous ai ici présenté les bases de RedBeanPHP, ce que vous utiliserez tous l
 * ...
 
 ## Liens
-[RedBeanPHP - site officiel](http://redbeanphp.com/)
+[RedBeanPHP - site officiel](https://redbeanphp.com/)
 [RedBeanPHP sur Github](https://github.com/gabordemooij/redbean)
-[Propel - site officiel](http://propelorm.org/)
-[Doctrine - site officiel](http://www.doctrine-project.org/)
+[Propel - sur Github](https://github.com/propelorm/)
+[Doctrine - site officiel](https://www.doctrine-project.org/)

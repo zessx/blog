@@ -9,12 +9,12 @@ description: >
   Présentation d'un travail perso : un générateur pour embellir rapidement vos navbars Bootstrap
 ---
 
-Vous connaissez probablement [Bootstrap](http://getbootstrap.com/) (anciennement Twitter Bootstrap), le framework CSS le plus en vogue aujourd'hui. Je l'utilise personnellement assez régulièrement, dans des contextes autant professionnels que personnels.
+Vous connaissez probablement [Bootstrap](https://getbootstrap.com/) (anciennement Twitter Bootstrap), le framework CSS le plus en vogue aujourd'hui. Je l'utilise personnellement assez régulièrement, dans des contextes autant professionnels que personnels.
 Bootstrap n'est pas adapté à tous les projets, il ne faut pas chercher à systématiqument l'utiliser, mais il est important de savoir qu'il existe et d'être capable de détecter quand il peut être utile. Il permet en effet un gain de temps assez bluffant lorsqu'il s'agit de réaliser des applications web.
 
 ## Le composant navbar
 
-Le [composant navbar](http://getbootstrap.com/components/#navbar) est un des plus utilisé dans le framework Bootstrap. Voici un exemple d'utilisation de ce composant :
+Le [composant navbar](https://getbootstrap.com/components/#navbar) est un des plus utilisé dans le framework Bootstrap. Voici un exemple d'utilisation de ce composant :
 
 	<nav class="navbar navbar-default" role="navigation">
 	  <!-- Brand and toggle get grouped for better mobile display -->
@@ -100,12 +100,12 @@ L'outil reste assez simpliste, mais répondra aux besoin de la plupart des gens.
 
 ## Une alternative LESS ?
 
-Il faut savoir que Bootstrap propose [des build personnalisés](http://getbootstrap.com/customize/), pour lesquels vous choisissez quels fichiers LESS compiler, en fixant certaines variables.
+Il faut savoir que Bootstrap propose [des build personnalisés](https://getbootstrap.com/customize/), pour lesquels vous choisissez quels fichiers LESS compiler, en fixant certaines variables.
 C'est un autre moyen simple pour vous de modifier les couleurs du composant navbar, et bien plus encore.
 
 ## Liens
-[TWBSColor](http://blog.work.smarchal.com/twbscolor/)
-[Le site de Bootstrap](http://getbootstrap.com/)
-[Le composant Navbar](http://getbootstrap.com/components/#navbar)
-[Les builds Bootstrap personnalisé](http://getbootstrap.com/customize/)
-[Le post SO à l'origine de l'idée](http://stackoverflow.com/a/18529465/1238019)
+[TWBSColor](https://work.smarchal.com/twbscolor/)
+[Le site de Bootstrap](https://getbootstrap.com/)
+[Le composant Navbar](https://getbootstrap.com/components/#navbar)
+[Les builds Bootstrap personnalisé](https://getbootstrap.com/customize/)
+[Le post SO à l'origine de l'idée](https://stackoverflow.com/a/18529465/1238019)

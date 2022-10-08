@@ -57,4 +57,4 @@ Normalement, vous devriez à présent voir DuckDuckGo définit par défaut en ha
 
 ## Liens
 [DuckDuckGo - page officielle](https://duckduckgo.com/)
-[Don't track us - quelques infos sur les données collectées par Google](http://donttrack.us/)
+[Don't track us - quelques infos sur les données collectées par Google](https://donttrack.us/)

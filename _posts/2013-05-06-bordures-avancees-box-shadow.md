@@ -92,5 +92,5 @@ Vous pouvez en découvrir plein d'autres dans la démo, hébergée sur le blog o
 
 ## Liens
 [**Démonstration**](https://blog.smarchal.com/demos/bordures-avancees-box-shadow/)
-[Spécifications de la propriété box-shadow](http://www.w3.org/TR/css3-background/#the-box-shadow)
-[La démo sur CodePen](http://codepen.io/zessx/pen/IdFnl)
+[Spécifications de la propriété box-shadow](https://www.w3.org/TR/css3-background/#the-box-shadow)
+[La démo sur CodePen](https://codepen.io/zessx/pen/IdFnl)

@@ -70,4 +70,4 @@ La regex devient plus simple à lire, et encore plus si vous utilisez le modifie
 	(?P=tag)
 
 ## Liens
-[Documentation sur les regex Perl](http://perldoc.perl.org/perlre.html)
+[Documentation sur les regex Perl](https://perldoc.perl.org/perlre.html)

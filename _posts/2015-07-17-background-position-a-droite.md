@@ -42,6 +42,6 @@ Cette limitation n'ayant pas vraiment de raison d'être, CSS3 nous a amené dans
 
 ## Liens
 
-[Spécification CSS3 de la propriété background-position](http://dev.w3.org/csswg/css-backgrounds-3/#background-position)
+[Spécification CSS3 de la propriété background-position](https://dev.w3.org/csswg/css-backgrounds-3/#background-position)
 [La propriété background-position sur le MDN](https://developer.mozilla.org/fr/docs/Web/CSS/background-position)
-[Page CanIUse de la propriété](http://caniuse.com/#feat=css-background-offsets)
+[Page CanIUse de la propriété](https://caniuse.com/#feat=css-background-offsets)

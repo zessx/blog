@@ -73,4 +73,4 @@ Attention toutefois aux guillemets. Si vous concaténez une chaîne avec guillem
 Si la chaîne avec guillemets vient en premier, le résultat sera entouré de guillemets, et vice versa.
 
 ## Liens
-[La documentation de SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+[La documentation de SASS](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)

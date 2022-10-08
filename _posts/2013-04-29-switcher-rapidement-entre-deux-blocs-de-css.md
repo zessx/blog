@@ -41,5 +41,5 @@ Le simple ajout d'un espace avant le dernier slash (ligne 1) vous permet de basc
 Évitez malgré tout d'utiliser ce genre d'astuces en environnement de production et préférez l'utilisation de variables de configuration, combinées avec un vrai `if{} else {}`
 
 ## Liens
-[Démo originale, par CSS Wizardry](http://jsfiddle.net/csswizardry/Kny3Q/)
-[Le site CSS Wizardry](http://csswizardry.com/)
+[Démo originale, par CSS Wizardry](https://jsfiddle.net/csswizardry/Kny3Q/)
+[Le site CSS Wizardry](https://csswizardry.com/)

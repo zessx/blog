@@ -114,5 +114,4 @@ Vous voulez récupérer toutes les lignes des tables A et B, qu'elle aient ou no
 Toutes ces requêtes sont basiques et répondront à plus de 99% de vos besoins dans le développement web. Cela vaut plutôt le coup de les avoir en tête !
 
 ## Liens
-[Documentation MySQL : la syntaxe de JOIN](http://dev.mysql.com/doc/refman/5.0/fr/join.html)
-
+[Documentation MySQL : la syntaxe de JOIN](https://dev.mysql.com/doc/refman/5.0/fr/join.html)

@@ -18,4 +18,4 @@ description: >
 On récupère la structure de la colonne (nom, type, null...), on isole ensuite le type (`enum('valeur1','valeur2','valeur3')`), que l'on parse pour récupérer les valeurs.
 
 ## Liens
-[Documentation MySQL : le type ENUM](http://dev.mysql.com/doc/refman/5.0/en/enum.html)
+[Documentation MySQL : le type ENUM](https://dev.mysql.com/doc/refman/5.0/en/enum.html)

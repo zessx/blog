@@ -14,7 +14,7 @@ description: >
 Je vous présente pour l'occasion [UglifyJS](https://github.com/mishoo/UglifyJS2) !
 C'est cet outil qui sera à même de minifier notre JS.
 
-Il a besoin [NodeJS](http://nodejs.org/) pour fonctionner, passez-donc l'installer en deux temps trois mouvements si ce n'est pas déjà fait (un redémarrage de votre machine sera probablement requis).
+Il a besoin [NodeJS](https://nodejs.org/) pour fonctionner, passez-donc l'installer en deux temps trois mouvements si ce n'est pas déjà fait (un redémarrage de votre machine sera probablement requis).
 
 Lancer ensuite cette commande pour installer UglifyJS :
 
@@ -116,6 +116,6 @@ Vous pouvez gardez l'option `--mangle`, mais si la lisibilité est votre but, ce
 
 [Guide d'installation de SASS avec Sublime Text 3](https://blog.smarchal.com/guide-installation-sass-avec-sublime-text-3)
 [UglifyJS](https://github.com/mishoo/UglifyJS2)
-[NodeJS](http://nodejs.org/)
+[NodeJS](https://nodejs.org/)
 [SublimeOnSaveBuild](https://sublime.wbond.net/packages/SublimeOnSaveBuild)
 [Documentation de UglifyJS](https://github.com/mishoo/UglifyJS2#usage)

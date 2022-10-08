@@ -25,7 +25,7 @@ Heureusement pour nous, Sublime Text 3 utilise une architecture de dossiers asse
 - Les préférences utilisateur (`.sublime-settings`)
 - Les builds (`.sublime-build`)
 
-En plus de cela, il va falloir sauvegarder les plugins installés. Là, nous remercions de tout notre coeur [Will Bond](http://wbond.net/), qui a créé le plugin **Package Control**, lequel permet d'installer simplement d'autres plugins via Sublime Text, mais surtout d'installer une liste complète de plugins prédéfinis ! Cette liste se trouve tout simplement dans le fichier `Package Control.sublime-settings`, dont voici un exemple :
+En plus de cela, il va falloir sauvegarder les plugins installés. Là, nous remercions de tout notre coeur [Will Bond](https://wbond.net/), qui a créé le plugin **Package Control**, lequel permet d'installer simplement d'autres plugins via Sublime Text, mais surtout d'installer une liste complète de plugins prédéfinis ! Cette liste se trouve tout simplement dans le fichier `Package Control.sublime-settings`, dont voici un exemple :
 
     {
         "installed_packages":
@@ -99,6 +99,6 @@ La dernière étape ? Tout simplement lancer Sublime Text 3, et laisser Package 
 
 ## Liens
 
-[Sublime Text 3](http://www.sublimetext.com/3)
+[Sublime Text 3](https://www.sublimetext.com/3)
 [Package Control](https://sublime.wbond.net/)
 [Ma configuration ST3](https://github.com/zessx/st3-settings)

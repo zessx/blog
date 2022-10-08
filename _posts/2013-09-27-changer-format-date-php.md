@@ -58,6 +58,6 @@ Il n'y a plus qu'a se préparer une petite classe utilitaire pour simplifier l'u
 
 
 ## Liens
-[PHP Doc : la fonction strtotime()](http://php.net/manual/fr/function.strtotime.php)
-[PHP Doc : la fonction date()](http://php.net/manual/fr/function.date.php)
-[PHP Doc : la classe DateTime](http://php.net/manual/fr/book.datetime.php)
+[PHP Doc : la fonction strtotime()](https://php.net/manual/fr/function.strtotime.php)
+[PHP Doc : la fonction date()](https://php.net/manual/fr/function.date.php)
+[PHP Doc : la classe DateTime](https://php.net/manual/fr/book.datetime.php)

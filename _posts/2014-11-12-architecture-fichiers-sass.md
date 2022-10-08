@@ -18,7 +18,7 @@ Il y a quelques années, on a vu fleurir bon nombre d'exemples où un fichier CS
     @import url("layout/content.css");
     @import url("layout/footer.css");
 
-L'avantage évident de cette technique était qu'elle permettait de diviser son code CSS pour plus de lisibilité, tout en gardant une unique balise `<link>` dans le HTML. À l'époque (2009), un employé de Google (Steve Souders) spécialisé dans la performance des sites web, avait rédigé un article intitulé [Don't use @import](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/). Son article expliquait que la technique de l'import, si elle avait un côté pratique reconnu, influait de manière très néfaste sur les temps de chargement, et pouvait même dans certains cas provoquer certains bugs avec JavaScript. Cet article fut d'ailleurs repris en France par [Alsacréations](http://www.alsacreations.com/actu/lire/695-utilisation-style-css-import-link.html).
+L'avantage évident de cette technique était qu'elle permettait de diviser son code CSS pour plus de lisibilité, tout en gardant une unique balise `<link>` dans le HTML. À l'époque (2009), un employé de Google (Steve Souders) spécialisé dans la performance des sites web, avait rédigé un article intitulé [Don't use @import](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/). Son article expliquait que la technique de l'import, si elle avait un côté pratique reconnu, influait de manière très néfaste sur les temps de chargement, et pouvait même dans certains cas provoquer certains bugs avec JavaScript. Cet article fut d'ailleurs repris en France par [Alsacréations](https://www.alsacreations.com/actu/lire/695-utilisation-style-css-import-link.html).
 
 Sass reprit plus tard ce principe, en apportant la règle `@import`, mais surtout les partials. Les partials sont des fichiers Sass qui n'ont pas vocation a être compilés seuls, leur intérêt est d'être inclus par un autre fichier. Afin de les identifier, il faut préfixer leur nom d'un underscore.
 
@@ -52,7 +52,7 @@ Cela semble évident quand on en parle, mais on ne le fait pas forcément correc
 
 C'est simple et ça fonctionne, mais je me retrouvais au final avec un fichier `app.scss` énorme, contenant le code spécifique à chaque page, à chaque bloc de contenu...
 
-J'ai ensuite commencé à réfléchir à une meilleure architecture, afin de mieux répartir mon code. Bien que je l'ai pensée de mon côté, cette architecture s'approche énormément de celle que propose Hugo Giraudel dans son article [Architecture for a Sass Project](http://www.sitepoint.com/architecture-sass-project/) :
+J'ai ensuite commencé à réfléchir à une meilleure architecture, afin de mieux répartir mon code. Bien que je l'ai pensée de mon côté, cette architecture s'approche énormément de celle que propose Hugo Giraudel dans son article [Architecture for a Sass Project](https://www.sitepoint.com/architecture-sass-project/) :
 
     base/
         _bootstrap.scss
@@ -108,5 +108,5 @@ N'hésitez pas à apporter votre contribution en discutant de cette architecture
 ## Liens
 
 [Don't use @import](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/)
-[Documentation sur la règle @import de Sass](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#import)
-[Architecture for a Sass Project](http://www.sitepoint.com/architecture-sass-project/)
+[Documentation sur la règle @import de Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#import)
+[Architecture for a Sass Project](https://www.sitepoint.com/architecture-sass-project/)

@@ -36,4 +36,4 @@ Pour éviter cela, il va falloir faire une surcharge de paramètres comme ceci :
 ## Liens
 [Visual Studio Code](https://code.visualstudio.com/)
 [Mes préférences utilisateur pour VSCode](https://gist.github.com/zessx/b7875430f23eda960df7f344158ff3ca)
-[Le Markdown](http://fr.wikipedia.org/wiki/Markdown)
+[Le Markdown](https://fr.wikipedia.org/wiki/Markdown)

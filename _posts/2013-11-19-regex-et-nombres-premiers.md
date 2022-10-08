@@ -14,7 +14,7 @@ description: >
 
 ## Une histoire de Perl
 
-Cette petite regex fut créée en Perl par un développeur très doué ([Abigail](http://abigail.be/)), en 1998.
+Cette petite regex fut créée en Perl par un développeur très doué ([Abigail](https://github.com/Abigail)), en 1998.
 Le script d'origine était remarquable en ce qu'il permettait de savoir si un nombre est premier en une seule ligne de code :
 
 	perl -wle 'print "Prime" if (1 x shift) !~ /^1?$|^(11+?)\1+$/'
@@ -70,4 +70,4 @@ Si vous préférez directement identifier les nombre premiers, renversez le test
 ## Liens
 [Polygenelubricants, un blog intéressant tout plein de regex capilotractées et de Java !](http://www.polygenelubricants.com/)
 [Le (vieux) post à l'origine de cette regex](http://diswww.mit.edu/bloom-picayune.mit.edu/perl/10138) (recherchez "Prime")
-[Doc PHP sur les backreferences](http://www.php.net/manual/fr/regexp.reference.back-references.php)
+[Doc PHP sur les backreferences](https://www.php.net/manual/fr/regexp.reference.back-references.php)

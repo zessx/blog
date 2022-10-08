@@ -44,6 +44,6 @@ N'oubliez pas que pour fonctionner, ce code doit être placé avant le premier a
 
 
 ## Liens
-[Sizzle](http://sizzlejs.com/)
-[jQuery](http://jquery.com/)
-[Documentation de :contains](http://api.jquery.com/contains-selector/)
+[Sizzle](https://github.com/jquery/sizzle/wiki)
+[jQuery](https://jquery.com/)
+[Documentation de :contains](https://api.jquery.com/contains-selector/)

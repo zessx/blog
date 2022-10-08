@@ -74,6 +74,6 @@ Voici donc la liste des mixins définis (je vous laisserai vous plonger dans le 
 ## Liens
 [SassFlexbox](https://work.smarchal.com/sass-flexbox/)
 [Le projet Github](https://github.com/zessx/sass-flexbox)
-[Spécifications W3C pour Flexbox](http://www.w3.org/TR/css3-flexbox/)
+[Spécifications W3C pour Flexbox](https://www.w3.org/TR/css3-flexbox/)
 [Utiliser Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)
-[Can I Use Flexbox?](http://caniuse.com/#feat=flexbox)
+[Can I Use Flexbox?](https://caniuse.com/#feat=flexbox)

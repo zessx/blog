@@ -40,5 +40,5 @@ Il ne reste plus qu'à utiliser le dictionnaire installé :
 Vous pouvez désormais rapidement activer/désactiver le correcteur via la touche <kbd>F6</kbd> (par défaut).
 
 ## Liens
-[Spell Checking - Sublime Text 2 Documentation](http://www.sublimetext.com/docs/2/spell_checking.html)
+[Spell Checking - Sublime Text 2 Documentation](https://www.sublimetext.com/docs/2/spell_checking.html)
 [Repository Github de Sublime Text](https://github.com/SublimeText/)

@@ -52,6 +52,6 @@ Et voilà notre module installé. Pour pouvez maintenant le retrouver dans le Ba
 ## Liens
 [Le site du développeur](http://www.henribaeyens.com/)
 [AttributePosition sur le site du développeur](http://www.henribaeyens.com/10ver/filez/prestashop_module_attributeposition)
-[Doc PHP : la fonction natcasesort()](http://php.net/manual/fr/function.natcasesort.php)
+[Doc PHP : la fonction natcasesort()](https://php.net/manual/fr/function.natcasesort.php)
 [Le site officiel de Prestashop](http://www.prestashop.com/fr)
 [Le dépôt officiel des addons Prestashop](https://addons.prestashop.com/fr/)

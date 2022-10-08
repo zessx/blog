@@ -82,5 +82,5 @@ Mais si vous êtes juste maniaque, et que ça vous énerve que tout ne soit pas 
 
 ## Liens
 
-[PostgreSQL](http://www.postgresql.org/)
+[PostgreSQL](https://www.postgresql.org/)
 [Article du wiki PostgreSQL](https://wiki.postgresql.org/wiki/Alter_column_position)

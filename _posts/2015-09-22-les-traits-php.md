@@ -150,5 +150,5 @@ des setters (`UseSingleCategory`, `UseMultipleCategories`...) et ainsi m'éviter
 
 ## Liens
 
-[Présentation des traits sur php.net](http://php.net/manual/fr/language.oop5.traits.php)
+[Présentation des traits sur php.net](https://php.net/manual/fr/language.oop5.traits.php)
 [Le pattern Singleton](https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception))

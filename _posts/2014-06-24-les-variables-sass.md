@@ -146,4 +146,4 @@ Ce fonctionnement à de bons et de mauvais côtés. Pour vous, et particulièrem
 
 
 ## Liens
-[La documentation de SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+[La documentation de SASS](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)

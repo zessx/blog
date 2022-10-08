@@ -120,6 +120,6 @@ Merci à [@jiceb](https://twitter.com/jiceb) pour ses remarques sur la piste #3,
 
 ## Liens
 
-[La fonction filemtime()](http://php.net/manual/fr/function.filemtime.php)
-[Apache mod_expire](http://httpd.apache.org/docs/2.2/mod/mod_expires.html)
+[La fonction filemtime()](https://php.net/manual/fr/function.filemtime.php)
+[Apache mod_expire](https://httpd.apache.org/docs/2.2/mod/mod_expires.html)
 [Revving filenames : don't use querystrings](http://stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring)

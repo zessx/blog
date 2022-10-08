@@ -117,6 +117,6 @@ Au même titre que les valeurs `hsb()`, `hsba()` et `rgba()`, `currentColor` est
 C'est à vous de jouer maintenant, simplifiez vos fichiers CSS !
 
 ## Liens
-[Source](http://osvaldas.info/keeping-css-short-with-currentcolor)
-[Spécifications CSS 3 du W3C](http://www.w3.org/TR/css3-color/#currentcolor)
-[Spécifications SVG 1.0 du W3C](http://www.w3.org/TR/SVG/color.html#ColorProperty)
+[Source](https://osvaldas.info/keeping-css-short-with-currentcolor)
+[Spécifications CSS 3 du W3C](https://www.w3.org/TR/css3-color/#currentcolor)
+[Spécifications SVG 1.0 du W3C](https://www.w3.org/TR/SVG/color.html#ColorProperty)

@@ -51,5 +51,5 @@ Ce raccourci peut donc s'avérer utile, mais doit être utilisé avec précautio
 Un équivalent peut d'ailleurs être trouvé en C#, avec l'opérateur de fusion null `??` (en lien ci-dessous un article à ce propos)
 
 ## Liens
-[Documentation PHP : les opérateurs de comparaison](http://php.net/manual/fr/language.operators.comparison.php)
-[CodePoney : l'opérateur de fusion null (??) en C#](http://codeponey.blogspot.fr/2013/06/loperateur-de-fusion-null.html)
+[Documentation PHP : les opérateurs de comparaison](https://php.net/manual/fr/language.operators.comparison.php)
+[CodePoney : l'opérateur de fusion null (??) en C#](https://codeponey.blogspot.fr/2013/06/loperateur-de-fusion-null.html)

@@ -9,7 +9,7 @@ description: >
   Un peu de mathématiques aujourd'hui, avec l'implémentation de fonctions trigonométriques en Sass !
 ---
 
-Il arrive parfois qu'on ait à travailler en Sass avec des triangles, des cercles ou des coordonnées 2D voire 3D. La trigonométrie s'invite alors avant même qu'on ne l'appelle, et les fonctions cosinus, sinus et tangente se rendent indispensables. Si vous utiliser une librairie comme Compass, [vous avez déjà accès à ces fonctions](http://compass-style.org/reference/compass/helpers/math/) ; l'objectif de cet article sera de créer ces fonctions de toutes pièces.
+Il arrive parfois qu'on ait à travailler en Sass avec des triangles, des cercles ou des coordonnées 2D voire 3D. La trigonométrie s'invite alors avant même qu'on ne l'appelle, et les fonctions cosinus, sinus et tangente se rendent indispensables. Si vous utiliser une librairie comme Compass, [vous avez déjà accès à ces fonctions](https://compass-style.org/reference/compass/helpers/math/) ; l'objectif de cet article sera de créer ces fonctions de toutes pièces.
 
 ## Les séries entières
 
@@ -166,4 +166,4 @@ La tangente étant simplement définie par `tan(α) = sin(α) / cos(α)`, on peu
 
 - [Définition de cosinus à partir des séries entières](https://fr.wikipedia.org/wiki/Cosinus#D.C3.A9finitions_.C3.A0_partir_des_s.C3.A9ries_enti.C3.A8res)
 - [Définition de sinus à partir des séries entières](https://fr.wikipedia.org/wiki/Sinus_(math%C3%A9matiques)#D.C3.A9finitions_.C3.A0_partir_des_s.C3.A9ries_enti.C3.A8res)
-- [Fonctions mathématiques de Compass](http://compass-style.org/reference/compass/helpers/math/)
+- [Fonctions mathématiques de Compass](https://compass-style.org/reference/compass/helpers/math/)

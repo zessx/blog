@@ -73,5 +73,5 @@ Redémarrez une nouvelle et dernière fois Apache, et vous vous retrouvez désor
 - ***http://monprojet.dev/*** pointant sur `C:/wamp/www/mon-projet/web/`
 
 ## Liens
-[WampServer](http://www.wampserver.com/)
-[Apache Virtual Host documentation](http://httpd.apache.org/docs/current/vhosts/)
+[WampServer](https://www.wampserver.com/)
+[Apache Virtual Host documentation](https://httpd.apache.org/docs/current/vhosts/)

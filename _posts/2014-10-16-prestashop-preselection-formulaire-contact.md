@@ -13,7 +13,7 @@ description: >
 
 Pour présélectionner le destinataire sans tout remettre en question, on va simplement ajouter une variable `GET` dans l'url avec l'identifiant du contact :
 
-	http://www.maboutique.com/fr/contactez-nous?id_contact=1
+	https://www.maboutique.com/fr/contactez-nous?id_contact=1
 
 L'utilisation d'une variable `GET` est intéressante d'une part parce qu'elle ne nécessite que très peu de modifications (on n'est même pas obligés de toucher aux contrôleurs),
 et d'autre part parce qu'on va pouvoir la différencier facilement des données `POST` envoyées via le formulaire. Un exemple pour comprendre l'intérêt :
@@ -72,6 +72,6 @@ Dans notre cas, `$_GET['id_contact']` et `$_POST['id_contact']` sont définies, 
 
 [Un template sans le problème (v1.6)](https://github.com/PrestaShop/PrestaShop/blob/1.6/themes/default-bootstrap/contact-form.tpl#L68)
 [Un template avec le problème (v1.4)](https://github.com/PrestaShop/PrestaShop-1.4/blob/master/themes/prestashop/contact-form.tpl#L58)
-[Documentation Smarty 2 sur $smarty.request](http://www.smarty.net/docs/en/language.variables.smarty.tpl#language.variables.smarty.request)
-[Documentation Smarty 3 sur $smarty.request](http://www.smarty.net/docsv2/en/language.variables.smarty.tpl#language.variables.smarty.request)
-[Documentation PHP sur variables_order](http://www.php.net/manual/fr/ini.core.php#ini.variables-order)
+[Documentation Smarty 2 sur $smarty.request](https://www.smarty.net/docs/en/language.variables.smarty.tpl#language.variables.smarty.request)
+[Documentation Smarty 3 sur $smarty.request](https://www.smarty.net/docsv2/en/language.variables.smarty.tpl#language.variables.smarty.request)
+[Documentation PHP sur variables_order](https://www.php.net/manual/fr/ini.core.php#ini.variables-order)

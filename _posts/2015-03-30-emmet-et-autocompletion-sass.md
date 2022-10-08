@@ -47,6 +47,6 @@ Tout est fin prêt, à présent le raccourci `t0` vous donnera ce résultat :
     top: 0;
 
 ## Liens
-[Site officiel du plugin Emmet](http://emmet.io/)
-[Documentation complète](http://docs.emmet.io/)
-[Cheet Sheet - Récapitulatif des fonctions](http://docs.emmet.io/cheat-sheet/)
+[Site officiel du plugin Emmet](https://emmet.io/)
+[Documentation complète](https://docs.emmet.io/)
+[Cheet Sheet - Récapitulatif des fonctions](https://docs.emmet.io/cheat-sheet/)

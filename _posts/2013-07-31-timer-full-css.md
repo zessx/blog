@@ -99,6 +99,6 @@ V3 : Le CSS reprend un peu de poil de la bête, mais est a présent compatible a
 
 ## Liens
 [**Démonstration**](https://blog.smarchal.com/demos/timer-full-css)
-[Spécifications des animations CSS3 sur le site du W3C](http://dev.w3.org/csswg/css-animations/)
+[Spécifications des animations CSS3 sur le site du W3C](https://dev.w3.org/csswg/css-animations/)
 [Les animations CSS3 sur le MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
-[La démo sur Codepen](http://codepen.io/zessx/pen/ytJig)
+[La démo sur Codepen](https://codepen.io/zessx/pen/ytJig)

@@ -26,16 +26,16 @@ Mais ce n'était pas suffisant.
 ## Gulp
 
 Voilà déjà quelques temps que je lorgnais sur Grunt et Gulp pour améliorer mon workflow. Plutôt Gulp d'ailleurs, qui semble avoir pris l'avantage sur Grunt grâce à un système de flux et à une configuration moins verbeuse.
-Je manque un peu de temps ces jours-ci, et je n'imaginais pas que Gulp puisse être mis en place et testé rapidement, l'idée me trottait donc dans la tête sans en émerger. Il aura fallu [un nouvel article de Raphaël Goetter](http://www.alsacreations.com/tuto/lire/1685-ebauche-de-workflow-gulp-taches-uncss-includes-critical-css.html) pour me dire, une fois de plus, que ça avait l'air 'achement cool. Et me lancer.
+Je manque un peu de temps ces jours-ci, et je n'imaginais pas que Gulp puisse être mis en place et testé rapidement, l'idée me trottait donc dans la tête sans en émerger. Il aura fallu [un nouvel article de Raphaël Goetter](https://www.alsacreations.com/tuto/lire/1685-ebauche-de-workflow-gulp-taches-uncss-includes-critical-css.html) pour me dire, une fois de plus, que ça avait l'air 'achement cool. Et me lancer.
 
-[Gulp](http://gulpjs.com/) est un outil de gestion de tâches en JavaScript.
+[Gulp](https://gulpjs.com/) est un outil de gestion de tâches en JavaScript.
 Une fois installé, il se base sur un fichier `gulpfile.js` placé à la racine de votre projet, dans lequel sont définies les tâches disponibles.
 Ces tâches vous permettent de modifier vos sources (Sass, JS, HTML, images...) afin de... et bien afin de faire ce que vous voulez !
 Minification, compression d'images, compilation, vérification syntaxique, tout est possible et la seule limite est le besoin que vous en avez.
 
 ## Installation
 
-Gulp est un outil basé sur [NodeJS](http://nodejs.org/), il faudra donc avant tout l'installer si ce n'est pas déjà fait. Leur site propose de télécharger des installeurs tout prêts, il n'y a rien de compliqué.
+Gulp est un outil basé sur [NodeJS](https://nodejs.org/), il faudra donc avant tout l'installer si ce n'est pas déjà fait. Leur site propose de télécharger des installeurs tout prêts, il n'y a rien de compliqué.
 
 Une fois NodeJS en place, installez gulp :
 
@@ -269,7 +269,7 @@ Ne reste plus qu'une chose : convaincre les graphistes-intégrateurs à utiliser
 
 ## Liens
 
-[Homepage de Gulp](http://gulpjs.com/)
-[Liste des plugins Gulp](http://gulpjs.com/plugins/)
+[Homepage de Gulp](https://gulpjs.com/)
+[Liste des plugins Gulp](https://gulpjs.com/plugins/)
 [Page de npm pour rechercher des plugins Gulp](https://www.npmjs.com/)
 [Homepage de NodeJS](https://nodejs.org)

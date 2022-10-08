@@ -128,5 +128,5 @@ Malheureusement, notre lookbehind n'a pas ici une taille fixe, en résulte une e
 Les lookahead sont aussi supportés en Javascript, mais pas les lookbehind. Il faudra donc parfois retravailler la capture pour supprimer les données inutiles.
 
 ## Liens
-[Documentation PHP : PCRE, les assertions](http://www.php.net/manual/fr/regexp.reference.assertions.php)
-[SO : Regex lookahead ordering, lien intéressant sur l'endroit où placer une assertion](http://stackoverflow.com/questions/2126137/regex-lookahead-ordering#2126755)
+[Documentation PHP : PCRE, les assertions](https://www.php.net/manual/fr/regexp.reference.assertions.php)
+[SO : Regex lookahead ordering, lien intéressant sur l'endroit où placer une assertion](https://stackoverflow.com/questions/2126137/regex-lookahead-ordering#2126755)

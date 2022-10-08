@@ -59,4 +59,4 @@ Maintenant que vous avez saisi le principe, vous comprendrez vite son intérêt 
 
 
 ## Liens
-[La documentation de Sass](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+[La documentation de Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)

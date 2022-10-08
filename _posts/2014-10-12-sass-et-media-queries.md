@@ -197,5 +197,5 @@ Voyez ci-dessous la simplicité d'utilisation :
     }
 
 ## Liens
-[La documentation de SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+[La documentation de SASS](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 [SassQueries](https://work.smarchal.com/sass-queries/)

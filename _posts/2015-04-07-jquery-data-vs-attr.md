@@ -90,5 +90,5 @@ Si vous désirez changer la valeur d'un attribut, utilisez en toute logique la f
 - `attr()` peut donc créer des attributs
 
 ## Liens
-[Documentation sur la fonction data()](http://api.jquery.com/data/)
-[Documentation sur la fonction attr()](http://api.jquery.com/attr/)
+[Documentation sur la fonction data()](https://api.jquery.com/data/)
+[Documentation sur la fonction attr()](https://api.jquery.com/attr/)

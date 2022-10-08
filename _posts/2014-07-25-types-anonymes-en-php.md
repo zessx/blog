@@ -80,5 +80,5 @@ En complément, je préciserai que le transtypage apporté par `(object)` peut �
 	print $foo->scalar; // bar
 
 ## Liens
-[Les classes prédéfinies en PHP](http://php.net//manual/fr/reserved.classes.php)
-[Conversion en un objet PHP](http://php.net/manual/fr/language.types.object.php#language.types.object.casting)
+[Les classes prédéfinies en PHP](https://php.net//manual/fr/reserved.classes.php)
+[Conversion en un objet PHP](https://php.net/manual/fr/language.types.object.php#language.types.object.casting)

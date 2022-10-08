@@ -90,6 +90,6 @@ Cette méthode pose des limites : on ne pourra traiter que les nombres contenus 
 
 ## Liens
 
-[La clause ORDER BY en MySQL](http://dev.mysql.com/doc/refman/5.0/fr/sorting-rows.html)
-[Les types numériques en MySQL](http://dev.mysql.com/doc/refman/5.0/fr/numeric-types.html)
-[Les fonctions de transtypage en MySQL](http://dev.mysql.com/doc/refman/5.0/fr/cast-functions.html)
+[La clause ORDER BY en MySQL](https://dev.mysql.com/doc/refman/5.0/fr/sorting-rows.html)
+[Les types numériques en MySQL](https://dev.mysql.com/doc/refman/5.0/fr/numeric-types.html)
+[Les fonctions de transtypage en MySQL](https://dev.mysql.com/doc/refman/5.0/fr/cast-functions.html)

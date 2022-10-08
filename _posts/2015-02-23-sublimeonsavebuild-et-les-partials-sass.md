@@ -42,5 +42,5 @@ And voilà !
 Dans notre exemple, seul le fichier `app.scss` sera compilé.
 
 ## Liens
-[Sublime Text 3](http://www.sublimetext.com/3)
+[Sublime Text 3](https://www.sublimetext.com/3)
 [SublimeOnSaveBuild](https://sublime.wbond.net/packages/SublimeOnSaveBuild)

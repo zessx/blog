@@ -153,5 +153,5 @@ Quelques exemples et le résultat :
 
 ## Liens
 [**Démonstration**](https://blog.smarchal.com/demos/icone-pour-vos-fichiers-en-css/index.html)
-[Le Codepen pour jouer](http://codepen.io/zessx/pen/qyruj)
-[Les triangles en CSS](http://css-tricks.com/snippets/css/css-triangle/)
+[Le Codepen pour jouer](https://codepen.io/zessx/pen/qyruj)
+[Les triangles en CSS](https://css-tricks.com/snippets/css/css-triangle/)

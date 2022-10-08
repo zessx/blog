@@ -39,4 +39,4 @@ Dans notre premier exemple, on spécifie une branche distante, mais **pas de bra
     $ git push origin :migration
 
 ## Liens
-[Documentation sur git push](http://git-scm.com/docs/git-push)
+[Documentation sur git push](https://git-scm.com/docs/git-push)

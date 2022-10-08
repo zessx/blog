@@ -30,5 +30,5 @@ Vous pouvez maintenant redéfinir l'éditeur par défaut par... disons... Sublim
 
 
 ## Liens
-[Sublime Text 3](http://www.sublimetext.com/3)
-[Source](http://www.sublimetext.com/forum/viewtopic.php?t=13214)
+[Sublime Text 3](https://www.sublimetext.com/3)
+[Source](https://www.sublimetext.com/forum/viewtopic.php?t=13214)

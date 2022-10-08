@@ -11,10 +11,10 @@ description: >
 
 ## Présentation de Random User Generator
 
-[Random User generator](http://randomuser.me), c'est une simple url que vous appeler pour obtenir un utilisateur aléatoire. Pour obtenir un utilisateur, il suffit par exemple de faire un petit appel AJAX :
+[Random User generator](https://randomuser.me), c'est une simple url que vous appeler pour obtenir un utilisateur aléatoire. Pour obtenir un utilisateur, il suffit par exemple de faire un petit appel AJAX :
 
 	$.ajax({
-		url: 'http://api.randomuser.me/0.2/',
+		url: 'https://api.randomuser.me/0.2/',
 		dataType: 'json',
 		success: function(data){
 			console.log(data);
@@ -45,7 +45,7 @@ Vous obtenez un objet JSON formaté comme ci-dessous :
 				phone: "(471)-543-4073",
 				cell: "(651)-308-4754",
 				SSN: "160-76-1677",
-				picture: "http://api.randomuser.me/0.2/portraits/women/6.jpg"
+				picture: "https://api.randomuser.me/0.2/portraits/women/6.jpg"
 			},
 			seed: "tinyGoose"
 		}]
@@ -73,4 +73,4 @@ L'url dispose de quelques options, afin d'affiner les profils que vous désirer 
 
 ## Liens
 [**Démonstration**](https://blog.smarchal.com/demos/random-user-generator/index.html)
-[Le site de Random User generator](http://randomuser.me)
+[Le site de Random User generator](https://randomuser.me)

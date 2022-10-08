@@ -12,12 +12,12 @@ description: >
 
 ## Sublime Text 3
 
-Hop... Captain Obvious passe la tête par l'encadrure de la porte pour vous préciser que sans [Sublime Text 3](http://www.sublimetext.com/3) (j'insiste sur la v3), ce guide perd légèrement de son intérêt.
+Hop... Captain Obvious passe la tête par l'encadrure de la porte pour vous préciser que sans [Sublime Text 3](https://www.sublimetext.com/3) (j'insiste sur la v3), ce guide perd légèrement de son intérêt.
 
 ## Ruby
 
 SASS nécessite Ruby pour fonctionner. Courez-donc installer de petit bijou si ce n'est pas déjà fait !
-Pour les utilisateurs de Windows, vous avez un installeur qui fait (presque tout pour vous) sur le site [rubyinstaller.org](http://rubyinstaller.org/downloads/). N'oubliez pas, pendant l'installation, de bien cocher ***Add Ruby executables to your PATH*** afin d'avoir accès à Ruby en ligne de commande.
+Pour les utilisateurs de Windows, vous avez un installeur qui fait (presque tout pour vous) sur le site [rubyinstaller.org](https://rubyinstaller.org/downloads/). N'oubliez pas, pendant l'installation, de bien cocher ***Add Ruby executables to your PATH*** afin d'avoir accès à Ruby en ligne de commande.
 
 Une fois l'installation terminée, vérifiez que tout est bien accessible en exécutant cette petite commande :
 
@@ -126,10 +126,10 @@ Vous pouvez aussi manuellement lancer le build avec la combinaison de touches <k
 Enjoy.
 
 ## Liens
-[Sublime Text 3](http://www.sublimetext.com/3)
+[Sublime Text 3](https://www.sublimetext.com/3)
 [ST3 - Package Control](https://sublime.wbond.net/installation)
 [ST3 - Sass](https://sublime.wbond.net/packages/Sass)
 [ST3 - SublimeOnSaveBuild](https://sublime.wbond.net/packages/SublimeOnSaveBuild)
-[Build Systems with Sublime Text](http://docs.sublimetext.info/en/latest/reference/build_systems.html)
-[RubyInstaller](http://www.rubyinstaller.org/downloads/)
-[SASS](http://sass-lang.com/)
+[Build Systems with Sublime Text](https://docs.sublimetext.info/en/latest/reference/build_systems.html)
+[RubyInstaller](https://www.rubyinstaller.org/downloads/)
+[SASS](https://sass-lang.com/)

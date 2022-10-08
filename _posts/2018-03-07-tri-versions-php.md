@@ -38,5 +38,5 @@ La fonction `usort` quant à elle permet de trier un tableau en utilisant une fo
 
 ## Liens :
 
-[La fonction version_compare](http://php.net/version_compare)
-[La fonction usort](http://php.net/usort)
+[La fonction version_compare](https://php.net/version_compare)
+[La fonction usort](https://php.net/usort)

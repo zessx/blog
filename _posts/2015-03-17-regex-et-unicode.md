@@ -103,7 +103,7 @@ Dans notre cas, il suffira d'utiliser cette regex :
 Simple, court, complet, que demander de plus ?
 
 ##Liens
-[Les regex Unicode](http://www.regular-expressions.info/unicode.html)
-[Table Unicode/U0000](http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0000)
-[Table Unicode/U0080](http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080)
-[Les catégories de caractères Unicode](http://en.wikipedia.org/wiki/Unicode_character_property#General_Category)
+[Les regex Unicode](https://www.regular-expressions.info/unicode.html)
+[Table Unicode/U0000](https://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0000)
+[Table Unicode/U0080](https://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080)
+[Les catégories de caractères Unicode](https://en.wikipedia.org/wiki/Unicode_character_property#General_Category)

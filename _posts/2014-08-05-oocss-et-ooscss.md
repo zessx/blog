@@ -261,6 +261,6 @@ On remarque la double utilisation du sélecteur `button.btn-add`. Il ne faut pas
 L'OOSCSS reprend les principes de l'OOCSS, tout en corrigeant ses défauts.
 
 ## Liens
-[OOCSS.org](http://oocss.org/)
-[Les placeholders Sass](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_)
-[Les mixins Sass](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins)
+[OOCSS.org](https://oocss.org/)
+[Les placeholders Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_)
+[Les mixins Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins)

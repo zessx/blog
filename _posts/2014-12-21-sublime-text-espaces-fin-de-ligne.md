@@ -49,6 +49,6 @@ Et voilà !
 Des espaces supprimés en fin de ligne à chaque enregistrement, sauf sur la ligne de travail (courante) et dans les fichiers `.md`.
 
 ## Liens
-[Sublime Text 3](http://www.sublimetext.com/3)
-[Le Markdown](http://fr.wikipedia.org/wiki/Markdown)
-[Dropplets](http://dropplets.com/)
+[Sublime Text 3](https://www.sublimetext.com/3)
+[Le Markdown](https://fr.wikipedia.org/wiki/Markdown)
+[Dropplets](https://dropplets.com/)

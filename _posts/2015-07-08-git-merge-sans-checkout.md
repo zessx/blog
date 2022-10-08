@@ -43,4 +43,4 @@ Comme précisé plus haut, cette méthode ne fonctionne que si le merge est un f
 
 ## Liens
 
-[Documentation de la commange git fetch](http://git-scm.com/docs/git-fetch)
+[Documentation de la commange git fetch](https://git-scm.com/docs/git-fetch)

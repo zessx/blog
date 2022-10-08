@@ -14,7 +14,7 @@ Cette propriété, introduite avec CSS3, permet habituellement d'ajouter une omb
 
 	box-shadow <offset-x> <offset-y> <blur> <color>;
 
-Il existe des paramètres supplémentaires, plus rarement utilisés et qui ne nous intéressent pas ici. Je vous invite à passer voir [les spécifications du W3C](http://www.w3.org/TR/css3-background/#the-box-shadow) pour tous les détails.
+Il existe des paramètres supplémentaires, plus rarement utilisés et qui ne nous intéressent pas ici. Je vous invite à passer voir [les spécifications du W3C](https://www.w3.org/TR/css3-background/#the-box-shadow) pour tous les détails.
 
 ## Le pixel art
 
@@ -102,6 +102,6 @@ Notez au passage que, même avec un `background: none`, vous ne pourrez pas affi
 ## Liens
 [**Démonstration**](https://blog.smarchal.com/demos/pixel-art-css-box-shadow/index.html)
 [Un début de générateur que je prendrait (peut-être) le temps d'améliorer](https://blog.smarchal.com/demos/pixel-art-css-box-shadow/generator.php)
-[Spécifications de la propriété box-shadow](http://www.w3.org/TR/css3-background/#the-box-shadow")
-[Le Sonic complet sur CodePen](http://codepen.io/zessx/pen/BsfFt")
-[Un générateur de box-shadow pour les fainéants](http://cssmatic.com/box-shadow)
+[Spécifications de la propriété box-shadow](https://www.w3.org/TR/css3-background/#the-box-shadow")
+[Le Sonic complet sur CodePen](https://codepen.io/zessx/pen/BsfFt")
+[Un générateur de box-shadow pour les fainéants](https://cssmatic.com/box-shadow)

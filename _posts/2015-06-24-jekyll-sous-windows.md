@@ -78,13 +78,13 @@ Rien de plus !
 
 ## Jekyll et Windows : la croisade du XXIe siècle
 
-Bon. Maintenant que je vous ai très rapidement présenté Jekyll, il est temps d'attaquer le vrai but de cet article. La documentation de Jekyll est suffisamment bien faite, et il y a assez de ressources sur le net pour que vous compreniez aisément comment utiliser Jekyll. En revanche, les articles qui expliquent comment le faire fonctionner sous Windows sont rares. Il en existe toutefois un qui mérite d'être cité, et qui m'a plutôt aidé dans cette croisade : [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/), écrit par [@juthilo](https://twitter.com/juthilo).
+Bon. Maintenant que je vous ai très rapidement présenté Jekyll, il est temps d'attaquer le vrai but de cet article. La documentation de Jekyll est suffisamment bien faite, et il y a assez de ressources sur le net pour que vous compreniez aisément comment utiliser Jekyll. En revanche, les articles qui expliquent comment le faire fonctionner sous Windows sont rares. Il en existe toutefois un qui mérite d'être cité, et qui m'a plutôt aidé dans cette croisade : [Run Jekyll on Windows](https://-windows.juthilo.com/), écrit par [@juthilo](https://twitter.com/juthilo).
 
 Nous allons donc commencer, de zéro, en détaillant tous les prérequis.
 
 ### Ruby
 
-Jekyll est écrit en Ruby, vous avez donc évidemment besoin de lui pour le faire fonctionner. La petite spécificité ici, c'est qu'il faudra aussi installer le Ruby DevKit, et ça tout le monde ne l'a pas forcément. Commencez donc par récupérer Ruby et Ruby DevKit **[ici](http://rubyinstaller.org/downloads/)**, en prenant garde aux versions x32/x64. Prenez Ruby 2.0.0 ou une version plus récente.
+Jekyll est écrit en Ruby, vous avez donc évidemment besoin de lui pour le faire fonctionner. La petite spécificité ici, c'est qu'il faudra aussi installer le Ruby DevKit, et ça tout le monde ne l'a pas forcément. Commencez donc par récupérer Ruby et Ruby DevKit **[ici](https://rubyinstaller.org/downloads/)**, en prenant garde aux versions x32/x64. Prenez Ruby 2.0.0 ou une version plus récente.
 
 Lors de l'installation de Ruby, faites bien attention à cocher la ligne `Add Ruby executables to your PATH`. Vérifiez ensuite que Ruby est bien installé :
 
@@ -178,12 +178,12 @@ Déjà évoquée, cette commande permet de lancer un serveur sur le port 4000 de
 
     $ jekyll serve --drafts
 
-Dérivée de la précédente, le serveur tiendra ici compte des drafts (les articles en cours de rédaction). Ces articles qui se trouvent dans le dossier `_drafts/` ne sont habituellement pas pris en compte. Préciser l'option `--drafts` vous permet de vérifier en local l'affichage correct d'un futur article, sans avoir besoin de de publier. Notez que GitHub n'utilise évidemment pas cette option. Vous pourrez trouver plus d'informations sur les drafts [dans la documentation de Jekyll](http://jekyllrb.com/docs/drafts/)
+Dérivée de la précédente, le serveur tiendra ici compte des drafts (les articles en cours de rédaction). Ces articles qui se trouvent dans le dossier `_drafts/` ne sont habituellement pas pris en compte. Préciser l'option `--drafts` vous permet de vérifier en local l'affichage correct d'un futur article, sans avoir besoin de de publier. Notez que GitHub n'utilise évidemment pas cette option. Vous pourrez trouver plus d'informations sur les drafts [dans la documentation de Jekyll](https://rb.com/docs/drafts/)
 
 C'est tout pour aujourd'hui !
 Je posterai probablement quelques autres article sur Jekyll, qui concerneront plus son utilisation et différentes techniques que j'aurai pu trouver.
 
 ## Liens
 
-[Site officiel de Jekyll](http://jekyllrb.com/)
+[Site officiel de Jekyll](https://rb.com/)
 [Jekyll sur GitHub](https://github.com/jekyll/jekyll)

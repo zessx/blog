@@ -87,4 +87,4 @@ Afin de faciliter sa personnalisation et d'éviter tout conflit, CookiesPlease u
 ## Liens
 [CookiesPlease](https://work.smarchal.com/cookiesplease/)
 [Le projet Github](https://github.com/zessx/cookiesplease)
-[Article de la CNIL sur les cookies](http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/)
+[Article de la CNIL sur les cookies](https://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/)

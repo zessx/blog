@@ -39,11 +39,11 @@ Vous aurez donc un dépôt avec l'url suivante : `https://github.com/zessx/zessx
 Si votre dépôt existe déjà, mais n'a pas le bon nom, vous pouvez facilement le renommer.
 Allez dans les paramètres de votre dépôt, et vous tomberez directement sur le formulaire pour changer le "Repository name".
 
-À ce stade, votre site est déjà visible en ligne à l'adresse `http://zessx.github.io` (il faudra sûrement attendre une dizaine de minutes avant qu'il soit visible, le temps que GitHub le déploie la première fois).
+À ce stade, votre site est déjà visible en ligne à l'adresse `https://zessx.github.io` (il faudra sûrement attendre une dizaine de minutes avant qu'il soit visible, le temps que GitHub le déploie la première fois).
 
 ## Lier un nom de domaine à son dépôt GitHub
 
-Bon j'avoue, ma première idée a été de créer un simple `index.html` sur mon serveur, avec une bonne vieille iFrame toute moche chargant le contenu de `http://zessx.github.io`.
+Bon j'avoue, ma première idée a été de créer un simple `index.html` sur mon serveur, avec une bonne vieille iFrame toute moche chargant le contenu de `https://zessx.github.io`.
 Je me suis renseigné avant de commencer ces lignes de code de la honte, et j'ai vu que GitHub proposait **déjà** cette fonctionnalité !
 
 Il va donc vous falloir agir des deux côtés : sur GitHub, et chez votre registrar (là où vous gérez habituellement les zones DNS).
@@ -114,7 +114,7 @@ Comme GitHub n'autorise que des ressources statiques, inutile de compter sur un 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>TWBSColor</title>
 		<script>
-		window.location.replace("http://twbscolor.smarchal.com");
+		window.location.replace("https://twbscolor.smarchal.com");
 		</script>
 	</head>
 	<body></body>

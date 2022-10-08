@@ -15,7 +15,7 @@ Aujourd'hui, c'est regex !
 Mais si, mais si, je sais bien que vous adorez ça...
 
 {:.center}
-![PERL Problems](http://imgs.xkcd.com/comics/perl_problems.png)
+![PERL Problems](https://imgs.xkcd.com/comics/perl_problems.png)
 
 Je trouve la fonction de recherche de Sublime Text bien fichue. D'une parce qu'elle est complète -encore heureux dans un éditeur ; de deux parce que les portions de codes capturées, qui seront modifiées, sont instantanément mises en avant. C'est tout bête, mais tellement pratique lorsque vous vous attaquez à la recherche par regex.
 Quand on commence à avoir besoin d'une regex, c'est qu'on veut remplacer pas mal de choses. J'en utilise assez régulièrement dans divers cas :
@@ -137,9 +137,9 @@ Avec ces quelques outils, vous avez les moyens de modifier vos fichiers massivem
 	(?s)<foo>(.*?)</foo>
 
 ## Liens
-[XKCD : Perl Problems](http://xkcd.com/1171/)
-[Un testeur de Regex](http://lumadis.be/regex/test_regex.php?lang=fr)
-[Un autre testeur de Regex, visuel ce coup-ci, qui peut aider à mieux comprendre](http://www.regexper.com/)
-[Site complet sur les regex, avec exemples à l'appui](http://www.regular-expressions.info/)
-[Site officiel de la librairie PCRE](http://www.pcre.org/)
-[Documentation PCRE](http://php.net/manual/fr/book.pcre.php)
+[XKCD : Perl Problems](https://xkcd.com/1171/)
+[Un testeur de Regex](https://lumadis.be/regex/test_regex.php?lang=fr)
+[Un autre testeur de Regex, visuel ce coup-ci, qui peut aider à mieux comprendre](https://www.regexper.com/)
+[Site complet sur les regex, avec exemples à l'appui](https://www.regular-expressions.info/)
+[Site officiel de la librairie PCRE](https://www.pcre.org/)
+[Documentation PCRE](https://php.net/manual/fr/book.pcre.php)

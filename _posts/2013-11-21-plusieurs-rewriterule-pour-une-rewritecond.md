@@ -68,6 +68,6 @@ Voici comment le code que je vous propose fonctionne :
 
 
 ## Liens
-[Une réponse sur ServeurFault résumant la syntaxe à utiliser pour mod_rewrite](http://serverfault.com/a/214521/168109)
-[Documentation officielle du mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html)
-[Documentation officielle sur le flag S](http://httpd.apache.org/docs/current/rewrite/flags.html#flag_s)
+[Une réponse sur ServeurFault résumant la syntaxe à utiliser pour mod_rewrite](https://serverfault.com/a/214521/168109)
+[Documentation officielle du mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
+[Documentation officielle sur le flag S](https://httpd.apache.org/docs/current/rewrite/flags.html#flag_s)

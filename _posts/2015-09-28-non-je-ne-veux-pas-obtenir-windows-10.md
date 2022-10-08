@@ -28,4 +28,4 @@ Il ne reste plus qu'à fermer l'éditeur de registre, et à redémarrer votre or
 Vous n'aurez plus ni la popup au démarrage, ni l'icône persistante dans la zone de notifications.
 
 ## Liens
-- [Source](http://www.askvg.com/how-to-remove-get-windows-10-app-and-its-icon-from-taskbar/)
+- [Source](https://www.askvg.com/how-to-remove-get-windows-10-app-and-its-icon-from-taskbar/)

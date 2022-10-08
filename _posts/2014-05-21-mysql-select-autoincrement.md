@@ -30,4 +30,4 @@ Ce qui nous donne comme résultat :
 	4 | qux     | foo
 
 ## Liens
-[Les variables utilisateur en MySQL](http://dev.mysql.com/doc/refman/5.0/fr/variables.html)
+[Les variables utilisateur en MySQL](https://dev.mysql.com/doc/refman/5.0/fr/variables.html)

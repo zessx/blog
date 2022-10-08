@@ -31,5 +31,5 @@ Les propriétés CSS pouvant être utilisé sur le pseudo-élément `::selection
 - `text-shadow`
 
 ## Liens
-[Can I Use ? ::selection](http://caniuse.com/#feat=css-selection)
+[Can I Use ? ::selection](https://caniuse.com/#feat=css-selection)
 [MDN - Le pseudo-élément ::selection](https://developer.mozilla.org/en-US/docs/Web/CSS/::selection)
