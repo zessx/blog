@@ -50,7 +50,8 @@ Et voici le code du workflow, à placer dans le fichier en question :
 # Nom du workflow, apparaîtra dans les logs
 name: Issues commands
 
-# Déclencheur, ici toute création de commentaire, sur une Issue ou une Pull Request
+# Déclencheur, ici toute création de commentaire,
+# sur une Issue ou une Pull Request
 on:
   issue_comment:
     types: [created]
@@ -60,7 +61,7 @@ jobs:
   ping:
     name: Command /ping
     # On récupère le contenu du commentaire grâce au contexte `github`
-    if: ${{ endsWith(github.event.comment.body, '/ping') }}
+    if: $\{\{ endsWith(github.event.comment.body, '/ping') \}\}
     # Le type de Runner sur lequel exécuter ce job
     runs-on: ubuntu-latest
     steps:
@@ -70,8 +71,8 @@ jobs:
         run: gh issue comment $ISSUE --body "Pong"
         env:
           # Token d'authentification requis par GitHub CLI
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.issue.html_url }}
+          GITHUB_TOKEN: $\{\{ secrets.GITHUB_TOKEN \}\}
+          ISSUE: $\{\{ github.event.issue.html_url \}\}
 ```
 
 La syntaxe YAML est assez simple à comprendre, ici nous n'utilisons aucune GitHub Action externe, tout le code est stocké dans le dépôt. Pour information, GitHub CLI est installé par défaut sur les *Runners*, afin de vous permettre de travailler plus rapidement et facilement.
@@ -89,7 +90,7 @@ git push origin main
 Une fois publié, vous pouvez le tester en ouvrant une Issue, puis en ajoutant un commentaire se terminant par `/ping`. Après quelques secondes, vous devriez voir le bot `github-actions` vous répondre 🎉 :
 
 {:.center}
-![Commentaire du GitHub Bot]({{ site.url }}/images/github-slash-commandes/github-bot-comment.png)
+![Commentaire du GitHub Bot](\{\{ site.url \}\}/images/github-actions-slash-commandes/github-bot-comment.png)
 
 ## Les étapes
 
@@ -109,7 +110,7 @@ Les *Steps* sont avant tout un moyen d'organiser toutes les commandes à exécut
 
 ## Les expressions
 
-Attardons-nous sur la condition `if: ${{ endsWith(github.event.comment.body, '/ping') }}`, qui contient une *Expression*.
+Attardons-nous sur la condition `if: $\{\{ endsWith(github.event.comment.body, '/ping') \}\}`, qui contient une *Expression*.
 
 Les *Expressions* permettent de définir des variables et d'accéder à des *Contexts* (plus d'informations à ce sujet dans la suite de cet article) en utilisant des valeurs littérales, des opérateurs, des références et/ou des fonctions. Elles sont habituellement utilisées comme dans notre exemple : afin de déterminer si un *Job* (ou un *Step*) doit être exécuté ou non.
 
@@ -137,7 +138,7 @@ Avant de finir cet article d'introduction aux GitHub Actions, je pense qu'il est
 
 ```yaml
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: $\{\{ secrets.GITHUB_TOKEN \}\}
 ```
 
 Vous avez besoin d'un token d'authentification pour interagir avec les API de GitHub. Pour chaque dépôt, un `GITHUB_TOKEN` est automatiquement créé et disponible dans vos *Workflows* via le **Context* `secrets`. Cependant et selon ce que vous voulez faire, les permissions de ce token peuvent s'avérer insuffisantes.
@@ -171,7 +172,7 @@ Une fois généré, placez ce PAT dans les secrets de votre dépôt (`Settings >
 
 ```yaml
 env:
-  GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+  GITHUB_TOKEN: $\{\{ secrets.PERSONAL_ACCESS_TOKEN \}\}
 ```
 
 Et voilà, vous avez à présent toutes les informations nécessaires pour commencer à expérimenter avec les GitHub Action !
