@@ -22,6 +22,12 @@ article {
     margin: ($section_padding / 2) 0;
   }
 
+  ol {
+    list-style: outside decimal;
+    padding-left: $section_padding;
+    margin: ($section_padding / 2) 0;
+  }
+
   &.full-article {
     min-height: 100vh;
   }
@@ -32,7 +38,7 @@ article {
     display: block;
   }
 
-  aside {
+  header {
     overflow: hidden;
     text-align: center;
 
@@ -104,6 +110,7 @@ article {
   .center {
     text-align: center;
   }
+
   img,
   iframe {
     max-width: 100%;

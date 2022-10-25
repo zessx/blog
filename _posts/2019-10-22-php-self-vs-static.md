@@ -8,10 +8,11 @@ description: >
   Quelle est la différence entre self et static, et comment les utiliser ?
 ---
 
-> Articles du dossier :
->
-> [I - Les traits](https://blog.smarchal.com/les-traits-php)
-> **II - self versus static**
+<aside><p>Articles du dossier :</p>
+<p>
+<a href="https://blog.smarchal.com/les-traits-php">I - Les traits</a><br>
+<strong>II - self versus static</strong>
+</p></aside>
 
 Cet article s'inscrit dans un dossier sur les concepts PHP et l'architecture de code, commencé avec un précédent article sur les traits.
 
@@ -42,7 +43,7 @@ new Mother();
 print Mother::count(); // 3
 ```
 
-> Notez au passage l'utilisation d'une propriété typée, feature qui arrive avec PHP 7.4 !
+<aside><p>Notez au passage l'utilisation d'une propriété typée, feature qui arrive avec PHP 7.4 !</p></aside>
 
 Dans le code ci-dessus, on constate l'utilisation du mot-clé `self` pour accéder à la propriété statique. Certains d'entre-vous auraient peut-être utilisé le mot-clé `static` à la place, ce qui aurait parfaitement fonctionné dans ce cas précis.
 

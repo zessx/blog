@@ -126,8 +126,8 @@ En englobant ces valeurs stringifiée (à l'aide de `+[]`), nous pouvons ainsi r
 
 Pour le `e` nous préférerons l'extraire de la chaîne `true` car son indice y est plus petit (3) que dans `false` (4), cela demandera donc un peu moins de symboles.
 
-> Et nous voilà à présent avec un petit début d'alphabet :
-> `a...ef.....l.....rstu.....` (27%)
+<aside><p>Et nous voilà à présent avec un petit début d'alphabet :<br>
+<code>a...ef.....l.....rstu.....</code> (27%)</p></aside>
 
 ## D'autres chaînes
 
@@ -163,8 +163,8 @@ De la même manière que nous avons utilisé `toString()` sur un tableau, on peu
 // "o"
 ```
 
-> État de l'alphabet :
-> `abcdef..ij.l.no..rstu.....` (54%)
+<aside><p>État de l'alphabet :<br>
+<code>abcdef..ij.l.no..rstu.....</code> (54%)</p></aside>
 
 ## Les constructeurs
 
@@ -211,8 +211,8 @@ Et ainsi nous pouvons récupérer les lettres `g`, `m`, `p`, `v`, `x` et `y`
 // "y"
 ```
 
-> État de l'alphabet :
-> `abcdefg.ij.lmnop.rstuv.xy.` (81%)
+<aside><p>État de l'alphabet :<br>
+<code>abcdefg.ij.lmnop.rstuv.xy.</code> (81%)</p></aside>
 
 ## Les bases
 
@@ -257,8 +257,8 @@ Pour ce faire, nous aurons besoin des nombres et des lettres pour faire le mot `
 // "z"
 ```
 
-> État de l'alphabet :
-> `abcdefghijklmnopqrstuvwxyz` (100%) 🎉
+<aside><p>État de l'alphabet :<br>
+<code>abcdefghijklmnopqrstuvwxyz</code> (100%) 🎉</p></aside>
 
 ## Optimisations
 

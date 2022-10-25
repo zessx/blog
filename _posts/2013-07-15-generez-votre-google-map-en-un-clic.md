@@ -9,7 +9,7 @@ description: >
   Présentation d'un petit outil perso pour générer des Google Map.
 ---
 
-> Cet article est obsolète, l'outil ayant été supprimé en 2015
+<aside><p>Cet article est obsolète, l'outil ayant été supprimé en 2015</p></aside>
 
 **[Par ici!](#)** *(Lien mort)*
 

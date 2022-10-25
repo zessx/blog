@@ -27,7 +27,7 @@ layout: full
 </header>
 
 <article class="full-article c-{{ page.tags | first }}">
-  <aside>
+  <header>
     <p class="date">{{ page.date | date: "%d " }}{{ dateMonth }}{{ page.date | date: " %Y" }}</p>
     {% if page.update %}
 
@@ -61,7 +61,7 @@ layout: full
     {% endfor %}
     </ul>
     {% endif %}
-  </aside>
+  </header>
 
   <div class="article-content">
     {{ content }}

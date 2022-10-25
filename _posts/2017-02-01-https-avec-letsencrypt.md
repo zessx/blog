@@ -9,7 +9,7 @@ description: >
   Comment activer le protocole HTTPS et générer des certificats SSL sur votre serveur ?
 ---
 
-> Cet article suppose que vous avez accès à un serveur dédié ou un VPS, avec Apache
+<aside><p>Cet article suppose que vous avez accès à un serveur dédié ou un VPS, avec Apache</p></aside>
 
 Suite à certains événements survenus l'année dernière, j'ai décidé de m'intéresser au protocole HTTPS, et d'essayer de le mettre en place sur mes différents noms de domaine. Étant assez novice dans ce domaine, il m'aura fallu un peu de temps avant de comprendre ce dont j'avais besoin.
 

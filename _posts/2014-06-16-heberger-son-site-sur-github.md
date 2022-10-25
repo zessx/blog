@@ -8,7 +8,7 @@ description: >
   Vous voulez profiter de GitHub pour héberger votre site (statique) perso ? Pas de problème.
 ---
 
-> Mon site ayant été refait depuis, les exemples sont toujours valides, mais non visibles.
+<aside><p>Mon site ayant été refait depuis, les exemples sont toujours valides, mais non visibles.</p></aside>
 
 ## Étude de cas
 
@@ -18,7 +18,7 @@ Je voulais néanmoins garder mon nom de domaine, et ne pas me retrouver avec une
 
 Je vous détaille ici les étapes que j'ai suivies, vous verrez qu'il n'y a rien de bien méchant, et que la documentation est **très** complète.
 
-> Cette procédure nécessite quelques connaissances en terme de configuration DNS. Il est vivement recommandé de lire l'intégralité de l'article avant et de ne pas faire ces manipulations sur un site à fort traffic actuellement en production, à moins de savoir ce que vous faites. Je rappelle que la propagation des modifications sur les entrées DNS peut prendre plusieurs heures.
+<aside><p>Cette procédure nécessite quelques connaissances en terme de configuration DNS. Il est vivement recommandé de lire l'intégralité de l'article avant et de ne pas faire ces manipulations sur un site à fort traffic actuellement en production, à moins de savoir ce que vous faites. Je rappelle que la propagation des modifications sur les entrées DNS peut prendre plusieurs heures.</p></aside>
 
 ## Les pages GitHub
 

@@ -9,7 +9,7 @@ description: >
   Comment être redirigé ailleur sur la page de détail d'un node après l'avoir créé/modifié ?
 ---
 
-> Cet article a été rédigé pour la version 8 de Drupal
+<aside><p>Cet article a été rédigé pour la version 8 de Drupal.</p></aside>
 
 Sur certains projets, je trouve assez frustrant de me voir redirigé sur la page de détail du node que je viens de créer.
 Cette redirection m'oblige à revenir dans le backoffice moi-même, ce qui devient rapidement insupportable à force.

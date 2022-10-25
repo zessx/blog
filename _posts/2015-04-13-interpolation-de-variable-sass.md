@@ -8,11 +8,12 @@ description: >
   Ce billet fait suite à celui sur les variables et les opérations en Sass, et présente cette fois-ci l'interpolation de variable.
 ---
 
-> Articles du dossier :
->
-> [I - Les variables Sass et leur portée](https://blog.smarchal.com/les-variables-sass)
-> [II - Les variables et les opérations en Sass](https://blog.smarchal.com/variables-et-operations-en-sass)
-> **III - L'interpolation de variable en Sass**
+<aside><p>Articles du dossier :</p>
+<p>
+<a href="https://blog.smarchal.com/les-variables-sass">I - Les variables Sass et leur portée</a><br>
+<a href="https://blog.smarchal.com/variables-et-operations-en-sass">II - Les variables et les opérations en Sass</a><br>
+<strong>III - Interpolation de variables en Sass</strong>
+</p></aside>
 
 ## L'interpolation
 

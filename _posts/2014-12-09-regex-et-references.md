@@ -8,7 +8,7 @@ description: >
   Petit point sur les différentes références utilisables dans une regex.
 ---
 
-> Cet article concerne uniquement les regex PCRE
+<aside><p>Cet article concerne uniquement les regex PCRE.</p></aside>
 
 ## Les références absolues
 

@@ -174,7 +174,7 @@ function jekyllSearch() {
       },
       searchResultTemplate: '\
         <article class="c-{class}">\
-          <aside>\
+          <header>\
             <p class="date">{date}</p>\
             {update}\
             <div class="article-preview">\
@@ -182,7 +182,7 @@ function jekyllSearch() {
               {description}\
             </div>\
             <ul class="tags">{tags}</ul>\
-          </aside>\
+          </header>\
         </article>\
       '
     });

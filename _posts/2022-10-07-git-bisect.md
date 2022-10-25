@@ -236,7 +236,7 @@ Plus rapide, n'est-ce pas ?
 
 Votre script doit renvoyer un code 0 si le test est un succès, et un code entre 1 et 127 (inclus) si c'est un échec. Dans notre exemple, la commande `bin/prettier.js` renvoie déjà les codes nécessaires, ce qui explique pourquoi nous n'avons rien eu à faire d'autre.
 
-> Attention, le code de retour 125 est réservé et ne doit pas être utilisé.
+<aside><p>Attention, le code de retour 125 est réservé et ne doit pas être utilisé.</p></aside>
 
 
 ## Liens

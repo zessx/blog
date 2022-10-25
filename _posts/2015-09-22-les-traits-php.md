@@ -9,10 +9,11 @@ description: >
   peu utilisé pouvant être utile et perturbant à la fois.
 ---
 
-> Articles du dossier :
->
-> **I - Les traits**
-> [II - self versus static](https://blog.smarchal.com/php-self-vs-static)
+<aside><p>Articles du dossier :</p>
+<p>
+<strong>I - Les traits</strong><br>
+<a href="https://blog.smarchal.com/php-self-vs-statics">II - self versus static</a>
+</p></aside>
 
 ## Back to the future
 

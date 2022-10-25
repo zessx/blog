@@ -13,9 +13,7 @@ description: >
 
 Lorsque vous essayer de traduire les textes utilisés dans les modules via le backoffice de Prestashop, vous tombez quasi systématiquement sur ce genre de message d'erreur :
 
-> Attention, votre hébergeur limite le nombre de champs dans les formulaires:
-> 1000 pour max_input_vars
-> Demandez à votre hébergeur d'augmenter les limites post et request à xxxx au moins, ou éditez le fichier de traduction manuellement.
+<aside><p>Attention, votre hébergeur limite généralement le nombre de champs dans les formulaires (<code>max_input_vars</code> à 1000). Demandez lui d'augmenter les limites post et request à xxxx au moins, ou éditez le fichier de traduction manuellement.</p></aside>
 
 Cela signifie que PHP limite le nombre maximum de champs envoyés via un formulaire. Sa valeur par défaut est de 1000. Comme il y a plusieurs dizaines de chaînes de caractères par module, et que Prestashop envoie l'intégralité des champs (de tous les modules) à l'enregistrement, vous dépassez cette limite.
 

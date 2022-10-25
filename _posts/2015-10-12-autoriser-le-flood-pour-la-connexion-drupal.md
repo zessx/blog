@@ -9,7 +9,7 @@ description: >
   Comment désactiver la limite instaurée par Drupal sur le nombre de tentatives de connexion ?
 ---
 
-> Cet article a été rédigé pour Drupal 7
+<aside><p>Cet article a été rédigé pour Drupal 7</p></aside>
 
 ## Les deux types de blocages
 

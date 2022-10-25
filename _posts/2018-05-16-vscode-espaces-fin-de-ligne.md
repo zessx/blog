@@ -9,7 +9,7 @@ description: >
   Comment supprimer les espaces en fin de ligne automatiquement, et intelligemment ?
 ---
 
-> [Vous trouverez l'article equivalent pour Sublime Text par ici.](https://blog.smarchal.com/sublime-text-espaces-fin-de-ligne)
+<aside><p>Vous trouverez l'article equivalent <a href="https://blog.smarchal.com/sublime-text-espaces-fin-de-ligne">pour Sublime Text par ici</a>.</p></aside>
 
 ## L'option `files.trimTrailingWhitespace`
 

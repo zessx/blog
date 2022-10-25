@@ -44,7 +44,7 @@ layout: listing
   {% endcase %}
 
   <article class="c-{{ post.tags | first }}">
-    <aside>
+    <header>
       <p class="date">{{ post.date | date: "%d " }}{{ month }}{{ post.date | date: " %Y" }}</p>
 
       {% if post.update %}
@@ -81,7 +81,7 @@ layout: listing
       {% endfor %}
       </ul>
       {% endif %}
-    </aside>
+    </header>
 
   </article>
   {% endfor %}

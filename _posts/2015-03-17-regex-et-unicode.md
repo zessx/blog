@@ -8,7 +8,7 @@ description: >
   Quels avantages apporte Unicode dans nos regex ?
 ---
 
-> Cet article concerne uniquement les regex PCRE
+<aside><p>Cet article concerne uniquement les regex PCRE.</p></aside>
 
 ## It Would Be So Nice
 

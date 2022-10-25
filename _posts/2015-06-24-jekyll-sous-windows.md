@@ -137,9 +137,12 @@ jekyll --version
 
 Pour les utilisateurs de [Cygwin](https://blog.smarchal.com/cygwin/) et de Ruby < 2.4, il est possible que vous ayez ce type d'erreur :
 
-> ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
-> Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (
-https://api.rubygems.org/latest_specs.4.8.gz)
+```sh
+ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
+ Unable to download data from https://rubygems.org/ - SSL_connect 
+ returned=1 errno=0 state=SSLv3 read server certificate B: 
+ certificate verify failed (https://api.rubygems.org/latest_specs.4.8.gz)
+```
 
 Ceci est dû à la transition actuelle entre l'utilisation de SHA1 et SHA2 pour les certificats SSL. Si vous avez ce problème, voici la marche à suivre (des informations détaillées sont disponibles [ici](https://gist.github.com/luislavena/f064211759ee0f806c88) pour ceux qui voudraient en savoir un peu plus) :
 
