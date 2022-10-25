@@ -1,5 +1,5 @@
 ---
-layout: docker
-tag: tag
+layout: tag
+tag: docker
 permalink: /tag/docker/
 ---
