@@ -87,7 +87,7 @@ echo "${DATE: -2:2}"
 # 02
 ```
 
-<aside><p>Dans le cas des valeurs négatives, il faut séparer la valeur de l'opérateur `:` par au moins une espace, afin d'éviter la confusion avec l'opérateur `:-`.</p></aside>
+<aside><p>Dans le cas des valeurs négatives, il faut séparer la valeur de l'opérateur <code>:</code> par au moins une espace afin d'éviter la confusion avec l'opérateur <code>:-</code></p></aside>
 
 ## Préfixes de noms de variables
 
@@ -97,6 +97,7 @@ USERNAME="zessx"
 DATE_START="2022-01-01"
 DATE_END="2022-03-02"
 echo "${!DATE_*}"
+# DATE_START DATE_END
 ```
 
 ## Modification de la casse
@@ -136,7 +137,7 @@ echo "${USERNAME^^[^aeiouy]}"
 
 ## Suppression de préfixes/suffixes
 
-Les opérateurs `#` et `%` permettent respectivement de supprimer un préfixe ou un suffixes :
+Les opérateurs `#` et `%` permettent respectivement de supprimer un préfixe ou un suffixe :
 ```bash
 URL='blog.smarchal.com'
 echo "${URL#*.}"
