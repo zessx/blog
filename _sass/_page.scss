@@ -303,15 +303,20 @@ aside {
   }
   &:after {
     content: '“';
-    font-size: 200px;
+    font-size: 100px;
     position: absolute;
-    top: 0;
-    left: $section_padding * -2;
+    top: 25px;
+    left: -40px;
     line-height: 1;
     z-index: 2;
 
     @include darkmode() {
       color: $grey_medium;
+    }
+    @include media($from: tablet) {
+      font-size: 200px;
+      top: 0;
+      left: $section_padding * -2;
     }
   }
   p,
@@ -336,7 +341,15 @@ aside {
 aside {
   &:after {
     content: 'ℹ';
-    font-size: 90px;
+    font-size: 60px;
+    top: 20px;
+    left: -45px;
+
+    @include media($from: tablet) {
+      font-size: 90px;
+      top: 0;
+      left: $section_padding * -2;
+    }
   }
 }
 kbd {
