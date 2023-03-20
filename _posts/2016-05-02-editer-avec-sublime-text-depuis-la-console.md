@@ -4,7 +4,7 @@ title:  "Éditer avec Sublime Text depuis la console"
 date:   2016-05-02
 tags:
 - sublime-text
-- bash
+- shell
 description: >
   Micro-astuce pour lancer Sublime Text depuis votre console
 ---

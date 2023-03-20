@@ -3,7 +3,7 @@ layout: post
 title:  "Les substitutions de variables en bash"
 date:   2023-03-02
 tags:
-- bash
+- shell
 description: >
   Découvrez les substitutions de variables, un outil puissant pour simplifier vos scripts.
 --- 

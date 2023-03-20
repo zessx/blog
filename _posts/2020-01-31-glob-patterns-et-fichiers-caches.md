@@ -3,7 +3,7 @@ layout: post
 title:  "Inclure les fichiers cachés dans les glob patterns"
 date:   2020-01-31
 tags:
-- bash
+- shell
 - sysadmin
 description: >
   Comment inclure les fichiers cachés dans vos commandes cp ?

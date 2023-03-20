@@ -3,7 +3,7 @@ layout: post
 title:  "Supprimer l'historique des commandes bash"
 date:   2015-08-26
 tags:
-- bash
+- shell
 description: >
   Astuce rapide pour expliquer comment supprimer partiellement ou totalement l'historique des commandes bash.
 ---

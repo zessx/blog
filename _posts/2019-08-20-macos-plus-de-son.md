@@ -4,7 +4,7 @@ title:  "macOS : plus de son ?"
 date:   2019-08-20
 tags:
 - macos
-- bash
+- shell
 - software
 description: >
   Dépannage express si votre Mac n'émet plus aucun son

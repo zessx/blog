@@ -3,7 +3,7 @@ layout: post
 title:  "Un bash prompt personnalisé"
 date:   2017-04-05
 tags:
-- bash
+- shell
 description: >
   Présentation d'un nouveau bash prompt que j'utilise.
 ---

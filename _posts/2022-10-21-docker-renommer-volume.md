@@ -4,7 +4,9 @@ title:  "Renommer un volume Docker"
 date:   2022-10-21
 tags:
 - docker
+- devops
 - sysadmin
+- shell
 description: >
   Comment faire pour renommer un volume Docker, sans en perdre les données ?
 ---

@@ -4,7 +4,7 @@ title:  "Générer une architecture Sass à partir d'un fichier Manifest"
 date:   2015-01-20
 tags:
 - sass
-- bash
+- shell
 description: >
   L'astuce du jour : comment créer une arborescence de fichier Sass à partir d'un fichier Manifest !
 ---

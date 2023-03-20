@@ -3,7 +3,7 @@ layout: post
 title:  "Corriger votre dernière commande bash"
 date:   2017-02-13
 tags:
-- bash
+- shell
 description: >
   S'il vous arrive de devoir répéter la même commande bash en changeant juste un argument, cette astuce est faite pour vous.
 ---

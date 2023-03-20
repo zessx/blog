@@ -3,7 +3,7 @@ layout: post
 title:  "Supprimer les fichiers dot-underscore en ligne de commande"
 date:   2015-03-04
 tags:
-- bash
+- shell
 description: >
   Comment supprimer rapidement tous ces fichier <code>._</code> générés par Mac OS X ?
 ---

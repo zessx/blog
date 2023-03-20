@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction à Gulp"
 date:   2015-07-22
 tags:
-- bash
+- shell
 - js
 description: >
   Suite à ma découverte de Gulp, voici un petit retour pour vous le présenter et vous expliquer comment le mettre en place.
