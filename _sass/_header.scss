@@ -16,11 +16,7 @@
   justify-content: center;
   text-align: center;
   padding: 0 $content_padding;
-  color: $white;
-
-  @include darkmode() {
-    color: $grey_dark;
-  }
+  color: var(--bg-color);
 
   &.small-header {
     padding-top: 30px;
@@ -48,7 +44,7 @@
     transition: all $transition_header;
 
     .c-default & {
-      color: #075675;
+      color: $defaultcolor_dark;
     }
 
     #logo {
@@ -79,18 +75,13 @@
     padding: 0.5em 2em 0.5em 1em;
     margin: 0;
     border: none;
-    color: $white;
-    background: $grey_dark;
+    color: var(--bg-color);
+    background: var(--fg-color);
     text-decoration: none;
     text-align: center;
     font-size: 14px;
     line-height: $font_size;
     z-index: 90;
-
-    @include darkmode() {
-      color: $grey_dark;
-      background: $white;
-    }
 
     span {
       -webkit-transition: padding .4s;
@@ -125,6 +116,6 @@
 
 @media (prefers-color-scheme: dark) {
   .c-default header h1 {
-    color: #029a94;
+    color: $defaultcolor;
   }
 }

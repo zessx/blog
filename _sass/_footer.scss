@@ -2,12 +2,8 @@
 
 body > footer {
   width: 100%;
-  background: $white;
+  background: var(--bg-color);
   padding-bottom: 80px;
-
-  @include darkmode() {
-    background: $grey_dark;
-  }
 
   @at-root #partager-block {
     width: 100%;
@@ -23,11 +19,8 @@ body > footer {
     -ms-flex-pack: center;
     justify-content: center;
     line-height: 120px;
-    color: $white;
+    color: var(--bg-color);
 
-    @include darkmode() {
-      color: $grey_dark;
-    }
     @include media($from: tablet) {
       width: map-get($content_width, tablet);
     }
@@ -50,12 +43,8 @@ body > footer {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      background: $grey_dark;
+      background: var(--fg-color);
       z-index: 1;
-
-      @include darkmode() {
-        background: $white;
-      }
     }
     h2 {
       display: none;
@@ -71,8 +60,8 @@ body > footer {
       }
     }
     > a {
-      background: $grey_dark;
-      color: $white;
+      background: var(--fg-color);
+      color: var(--bg-color);
       text-decoration: none;
       float: left;
       font-size: 120%;
@@ -85,9 +74,6 @@ body > footer {
       z-index: 2;
 
       @include darkmode() {
-        background: $white;
-        color: $grey_dark;
-
         img {
           filter: brightness(0.2);
         }
@@ -117,11 +103,7 @@ body > footer {
         transition: all .4s;
       }
       &:hover {
-        color: $grey_dark;
-
-        @include darkmode() {
-          color: $white;
-        }
+        color: var(--fg-color);
 
         &:before,
         &:after {
@@ -146,13 +128,9 @@ body > footer {
     }
 
     h2 {
-      color: $grey_dark;
+      color: var(--fg-color);
       padding-top: ($section_padding / 2);
       margin-bottom: $section_padding;
-
-      @include darkmode() {
-        color: $white;
-      }
 
       &:before {
         content: none;
@@ -160,11 +138,7 @@ body > footer {
     }
 
     @at-root #disqus_thread {
-      color: $grey_dark;
-
-      @include darkmode() {
-        color: $white;
-      }
+      color: var(--fg-color);
     }
   }
 }
