@@ -114,8 +114,7 @@ div {
 <center><iframe src="{{ site.url }}/demos/pixel-art-css-box-shadow/index.html" width="340" height="430"></iframe></center>
 
 ## Liens
-[**Démonstration**](https://blog.smarchal.com/demos/pixel-art-css-box-shadow/index.html)
-[Un début de générateur que je prendrait (peut-être) le temps d'améliorer](https://blog.smarchal.com/demos/pixel-art-css-box-shadow/generator.php)
-[Spécifications de la propriété box-shadow](https://www.w3.org/TR/css3-background/#the-box-shadow")
-[Le Sonic complet sur CodePen](https://codepen.io/zessx/pen/BsfFt")
+
+[**Démonstration**](https://blog.smarchal.com/demos/pixel-art-css-box-shadow/index.html)    
+[Spécifications de la propriété box-shadow](https://www.w3.org/TR/css3-background/#the-box-shadow")    
 [Un générateur de box-shadow pour les fainéants](https://cssmatic.com/box-shadow)
