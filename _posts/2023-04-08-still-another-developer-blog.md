@@ -22,101 +22,13 @@ Si l'intégration et le frontend ont très vite été [source](https://blog.smar
 
 Cette tendance se reflète d'ailleurs dans les sujets traités dans mes articles de blog à travers les années :
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-<script type="text/javascript">
-  google.charts.load('current', { 'packages': ['bar'] });
-  google.charts.setOnLoadCallback(drawChartDomain);
-
-  function drawChartDomain() {
-    var data = google.visualization.arrayToDataTable([
-      ['Année', 'AdminSys / DevOps', 'Backend', 'Frontend', 'Autres'],
-      ["2013", 2 / 65, 13 / 65, 25 / 65, 25 / 65],
-      ["2014", 14 / 56, 16 / 56, 13 / 56, 13 / 56],
-      ["2015", 4 / 43, 12 / 43, 19 / 43, 8 / 43],
-      ["2016", 1 / 7, 4 / 7, 1 / 7, 1 / 7],
-      ["2017", 4 / 12, 3 / 12, 0 / 12, 5 / 12],
-      ["2018", 0 / 11, 5 / 11, 0 / 11, 6 / 11],
-      ["2019", 2 / 10, 6 / 10, 0 / 10, 2 / 10],
-      ["2020", 4 / 7, 0 / 7, 3 / 7, 0 / 7],
-      ["2021", 1 / 2, 0 / 2, 1 / 2, 0 / 2],
-      ["2022", 16 / 25, 6 / 25, 0 / 25, 3 / 25],
-      ["2023", 4 / 5, 1 / 5, 0 / 5, 0 / 5]
-    ]);
-
-    var options = {
-      chart: {
-        title: 'Répartition des articles par domaine',
-        subtitle: 'Période de Avril 2013 à Avril 2023',
-      },
-      width: 800,
-      height: 600,
-      backgroundColor: getComputedStyle(document.body).getPropertyValue('--bg-color').trim(),
-      chartArea: {
-        backgroundColor: getComputedStyle(document.body).getPropertyValue('--bg-color').trim(),
-      },
-      isStacked: true,
-      vAxis: {
-        format: 'percent'
-      },
-      hAxis: {
-        title: ''
-      }
-    };
-    console.log(options)
-
-    var chart = new google.charts.Bar(document.getElementById('chart_domain'));
-    chart.draw(data, google.charts.Bar.convertOptions(options));
-  }
-</script>
-<div id="chart_domain"></div>
+{:.center}
+![Sous-réseaux VPC]({{ site.url }}/images/still-another-developer-blog/articles-par-domaine.png)
 
 Le rythme des article a par contre nettement diminué au fil des ans. D'une trentaine d'articles par an jusqu'en 2015, je suis passé à moins d'une dizaine, comme en témoigne le graphique suivant. 
 
-<script type="text/javascript">
-  google.charts.setOnLoadCallback(drawChartAmount);
-
-  function drawChartAmount() {
-    var data = google.visualization.arrayToDataTable([
-      ['Année', 'Articles'],
-      ["2013", 41],
-      ["2014", 35],
-      ["2015", 34],
-      ["2016", 4],
-      ["2017", 7],
-      ["2018", 8],
-      ["2019", 6],
-      ["2020", 3],
-      ["2021", 2],
-      ["2022", 10],
-      ["2023", 3]
-    ]);
-
-    var options = {
-      chart: {
-        title: 'Nombre d\'articles',
-        subtitle: 'Période de Avril 2013 à Avril 2023',
-      },
-      width: 800,
-      height: 600,
-      backgroundColor: getComputedStyle(document.body).getPropertyValue('--bg-color').trim(),
-      chartArea: {
-        backgroundColor: getComputedStyle(document.body).getPropertyValue('--bg-color').trim(),
-      },
-      legend: { 
-        position: "none" 
-      },
-      isStacked: true,
-      hAxis: {
-        title: ''
-      }
-    };
-
-    var chart = new google.charts.Bar(document.getElementById('chart_amount'));
-    chart.draw(data, google.charts.Bar.convertOptions(options));
-  }
-</script>
-<div id="chart_amount"></div>
+{:.center}
+![Sous-réseaux VPC]({{ site.url }}/images/still-another-developer-blog/articles-par-annee.png)
 
 Moins d'articles certes, mais des articles de meilleure qualité ! Il suffit de regarder les articles parus ces [deux](https://blog.smarchal.com/bash-substitutions-variables) [dernières](https://blog.smarchal.com/load-average) [années](https://blog.smarchal.com/cdk-mezmo-log-forwarder) pour le constater, je recherche aujourd'hui plus à expliquer qu'à simplement partager. Les sujets traités gagnent aussi en complexité, ce qui me demande forcément un peu plus de travail de rédaction (particulièrement sur les tutorials, qui doivent être facilement reproductibles chez tout le monde). 
 
