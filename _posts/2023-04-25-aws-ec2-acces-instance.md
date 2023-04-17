@@ -17,7 +17,7 @@ Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS Cl
 <p>
 <a href="{{ site.url }}/aws-ec2-ami">I - Les AWS AMI</a><br>
 <strong>II - Accéder à une instance EC2</strong><br>
-<em>III - Le script cfn-init</em><br>
+<a href="{{ site.url }}/aws-ec2-cfn-init">III - Le script cfn-init</a><br>
 <em>IV - Le script cfn-get-metadata</em><br>
 <em>V - Le script cfn-signal</em><br>
 <em>VI - Le script cfn-hup</em>
