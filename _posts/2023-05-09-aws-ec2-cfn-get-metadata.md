@@ -19,7 +19,7 @@ Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS Cl
 <a href="{{ site.url }}/aws-ec2-acces-instance">II - Accéder à une instance EC2</a><br>
 <a href="{{ site.url }}/aws-ec2-cfn-init">III - Le script cfn-init</a><br>
 <strong>IV - Le script cfn-get-metadata</strong><br>
-<em>V - Le script cfn-signal</em><br>
+<a href="{{ site.url }}/aws-ec2-cfn-signal">V - Le script cfn-signal</a><br>
 <em>VI - Le script cfn-hup</em>
 </p></aside>
 
