@@ -11,7 +11,7 @@ description: >
   Comment se connecter à une instance EC2 ?
 --- 
 
-Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS CloudFormation. Merci de bien lire la section [Introduction et disclaimers]({{ site.url }}/aws-ec2-ami#introduction-et-disclaimers) du premier article de ce dossier.
+Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS CloudFormation. Merci de bien lire la section [Introduction et disclaimers]({{ site.url }}/aws-ec2-ami#introduction-et-disclaimers) du premier article de ce dossier. Vous pouvez aussi retrouver l'intégralité du code utilisé en fin d'article.
 
 <aside><p>Articles du dossier :</p>
 <p>
@@ -238,7 +238,63 @@ Pour pouvoir accéder à une instance EC2, nous avons donc vu qu'il faut un cert
 
 Cela peut faire un peu peur au début, mais le networking dans le cloud c'est surtout de la sécurité. Il faut prendre le temps de comprendre à quoi sert chaque élément, l'ensemble n'est au final pas si compliqué que cela.
 
-Dans les prochains articles nous allons enfin pouvoir aborder les 4 scripts CloudFormation de gestion des instances EC2 !
+Dans les prochains articles nous allons enfin pouvoir aborder les 4 scripts CloudFormation de gestion des instances EC2, [à commencer par le script `cfn-init`]({{ site.url }}/aws-ec2-cfn-init) !
+
+<details>
+<summary>Voir l'intégralité du code</summary>
+<pre><code>from aws_cdk import (
+  Stack,
+  CfnOutput,
+  aws_ec2 as ec2,
+)
+from constructs import Construct
+
+class WorkshopStack(Stack):
+
+  def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+    super().__init__(scope, construct_id, **kwargs)
+
+    vpc = ec2.Vpc(self, "Vpc",
+      subnet_configuration = [
+        ec2.SubnetConfiguration(
+          name = "public",
+          subnet_type = ec2.SubnetType.PUBLIC,
+          cidr_mask = 24)],
+      max_azs = 1)
+
+    security_group = ec2.SecurityGroup(self, "InstanceSecurityGroup",
+      vpc = vpc)
+    security_group.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(22))
+
+    cfn_key_pair = ec2.CfnKeyPair(self, "KeyPair",
+      key_name = "ssh-key-workshop",
+      key_type = "ed25519")
+
+    instance = ec2.Instance(self, "Instance",
+      # Type d'instance : t2.micro
+      instance_type = ec2.InstanceType.of(
+        instance_class = ec2.InstanceClass.T2,
+        instance_size = ec2.InstanceSize.MICRO),
+      # AMI à utiliser
+      machine_image = ec2.MachineImage.generic_linux({
+        "eu-west-3": "ami-01fde5e5b31e98551"}),
+      # VPC dans lequel déployer l'instance
+      vpc = vpc,
+      # Groupe de sécurité pour autoriser le trafic sur le port 22
+      security_group = security_group,
+      # SSH key to use
+      key_name = cfn_key_pair.key_name)
+
+    # Affiche l'identifiant logique de l'instance
+    CfnOutput(self, "InstanceLogicalId",
+      value = instance.instance.logical_id)
+
+    # Affiche l'adresse IP publique de l'instance
+    CfnOutput(self, "InstancePublicIp",
+      value = instance.instance_public_ip)
+</code></pre>
+</details>
+
 
 ## Liens
 

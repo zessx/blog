@@ -11,7 +11,7 @@ description: >
   Comment déclencher des mise à jour automatiques de vos instances EC2, suite à un changement de template CloudFormation ?
 --- 
 
-Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS CloudFormation. Merci de bien lire la section [Introduction et disclaimers]({{ site.url }}/aws-ec2-ami#introduction-et-disclaimers) du premier article de ce dossier. 
+Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS CloudFormation. Merci de bien lire la section [Introduction et disclaimers]({{ site.url }}/aws-ec2-ami#introduction-et-disclaimers) du premier article de ce dossier. Vous pouvez aussi retrouver l'intégralité du code utilisé en fin d'article.
 
 <aside><p>Articles du dossier :</p>
 <p>
@@ -72,7 +72,8 @@ instance.instance.add_metadata("AWS::CloudFormation::Init", {
           "ensureRunning": True,
           "files": [
             "/etc/nginx/nginx.conf",
-            "/usr/share/nginx/html/index.html"]}}}}})
+            "/usr/share/nginx/html/index.html"]}}}}
+  })
 ```
 
 Pour récapituler ce changement, voici ce que nous avions avant :
@@ -115,7 +116,8 @@ instance.instance.add_metadata("AWS::CloudFormation::Init", {
       "nginx",
       "cfn-hup"]},
   "nginx": { … },
-  "cfn-hup": {}})
+  "cfn-hup": {}
+  })
 ```
 
 Je vais à présent détailler les trois étapes évoquées pour la mise en place complète du script `cfn-hup`.
@@ -128,7 +130,7 @@ Comme pour Nginx, nous allons utiliser la clé `services.sysvinit` pour nous ass
 
 ```py
 instance.instance.add_metadata("AWS::CloudFormation::Init", {
-  "configSets": {… },
+  "configSets": { … },
   "nginx": { … },
   "cfn-hup": {
     # Activation du service cfn-hup
@@ -139,7 +141,8 @@ instance.instance.add_metadata("AWS::CloudFormation::Init", {
           "ensureRunning": True,
           "files": [
             "/etc/cfn/cfn-hup.conf",
-            "/etc/cfn/hooks.d/cfn-auto-reloader.conf"]}}}}})
+            "/etc/cfn/hooks.d/cfn-auto-reloader.conf"]}}}}
+  })
 ```
 
 ### Configuration du script
@@ -185,7 +188,8 @@ instance.instance.add_metadata("AWS::CloudFormation::Init", {
           "ensureRunning": True,
           "files": [
             "/etc/cfn/cfn-hup.conf",
-            "/etc/cfn/hooks.d/cfn-auto-reloader.conf"]}}}}})
+            "/etc/cfn/hooks.d/cfn-auto-reloader.conf"]}}}}
+  })
 ```
 
 ### Configuration des hooks
@@ -260,7 +264,8 @@ instance.instance.add_metadata("AWS::CloudFormation::Init", {
           "ensureRunning": True,
           "files": [
             "/etc/cfn/cfn-hup.conf",
-            "/etc/cfn/hooks.d/cfn-auto-reloader.conf"]}}}}})
+            "/etc/cfn/hooks.d/cfn-auto-reloader.conf"]}}}}
+  })
 ```
 
 <aside><p>Même si ce n'est pas le cas ici, il est tout à fait possible de réagir à des événements qui surviennent sur une autre ressource de la stack. C'est très utile pour prendre en compte automatiquement l'ajout et la suppression d'instances EC2 à un cluster, par exemple.</p></aside>
@@ -301,7 +306,8 @@ instance.instance.add_metadata("AWS::CloudFormation::Init", {
           "files": [
             "/etc/nginx/nginx.conf",
             "/usr/share/nginx/html/index.html"]}}}},
-  "cfn-hup": { … }})
+  "cfn-hup": { … }
+  })
 ```
 
 En lançant la commande `cdk diff` on constate qu'il n'y a pas de changement d'instance prévu, juste un ajout de méta-données :
@@ -328,6 +334,158 @@ Au maximum 5 minutes plus tard, vous devriez voir cette nouvelle page d'accueil 
 Nous voila arrivés à la fin de ce dossier qui couvre les bases de la gestion d'instance EC2 avec CloudFormation. Sa rédaction aura pris beaucoup de temps, j'ai apporté un soin tout particulier à la stack CloudFormation et au code qui, je l'espère, devraient vous avoir permis de suivre l'ensemble des articles plus facilement en reproduisant toutes les opérations vous-mêmes.
 
 Vous voici à présent en mesure de provisioner et configurer des instances EC2 sans aucune intervention manuelle. Il y aura très probablement d'autres articles sur EC2 dans le futur, qui s'attarderont plus en détails sur certaines techniques et/ou fonctionnalités, restez dans le coin…
+
+<aside><p>N'oubliez pas lancer la commande <code>cdk destroy</code> pour supprimer toutes les ressources créées lors de ce workshop.</p></aside>
+
+<details>
+<summary>Voir l'intégralité du code</summary>
+<pre><code>from aws_cdk import (
+  Stack,
+  CfnOutput,
+  CfnCreationPolicy,
+  CfnResourceSignal,
+  aws_ec2 as ec2,
+)
+from constructs import Construct
+from textwrap import dedent
+
+class WorkshopStack(Stack):
+
+  def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+    super().__init__(scope, construct_id, **kwargs)
+
+    vpc = ec2.Vpc(self, "Vpc",
+      subnet_configuration = [
+        ec2.SubnetConfiguration(
+          name = "public",
+          subnet_type = ec2.SubnetType.PUBLIC,
+          cidr_mask = 24)],
+      max_azs = 1)
+
+    security_group = ec2.SecurityGroup(self, "InstanceSecurityGroup",
+      vpc = vpc)
+    security_group.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(22))
+    security_group.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(80))
+
+    cfn_key_pair = ec2.CfnKeyPair(self, "KeyPair",
+      key_name = "ssh-key-workshop",
+      key_type = "ed25519")
+
+    instance = ec2.Instance(self, "Instance",
+      # Type d'instance : t2.micro
+      instance_type = ec2.InstanceType.of(
+        instance_class = ec2.InstanceClass.T2,
+        instance_size = ec2.InstanceSize.MICRO),
+      # AMI à utiliser
+      machine_image = ec2.MachineImage.generic_linux({
+        "eu-west-3": "ami-01fde5e5b31e98551"}),
+      # VPC dans lequel déployer l'instance
+      vpc = vpc,
+      # Groupe de sécurité pour autoriser le trafic sur le port 22
+      security_group = security_group,
+      # SSH key to use
+      key_name = cfn_key_pair.key_name,
+      # Un changement de user-data doit provoquer un changement d'instance
+      user_data_causes_replacement = True)
+
+    instance.add_user_data(dedent(f"""\
+      (
+        set +e
+        /opt/aws/bin/cfn-init -v \
+          --region eu-west-3 \
+          --stack {self.stack_name} \
+          --resource {instance.instance.logical_id} \
+          --configsets create
+        /opt/aws/bin/cfn-signal -e $? \
+          --region eu-west-3 \
+          --stack {self.stack_name} \
+          --resource {instance.instance.logical_id}
+      )"""))
+
+    cfn_instance = instance.node.default_child
+    cfn_instance.cfn_options.creation_policy = CfnCreationPolicy(
+      resource_signal = CfnResourceSignal(
+        count = 1,
+        timeout = "PT5M"))
+
+    instance.instance.add_metadata("AWS::CloudFormation::Init", {
+      "configSets": {
+        "create": [
+          "nginx",
+          "cfn-hup"],
+        "update": [
+          "nginx"]},
+      "nginx": {
+        # Installation du package Nginx
+        "commands": {
+          "01-nginx-install": {
+            "command": "sudo amazon-linux-extras install -y nginx1"}},
+        # Modification de la page par défaut de Nginx
+        "files": {
+          "/usr/share/nginx/html/index.html": {
+            "content": "&lt;title&gt;Hello World&lt;/title&gt;&lt;h1&gt;Hello World&lt;/h1&gt;",
+            "mode": "000644",
+            "owner": "root",
+            "group": "root"}},
+        # Activation du service Nginx
+        "services": {
+          "sysvinit": {
+            "nginx": {
+              "enabled": True,
+              "ensureRunning": True,
+              "files": [
+                "/etc/nginx/nginx.conf",
+                "/usr/share/nginx/html/index.html"]}}}},
+      "cfn-hup": {
+        "files": {
+          # Fichier de configuration de cfn-hup
+          "/etc/cfn/cfn-hup.conf": {
+            "content": dedent(f"""\
+              [main]
+              stack={self.stack_id}
+              region=eu-west-3
+              interval=5
+              verbose=true"""),
+            "encoding": "plain",
+            "mode": "000400",
+            "owner": "root",
+            "group": "root"},
+          # Commandes à lancer lors d'un signal de mise à jour
+          "/etc/cfn/hooks.d/cfn-auto-reloader.conf": {
+            "content": dedent(f"""\
+              [cfn-auto-reloader-hook]
+              triggers=post.update
+              path=Resources.{instance.instance.logical_id}.Metadata.AWS::CloudFormation::Init
+              action=/opt/aws/bin/cfn-init -v \
+                --region eu-west-3 \
+                --stack {self.stack_id} \
+                --resource {instance.instance.logical_id} \
+                --configsets update
+              runas=root"""),
+            "encoding": "plain",
+            "mode": "000400",
+            "owner": "root",
+            "group": "root"}},
+        # Activation du service cfn-hup
+        "services": {
+          "sysvinit": {
+            "cfn-hup": {
+              "enabled": True,
+              "ensureRunning": True,
+              "files": [
+                "/etc/cfn/cfn-hup.conf",
+                "/etc/cfn/hooks.d/cfn-auto-reloader.conf"]}}}}
+      })
+
+    # Affiche l'identifiant logique de l'instance
+    CfnOutput(self, "InstanceLogicalId",
+      value = instance.instance.logical_id)
+
+    # Affiche l'adresse IP publique de l'instance
+    CfnOutput(self, "InstancePublicIp",
+      value = instance.instance_public_ip)
+</code></pre>
+</details>
 
 ## Liens
 

@@ -11,7 +11,7 @@ description: >
   Comment récupérer les méta-données de vos instances EC2 ?
 --- 
 
-Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS CloudFormation. Merci de bien lire la section [Introduction et disclaimers]({{ site.url }}/aws-ec2-ami#introduction-et-disclaimers) du premier article de ce dossier.
+Cet article s'inscrit dans un dossier sur la gestion de machines EC2 avec AWS CloudFormation. Merci de bien lire la section [Introduction et disclaimers]({{ site.url }}/aws-ec2-ami#introduction-et-disclaimers) du premier article de ce dossier. Vous pouvez aussi retrouver l'intégralité du code utilisé en fin d'article.
 
 <aside><p>Articles du dossier :</p>
 <p>
@@ -82,7 +82,89 @@ Pour des raisons de sécurité, il ne sera bien évidemment possible que de réc
 
 ## Conclusion
 
-Cet article était un peu plus léger que les précédents, étant donné que nous avions déjà eu l'occasion de travailler avec les méta-données de notre instance. Le script `cfn-get-metadata` peut néanmoins s'avérer très utile dans des cas spécifiques, par exemple s'il vous faut déployer des flottes d'instances inter-connectées. Nous verrons dans la suite de ce dossier comment gérer les erreurs qui peuvent survenir lors de la création de nos instances, puis comment mettre à jour ces instances automatiquement pour qu'elles soient toujours à jour avec la dernière version de `AWS::CloudFormation::Init`.
+Cet article était un peu plus léger que les précédents, étant donné que nous avions déjà eu l'occasion de travailler avec les méta-données de notre instance. Le script `cfn-get-metadata` peut néanmoins s'avérer très utile dans des cas spécifiques, par exemple s'il vous faut déployer des flottes d'instances inter-connectées. Nous verrons dans la suite de ce dossier [comment gérer les erreurs qui peuvent survenir lors de la création de nos instances]({{ site.url }}/aws-ec2-cfn-signal), puis comment mettre à jour ces instances automatiquement pour qu'elles soient toujours à jour avec la dernière version de `AWS::CloudFormation::Init`.
+
+<details>
+<summary>Voir l'intégralité du code</summary>
+<pre><code>from aws_cdk import (
+  Stack,
+  CfnOutput,
+  aws_ec2 as ec2,
+)
+from constructs import Construct
+from textwrap import dedent
+
+class WorkshopStack(Stack):
+
+  def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+    super().__init__(scope, construct_id, **kwargs)
+
+    vpc = ec2.Vpc(self, "Vpc",
+      subnet_configuration = [
+        ec2.SubnetConfiguration(
+          name = "public",
+          subnet_type = ec2.SubnetType.PUBLIC,
+          cidr_mask = 24)],
+      max_azs = 1)
+
+    security_group = ec2.SecurityGroup(self, "InstanceSecurityGroup",
+      vpc = vpc)
+    security_group.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(22))
+    security_group.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(80))
+
+    cfn_key_pair = ec2.CfnKeyPair(self, "KeyPair",
+      key_name = "ssh-key-workshop",
+      key_type = "ed25519")
+
+    instance = ec2.Instance(self, "Instance",
+      # Type d'instance : t2.micro
+      instance_type = ec2.InstanceType.of(
+        instance_class = ec2.InstanceClass.T2,
+        instance_size = ec2.InstanceSize.MICRO),
+      # AMI à utiliser
+      machine_image = ec2.MachineImage.generic_linux({
+        "eu-west-3": "ami-01fde5e5b31e98551"}),
+      # VPC dans lequel déployer l'instance
+      vpc = vpc,
+      # Groupe de sécurité pour autoriser le trafic sur le port 22
+      security_group = security_group,
+      # SSH key to use
+      key_name = cfn_key_pair.key_name,
+      # Un changement de user-data doit provoquer un changement d'instance
+      user_data_causes_replacement = True)
+
+    instance.add_user_data(dedent(f"""\
+      /opt/aws/bin/cfn-init -v \
+        --region eu-west-3 \
+        --stack {self.stack_name} \
+        --resource {instance.instance.logical_id}"""))
+
+    instance.instance.add_metadata("AWS::CloudFormation::Init", {
+      "config": {
+        # Installation du packages Nginx
+        "commands": {
+          "01-nginx-install": {
+            "command": "sudo amazon-linux-extras install -y nginx1"}},
+        # Activation du service Nginx
+        "services": {
+          "sysvinit": {
+            "nginx": {
+              "enabled": True,
+              "ensureRunning": True,
+              "files": [
+                "/etc/nginx/nginx.conf",
+                "/usr/share/nginx/html/index.html"]}}}
+      }})
+
+    # Affiche l'identifiant logique de l'instance
+    CfnOutput(self, "InstanceLogicalId",
+      value = instance.instance.logical_id)
+
+    # Affiche l'adresse IP publique de l'instance
+    CfnOutput(self, "InstancePublicIp",
+      value = instance.instance_public_ip)
+</code></pre>
+</details>
 
 ## Liens
 
