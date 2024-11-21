@@ -11,7 +11,7 @@ description: >
 
 ## Pourquoi faire ?
 
-[@btrd_me](https://twitter.com/btrd_me) m'a présenté hier le travail de [Una Kravets](https://unakravets.com/) : [Sass Director](https://una.im/sass-director/). Le but de Sass Director est de fournir un outil en ligne (simple à utiliser) dans lequel vous copiez votre Manifest Sass, et qui vous génère une ligne de commande pour créer votre arborescence Sass.
+[@btrd_me](https://x.com/btrd_me) m'a présenté hier le travail de [Una Kravets](https://unakravets.com/) : [Sass Director](https://una.im/sass-director/). Le but de Sass Director est de fournir un outil en ligne (simple à utiliser) dans lequel vous copiez votre Manifest Sass, et qui vous génère une ligne de commande pour créer votre arborescence Sass.
 
 Pour ceux qui ne verraient pas ce qu'est un Manifest Sass, il s'agit tout simplement de votre fichier racine (`main.scss` ?) qui ne contient rien d'autre que des inclusions. Prenons le Manifest suivant par exemple :
 

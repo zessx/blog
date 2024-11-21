@@ -115,7 +115,7 @@ Vous pouvez ainsi l'utiliser beaucoup plus facilement, sans avoir à retenir la 
 git-patch HEAD HEAD~1 patch.zip
 ```
 
-Pour finir, merci à [@ronanpellegrini](https://twitter.com/ronanpellegrini) de m'avoir parlé de ce genre d'astuce. La commande d'origine ne créait pas de zip, mais quand on a compris la mécanique le résultat n'est plus très loin !
+Pour finir, merci à [@ronanpellegrini](https://x.com/ronanpellegrini) de m'avoir parlé de ce genre d'astuce. La commande d'origine ne créait pas de zip, mais quand on a compris la mécanique le résultat n'est plus très loin !
 
 ## Liens
 - [Documentation de git archive](https://git-scm.com/docs/git-archive)

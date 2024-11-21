@@ -130,7 +130,7 @@ Cette règle va concerner toutes les urls qui concernent nos fichiers JS et CSS,
 * **Avantages :** la solution est automatisée, utilise le cache, et le nom du fichier diffère systématiquement
 * **Inconvénients :** -
 
-Merci à [@jiceb](https://twitter.com/jiceb) pour ses remarques sur la piste #3, et ses précieux conseils pour la piste #4 !
+Merci à [@jiceb](https://x.com/jiceb) pour ses remarques sur la piste #3, et ses précieux conseils pour la piste #4 !
 
 ## Liens
 

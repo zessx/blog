@@ -30,8 +30,8 @@
   <meta property="og:article:tag" content="{{ tag }}" />{% endfor %}{% endif %}{% endif %}
 
   <meta property="twitter:card" content="summary" />
-  <meta property="twitter:site" content="{{ site.twitter_username }}" />
-  <meta property="twitter:creator" content="{{ site.twitter_username }}" />
+  <meta property="twitter:site" content="{{ site.x_username }}" />
+  <meta property="twitter:creator" content="{{ site.x_username }}" />
   <meta property="twitter:image" content="{{ "/images/logo.png" | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="twitter:image:width" content="360" />
   <meta property="twitter:image:height" content="360" />
@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  <link rel="me" href="https://twitter.com/{{ site.twitter_username }}">
+  <link rel="me" href="https://x.com/{{ site.x_username }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ "/images/logo.png" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="apple-touch-icon" href="{{ "/images/logo.png" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl | prepend: site.url }}">

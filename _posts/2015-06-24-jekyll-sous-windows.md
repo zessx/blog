@@ -84,7 +84,7 @@ Rien de plus !
 
 ## Jekyll et Windows : la croisade du XXIe siècle
 
-Bon. Maintenant que je vous ai très rapidement présenté Jekyll, il est temps d'attaquer le vrai but de cet article. La documentation de Jekyll est suffisamment bien faite, et il y a assez de ressources sur le net pour que vous compreniez aisément comment utiliser Jekyll. En revanche, les articles qui expliquent comment le faire fonctionner sous Windows sont rares. Il en existe toutefois un qui mérite d'être cité, et qui m'a plutôt aidé dans cette croisade : [Run Jekyll on Windows](https://-windows.juthilo.com/), écrit par [@juthilo](https://twitter.com/juthilo).
+Bon. Maintenant que je vous ai très rapidement présenté Jekyll, il est temps d'attaquer le vrai but de cet article. La documentation de Jekyll est suffisamment bien faite, et il y a assez de ressources sur le net pour que vous compreniez aisément comment utiliser Jekyll. En revanche, les articles qui expliquent comment le faire fonctionner sous Windows sont rares. Il en existe toutefois un qui mérite d'être cité, et qui m'a plutôt aidé dans cette croisade : [Run Jekyll on Windows](https://-windows.juthilo.com/), écrit par [@juthilo](https://x.com/juthilo).
 
 Nous allons donc commencer, de zéro, en détaillant tous les prérequis.
 
