@@ -22,18 +22,18 @@ En bref : on vous dissimule une information, et vous la trouvez par un moyen (l�
 
 Sofia Santos (ou Gralhix) est une analyste OSINT qui propose sur [son site](https://gralhix.com/) une liste d'exercices OSINT pour tous niveaux. Ce sont ces exercices (30 aujourd'hui) que je vais essayer de résoudre petit à petit afin de m'entraîner.
 
-<aside><p>La suite de cet article révèle la solution de l'exercice, n'allez pas plus loin si vous voulez le faire vous-même.</p></aside>
-
 ## Briefing
 
 → [Briefing](https://gralhix.com/list-of-osint-exercises/osint-exercise-001/)  
 
-Un screenshot de tweet est fourni, avec une photo montrant un levé de soleil dans une ville présumée d'Afrique ou du Moyen-Orient :
+Un screenshot de tweet est fourni, avec une photo montrant un lever de soleil dans une ville présumée d'Afrique ou du Moyen-Orient :
 
 {:.center}
 ![Briefing]({{ site.url }}/images/osint-exercice-gralhix-001/briefing.png)
 
 1. Quelles sont les coordonnées GPS de l'endroit où cette photo a été prise ?
+
+<aside><p>Cet article révèle la solution de l'exercice, n'allez pas plus loin si vous voulez le faire vous-même.</p></aside>
 
 ## Résolution
 

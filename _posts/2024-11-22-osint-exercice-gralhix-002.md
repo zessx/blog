@@ -8,16 +8,19 @@ description: >
   Solution d'un exercice d'OSINT proposé par Sofia Santos
 --- 
 
-<aside><p>Cet article révèle la solution de l'exercice, n'allez pas plus loin si vous voulez le faire vous-même.</p></aside>
-
 ## Briefing
 
 → [Briefing](https://gralhix.com/list-of-osint-exercises/osint-exercise-002/)  
 
-Une image partagée sur un réseau social et montrant une gare ferroviaire est fournie.
+Une image partagée sur un réseau social et montrant une gare ferroviaire est fournie :
+
+{:.center}
+![Briefing]({{ site.url }}/images/osint-exercice-gralhix-002/briefing.png)
 
 1. Quel est le nom de la gare visible sur la photo ?
-2. Quel est ne nom et la hauteur de la plus haute structure visible sur la photo ?
+2. Quel est le nom et la hauteur de la plus haute structure visible sur la photo ?
+
+<aside><p>Cet article révèle la solution de l'exercice, n'allez pas plus loin si vous voulez le faire vous-même.</p></aside>
 
 ## Résolution
 
@@ -28,25 +31,37 @@ Je récupère des informations assez évidentes sur la photo :
 - 2 bâtiments ont une inscription lisible : HWT et IBM
 - Un train bleu et gris est présent, avec des inscriptions "METRO" (peut-être coupé) et "FT" ou "PT" (difficile à identifier clairement)
 
-Je commence par rechercher "Flinders Street" sur Google Maps, et je tombe directement sur une gare à Melbourne. Je peux confirmer que c'est la bonne gare grâce au design des trains (recherche "métro Melbourne"), et en identifiant très vite le bâtiment IBM à quelques mètres sur Google Maps.
+{:.center}
+![Premières informations]({{ site.url }}/images/osint-exercice-gralhix-002/resolution-01.png)
+
+Je commence par rechercher ["Flinders Street" sur Google Maps](https://www.google.fr/maps/place/Flinders+St,+Melbourne+VIC,+Australie/@-37.8188319,144.9614845,1287m), et je tombe directement sur une gare à Melbourne. Je peux confirmer que c'est la bonne gare grâce au design des trains (recherche "métro Melbourne"), et en identifiant très vite le bâtiment IBM à quelques mètres sur Google Maps.
+
+{:.center}
+![Le Métro de Melbourne]({{ site.url }}/images/osint-exercice-gralhix-002/resolution-02.jpg)
 
 Pour les bâtiments, je veux me focaliser sur les 3 plus grands : 
-- L'antenne
-- Le bâtiment IBM
-- Le bâtiment en fond avec une enseigne rouge 
+- (1) L'antenne
+- (4) Le bâtiment IBM
+- (6) Le bâtiment en fond avec une enseigne rouge 
 
 En regardant sur Google Maps je trouve très vite leur noms : 
 - Art Center Melbourne (il s'agissait en fait d'une immense flèche)
 - IBM Australia
 - FOCUS Apartments
 
+{:.center}
+![Les bâtiments visibles]({{ site.url }}/images/osint-exercice-gralhix-002/resolution-03.png)
+
 Une recherche Google “[Arts Centre Melbourne building size](https://www.google.com/search?q=Arts+Centre+Melbourne+building+size)” retourne 162m.
 
-Une recherche “[IBM Australia building size](https://www.google.com/search?q=IBM+Australia+building+size)” retourne 131m, ainsi qu’un site dans les résultats qui pourra m’être utile : https://www.skyscrapercenter.com/building/ibm-australia/13493 
+Une recherche “[IBM Australia building size](https://www.google.com/search?q=IBM+Australia+building+size)” retourne 131m, ainsi qu’un site dans les résultats qui pourra m’être utile : [skyscrapercenter.com](https://www.skyscrapercenter.com/building/ibm-australia/13493)
 
-Une recherche “[FOCUS Apartments building size](https://www.google.com/search?q=FOCUS+Apartments+building+size)” retourne 167m, mais remonte le lien https://www.skyscrapercenter.com/building/focus-melbourne/38852 qui indique 166m.
+Une recherche “[FOCUS Apartments building size](https://www.google.com/search?q=FOCUS+Apartments+building+size)” retourne 167m, mais remonte le lien [skyscrapercenter.com](https://www.skyscrapercenter.com/building/focus-melbourne/38852) qui indique 166m.
 
 Avec Google Maps en mode 3D (incliné), je confirme que les 3 autres bâtiments sont à ignorer car plus petits. J’aurais pu gagner du temps en faisant ceci dès le début, ce qui m’aurait directement orienté sur le bâtiment de FOCUS.
+
+{:.center}
+![Une vue 3D des bâtiments]({{ site.url }}/images/osint-exercice-gralhix-002/resolution-04.png)
 
 ## Solution
 
