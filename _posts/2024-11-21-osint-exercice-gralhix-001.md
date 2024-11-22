@@ -28,7 +28,10 @@ Sofia Santos (ou Gralhix) est une analyste OSINT qui propose sur [son site](http
 
 → [Briefing](https://gralhix.com/list-of-osint-exercises/osint-exercise-001/)  
 
-Un screenshot de tweet est fourni, avec une photo montrant un levé de soleil dans une ville présumée d'Afrique ou du Moyen-Orient.
+Un screenshot de tweet est fourni, avec une photo montrant un levé de soleil dans une ville présumée d'Afrique ou du Moyen-Orient :
+
+{:.center}
+![Briefing]({{ site.url }}/images/osint-exercice-gralhix-001/briefing.png)
 
 1. Quelles sont les coordonnées GPS de l'endroit où cette photo a été prise ?
 
@@ -41,16 +44,42 @@ Je récupère quelques informations importantes du tweet :
 - Il y a une route en béton en direction du sud, qui semble sortir de la ville pour entrer dans un bois clairsemé
 - Les bâtiments ne sont probablement pas suffisamment important pour être identifiés
 
-Mon premier réflexe est d'aller rechercher la ville de Kiffa dans Google Maps, le premier résultat qui remonte est une ville de Mauritanie, un pays où l'arabe est effectivement parlé (ce qui est vite confirmé par le nom de nombreux emplacements sur Google Maps). Google Street View n'est pas disponible, mais en regardant les photos disponibles sur Google Search et Google Maps, je retrouve bien l'ambiance de la photo (style des bâtiments, couleur de la terre, arbres…), je suis assez sûr d'être dans la bonne ville.
+{:.center}
+![L'ombre et l'heure indiquent l'orientation]({{ site.url }}/images/osint-exercice-gralhix-001/resolution-01.png)
 
-En regardant Google Maps, je ne vois que 3 ou 4 routes indiquées, et un zoom rapide me confirme qu'elles semblent être les seules routes en béton. Je recherche donc :
+Mon premier réflexe est d'aller rechercher la ville de [Kiffa dans Google Maps](https://www.google.fr/maps/place/Kiffa,+Mauritanie/@16.6201526,-11.4283134,8597m), le premier résultat qui remonte est une ville de Mauritanie, un pays où l'arabe est effectivement parlé (ce qui est vite confirmé par le nom de nombreux emplacements sur Google Maps) :
+
+{:.center}
+![Kiffa sur Google Maps]({{ site.url }}/images/osint-exercice-gralhix-001/resolution-02.png)
+
+Google Street View n'est pas disponible, mais en regardant les photos disponibles sur Google Search et Google Maps, je retrouve bien l'ambiance de la photo (style des bâtiments, couleur de la terre, arbres…), je suis assez sûr d'être dans la bonne ville :
+
+{:.center}
+![Les points communs avec le briefing]({{ site.url }}/images/osint-exercice-gralhix-001/resolution-03.png)
+
+En regardant Google Maps, je ne vois que 3 ou 4 routes indiquées, et un zoom rapide me confirme qu'elles semblent être les seules routes en béton. 
+
+{:.center}
+![Les routes bétonnées de Kiffa]({{ site.url }}/images/osint-exercice-gralhix-001/resolution-04.png)
+
+Je recherche donc :
 - Une route en béton dans une direction approximative Nord-Sud
 - Des arbres vers le Sud
 
-Très vite, je vois que les seuls arbres présents en nombre sont autour de ce qui semble être un lit de rivière, et une seule route traverse ces bois parsemés dans la direction Nord-Sud, je zoom immédiatement dessus, très légèrement au Nord des arbres. Je n'ai pas d'autres images disponibles pour comparer, mais suffisamment d'éléments concordent sur Google Maps pour que ce soit le bon endroit :
+Très vite, je vois que les seuls arbres présents en nombre sont autour de ce qui semble être un lit de rivière, et une seule route traverse ces bois parsemés dans la direction Nord-Sud :
+
+{:.center}
+![L'emplacement le plus prometteur]({{ site.url }}/images/osint-exercice-gralhix-001/resolution-05.png)
+
+Je zoom immédiatement dessus, très légèrement au Nord des arbres. Je n'ai pas d'autres images disponibles pour comparer, mais suffisamment d'éléments concordent sur Google Maps pour que ce soit le bon endroit :
 - La route bifurque légèrement vers l'Ouest 
 - Je peux voir l'ombre des poteaux électriques 
 - Je retrouve le mur de l'autre côté de la route, ainsi que l'absence de bâtiment sur la gauche
+
+Le gros arbre sur la droite semble manquer, mais plus de 10 ans séparent la photo du briefing et l'image satellite, qui date de 2024. Il n'est pas impossible que cet arbre ait été coupé entre temps.
+
+{:.center}
+![L'emplacement le plus prometteur]({{ site.url }}/images/osint-exercice-gralhix-001/resolution-06.png)
 
 ## Solution
 
