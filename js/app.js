@@ -22,14 +22,15 @@ var points = [],
     polygons = [],
     oldWidth = 0;
 function trianglifyLimit() {
-    limit = window.innerHeight - window.pageYOffset;
+    limit = window.innerHeight - window.scrollY;
     polygons.forEach(function(polygon, index) {
-        if(window.pageYOffset == 0 || Math.max.apply(null, polygon.getAttribute('points').replace(new RegExp(/[\d\.]+\,/g), '').split(' ').map(function(element) { return parseFloat(element); })) < limit) {
+        if(window.scrollY == 0 || Math.max.apply(null, polygon.getAttribute('points').replace(new RegExp(/[\d\.]+\,/g), '').split(' ').map(function(element) { return parseFloat(element); })) < limit) {
             polygon.classList.add('visible');
         } else {
             polygon.classList.remove('visible');
         }
     });
+    document.querySelector('#canvas-background').setAttribute('height', limit)
 }
 function trianglify() {
   if(oldWidth == window.innerWidth) {
@@ -161,13 +162,13 @@ function jekyllSearch() {
       templateMiddleware: function(prop, value, template){
         if (prop === 'date') {
           var date = new Date(value);
-          return ('00'+date.getDate()).substr(-2) +' '+ months[date.getMonth()] +' '+ date.getFullYear();
+          return ('00'+date.getDate()).slice(-2) +' '+ months[date.getMonth()] +' '+ date.getFullYear();
         } else if (prop === 'update') {
           if (value == "") {
             return "";
           }
           var date = new Date(value);
-          return '<p class="update"><label>Mise à jour :</label> '+ ('00'+date.getDate()).substr(-2) +' '+ months[date.getMonth()] +' '+ date.getFullYear() +'</p>';
+          return '<p class="update"><label>Mise à jour :</label> '+ ('00'+date.getDate()).slice(-2) +' '+ months[date.getMonth()] +' '+ date.getFullYear() +'</p>';
         } else if (prop === 'tags') {
           return value.replace(/([^,]+),/g, '<li><a href="/tag/$1">$1</a></li>');
         }
@@ -248,7 +249,7 @@ function infiniteLoad() {
   }
   function scroller() {
     if(!shouldFetchPosts || isFetchingPosts) return;
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if(scrollTop + window.innerHeight + 100 > document.body.offsetHeight) {
       fetchPosts();
     }
