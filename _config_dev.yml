@@ -1,0 +1,7 @@
+# Development settings
+#   @note: Need to be provided to Jekyll command
+#          jekyll serve --config _config.yml,_config_dev.yml
+host: localhost
+future: true
+livereload: true
+open_url: true
