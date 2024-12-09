@@ -4,6 +4,8 @@ title:  "Utiliser des variables dans le layer CMD"
 date:   2024-12-09
 tags:
 - docker
+- devops
+- shell
 description: >
   Apprenez à faire des Dockerfile génériques, en utilisant des variables dans le layer CMD
 ---
