@@ -175,7 +175,7 @@ cdk diff
 # [-] AWS::EC2::Instance TestRootVolume TestRootVolume215594D9 destroy
 ```
 
-Notre objectif ici est de s'assurer que ces ressources seront préservées une fois sortie de la stack CloudFormation. Pour cela, nous allons dé-commenter le code et ajouter des politiques de rétention sur chaque ressource :
+Notre objectif ici est de s'assurer que ces ressources seront préservées une fois sortie de la stack CloudFormation. Pour cela, nous allons dé-commenter le code et ajouter des politiques de suppression sur chaque ressource :
 
 ```py
 from aws_cdk import RemovalPolicy
@@ -212,7 +212,7 @@ cdk diff
 #      └─ Retain
 ```
 
-Lançons ce premier déploiement avec `cdk deploy`, puis retentons de commenter tout notre code (la définition de l'instance, et les politiques de rétention). Notez bien comme toutes les ressources ne sont plus marquées avec `destroy`, mais avec `orphan` ; CloudFormation nous indique que ces ressources vont être préservées (grace à leur politique de rétention), mais ne feront plus partie de la stack :
+Lançons ce premier déploiement avec `cdk deploy`, puis retentons de commenter tout notre code (la définition de l'instance, et les politiques de suppression). Notez bien comme toutes les ressources ne sont plus marquées avec `destroy`, mais avec `orphan` ; CloudFormation nous indique que ces ressources vont être préservées (grace à leur politique de suppression), mais ne feront plus partie de la stack :
 
 ```sh
 cdk diff
@@ -289,7 +289,7 @@ df -h
 
 ## Réimporter l'instance dans la stack CloudFormation
 
-Maintenant que nos changements sont effectués, il ne reste plus qu'à réimporter l'instance dans la stack CloudFormation. Pour ce faire, dé-commentons une dernière fois tout le code, et assurons-nous qu'il représente l'état <b>ACTUEL</b> de l'instance (c'est à dire, avec les politiques de rétention, et le volume à 15 Go) :
+Maintenant que nos changements sont effectués, il ne reste plus qu'à réimporter l'instance dans la stack CloudFormation. Pour ce faire, dé-commentons une dernière fois tout le code, et assurons-nous qu'il représente l'état <b>ACTUEL</b> de l'instance (c'est à dire, avec les politiques de suppression, et le volume à 15 Go) :
 
 ```py
 from aws_cdk import RemovalPolicy
