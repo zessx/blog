@@ -189,7 +189,7 @@ for child in instance.node.children:
         child.apply_removal_policy(RemovalPolicy.RETAIN)
 ```
 
-Comme le profile d'instance n'est pas accessible via le constructeur L2 `ec2.Instance`, on se permet d'aller le chercher au niveau L1 en fouillant dans les `node.children`. On peut vérifier que les identifiants des ressources sont les bons : 
+Comme le profil d'instance n'est pas accessible via le constructeur L2 `ec2.Instance`, on se permet d'aller le chercher au niveau L1 en fouillant dans les `node.children`. On peut vérifier que les identifiants des ressources sont les bons : 
 
 ```sh
 cdk diff
@@ -289,7 +289,7 @@ df -h
 
 ## Réimporter l'instance dans la stack CloudFormation
 
-Maintenance que nos changements sont effectués, il ne reste plus qu'à réimporter l'instance dans la stack CloudFormation. Pour ce faire, dé-commentons une dernière fois tout le code, et assurons-nous qu'il représente l'état <b>ACTUEL</b> de l'instance (c'est à dire, avec les politiques de rétention, et le volume à 15 Go) :
+Maintenant que nos changements sont effectués, il ne reste plus qu'à réimporter l'instance dans la stack CloudFormation. Pour ce faire, dé-commentons une dernière fois tout le code, et assurons-nous qu'il représente l'état <b>ACTUEL</b> de l'instance (c'est à dire, avec les politiques de rétention, et le volume à 15 Go) :
 
 ```py
 from aws_cdk import RemovalPolicy
